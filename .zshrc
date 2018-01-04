@@ -5,8 +5,8 @@ SAVEHIST=1000
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-
 zstyle :compinstall filename '/Users/takiya/.zshrc'
+
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
@@ -17,6 +17,8 @@ bindkey -e
 # colored prompt
 autoload -Uz colors
 colors
+
+# colored prompt
 PROMPT="%{${fg[green]}%}%n@%m@%*%{${reset_color}%} %F{blue}%~ $%f "
 
 # some more ls aliases
@@ -68,5 +70,5 @@ export PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
 
 # colored less
-export LESS='-i -M -R'
+export LESS='-i -M -R' # -N はコピペがしにくいので手動でつける
 export LESSOPEN='| /usr/share/source-highlight/src-hilite-lesspipe.sh %s'
