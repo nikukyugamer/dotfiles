@@ -13,3 +13,12 @@ set history=50
 set whichwrap=b,s,[,],<,>
 set backspace=indent,eol,start
 set wildmenu
+
+let OSTYPE = system('uname')
+if OSTYPE == "Darwin\n"
+  :set term=xterm-256color
+  :syntax on
+endif
+
+autocmd BufWritePre * :%s/\s\+$//ge
+
