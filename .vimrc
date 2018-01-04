@@ -1,0 +1,15 @@
+set number
+set title
+set tabstop=2
+set expandtab
+set list
+set smartindent
+set ambiwidth=double
+set shiftwidth=2
+set smartindent
+set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
+set nrformats-=octal
+set history=50
+set whichwrap=b,s,[,],<,>
+set backspace=indent,eol,start
+set wildmenu
