@@ -13,6 +13,7 @@ set history=50
 set whichwrap=b,s,[,],<,>
 set backspace=indent,eol,start
 set wildmenu
+set paste
 
 let OSTYPE = system('uname')
 if OSTYPE == "Darwin\n"
