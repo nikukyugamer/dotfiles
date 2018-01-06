@@ -68,6 +68,8 @@ elif grep -e '^NAME="Amazon' $RELEASE_FILE >/dev/null; then
   # Amazon Linuxの場合
 elif grep -e '^NAME="Ubuntu' $RELEASE_FILE >/dev/null; then
   export LESSOPEN='| /usr/share/source-highlight/src-hilite-lesspipe.sh %s'
+elif grep -e '^NAME="Mint' $RELEASE_FILE >/dev/null; then
+  export LESSOPEN='| /usr/share/source-highlight/src-hilite-lesspipe.sh %s'
 else
  # その他のディストリビューションの場合
 fi
