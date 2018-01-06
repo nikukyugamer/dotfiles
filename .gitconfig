@@ -1,0 +1,8 @@
+[user]
+  name = Osamu Takiya
+  email = takiya@toran.sakura.ne.jp
+[diff]
+  tool = vimdiff
+[difftool]
+  prompt = false
+
