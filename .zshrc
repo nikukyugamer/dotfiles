@@ -20,11 +20,6 @@ autoload -Uz colors
 colors
 PROMPT="%{${fg[green]}%}%n@%m@%*%{${reset_color}%} %F{blue}%~ $%f "
 
-# ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
 # nodebrew for macOS
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
@@ -48,11 +43,35 @@ bindkey "^S" history-incremental-search-forward
 # lsに色をつける
 export LSCOLORS=exfxcxdxbxegedabagacad
 export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
-alias ls="ls --color=auto"
 zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
 
+# macOS と Linux で色の付け方が異なる
+case "${OSTYPE}" in
+darwin*)
+  alias ls="ls -G"
+  alias ll="ls -alFG"
+  alias la="ls -AG"
+  alias l="ls -CFG"
+  ;;
+linux*)
+  alias ls='ls --color=auto'
+  alias ll='ls -alF --color=auto'
+  alias la='ls -A --color=auto'
+  alias l='ls -CF --color=auto'
+  ;;
+esac
+
 # apt-get の親切機能（Debian だけの機能らしいので注意）
-source /etc/zsh_command_not_found
+RELEASE_FILE=/etc/os-release
+if /usr/bin/sw_vers | grep -e "ProductName" >/dev/null; then
+  # 何もしない
+elif grep -e '^NAME="Ubuntu' $RELEASE_FILE >/dev/null; then
+  source /etc/zsh_command_not_found
+elif grep -e '^NAME="Linux Mint' $RELEASE_FILE >/dev/null; then
+  source /etc/zsh_command_not_found
+else
+  # その他の場合の処理
+fi
 
 # rbenv
 export PATH=$HOME/.rbenv/bin:$PATH
@@ -63,7 +82,9 @@ export LESS='-i -M -R' # -N はコピペがしにくいので付けたい場合�
 
 # 一箇所だけだからいいが、以下の判定部分が増えると DRY でなくなるだろう
 RELEASE_FILE=/etc/os-release
-if grep -e '^NAME="CentOS' $RELEASE_FILE >/dev/null; then
+if /usr/bin/sw_vers | grep -e "ProductName" >/dev/null; then
+  export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
+elif grep -e '^NAME="CentOS' $RELEASE_FILE >/dev/null; then
   export LESSOPEN='| /usr/bin/src-hilite-lesspipe.sh %s'
 elif grep -e '^NAME="Amazon' $RELEASE_FILE >/dev/null; then
   # Amazon Linuxの場合
