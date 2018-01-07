@@ -21,7 +21,9 @@ colors
 PROMPT="%{${fg[green]}%}%n@%m@%*%{${reset_color}%} %F{blue}%~ $%f "
 
 # nodebrew for macOS
-export PATH=$HOME/.nodebrew/current/bin:$PATH
+if [[ "${OSTYPE}" =~ .*darwin.* ]]; then
+  export PATH=$HOME/.nodebrew/current/bin:$PATH
+fi
 
 # https://qiita.com/ktr_type23/items/3eb782f98c7a5f4c60b0
 setopt hist_ignore_dups # 重複を記録しない
@@ -63,14 +65,14 @@ esac
 
 # apt-get の親切機能（Debian だけの機能らしいので注意）
 RELEASE_FILE=/etc/os-release
-if /usr/bin/sw_vers | grep -e "ProductName" >/dev/null; then
+if [[ "${OSTYPE}" =~ .*darwin.* ]]; then
   # 何もしない
 elif grep -e '^NAME="Ubuntu' $RELEASE_FILE >/dev/null; then
   source /etc/zsh_command_not_found
 elif grep -e '^NAME="Linux Mint' $RELEASE_FILE >/dev/null; then
   source /etc/zsh_command_not_found
 else
-  # その他の場合の処理
+  # その他の場合の処理（CentOS とかも差し当たりここ）
 fi
 
 # rbenv
@@ -82,21 +84,23 @@ export LESS='-i -M -R' # -N はコピペがしにくいので付けたい場合�
 
 # 一箇所だけだからいいが、以下の判定部分が増えると DRY でなくなるだろう
 RELEASE_FILE=/etc/os-release
-if /usr/bin/sw_vers | grep -e "ProductName" >/dev/null; then
+if [[ "${OSTYPE}" =~ .*darwin.* ]]; then
   export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
 elif grep -e '^NAME="CentOS' $RELEASE_FILE >/dev/null; then
   export LESSOPEN='| /usr/bin/src-hilite-lesspipe.sh %s'
 elif grep -e '^NAME="Amazon' $RELEASE_FILE >/dev/null; then
-  # Amazon Linuxの場合
+  # Amazon Linuxの場合はここに書く
 elif grep -e '^NAME="Ubuntu' $RELEASE_FILE >/dev/null; then
   export LESSOPEN='| /usr/share/source-highlight/src-hilite-lesspipe.sh %s'
 elif grep -e '^NAME="Linux Mint' $RELEASE_FILE >/dev/null; then
   export LESSOPEN='| /usr/share/source-highlight/src-hilite-lesspipe.sh %s'
 else
- # その他のディストリビューションの場合
+ # その他のディストリビューションの場合はここに書く
 fi
 
 # nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+if ! [[ "${OSTYPE}" =~ .*darwin.* ]]; then
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+fi
