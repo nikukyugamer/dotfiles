@@ -1,25 +1,22 @@
 # Usage
 
-#### .vimrc
+#### ~/.vimrc
 ```.vimrc
 source ~/dotfiles/.vimrc
 ```
 
-#### .zshrc
-```.zshrc
-source ~/dotfiles/.zshrc
-```
-
-#### .gitconfig
+#### .~/gitconfig
 ```.gitconfig
 [include]
   path = ~/dotfiles/.gitconfig
 ```
 
-# Optional Usage
+#### .~/zshrc
+- `alias` の三行は Optional
 
-#### .zshrc
 ```.zshrc
+source ~/dotfiles/.zshrc
+
 alias vimvimrc='vim ~/dotfiles/.vimrc'
 alias vimzshrc='vim ~/dotfiles/.zshrc'
 alias vimgitconfig='vim ~/dotfiles/.gitconfig'
