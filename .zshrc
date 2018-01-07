@@ -6,7 +6,8 @@ bindkey -v
 # End of lines configured by zsh-newuser-install
 
 # The following lines were added by compinstall
-zstyle :compinstall filename '/Users/takiya/.zshrc'
+# 要検討場所
+# zstyle :compinstall filename '/Users/takiya/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
