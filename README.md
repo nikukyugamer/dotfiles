@@ -20,9 +20,9 @@ source ~/dotfiles/.zshrc
 
 #### .zshrc
 ```.zshrc
-alias vvimrc='vim ~/dotfiles/.vimrc'
-alias vzshrc='vim ~/dotfiles/.zshrc'
-alias vgitconfig='vim ~/dotfiles/.gitconfig'
+alias vimvimrc='vim ~/dotfiles/.vimrc'
+alias vimzshrc='vim ~/dotfiles/.zshrc'
+alias vimgitconfig='vim ~/dotfiles/.gitconfig'
 ```
 
 # Reference (thanks!)
