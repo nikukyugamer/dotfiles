@@ -1,13 +1,16 @@
 # Usage
 
+#### .vimrc
 ```.vimrc
 source ~/dotfiles/.vimrc
 ```
 
+#### .zshrc
 ```.zshrc
 source ~/dotfiles/.zshrc
 ```
 
+#### .gitconfig
 ```.gitconfig
 [include]
   path = ~/dotfiles/.gitconfig
@@ -15,6 +18,7 @@ source ~/dotfiles/.zshrc
 
 # Optional Usage
 
+#### .zshrc
 ```.zshrc
 alias vvimrc='vim ~/dotfiles/.vimrc'
 alias vzshrc='vim ~/dotfiles/.zshrc'
