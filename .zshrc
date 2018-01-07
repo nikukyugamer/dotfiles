@@ -50,7 +50,7 @@ export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46
 alias ls="ls --color=auto"
 zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
 
-# apt-get の親切機能（Ubuntu以外では注意）
+# apt-get の親切機能（Debian だけの機能らしいので注意）
 source /etc/zsh_command_not_found
 
 # rbenv
