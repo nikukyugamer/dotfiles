@@ -108,3 +108,6 @@ fi
 # npm (yarn) for local
 export PATH=$PATH:./node_modules/.bin
 
+# yarn global path
+export PATH="$PATH:`yarn global bin`"
+
