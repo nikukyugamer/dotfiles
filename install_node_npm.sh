@@ -1,7 +1,6 @@
 #!/bin/bash
 
-nvm install 9.4.0
-nvm alias default 9.4.0
+~/.nvm/nvm.sh install 9.4.0
+~/.nvm/nvm.sh alias default 9.4.0
 
-npm install yarn
-
+npm install -g yarn
