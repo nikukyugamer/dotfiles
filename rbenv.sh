@@ -7,13 +7,13 @@ git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-bu
 
 # if .bashrc
 # sed -e '$ a export PATH=$HOME/.rbenv/bin:$PATH' -i ~/.bashrc
-# sed -e '$ a eval "$(rbenv init -)"' -i ~/.bashrc↲
+# sed -e '$ a eval "$(rbenv init -)"' -i ~/.bashrc
 # source ~/.bashrc
 
 # if .zshrc
 sed -e '$ a export PATH=$HOME/.rbenv/bin:$PATH' -i ~/.zshrc
-sed -e '$ a eval "$(rbenv init -)"' -i ~/.zshrc↲
+sed -e '$ a eval "$(rbenv init -)"' -i ~/.zshrc
+
 source ~/.zshrc
 
 rbenv install 2.5.0
-
