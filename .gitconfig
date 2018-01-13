@@ -7,3 +7,6 @@
   prompt = false
 [push]
   default = current
+[core]
+autocrlf = input
+# safecrlf = true
