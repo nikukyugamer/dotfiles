@@ -7,9 +7,11 @@ endif
 set number
 set title
 set ambiwidth=double
-set tabstop=2
 set expandtab
+set tabstop=2
 set shiftwidth=2
+set softtabstop=2
+set autoindent
 set smartindent
 set list
 set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
@@ -28,8 +30,8 @@ highlight DiffChange cterm=bold ctermfg=10 ctermbg=17
 highlight DiffText   cterm=bold ctermfg=10 ctermbg=21
 
 " 都度変える必要あり
-set paste
-set noautoindent
+" set paste
+" set noautoindent
 
 " auto comment off
 augroup auto_comment_off
