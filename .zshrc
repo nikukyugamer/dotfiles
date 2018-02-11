@@ -99,15 +99,19 @@ else
 fi
 
 # nvm
-if ! [[ "${OSTYPE}" =~ .*darwin.* ]]; then
-  export NVM_DIR="$HOME/.nvm"
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-fi
+# if ! [[ "${OSTYPE}" =~ .*darwin.* ]]; then
+#   export NVM_DIR="$HOME/.nvm"
+#   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+#   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# fi
 
 # npm (yarn) for local
 export PATH=$PATH:./node_modules/.bin
 
 # yarn global path
 export PATH="$PATH:`yarn global bin`"
+
+# ndenv
+export PATH="$HOME/.ndenv/bin:$PATH"
+eval "$(ndenv init -)"
 
