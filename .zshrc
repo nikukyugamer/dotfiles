@@ -115,3 +115,7 @@ export PATH="$PATH:`yarn global bin`"
 export PATH="$HOME/.ndenv/bin:$PATH"
 eval "$(ndenv init -)"
 
+# pyenv
+export PATH="/home/meganekko/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
