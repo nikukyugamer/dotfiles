@@ -20,11 +20,6 @@ autoload -Uz colors
 colors
 PROMPT="%{${fg[green]}%}%n@%m@%*%{${reset_color}%} %F{blue}%~ $%f "
 
-# nodebrew for macOS
-if [[ "${OSTYPE}" =~ .*darwin.* ]]; then
-  export PATH=$HOME/.nodebrew/current/bin:$PATH
-fi
-
 # https://qiita.com/ktr_type23/items/3eb782f98c7a5f4c60b0
 setopt hist_ignore_dups # 重複を記録しない
 setopt EXTENDED_HISTORY # 開始と終了を記録
@@ -98,18 +93,11 @@ else
  # その他のディストリビューションの場合はここに書く
 fi
 
-# nvm
-# if ! [[ "${OSTYPE}" =~ .*darwin.* ]]; then
-#   export NVM_DIR="$HOME/.nvm"
-#   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-#   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-# fi
-
 # npm (yarn) for local
 export PATH=$PATH:./node_modules/.bin
 
 # yarn global path
-export PATH="$PATH:`yarn global bin`"
+# export PATH="$PATH:`yarn global bin`"
 
 # ndenv
 export PATH="$HOME/.ndenv/bin:$PATH"
