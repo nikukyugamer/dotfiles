@@ -107,3 +107,7 @@ eval "$(ndenv init -)"
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+# direnv
+export EDITOR="vim"
+eval "$(direnv hook zsh)"
