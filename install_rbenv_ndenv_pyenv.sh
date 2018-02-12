@@ -7,6 +7,7 @@ git clone https://github.com/riywo/ndenv ~/.ndenv
 git clone https://github.com/riywo/node-build.git $(ndenv root)/plugins/node-build
 
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
 
 # [Ubuntu]
 # (Build Ruby)
