@@ -11,6 +11,6 @@ git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-vi
 
 # [Ubuntu]
 # (Build Ruby)
-# $ sudo apt-get install gcc build-essentiallibssl-dev libreadline-dev zlib1g-dev
+# $ sudo apt-get install gcc build-essential libssl-dev libreadline-dev zlib1g-dev
 # (Build Python)
 # $ sudo apt-get install libbz2-dev libreadline-dev libsqlite3-dev
