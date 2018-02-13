@@ -94,10 +94,11 @@ else
 fi
 
 # npm (yarn) for local
-export PATH=$PATH:./node_modules/.bin
+export PATH="$PATH:./node_modules/.bin"
 
 # yarn global path
-export PATH="$PATH:`yarn global bin`"
+# export PATH="$PATH:`yarn global bin`"
+export PATH="$PATH:$HOME/.config/yarn/global/node_modules/.bin"
 
 # ndenv
 export PATH="$HOME/.ndenv/bin:$PATH"
