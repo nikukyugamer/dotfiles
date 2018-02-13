@@ -97,7 +97,7 @@ fi
 export PATH=$PATH:./node_modules/.bin
 
 # yarn global path
-# export PATH="$PATH:`yarn global bin`"
+export PATH="$PATH:`yarn global bin`"
 
 # ndenv
 export PATH="$HOME/.ndenv/bin:$PATH"
