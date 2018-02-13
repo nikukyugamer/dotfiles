@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# easy way
+# $ sudo apt-get install direnv
+
 # https://github.com/direnv/direnv/releases
 
 # wget https://github.com/direnv/direnv/releases/download/v2.14.0/direnv.linux-amd64
