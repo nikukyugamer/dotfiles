@@ -5,7 +5,7 @@ if OSTYPE == "Darwin\n"
 endif
 
 set number
-set nottitle
+set notitle
 set ambiwidth=double
 set expandtab
 set tabstop=2
