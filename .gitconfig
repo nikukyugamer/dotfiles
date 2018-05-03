@@ -8,6 +8,6 @@
 [push]
   default = current
 [core]
-autocrlf = input
-# safecrlf = true
-quotepath = false
+  autocrlf = input
+  # safecrlf = true
+  quotepath = false
