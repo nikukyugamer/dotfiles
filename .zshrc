@@ -110,5 +110,14 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 # direnv
+# eval "$(direnv hook zsh)"
+
+# embulk
+export PATH="$HOME/.embulk/bin:$PATH"
+
+# editor
 export EDITOR="vim"
-eval "$(direnv hook zsh)"
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
