@@ -5,13 +5,13 @@
 source ~/dotfiles/.vimrc
 ```
 
-#### .~/gitconfig
+#### ~/.gitconfig
 ```.gitconfig
 [include]
   path = ~/dotfiles/.gitconfig
 ```
 
-#### .~/zshrc
+#### ~/.zshrc
 - `alias` の三行は Optional
 
 ```.zshrc
