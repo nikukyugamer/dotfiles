@@ -8,6 +8,10 @@ git clone https://github.com/riywo/node-build.git $(ndenv root)/plugins/node-bui
 
 curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
 
+# curl -sS https://getcomposer.org/installer | php
+# mv composer.phar /usr/local/bin/composer
+# composer global require phpunit/phpunit
+
 # [Ubuntu]
 # (Build Ruby)
 # $ sudo apt-get install gcc build-essential libssl-dev libreadline-dev zlib1g-dev

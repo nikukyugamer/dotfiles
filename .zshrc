@@ -121,3 +121,5 @@ export EDITOR="vim"
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# composer
+export PATH="$HOME/.composer/vendor/bin:$PATH"
