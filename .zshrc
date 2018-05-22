@@ -15,10 +15,20 @@ compinit
 # keybind like emacs
 bindkey -e
 
+# Git branch
+# http://liosk.blog103.fc2.com/blog-entry-209.html
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' formats ' [%b]'
+precmd() {
+    psvar=()
+    LANG=en_US.UTF-8 vcs_info
+    psvar[1]=$vcs_info_msg_0_
+}
+
 # colored prompt
 autoload -Uz colors
 colors
-PROMPT="%{${fg[green]}%}%n@%m@%*%{${reset_color}%} %F{blue}%~ $%f "
+PROMPT="%{${fg[green]}%}%n@%m@%*%{${reset_color}%}%1v %F{yellow}%~ $ "
 
 # https://qiita.com/ktr_type23/items/3eb782f98c7a5f4c60b0
 setopt hist_ignore_dups # 重複を記録しない
