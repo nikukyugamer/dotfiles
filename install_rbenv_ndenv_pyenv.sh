@@ -7,4 +7,3 @@ git clone https://github.com/riywo/ndenv ~/.ndenv
 git clone https://github.com/riywo/node-build.git ~/.ndenv/plugins/node-build
 
 curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
-git clone https://github.com/pyenv/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
