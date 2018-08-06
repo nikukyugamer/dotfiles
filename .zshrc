@@ -1,3 +1,6 @@
+# Permission of Files and Directorys
+umask 002
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
