@@ -1,5 +1,6 @@
 # Permission of Files and Directorys
-umask 002
+# umask 0022 == chmod 0644
+umask 0022
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.zsh_history
