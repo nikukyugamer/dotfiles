@@ -147,3 +147,7 @@ export EDITOR="vim"
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 export COMPOSER_HOME="$HOME/.composer" # using zsh on Ubuntu, default COMPOSER_HOME is $HOME/.config/composer ??
 export PATH="$PATH:./vendor/bin"
+
+# Golang
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
