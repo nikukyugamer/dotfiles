@@ -149,5 +149,5 @@ export COMPOSER_HOME="$HOME/.composer" # using zsh on Ubuntu, default COMPOSER_H
 export PATH="$PATH:./vendor/bin"
 
 # Golang
-export GOPATH=$HOME/go
+export GOPATH=$PATH:$HOME/go
 export PATH=$PATH:$GOPATH/bin
