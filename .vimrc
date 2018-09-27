@@ -14,7 +14,9 @@ set softtabstop=2
 set autoindent
 set smartindent
 set list
-set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
+" 2018-09-27 突然のエラー（macOS のアップデートによるもの）
+" set listchars=tab:»-,trail:-,eol:,extends:»,precedes:«,nbsp:%
+set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%
 set nrformats-=octal
 set history=50
 set whichwrap=b,s,[,],<,>
