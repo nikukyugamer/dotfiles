@@ -1,3 +1,5 @@
+export LANG="ja_JP.UTF-8"
+
 # Permission of Files and Directorys
 # umask 0022 == chmod 0644
 umask 0022
