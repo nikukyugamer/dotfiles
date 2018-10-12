@@ -1,3 +1,11 @@
+# Note
+- As Japanese comments, it is necessary to run below command
+    - if not running, the error occurs
+
+```bash
+$ sudo apt-get install -y language-pack-ja language-pack-ja-base
+```
+
 # Usage
 
 #### ~/.vimrc
