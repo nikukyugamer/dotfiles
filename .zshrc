@@ -151,3 +151,7 @@ export EDITOR="vim"
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 export COMPOSER_HOME="$HOME/.composer" # using zsh on Ubuntu, default COMPOSER_HOME is $HOME/.config/composer ??
 export PATH="$PATH:./vendor/bin"
+
+# ghq and hub
+alias gg='cd $(ghq root)/$(ghq list | peco)'
+alias gghome='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
