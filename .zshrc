@@ -129,6 +129,8 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 # goenv
+export GOPATH="$HOME/.go"
+export PATH="$GOPATH/bin:$PATH"
 export GOENV_ROOT="$HOME/.goenv"
 export PATH="$GOENV_ROOT/bin:$PATH"
 eval "$(goenv init -)"
