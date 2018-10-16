@@ -34,7 +34,7 @@ precmd() {
 # colored prompt
 autoload -Uz colors
 colors
-PROMPT="%{${fg[green]}%}%n@%m@%*%{${reset_color}%}%F{yellow}%1v %F{blue}%~ $%f "
+PROMPT="%{${fg[green]}%}%n@%m@%*%{${reset_color}%}%F{yellow}%1v %F{blue}%(5~,%-2~/.../%1~,%~) $ %f"
 
 # https://qiita.com/ktr_type23/items/3eb782f98c7a5f4c60b0
 setopt hist_ignore_dups # 重複を記録しない
