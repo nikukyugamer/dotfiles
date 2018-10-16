@@ -16,4 +16,6 @@
   quotepath = false
 [fetch]
   prune = true
-
+[pager]
+  branch = peco
+  log = peco
