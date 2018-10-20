@@ -115,25 +115,9 @@ export PATH="$PATH:./node_modules/.bin"
 # export PATH="$PATH:`yarn global bin`"
 export PATH="$PATH:$HOME/.config/yarn/global/node_modules/.bin"
 
-# rbenv
-## export PATH=$HOME/.rbenv/bin:$PATH
-## eval "$(rbenv init -)"
-
-# ndenv
-## export PATH="$HOME/.ndenv/bin:$PATH"
-## eval "$(ndenv init -)"
-
-# pyenv
-## export PATH="$HOME/.pyenv/bin:$PATH"
-## eval "$(pyenv init -)"
-## eval "$(pyenv virtualenv-init -)"
-
-# goenv
+# golang
 export GOPATH="$HOME/.go"
 export PATH="$GOPATH/bin:$PATH"
-## export GOENV_ROOT="$HOME/.goenv"
-## export PATH="$GOENV_ROOT/bin:$PATH"
-## eval "$(goenv init -)"
 
 # direnv
 # eval "$(direnv hook zsh)"
@@ -156,7 +140,5 @@ export PATH="$PATH:./vendor/bin"
 alias gg='cd $(ghq root)/$(ghq list | peco)'
 alias gghome='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
 
-# anyenv
-export PATH="$HOME/.anyenv/bin:$PATH"
-eval "$(anyenv init -)"
-
+# lessの文字化けを防ぐ
+export LESSCHARSET=utf-8

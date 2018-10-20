@@ -1,0 +1,23 @@
+source ~/dotfiles/.zshrc
+
+alias vimvimrc='vim ~/dotfiles/.vimrc'
+alias vimzshrc='vim ~/dotfiles/.zshrc'
+alias vimgitconfig='vim ~/dotfiles/.gitconfig'
+
+# rbenv
+export PATH=$HOME/.rbenv/bin:$PATH
+eval "$(rbenv init -)"
+
+# ndenv
+export PATH="$HOME/.ndenv/bin:$PATH"
+eval "$(ndenv init -)"
+
+# pyenv
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+# goenv
+export GOENV_ROOT="$HOME/.goenv"
+export PATH="$GOENV_ROOT/bin:$PATH"
+eval "$(goenv init -)"
