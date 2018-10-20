@@ -89,10 +89,6 @@ else
   # その他の場合の処理（CentOS とかも差し当たりここ）
 fi
 
-# rbenv
-# export PATH=$HOME/.rbenv/bin:$PATH
-# eval "$(rbenv init -)"
-
 # less に色を付ける（要 install source-highlight）
 export LESS='-i -M -R' # -N はコピペがしにくいので付けたい場合は手動で付ける
 
@@ -119,21 +115,25 @@ export PATH="$PATH:./node_modules/.bin"
 # export PATH="$PATH:`yarn global bin`"
 export PATH="$PATH:$HOME/.config/yarn/global/node_modules/.bin"
 
+# rbenv
+## export PATH=$HOME/.rbenv/bin:$PATH
+## eval "$(rbenv init -)"
+
 # ndenv
-# export PATH="$HOME/.ndenv/bin:$PATH"
-# eval "$(ndenv init -)"
+## export PATH="$HOME/.ndenv/bin:$PATH"
+## eval "$(ndenv init -)"
 
 # pyenv
-# export PATH="$HOME/.pyenv/bin:$PATH"
-# eval "$(pyenv init -)"
-# eval "$(pyenv virtualenv-init -)"
+## export PATH="$HOME/.pyenv/bin:$PATH"
+## eval "$(pyenv init -)"
+## eval "$(pyenv virtualenv-init -)"
 
 # goenv
 export GOPATH="$HOME/.go"
 export PATH="$GOPATH/bin:$PATH"
-# export GOENV_ROOT="$HOME/.goenv"
-# export PATH="$GOENV_ROOT/bin:$PATH"
-# eval "$(goenv init -)"
+## export GOENV_ROOT="$HOME/.goenv"
+## export PATH="$GOENV_ROOT/bin:$PATH"
+## eval "$(goenv init -)"
 
 # direnv
 # eval "$(direnv hook zsh)"
