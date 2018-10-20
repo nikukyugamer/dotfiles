@@ -4,6 +4,7 @@ if OSTYPE == "Darwin\n"
   :syntax on
 endif
 
+set encoding=utf-8
 set number
 set notitle
 set ambiwidth=double
