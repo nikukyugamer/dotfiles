@@ -12,4 +12,7 @@ anyenv install jenv
 anyenv install luaenv
 anyenv install goenv
 
+# 初回実行ではなぜかテンポラリファイルからの移動が失敗する
+anyenv install rbenv
+
 exit 0
