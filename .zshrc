@@ -1,4 +1,6 @@
 export LANG="ja_JP.UTF-8"
+export LC_ALL="ja_JP.UTF-8"
+export LANGUAGE="ja_JP.UTF-8"
 
 # Permission of Files and Directorys
 # umask 0022 == chmod 0644
