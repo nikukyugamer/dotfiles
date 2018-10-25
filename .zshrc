@@ -144,3 +144,6 @@ alias gghome='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
 
 # lessの文字化けを防ぐ
 export LESSCHARSET=utf-8
+
+# bundle exec = be
+alias be='bundle exec'
