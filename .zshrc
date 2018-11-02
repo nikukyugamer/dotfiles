@@ -111,6 +111,7 @@ else
 fi
 
 # npm (yarn) for local
+# Should I use 'npx'?
 export PATH="$PATH:./node_modules/.bin"
 
 # yarn global path
