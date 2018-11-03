@@ -1,4 +1,9 @@
-#!/bin/bash -e
+#!/bin/bash
+# init directories でコケる可能性があるため -xe は付与しない
+
+echo 'init directories...'
+mkdir ~/.go
+mkdir ~/.ghq
 
 echo 'install peco...'
 go get github.com/peco/peco/cmd/peco
