@@ -17,6 +17,6 @@
 [fetch]
   prune = true
 [pager]
-  branch = peco
+  branch = cat
   log = peco
   config = cat
