@@ -4,6 +4,6 @@ git clone http://github.com/zimbatm/direnv
 cd direnv
 sudo make install
 cd ..
-rm -rf direnv
+sudo rm -rf direnv
 
 exit 0
