@@ -24,4 +24,4 @@ eval "$(goenv init -)"
 
 # direnv
 # If direnv isn't installed, the error occurs every time you login
-eval "$(direnv hook zsh)"
+# eval "$(direnv hook zsh)"
