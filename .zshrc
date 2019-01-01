@@ -148,3 +148,6 @@ export LESSCHARSET=utf-8
 
 # bundle exec = be
 alias be='bundle exec'
+
+# https://github.com/b4b4r07/gomi
+alias rm='gomi'
