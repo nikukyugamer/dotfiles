@@ -21,5 +21,9 @@ echo 'Install gomi...'
 go get -u github.com/b4b4r07/gomi/...
 echo 'Done'
 
+echo 'Install git-user...'
+go get -u github.com/gesquive/git-user
+echo 'Done'
+
 exit 0
 
