@@ -123,7 +123,7 @@ export GOPATH="$HOME/.go"
 export PATH="$GOPATH/bin:$PATH"
 
 # direnv
-# eval "$(direnv hook zsh)"
+eval "$(direnv hook zsh)"
 
 # embulk
 export PATH="$HOME/.embulk/bin:$PATH"
