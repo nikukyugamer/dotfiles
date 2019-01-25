@@ -1,5 +1,4 @@
 #!/bin/bash
-# init directories でコケる可能性があるため -xe は付与しない
 
 echo 'Init directories...'
 mkdir ~/.go
@@ -22,6 +21,7 @@ go get -u github.com/b4b4r07/gomi/...
 echo 'Done'
 
 echo 'Install git-user...'
+echo 'If you use macOS, use `git` command from Homebrew (If not so, an error may occur)'
 go get -u github.com/gesquive/git-user
 echo 'Done'
 
