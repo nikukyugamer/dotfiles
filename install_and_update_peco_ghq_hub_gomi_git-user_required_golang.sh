@@ -4,23 +4,23 @@ echo 'Init directories...'
 mkdir ~/.go
 mkdir ~/.ghq
 
-echo 'Install peco...'
-go get github.com/peco/peco/cmd/peco
+echo 'Install/Update peco...'
+go get -u github.com/peco/peco/cmd/peco
 echo 'Done'
 
-echo 'Install ghq...'
-go get github.com/motemen/ghq
+echo 'Install/Update ghq...'
+go get -u github.com/motemen/ghq
 echo 'Done'
 
-echo 'Install hub...'
-go get github.com/github/hub
+echo 'Install/Update hub...'
+go get -u github.com/github/hub
 echo 'Done'
 
-echo 'Install gomi...'
+echo 'Install/Update gomi...'
 go get -u github.com/b4b4r07/gomi/...
 echo 'Done'
 
-echo 'Install git-user...'
+echo 'Install/Update git-user...'
 echo 'If you use macOS, use `git` command from Homebrew (If not so, an error may occur)'
 go get -u github.com/gesquive/git-user
 echo 'Done'
