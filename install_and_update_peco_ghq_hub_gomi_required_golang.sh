@@ -20,10 +20,5 @@ echo 'Install/Update gomi...'
 go get -u github.com/b4b4r07/gomi/...
 echo 'Done'
 
-echo 'Install/Update git-user...'
-echo 'If you use macOS, use `git` command from Homebrew (If not so, an error may occur)'
-go get -u github.com/gesquive/git-user
-echo 'Done'
-
 exit 0
 
