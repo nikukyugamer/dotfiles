@@ -10,3 +10,6 @@ curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv
 
 git clone https://github.com/syndbg/goenv.git ~/.goenv
 
+# https://github.com/jenv/jenv
+git clone https://github.com/jenv/jenv.git ~/.jenv
+
