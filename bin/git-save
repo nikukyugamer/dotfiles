@@ -1,0 +1,5 @@
+#!/bin/bash
+
+branch=`git branch | grep '*' | cut -f 2 -d ' '`
+git commit -m "fixup! $branch"
+
