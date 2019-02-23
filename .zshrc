@@ -155,3 +155,6 @@ alias remove='/bin/rm'
 
 # Add my binaries
 export PATH="$PATH:$HOME/dotfiles/bin"
+
+# Add my aliases
+alias ytdl='youtube-dl --write-thumbnail'
