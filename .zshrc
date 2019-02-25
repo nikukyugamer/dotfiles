@@ -152,6 +152,7 @@ alias be='bundle exec'
 # https://github.com/b4b4r07/gomi
 alias rm='gomi'
 alias remove='/bin/rm'
+alias sudo-remove='sudo /bin/rm'
 
 # Add my binaries
 export PATH="$PATH:$HOME/dotfiles/bin"
