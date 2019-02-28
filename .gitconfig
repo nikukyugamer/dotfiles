@@ -18,7 +18,6 @@
   prune = false
 [pager]
   branch = cat
-  log = peco
   config = cat
 [filter "lfs"]
   clean = git-lfs clean -- %f
