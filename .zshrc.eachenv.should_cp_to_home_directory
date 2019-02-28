@@ -1,5 +1,7 @@
 source ~/dotfiles/.zshrc
 
+alias cat='~/.cargo/bin/bat'
+
 alias vimvimrc='vim ~/dotfiles/.vimrc'
 alias vimzshrc='vim ~/dotfiles/.zshrc'
 alias vimgitconfig='vim ~/dotfiles/.gitconfig'
@@ -29,3 +31,11 @@ eval "$(direnv hook zsh)"
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 
+# I don't memorize that I set below configuration. But I can execute commands such as rustc, cargo and so on...
+#
+# Rust is installed now. Great!
+#
+# To get started you need Cargo's bin directory ($HOME/.cargo/bin) in your PATH
+# environment variable. Next time you log in this will be done automatically.
+#
+# To configure your current shell run source $HOME/.cargo/env
