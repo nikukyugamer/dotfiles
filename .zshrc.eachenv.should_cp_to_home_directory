@@ -6,6 +6,8 @@ alias vimvimrc='vim ~/dotfiles/.vimrc'
 alias vimzshrc='vim ~/dotfiles/.zshrc'
 alias vimgitconfig='vim ~/dotfiles/.gitconfig'
 
+alias gl='git log --oneline --graph --decorate=full'
+
 # rbenv
 export PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
