@@ -16,4 +16,6 @@ cd ~/.ndenv/plugins/node-build && git pull
 cd ~/.goenv && git pull
 cd ~/.goenv/plugins/go-build && git pull
 
+cd ~/.jenv && git pull
+
 exit 0
