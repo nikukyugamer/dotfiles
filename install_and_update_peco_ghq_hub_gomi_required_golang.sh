@@ -20,5 +20,12 @@ echo 'Install/Update gomi...'
 go get -u github.com/b4b4r07/gomi/...
 echo 'Done'
 
+echo 'Install/Update gore and recommended apps...'
+go get -u github.com/motemen/gore/cmd/gore
+go get -u github.com/mdempsky/gocode   # for code completion
+go get -u github.com/k0kubun/pp        # or github.com/davecgh/go-spew/spew
+go get -u golang.org/x/tools/cmd/godoc # for using with the :doc colon-command
+echo 'Done'
+
 exit 0
 
