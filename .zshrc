@@ -158,4 +158,4 @@ alias sudo-remove='sudo /bin/rm'
 export PATH="$PATH:$HOME/dotfiles/bin"
 
 # Add my aliases
-alias ytdl='youtube-dl --write-thumbnail'
+alias ytdl='youtube-dl --write-all-thumbnails --write-annotations --write-info-json --write-description --write-auto-sub --sleep-interval 30 --max-sleep-interval 60'
