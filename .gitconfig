@@ -15,7 +15,7 @@
   autocrlf = input
   quotepath = false
 [fetch]
-  prune = false
+  prune = true
 [pager]
   branch = cat
   config = cat
