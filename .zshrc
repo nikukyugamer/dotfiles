@@ -119,6 +119,9 @@ export PATH="$PATH:./node_modules/.bin"
 export PATH="$PATH:$HOME/.config/yarn/global/node_modules/.bin"
 
 # golang
+export GOENV_ROOT="$HOME/.goenv"
+export PATH="$GOENV_ROOT/bin:$PATH"
+eval "$(goenv init -)"
 export GOPATH="$HOME/.go"
 export PATH="$GOPATH/bin:$PATH"
 

@@ -23,9 +23,10 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 # goenv
-export GOENV_ROOT="$HOME/.goenv"
-export PATH="$GOENV_ROOT/bin:$PATH"
-eval "$(goenv init -)"
+# ここにこの順番（トップでインクルードする上でのこの順番）だと正しく適用されないのでコメントアウトする
+# export GOENV_ROOT="$HOME/.goenv"
+# export PATH="$GOENV_ROOT/bin:$PATH"
+# eval "$(goenv init -)"
 
 # direnv
 eval "$(direnv hook zsh)"
