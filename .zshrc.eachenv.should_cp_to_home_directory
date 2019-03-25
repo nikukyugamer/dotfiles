@@ -1,8 +1,5 @@
 source ~/dotfiles/.zshrc
 
-alias cat='~/.cargo/bin/bat'
-alias kitten='/bin/cat'
-
 alias vimvimrc='vim ~/dotfiles/.vimrc'
 alias vimzshrc='vim ~/dotfiles/.zshrc'
 alias vimgitconfig='vim ~/dotfiles/.gitconfig'
