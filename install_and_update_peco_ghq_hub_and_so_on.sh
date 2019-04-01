@@ -61,4 +61,8 @@ echo 'Install/Update golint...'
 go get -u golang.org/x/lint/golint          # for VSCode
 echo 'Done'
 
+echo 'Install/Update jpcal...'
+go get -u github.com/y-yagi/jpcal
+echo 'Done'
+
 exit 0
