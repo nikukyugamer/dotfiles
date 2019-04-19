@@ -1,0 +1,5 @@
+# Ubuntu
+$ sudo apt-get install tig -y
+
+# MacOS
+$ brew install tig

@@ -1,0 +1,5 @@
+# Ubuntu
+$ sudo snap install --classic heroku
+
+# MacOS
+$ brew tap heroku/brew && brew install heroku && heroku autocomplete
