@@ -8,5 +8,8 @@ echo 'Install pgcli command...'
 pip install pgcli
 echo 'Done!'
 
-exit 0
+echo 'Install google-images-download command...'
+pip install google-images-download
+echo 'Done!'
 
+exit 0
