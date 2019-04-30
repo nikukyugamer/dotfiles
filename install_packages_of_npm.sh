@@ -1,6 +1,7 @@
 #!/bin/bash -xe
 
 npm install -g npm
+npm install -g yarn
 
 # Not recommend to install globally
 # npm install -g eslint
