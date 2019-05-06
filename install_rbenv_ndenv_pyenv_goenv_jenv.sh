@@ -11,5 +11,7 @@ curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv
 git clone https://github.com/syndbg/goenv.git ~/.goenv
 
 # https://github.com/jenv/jenv
+# $ /usr/libexec/java_home -V
+# $ jenv add /Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home
 git clone https://github.com/jenv/jenv.git ~/.jenv
 
