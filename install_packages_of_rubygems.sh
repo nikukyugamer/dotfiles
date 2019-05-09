@@ -10,6 +10,7 @@ gem install rubocop-performance
 gem install pg
 gem install itamae
 gem install ridgepole
+gem install pry
 
 exit 0
 
