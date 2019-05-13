@@ -8,9 +8,11 @@ gem install rubocop-performance
 # $ gem install mysql2 -- --local build.mysql2 "--with-ldflags=-L/usr/local/opt/openssl/lib"
 
 gem install pg
+gem install sqlite3
 gem install itamae
 gem install ridgepole
 gem install pry
+gem install whenever
 
 exit 0
 
