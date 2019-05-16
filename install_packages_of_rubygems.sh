@@ -2,6 +2,7 @@
 
 gem install rubocop
 gem install rubocop-performance
+gem install solargraph
 
 # gem install mysql2
 # if MySQL version is 8, on macOS,
