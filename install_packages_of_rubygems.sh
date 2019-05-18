@@ -1,7 +1,7 @@
 #!/bin/bash -xe
 
-gem install rubocop
 gem install rubocop-performance
+gem install rubocop
 gem install solargraph
 
 # gem install mysql2
