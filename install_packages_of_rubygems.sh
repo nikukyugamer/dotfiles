@@ -15,5 +15,7 @@ gem install ridgepole
 gem install pry
 gem install whenever
 
+gem update
+
 exit 0
 
