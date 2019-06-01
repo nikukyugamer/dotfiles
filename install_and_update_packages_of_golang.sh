@@ -65,4 +65,8 @@ echo 'Install/Update jpcal...'
 go get -u github.com/y-yagi/jpcal
 echo 'Done'
 
+echo 'Install/Update ojichat...'
+go get -u github.com/greymd/ojichat
+echo 'Done'
+
 exit 0
