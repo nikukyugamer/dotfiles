@@ -84,9 +84,11 @@ RELEASE_FILE=/etc/os-release
 if [[ "${OSTYPE}" =~ .*darwin.* ]]; then
   # 何もしない
 elif grep -e '^NAME="Ubuntu' $RELEASE_FILE >/dev/null; then
-  source /etc/zsh_command_not_found
+  # AWS だと存在しなかったのでコメントアウト……
+  # source /etc/zsh_command_not_found
 elif grep -e '^NAME="Linux Mint' $RELEASE_FILE >/dev/null; then
-  source /etc/zsh_command_not_found
+  # AWS だと存在しなかったのでコメントアウト……
+  # source /etc/zsh_command_not_found
 else
   # その他の場合の処理（CentOS とかも差し当たりここ）
 fi
