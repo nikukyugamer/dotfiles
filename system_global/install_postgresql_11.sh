@@ -6,4 +6,6 @@ sudo apt-get update
 sudo apt-get install -y postgresql
 sudo apt-get install -y libpq-dev
 
+sudo pg_ctlcluster 11 main start
+
 exit 0
