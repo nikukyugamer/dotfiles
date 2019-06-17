@@ -4,6 +4,10 @@ echo 'Init directories...'
 mkdir ~/.go
 mkdir ~/.ghq
 
+echo 'Install/Update Tokyo Amesh...'
+go get -u -v github.com/otiai10/amesh
+echo 'Tokyo Amesh Done.'
+
 echo 'Install/Update peco...'
 go get -u github.com/peco/peco/cmd/peco
 echo 'Done'
