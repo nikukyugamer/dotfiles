@@ -4,13 +4,18 @@ echo 'Init directories...'
 mkdir ~/.go
 mkdir ~/.ghq
 
+echo 'Install/Update ojichatrix'
+go get -u github.com/greymd/ojichatrix
+echo 'ojichatrix Done.'
+
 echo 'Install/Update dep'
 go get -u github.com/golang/dep/cmd/dep
 echo 'dep Done.'
 
-echo 'Install/Update Terminal Timer...'
-go get -u github.com/drgrib/ttimer
-echo 'Terminal Timer Done.'
+# Solving dependency is hard...
+# echo 'Install/Update Terminal Timer...'
+# go get -u github.com/drgrib/ttimer
+# echo 'Terminal Timer Done.'
 
 echo 'Install/Update Tokyo Amesh...'
 go get -u github.com/otiai10/amesh
