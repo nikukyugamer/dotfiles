@@ -4,6 +4,7 @@ source ~/dotfiles/.zshrc
 # alias vi='/usr/local/bin/vim'
 
 # If Pygments is already installed, please uncomment a below line
+# Note: It is a buggy...
 # alias cat='pygmentize'
 
 alias vimvimrc='vim ~/dotfiles/.vimrc'
