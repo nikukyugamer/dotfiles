@@ -3,6 +3,9 @@ source ~/dotfiles/.zshrc
 # If you use macOS, install vim by Homebrew and uncomment a below line
 # alias vi='/usr/local/bin/vim'
 
+# If Pygments is already installed, please uncomment a below line
+# alias cat='pygmentize'
+
 alias vimvimrc='vim ~/dotfiles/.vimrc'
 alias vimzshrc='vim ~/dotfiles/.zshrc'
 alias vimgitconfig='vim ~/dotfiles/.gitconfig'
