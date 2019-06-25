@@ -16,6 +16,10 @@ alias gc='git checkout'
 alias gb='git branch'
 alias gs='git status'
 
+# Useful expanded alias for some commands
+alias cat='bat -p'
+alias fzf='fzf --ansi'
+
 # rbenv
 export PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
