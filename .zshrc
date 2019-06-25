@@ -66,10 +66,10 @@ zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'c
 # macOS と Linux で色の付け方が異なる
 case "${OSTYPE}" in
 darwin*)
-  alias ls="ls -G"
-  alias ll="ls -alFG"
-  alias la="ls -AG"
-  alias l="ls -CFG"
+  alias ls="unbuffer ls -G"
+  alias ll="unbuffer ls -alFG"
+  alias la="unbuffer ls -AG"
+  alias l="unbuffer ls -CFG"
   ;;
 linux*)
   alias ls='ls --color=auto'
