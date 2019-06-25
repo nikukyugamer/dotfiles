@@ -70,12 +70,23 @@ darwin*)
   alias ll="unbuffer ls -alFG"
   alias la="unbuffer ls -AG"
   alias l="unbuffer ls -CFG"
+
+  alias gl='unbuffer git log --oneline --graph --decorate=full'
+  alias gc='unbuffer git checkout'
+  alias gb='unbuffer git branch'
+  alias gs='unbuffer git status'
   ;;
 linux*)
   alias ls='ls --color=auto'
   alias ll='ls -alF --color=auto'
   alias la='ls -A --color=auto'
   alias l='ls -CF --color=auto'
+
+  # カラー指定をする方法がわからん
+  alias gl='git log --oneline --graph --decorate=full'
+  alias gc='git checkout'
+  alias gb='git branch'
+  alias gs='git status'
   ;;
 esac
 
