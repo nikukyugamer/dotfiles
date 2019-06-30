@@ -1,0 +1,1 @@
+- If you don't install `expect`, `cd` command will become error.
