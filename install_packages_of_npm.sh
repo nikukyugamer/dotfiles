@@ -8,6 +8,7 @@ npm install -g yarn
 npm install -g jshint
 npm install -g js-beautify
 npm install -g typescript
+npm install -g terminalizer
 
 exit 0
 
