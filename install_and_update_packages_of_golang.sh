@@ -86,4 +86,8 @@ echo 'Install/Update ojichat...'
 go get -u github.com/greymd/ojichat
 echo 'ojichat Done'
 
+echo 'Install/Update lazydocker...'
+go get -u github.com/jesseduffield/lazydocker
+echo 'lazydocker Done'
+
 exit 0
