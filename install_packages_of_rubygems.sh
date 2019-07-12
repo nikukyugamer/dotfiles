@@ -15,6 +15,10 @@ gem install ridgepole
 gem install pry
 gem install whenever
 
+# For Visual Studio Code
+gem install ruby-debug-ide
+gem install debase
+
 gem update
 
 exit 0
