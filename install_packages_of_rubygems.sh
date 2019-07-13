@@ -19,6 +19,14 @@ gem install whenever
 gem install ruby-debug-ide
 gem install debase
 
+# https://impsbl.hatenablog.jp/entry/RubyInVSCode1
+# Solargraph さえあればどれも必須ではないっぽい（か、依存関係で入っている）
+# gem install rcodetools
+# gem install ruby-lint
+# gem install reek
+# gem install faster
+# gem install debride
+
 gem update
 
 exit 0
