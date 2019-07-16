@@ -2,6 +2,7 @@
 
 gem install rubocop-performance
 gem install rubocop
+gem install rubocop-rails
 gem install solargraph
 
 # gem install mysql2
