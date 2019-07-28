@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo 'Install bat command...'
-cargo install bat
+cargo install --force bat
 
 exit 0
 
