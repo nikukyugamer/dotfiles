@@ -4,6 +4,10 @@ echo 'Init directories...'
 mkdir ~/.go
 mkdir ~/.ghq
 
+echo 'Install/Update ghch (Generate changelog from git history)'
+go get -u github.com/Songmu/ghch/cmd/ghch
+echo 'ghch Done.'
+
 echo 'Install/Update ojichatrix'
 go get -u github.com/greymd/ojichatrix
 echo 'ojichatrix Done.'
