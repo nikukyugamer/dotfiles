@@ -40,5 +40,10 @@ echo 'Install capture-website-cli...'
 npm install -g capture-website-cli
 echo 'DONE: Install capture-website-cli'
 
+echo 'Install @vue/cli...'
+npm install -g @vue/cli
+echo 'DONE: Install @vue/cli'
+
 exit 0
+
 
