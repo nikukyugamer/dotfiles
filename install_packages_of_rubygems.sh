@@ -28,6 +28,8 @@ gem install debase
 # gem install faster
 # gem install debride
 
+gem install bundler-diff
+
 gem update
 
 exit 0
