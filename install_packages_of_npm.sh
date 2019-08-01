@@ -44,6 +44,9 @@ echo 'Install @vue/cli...'
 npm install -g @vue/cli
 echo 'DONE: Install @vue/cli'
 
-exit 0
+echo 'Install @vue/cli-init...'
+npm install -g @vue/cli-ini
+echo 'DONE: Install @vue/cli-init'
 
+exit 0
 
