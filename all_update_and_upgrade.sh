@@ -1,6 +1,6 @@
 #!/bin/bash -xe
 
-./install_and_update_packages_of_golang.sh
+./install_and_upgrade_packages_of_golang.sh
 ./install_and_upgrade_packages_of_pip.sh
 ./install_and_upgrade_packages_of_rust.sh
 
