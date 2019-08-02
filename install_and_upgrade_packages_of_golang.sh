@@ -4,6 +4,10 @@ echo 'Init directories...'
 mkdir ~/.go
 mkdir ~/.ghq
 
+echo 'Install/Update git-chglog (Generate Git CHANGELOG generator)'
+go get -u github.com/git-chglog/git-chglog/cmd/git-chglog
+echo 'git-chglog Done.'
+
 echo 'Install/Update ghch (Generate changelog from git history)'
 go get -u github.com/Songmu/ghch/cmd/ghch
 echo 'ghch Done.'
