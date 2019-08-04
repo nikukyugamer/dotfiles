@@ -25,4 +25,8 @@ echo 'Install and Upgrade HTTPie'
 pip install --upgrade httpie
 echo 'HTTPie Done!'
 
+echo 'Install and Upgrade Instaloader'
+pip install --upgrade instaloader
+echo 'Instaloader Done!'
+
 exit 0
