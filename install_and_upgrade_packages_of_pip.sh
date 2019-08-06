@@ -4,6 +4,10 @@ echo 'Upgrade pip'
 pip install --upgrade pip
 echo 'upgrade pip Done!'
 
+echo 'Upgrade setuptools'
+pip install --upgrade setuptools
+echo 'upgrade setuptools Done!'
+
 echo 'Install and Upgrade mycli command...'
 pip install --upgrade mycli
 echo 'mycli Done!'
