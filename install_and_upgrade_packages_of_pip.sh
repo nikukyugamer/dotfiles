@@ -33,4 +33,8 @@ echo 'Install and Upgrade Instaloader'
 pip install --upgrade instaloader
 echo 'Instaloader Done!'
 
+echo 'Install awscli'
+pip install --upgrade awscli
+echo 'awscli Done!'
+
 exit 0
