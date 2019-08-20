@@ -66,10 +66,13 @@ zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'c
 # macOS と Linux で色の付け方が異なる
 case "${OSTYPE}" in
 darwin*)
-  alias ls="unbuffer ls -G"
-  alias ll="unbuffer ls -alFG"
+  # alias ls="unbuffer ls -G"
+  alias ls="exa"
+   # alias ll="unbuffer ls -alFG"
+  alias ll="exa -l"
   alias la="unbuffer ls -AG"
-  alias l="unbuffer ls -CFG"
+  # alias l="unbuffer ls -CFG"
+  alias l="exa -Tl"
 
   alias gl='unbuffer git log --oneline --graph --decorate=full'
   alias gc='unbuffer git checkout'
