@@ -69,7 +69,7 @@ darwin*)
   # alias ls="unbuffer ls -G"
   alias ls="exa"
    # alias ll="unbuffer ls -alFG"
-  alias ll="exa -l"
+  alias ll="exa -la"
   alias la="unbuffer ls -AG"
   # alias l="unbuffer ls -CFG"
   alias l="exa -Tl"
