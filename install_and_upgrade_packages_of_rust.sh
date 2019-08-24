@@ -20,5 +20,10 @@ cargo install --force exa
 echo 'exa Done.'
 echo 'Usage: $ exa -Tl'
 
+echo 'Install Silicon (Capture source codes)...'
+cargo install --force silicon
+echo 'Silicon Done.'
+echo 'Usage: $ silicon main.rs -o main.png'
+
 exit 0
 
