@@ -25,5 +25,13 @@ cargo install --force silicon
 echo 'Silicon Done.'
 echo 'Usage: $ silicon main.rs -o main.png'
 
+echo 'Install monolith (Pack a webpage to a single file)'
+git clone https://github.com/Y2Z/monolith.git /tmp/monolith
+cd /tmp/monolith
+~/.cargo/bin/cargo install --force --path .
+cd ~ && rm -rf /tmp/monolith
+echo '"monolith" installation has done.'
+echo 'Usage: $ monolith https://www.amazon.co.jp/ > amazon.html'
+
 exit 0
 
