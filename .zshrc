@@ -80,10 +80,10 @@ darwin*)
   alias gs='unbuffer git status'
   ;;
 linux*)
-  alias ls='ls --color=auto'
-  alias ll='ls -alF --color=auto'
-  alias la='ls -A --color=auto'
-  alias l='ls -CF --color=auto'
+  alias ls='exa --color=auto'
+  alias ll='exa -la --color=auto'
+  alias la='exa -A --color=auto'
+  alias l='exa -CF --color=auto'
 
   # カラー指定をする方法がわからん
   alias gl='git log --oneline --graph --decorate=full'
