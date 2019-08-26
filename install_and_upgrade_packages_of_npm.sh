@@ -22,6 +22,10 @@ echo 'DONE: Install npm'
 #     "eslint-plugin-standard": "^4.0.0",
 #     "eslint-plugin-vue": "^5.1.0"
 
+echo 'Install pm2 (Advanced, production process manager) ...'
+npm install -g pm2
+echo 'pm2 is installed!'
+
 echo 'Install jshint...'
 npm install -g jshint
 echo 'DONE: Install jshint'
@@ -48,6 +52,11 @@ echo 'DONE: Install @vue/cli'
 echo 'Install @vue/cli-init...'
 npm install -g @vue/cli-init
 echo 'DONE: Install @vue/cli-init'
+
+# これ必要？安全のために実行しているが……
+echo 'npm update...'
+npm update
+echo 'npm update is done!'
 
 exit 0
 
