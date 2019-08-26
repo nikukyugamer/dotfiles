@@ -4,6 +4,11 @@ echo 'Init directories...'
 mkdir ~/.go
 mkdir ~/.ghq
 
+echo 'Install/Update Vegeta (A versatile HTTP load testing tool)'
+go get -u github.com/tsenart/vegeta
+echo 'Vegeta Done.'
+echo 'https://camo.githubusercontent.com/417a39e5a142e0877be0a7a6d7a66cb77ea21e8c/687474703a2f2f666330392e64657669616e746172742e6e65742f667334392f692f323030392f3139382f632f632f73736a325f7665676574615f62795f7472756e6b7332342e6a7067'
+
 echo 'Install/Update git-chglog (Git CHANGELOG generator)'
 go get -u github.com/git-chglog/git-chglog/cmd/git-chglog
 echo 'git-chglog Done.'
