@@ -22,6 +22,10 @@ echo 'DONE: Install npm'
 #     "eslint-plugin-standard": "^4.0.0",
 #     "eslint-plugin-vue": "^5.1.0"
 
+echo 'yukichant（テキストデータを詠唱呪文に変換するコマンド）をインストールします'
+npm install -g yukichant
+echo 'yukichant（テキストデータを詠唱呪文に変換するコマンド）のインストールが完了しました'
+
 echo 'Install pm2 (Advanced, production process manager) ...'
 npm install -g pm2
 echo 'pm2 is installed!'
