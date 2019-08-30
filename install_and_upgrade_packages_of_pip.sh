@@ -37,4 +37,8 @@ echo 'Install awscli'
 pip install --upgrade awscli
 echo 'awscli Done!'
 
+echo 'Install and Upgrade awsebcli'
+pip install --upgrade awsebcli
+echo 'awsebcli Done!'
+
 exit 0
