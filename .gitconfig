@@ -24,3 +24,6 @@
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
   required = true
+[alias]
+  tree = log --graph --pretty=format:'%x09%C(auto) %h %Cgreen %ar %Creset%x09"%C(cyan ul)%an%Creset" %x09%C(auto)%s %d'
+
