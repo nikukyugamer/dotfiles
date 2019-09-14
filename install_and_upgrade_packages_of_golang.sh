@@ -117,4 +117,10 @@ echo 'Install/Update lazydocker...'
 go get -u github.com/jesseduffield/lazydocker
 echo 'lazydocker Done'
 
+echo 'Install/Update micro (Editor)...'
+go get -d github.com/zyedidia/micro/cmd/micro
+cd $GOPATH/src/github.com/zyedidia/micro
+make install
+echo 'micro (Editor) Done'
+
 exit 0
