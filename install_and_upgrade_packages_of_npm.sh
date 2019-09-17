@@ -57,6 +57,10 @@ echo 'Install @vue/cli-init...'
 npm install -g @vue/cli-init
 echo 'DONE: Install @vue/cli-init'
 
+echo '💪 Install @amanoese/muscular... 💪'
+npm install -g @amanoese/muscular
+echo '💪 DONE: Install @vue/cli-init 💪'
+
 # これ必要？安全のために実行しているが……
 echo 'npm update...'
 npm update
