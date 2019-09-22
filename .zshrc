@@ -179,3 +179,7 @@ export PATH="$PATH:$HOME/dotfiles/bin"
 
 # Add my aliases
 alias ytdl='youtube-dl --ignore-errors --download-archive .youtube-dl_download-archive --write-all-thumbnails --write-annotations --write-info-json --write-description --write-auto-sub --sleep-interval 15 --max-sleep-interval 30 --format mp4'
+
+# Editor is micro
+# export EDITOR=vim
+export EDITOR=micro
