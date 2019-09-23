@@ -185,4 +185,4 @@ alias ytdl='youtube-dl --ignore-errors --download-archive .youtube-dl_download-a
 export EDITOR=micro
 
 # Bundler Aliases
-export bipvb=bundle install --path vendor/bundle
+export bipvb='bundle install --path vendor/bundle'
