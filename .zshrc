@@ -183,3 +183,6 @@ alias ytdl='youtube-dl --ignore-errors --download-archive .youtube-dl_download-a
 # Editor is micro
 # export EDITOR=vim
 export EDITOR=micro
+
+# Bundler Aliases
+export bipvb=bundle install --path vendor/bundle
