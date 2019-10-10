@@ -2,11 +2,15 @@
 
 echo 'Upgrade pip'
 pip install --upgrade pip
-echo 'upgrade pip Done!'
+echo 'Upgrade pip Done!'
+
+echo 'Upgrade termdown'
+pip install --upgrade termdown
+echo 'termdown Done!'
 
 echo 'Upgrade setuptools'
 pip install --upgrade setuptools
-echo 'upgrade setuptools Done!'
+echo 'Upgrade setuptools Done!'
 
 echo 'Install and Upgrade mycli command...'
 pip install --upgrade mycli
