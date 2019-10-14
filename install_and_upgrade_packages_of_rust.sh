@@ -1,5 +1,10 @@
 #!/bin/bash
 
+echo 'Install grex...'
+cargo install --force grex
+echo 'grex installation is done.'
+echo 'grex is a small command-line utility that is meant to simplify the often complicated and tedious task of creating regular expressions.'
+
 echo 'Install bat...'
 cargo install --force bat
 echo 'bat Done.'
