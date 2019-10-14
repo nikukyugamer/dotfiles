@@ -9,6 +9,7 @@
 ./update_fzf.sh
 
 ./update_cli_tools.sh
+./update_rust.sh
 
 exit 0
 
