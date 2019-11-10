@@ -64,6 +64,7 @@ export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46
 zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
 
 # macOS と Linux で色の付け方が異なる
+# macOS か否か の判定には sw_vers の終了ステータスが使える
 case "${OSTYPE}" in
 darwin*)
   # alias ls="unbuffer ls -G"
