@@ -15,6 +15,7 @@
   autocrlf = input
   quotepath = false
   # editor = /Users/osamutakiya/.go/bin/micro
+  excludesfile = ~/dotfiles/.gitignore.my
 [fetch]
   prune = true
 [pager]
