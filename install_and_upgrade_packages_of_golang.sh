@@ -123,4 +123,8 @@ cd $GOPATH/src/github.com/zyedidia/micro
 make install
 echo 'micro (Editor) Done'
 
+echo 'Install/Update Slack API in Go...'
+go get -u github.com/nlopes/slack
+echo 'Slack API in Go Done'
+
 exit 0
