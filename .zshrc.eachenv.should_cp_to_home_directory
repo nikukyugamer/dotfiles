@@ -17,9 +17,7 @@ alias gb='git branch'
 alias gs='git status'
 
 # Useful expanded alias for some commands
-# 'bat -p' causes an error on macOS so temporary commented.
-# alias cat='bat -p'
-alias cat='bat'
+alias cat='bat -p'
 alias fzf='fzf --ansi'
 
 # rbenv
