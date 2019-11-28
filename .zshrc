@@ -187,3 +187,7 @@ export EDITOR=micro
 
 # Bundler Aliases
 alias bipvb='bundle install --path vendor/bundle'
+
+# Dart
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+
