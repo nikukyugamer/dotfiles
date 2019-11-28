@@ -4,10 +4,9 @@ echo 'Install npm...'
 npm install -g npm
 echo 'DONE: Install npm'
 
-# システムグローバルに入れるのがベターっぽい（検討中）
-# echo 'Install yarn...'
-# npm install -g yarn
-# echo 'DONE: Install yarn'
+echo 'Install Yarn via npm...'
+npm install -g yarn
+echo 'DONE: Install Yarn via npm'
 
 # Not recommend to install globally
 # npm install -g eslint
