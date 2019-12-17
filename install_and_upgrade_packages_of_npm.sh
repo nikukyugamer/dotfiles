@@ -11,7 +11,7 @@ echo 'DONE: Install Yarn via npm'
 # Not recommend to install globally
 # npm install -g eslint
 # npm install -g vue
-# npm install -g prettier
+npm install -g prettier
 
 #     "eslint": "^5.12.1",
 #     "eslint-config-standard": "^12.0.0",
