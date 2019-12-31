@@ -191,3 +191,9 @@ alias bipvb='bundle install --path vendor/bundle'
 # Dart
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 
+# With peco
+alias -g B='`git branch -a | peco --prompt "GIT BRANCH>" | head -n 1 | sed -e "s/^\*\s*//g"`'
+alias -g LR='`git branch -a | peco --query "remotes/ " --prompt "GIT REMOTE BRANCH>" | head -n 1 | sed "s/^\*\s*//" | sed "s/remotes\/[^\/]*\/\(\S*\)/\1 \0/"`'
+alias -g C='`git log --oneline | peco | cut -d" " -f1`'
+alias -g R='`git reflog | peco | cut -d" " -f1`'
+

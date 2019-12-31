@@ -28,4 +28,9 @@
   required = true
 [alias]
   tree = log --graph --pretty=format:'%x09%C(auto) %h %Cgreen %ar %Creset%x09"%C(cyan ul)%an%Creset" %x09%C(auto)%s %d'
-
+  c = commit -v
+  co = checkout
+  s = switch
+  sc = switch -c
+  pl = pull
+  pu = push
