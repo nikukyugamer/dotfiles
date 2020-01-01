@@ -45,4 +45,10 @@ echo 'Install and Upgrade awsebcli'
 pip install --upgrade awsebcli
 echo 'awsebcli Done!'
 
+echo 'Install and Upgrade Glances (Alt top comand)'
+pip install --upgrade glances
+pip install --upgrade pysnmp
+pip install --upgrade bottle
+echo 'glances Done!'
+
 exit 0
