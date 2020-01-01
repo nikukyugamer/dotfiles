@@ -33,4 +33,4 @@
   s = switch
   sc = switch -c
   pl = pull
-  pu = push
+  # pu = push
