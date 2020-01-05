@@ -22,7 +22,7 @@ Layout/TrailingBlankLines:
 Style/AsciiComments:
   Enabled: false
 
-Layout/LineLength:
+Metrics/LineLength:
   Max: 180 # 数字に特に根拠はない
 
 Style/NumericLiterals:
