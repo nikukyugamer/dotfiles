@@ -51,4 +51,10 @@ pip install --upgrade pysnmp
 pip install --upgrade bottle
 echo 'glances Done!'
 
+# https://github.com/alexdredmon/cuteuid
+echo 'Install and Upgrade awsebcli'
+pip install --upgrade cuteuid
+echo 'awsebcli Done!'
+
 exit 0
+
