@@ -201,3 +201,7 @@ alias -g LR='`git branch -a | peco --query "remotes/ " --prompt "GIT REMOTE BRAN
 alias -g C='`git log --oneline | peco | cut -d" " -f1`'
 alias -g R='`git reflog | peco | cut -d" " -f1`'
 
+# For Rails
+alias railsconsole='bundle exec rails c'
+alias railsspec='bundle exec rails spec'
+alias railsroutes='bundle exec raips routes'
