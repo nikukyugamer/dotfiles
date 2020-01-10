@@ -202,6 +202,7 @@ alias -g C='`git log --oneline | peco | cut -d" " -f1`'
 alias -g R='`git reflog | peco | cut -d" " -f1`'
 
 # For Rails
-alias railsconsole='bundle exec rails c'
+alias railsserver='bundle exec rails server'
+alias railsconsole='bundle exec rails console'
 alias railsspec='bundle exec rails spec'
 alias railsroutes='bundle exec raips routes'
