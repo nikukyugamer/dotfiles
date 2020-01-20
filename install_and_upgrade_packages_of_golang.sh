@@ -127,4 +127,8 @@ echo 'Install/Update Slack API in Go...'
 go get -u github.com/nlopes/slack
 echo 'Slack API in Go Done'
 
+echo 'Install/Update "memo" by mattn...'
+go get -u github.com/mattn/memo
+echo '"memo" Done'
+
 exit 0
