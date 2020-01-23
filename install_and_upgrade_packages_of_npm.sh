@@ -64,6 +64,10 @@ echo '💪 Install @amanoese/muscular... 💪'
 npm install -g @amanoese/muscular
 echo '💪 DONE: Install @vue/cli-init 💪'
 
+echo 'Install "trello-clo"'
+npm install -g trello-cli
+echo 'DONE: Install "trello-cli"'
+
 # これ必要？安全のために実行しているが……
 echo 'npm update...'
 npm update
