@@ -61,7 +61,7 @@ go get -u github.com/github/hub
 echo 'hub Done'
 
 echo 'Install/Update gomi...'
-go get -u github.com/b4b4r07/gomi/...
+go get -u github.com/b4b4r07/gomi
 echo 'gomi Done'
 
 echo 'Install/Update gore...'
