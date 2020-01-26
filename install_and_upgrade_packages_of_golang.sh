@@ -131,4 +131,9 @@ echo 'Install/Update "memo" by mattn...'
 go get -u github.com/mattn/memo
 echo '"memo" Done'
 
+# https://github.com/qeesung/asciiplayer
+echo 'Install/Update "ASCIIPlayer"...'
+go get -u github.com/qeesung/asciiplayer
+echo '"ASCIIPlayer" Done'
+
 exit 0
