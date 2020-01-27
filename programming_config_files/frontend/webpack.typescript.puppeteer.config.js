@@ -1,28 +1,43 @@
 const path = require('path');
-const nodeExternals = require('webpack-node-externals');
+// const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
-  externals: [nodeExternals()],
   target: 'node',
   mode: 'development',
-  entry: './app.ts',
+  entry: './src/entry.ts',
   output: {
-    filename: 'main.js',
+    filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/dist/'
+    publicPath: '/dist/',
   },
   module: {
     rules: [
-    {
-      test: /\.ts$/,
-      use: 'ts-loader'
-    }
-    ]
+      {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.ts$/,
+        use: 'ts-loader',
+      },
+      {
+        test: /\.(css|scss)$/,
+        include: path.resolve(__dirname, 'src'),
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+    ],
   },
   devServer: {
-    contentBase: './'
+    contentBase: './',
   },
   resolve: {
-    extensions: ['.ts', '.js']
-  }
+    extensions: ['.ts', '.js'],
+  },
+  node: {
+    fs: 'empty',
+  },
+  externals: {
+    // [nodeExternals()],
+    puppeteer: 'require("puppeteer")',
+  },
 };
