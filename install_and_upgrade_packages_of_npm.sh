@@ -45,6 +45,10 @@ echo 'Install typescript...'
 npm install -g typescript
 echo 'DONE: Install typescript'
 
+echo 'Install ts-node...'
+npm install -g ts-node
+echo 'DONE: Install ts-node'
+
 # バージョン依存がひどい
 # npm install -g terminalizer
 
