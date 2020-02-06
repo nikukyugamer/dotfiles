@@ -33,6 +33,9 @@ gem install bundler-diff
 
 gem install rspec
 
+# For 'kv'
+gem install curses
+
 gem update
 
 exit 0
