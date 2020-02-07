@@ -136,4 +136,9 @@ echo 'Install/Update "ASCIIPlayer"...'
 go get -u github.com/qeesung/asciiplayer
 echo '"ASCIIPlayer" Done'
 
+# Twitter Clinet Powered by mattn
+echo 'Install/Update twty (Twitter Client) developed by mattn'
+go get -u github.com/mattn/twty
+echo 'twty (Twitter Client) Done.'
+
 exit 0
