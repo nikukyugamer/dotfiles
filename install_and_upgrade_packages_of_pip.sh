@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo 'Upgrade pip'
-pip install --upgrade pip
+
 echo 'Upgrade pip Done!'
 
 echo 'Upgrade termdown'
@@ -55,6 +55,11 @@ echo 'glances Done!'
 echo 'Install and Upgrade awsebcli'
 pip install --upgrade cuteuid
 echo 'awsebcli Done!'
+
+# https://github.com/taspinar/twitterscraper
+echo 'Install and Upgrade twitterscraper'
+pip install --upgrade twitterscraper
+echo 'twitterscraper Done!'
 
 exit 0
 
