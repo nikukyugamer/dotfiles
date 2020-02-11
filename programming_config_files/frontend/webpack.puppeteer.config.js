@@ -5,12 +5,12 @@ module.exports = {
   entry: './src/entry.js',
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'public')
+    path: path.resolve(__dirname, 'public'),
   },
   node: {
-    fs: 'empty'
+    fs: 'empty',
   },
   externals: {
-    puppeteer: 'require("puppeteer")'
-  }
+    puppeteer: 'require("puppeteer")',
+  },
 };
