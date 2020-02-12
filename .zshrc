@@ -78,10 +78,14 @@ darwin*)
   # alias l="unbuffer ls -CFG"
   alias l="exa -Tl"
 
-  alias gl='unbuffer git log --oneline --graph --decorate=full'
-  alias gc='unbuffer git checkout'
-  alias gb='unbuffer git branch'
-  alias gs='unbuffer git status'
+  # alias gl='unbuffer git log --oneline --graph --decorate=full'
+  # alias gc='unbuffer git checkout'
+  # alias gb='unbuffer git branch'
+  # alias gs='unbuffer git status'
+  alias gl='git log --oneline --graph --decorate=full'
+  alias gc='git checkout'
+  alias gb='git branch'
+  alias gs='git status'
   ;;
 linux*)
   alias ls='exa --color=auto'
