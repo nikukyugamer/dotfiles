@@ -30,6 +30,11 @@ cargo install --force silicon
 echo 'Silicon Done.'
 echo 'Usage: $ silicon main.rs -o main.png'
 
+echo 'Install kiro-editor (Like micro)...'
+cargo install --force kiro-editor
+echo 'kill-editor installation has been done.'
+echo 'Usage: $ kiro hoge.txt'
+
 echo 'Install monolith (Pack a webpage to a single file)'
 git clone https://github.com/Y2Z/monolith.git /tmp/monolith
 cd /tmp/monolith
