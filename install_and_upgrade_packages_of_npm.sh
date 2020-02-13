@@ -77,5 +77,9 @@ echo 'npm update...'
 npm update
 echo 'npm update is done!'
 
+echo 'Install "jsonlint"'
+npm install -g jsonlint
+echo 'DONE: Install "jsonlint"'
+
 exit 0
 
