@@ -141,4 +141,10 @@ echo 'Install/Update twty (Twitter Client) developed by mattn'
 go get -u github.com/mattn/twty
 echo 'twty (Twitter Client) Done.'
 
+# Rename multiple files using your $EDITOR
+# https://github.com/itchyny/mmv
+echo 'Install/Update mmv'
+go get github.com/itchyny/mmv/cmd/mmv
+echo 'mmv Done.'
+
 exit 0
