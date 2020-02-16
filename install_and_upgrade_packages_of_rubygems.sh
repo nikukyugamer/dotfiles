@@ -32,6 +32,7 @@ gem install debase
 gem install bundler-diff
 
 gem install rspec
+gem install foreman
 
 # For 'kv'
 gem install curses
