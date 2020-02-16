@@ -36,6 +36,8 @@ gem install rspec
 # For 'kv'
 gem install curses
 
+gem install twurl
+
 gem update
 
 exit 0
