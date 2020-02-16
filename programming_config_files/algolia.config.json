@@ -1,0 +1,29 @@
+{
+  "index_name": "my-vue-press",
+  "start_urls": [
+    "https://hogehoge.example.com/"
+  ],
+  "stop_urls": [],
+  "selectors": {
+    "lvl0": {
+      "selector": "p.sidebar-heading.open",
+      "global": true,
+      "default_value": "Documentation"
+    },
+    "text": ".language-text",
+    "lang": {
+      "selector": "/html/@lang",
+      "type": "xpath",
+      "global": true
+    }
+  },
+  "custom_settings": {
+    "attributesForFaceting": [
+      "lang"
+    ]
+  },
+  "strip_chars": " .,;:#",
+  "scrap_start_urls": false,
+  "nb_hits": "OUTPUT OF THE CRAWL"
+}
+
