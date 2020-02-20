@@ -61,5 +61,9 @@ echo 'Install and Upgrade twitterscraper'
 pip install --upgrade twitterscraper
 echo 'twitterscraper Done!'
 
+echo 'Install and Upgrade storm'
+pip install --upgrade stormssh
+echo 'stormssh Done!'
+
 exit 0
 
