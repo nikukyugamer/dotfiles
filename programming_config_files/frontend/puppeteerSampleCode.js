@@ -14,6 +14,22 @@ const yahooDePuppeteer = async () => {
   await page.setViewport({ width: 1200, height: 800 });
   await page.goto('https://www.yahoo.co.jp/');
 
+  const targetSelector = '#ToolList > ul > li';
+  const targetLiElements = await page.$$(targetSelector);
+  const resultValues = [];
+
+  // Promise で forEach は使えない
+  for (let i = 0; i < targetLiElements.length; i++) {
+    resultValues.push(
+      await (await targetLiElements[i].getProperty('textContent')).jsonValue()
+    );
+  }
+
+  // resultValues: ['ショッピング', 'PayPayモール', 'ヤフオク!', 'PayPayフリマ', 'ZOZOTOWN'...]
+  resultValues.forEach((resultValue, _) => {
+    console.log(resultValue);
+  });
+
   const searchBoxSelector = 'input[type="search"]';
   await page.waitForSelector(searchBoxSelector);
   // await page.$eval(searchBoxSelector, el => el.scrollIntoView());
