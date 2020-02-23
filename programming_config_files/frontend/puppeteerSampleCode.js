@@ -30,6 +30,13 @@ const yahooDePuppeteer = async () => {
     console.log(resultValue);
   });
 
+  // 上記と同じことを、セレクタをチェーンして行う場合は次のようになる
+  // その際、page.$$('#hogehoge') で取得したオブジェクトは「配列」であることに注意する
+  // const altTargetSelector = '#ToolList';
+  // const altTargetElements = await page.$$(altTargetSelector);
+  // const altNextTargetElements = await altTargetElements[0].$$('ul');
+  // const altNextNextTargetElements = await altNextTargetElements[0].$$('li');
+
   const searchBoxSelector = 'input[type="search"]';
   await page.waitForSelector(searchBoxSelector);
   // await page.$eval(searchBoxSelector, el => el.scrollIntoView());
