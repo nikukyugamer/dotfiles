@@ -72,5 +72,6 @@ const netflixDePuppeteer = async () => {
   await browser.close();
 };
 
-yahooDePuppeteer();
+// yahooDePuppeteer();
+yahooDePuppeteer().then(result => console.log(result));
 netflixDePuppeteer();
