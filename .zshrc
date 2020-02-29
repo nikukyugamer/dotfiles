@@ -214,4 +214,3 @@ alias railsserver='bundle exec rails server'
 alias railsconsole='bundle exec rails console'
 alias railsspec='bundle exec rails spec'
 alias railsroutes='bundle exec raips routes'
-
