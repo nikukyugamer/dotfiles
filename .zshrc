@@ -210,3 +210,8 @@ alias railsserver='bundle exec rails server'
 alias railsconsole='bundle exec rails console'
 alias railsspec='bundle exec rails spec'
 alias railsroutes='bundle exec raips routes'
+
+# For Ruby app servers breaking on High Sierra
+# https://blog.phusion.nl/2017/10/13/why-ruby-app-servers-break-on-macos-high-sierra-and-what-can-be-done-about-it/
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
