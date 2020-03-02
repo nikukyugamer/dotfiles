@@ -75,3 +75,14 @@ const netflixDePuppeteer = async () => {
 // yahooDePuppeteer();
 yahooDePuppeteer().then(result => console.log(result));
 netflixDePuppeteer();
+
+// select option を「序数」で選択する
+// 冗長なんだけど、セレクタが不定のときはこうやって意指定をするのがよいと思う
+// var s =
+//   'select[name*="order[foo][bar]"]';
+// var ss = await page.$$(s); // 戻り値が配列であることに注意する
+// var sss = await ss[0].$$('option'); // 戻り値が配列であることに注意する
+// var targetValue = await (await sss[1].getProperty('value')).jsonValue();
+//
+// await page.select(s, targetValue);
+
