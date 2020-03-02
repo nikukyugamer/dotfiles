@@ -147,4 +147,8 @@ echo 'Install/Update mmv'
 go get github.com/itchyny/mmv/cmd/mmv
 echo 'mmv Done.'
 
+echo 'Install/Update jsonui'
+go get -u github.com/gulyasm/jsonui
+echo 'jsonui Done.'
+
 exit 0
