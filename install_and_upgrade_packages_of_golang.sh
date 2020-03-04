@@ -151,4 +151,8 @@ echo 'Install/Update jsonui'
 go get -u github.com/gulyasm/jsonui
 echo 'jsonui Done.'
 
+echo 'Install/Update bed (Binary editor written in Go)'
+go get -u github.com/itchyny/bed/cmd/bed
+echo 'bed Done.'
+
 exit 0
