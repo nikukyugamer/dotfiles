@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo 'Install procs (Alt ps command)'
+cargo install --force procs
+echo 'procs installation is done.'
+
 echo 'Install grex...'
 cargo install --force grex
 echo 'grex installation is done.'
