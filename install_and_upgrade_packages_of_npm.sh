@@ -81,5 +81,9 @@ echo 'Install "jsonlint"'
 npm install -g jsonlint
 echo 'DONE: Install "jsonlint"'
 
+echo 'Install @fand/kao'
+npm install -g @fand/kao
+echo 'DONE: Install @fand/kao'
+
 exit 0
 
