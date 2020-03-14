@@ -5,6 +5,7 @@ ruby '2.7.0'
 
 gem 'aws-sdk-s3'
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'foreman'
 gem 'image_processing', '~> 1.2'
 gem 'jbuilder', '~> 2.7'
 gem 'puma', '~> 3.11'
@@ -13,10 +14,11 @@ gem 'rails', '~> 6.0.0.rc2'
 gem 'sass-rails', '~> 5'
 gem 'shrine', '~> 3.0'
 gem 'sorcery'
+gem 'unicorn'
+gem 'wicked_pdf'
+gem 'webpacker', '~> 4.0'
 gem 'sqlite3', '~> 1.4'
 gem 'turbolinks', '~> 5'
-gem 'webpacker', '~> 4.0'
-gem 'wicked_pdf'
 
 group :development, :test do
   gem 'binding_of_caller'
