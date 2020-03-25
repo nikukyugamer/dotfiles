@@ -36,3 +36,5 @@
   sc = switch -c
   pl = pull
   # pu = push
+  b = branch
+
