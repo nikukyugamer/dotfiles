@@ -9,6 +9,7 @@ git clone https://github.com/nodenv/node-build.git ~/.nodenv/plugins/node-build
 # ~/.anyenv 配下に入るのでだめ
 # curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
 
 git clone https://github.com/syndbg/goenv.git ~/.goenv
 
