@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo 'Install dust (du command powered by Rust)'
+cargo install --force du-dust
+echo 'dust installation is done.'
+
 echo 'Install procs (Alt ps command)'
 cargo install --force procs
 echo 'procs installation is done.'
