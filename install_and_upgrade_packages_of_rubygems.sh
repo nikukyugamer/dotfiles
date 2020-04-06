@@ -12,6 +12,7 @@ gem install solargraph
 
 gem install pg
 gem install sqlite3
+gem install squasher
 gem install itamae
 gem install ridgepole
 gem install pry
