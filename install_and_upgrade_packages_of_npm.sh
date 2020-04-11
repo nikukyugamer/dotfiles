@@ -1,4 +1,4 @@
-#!/bin/bash -xe
+#!/bin/bash
 
 echo 'Install npm...'
 npm install -g npm
