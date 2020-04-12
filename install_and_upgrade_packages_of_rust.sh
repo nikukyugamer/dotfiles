@@ -1,5 +1,10 @@
 #!/bin/bash
 
+echo 'Install tealdeer (Community based "tlde" command, which is the same as "man" command)'
+cargo install --force tealdeer
+tldr --update
+echo '"tealdeer" installation is done.'
+
 echo 'Install dust (du command powered by Rust)'
 cargo install --force du-dust
 echo 'dust installation is done.'
