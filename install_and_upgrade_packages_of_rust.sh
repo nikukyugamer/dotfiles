@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo 'Install broot (A new way to see and navigate directory trees)'
+cargo install --force broot
+echo '"broot" installation has done'
+
 echo 'Install tealdeer (Community based "tlde" command, which is the same as "man" command)'
 cargo install --force tealdeer
 tldr --update
