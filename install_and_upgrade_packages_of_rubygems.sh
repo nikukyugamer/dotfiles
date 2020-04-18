@@ -40,6 +40,9 @@ gem install curses
 
 gem install twurl
 
+# rails new 時などのトラブル防止
+gem uninstall fileutils
+
 gem update
 
 exit 0
