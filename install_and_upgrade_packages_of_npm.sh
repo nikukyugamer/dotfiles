@@ -72,10 +72,10 @@ echo 'Install "trello-clo"'
 npm install -g trello-cli
 echo 'DONE: Install "trello-cli"'
 
-# これ必要？安全のために実行しているが……
-echo 'npm update...'
-npm update
-echo 'npm update is done!'
+# これ必要？安全のために書いているが……
+# echo 'npm update...'
+# npm update
+# echo 'npm update is done!'
 
 echo 'Install "jsonlint"'
 npm install -g jsonlint
