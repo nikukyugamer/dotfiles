@@ -1,6 +1,21 @@
 #!/bin/bash
 
-echo "Install fzf"
-cd ~/.fzf && git pull && ./install
+echo 'Install/Update fzf'
+cd ~/.fzf && git pull
 
-exit 0
+expect -c "
+  spawn ./install
+
+  expect ]/n)
+  send y\n
+
+  expect ]/n)
+  send y\n
+
+  expect ]/n)
+  send y\n
+
+  expect \"For more information, see: https://github.com/junegunn/fzf\"
+
+  exit 0
+"
