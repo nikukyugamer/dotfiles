@@ -8,18 +8,9 @@ echo 'Install Yarn via npm...'
 npm install -g yarn
 echo 'DONE: Install Yarn via npm'
 
-# Not recommend to install globally
-# npm install -g eslint
-# npm install -g vue
+echo 'Install Prettier...'
 npm install -g prettier
-
-#     "eslint": "^5.12.1",
-#     "eslint-config-standard": "^12.0.0",
-#     "eslint-plugin-import": "^2.14.0",
-#     "eslint-plugin-node": "^8.0.1",
-#     "eslint-plugin-promise": "^4.0.1",
-#     "eslint-plugin-standard": "^4.0.0",
-#     "eslint-plugin-vue": "^5.1.0"
+echo 'DONE: Install Prettier'
 
 echo 'yukichant（テキストデータを詠唱呪文に変換するコマンド）をインストールします'
 npm install -g yukichant
@@ -49,9 +40,6 @@ echo 'Install ts-node...'
 npm install -g ts-node
 echo 'DONE: Install ts-node'
 
-# バージョン依存がひどい
-# npm install -g terminalizer
-
 echo 'Install capture-website-cli...'
 npm install -g capture-website-cli
 echo 'DONE: Install capture-website-cli'
@@ -72,11 +60,6 @@ echo 'Install "trello-clo"'
 npm install -g trello-cli
 echo 'DONE: Install "trello-cli"'
 
-# これ必要？安全のために書いているが……
-# echo 'npm update...'
-# npm update
-# echo 'npm update is done!'
-
 echo 'Install "jsonlint"'
 npm install -g jsonlint
 echo 'DONE: Install "jsonlint"'
@@ -86,4 +69,3 @@ npm install -g @fand/kao
 echo 'DONE: Install @fand/kao'
 
 exit 0
-
