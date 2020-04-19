@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo 'Upgrade pip'
-
+pip install --upgrade pip
 echo 'Upgrade pip Done!'
 
 echo 'Upgrade termdown'
