@@ -67,4 +67,9 @@ cargo install monolith
 echo '"monolith" installation has done.'
 echo 'Usage: $ monolith https://www.amazon.co.jp/ > amazon.html'
 
+echo 'Install "angle-grinder" (Logs analytics CLI tool)'
+cargo install ag
+echo '"angle-grinder" installation has done.'
+echo 'Usage: $ agrind --help'
+
 exit 0
