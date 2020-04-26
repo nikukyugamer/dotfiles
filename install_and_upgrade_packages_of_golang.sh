@@ -155,4 +155,11 @@ echo 'Install/Update bed (Binary editor written in Go)'
 go get -u github.com/itchyny/bed/cmd/bed
 echo 'bed Done.'
 
+echo 'Install/Update "trdsql" (CLI tool that can execute SQL queries on CSV, JSON and etc)'
+go get -d github.com/noborus/trdsql
+cd $GOPATH/src/github.com/noborus/trdsql
+make
+make install
+echo '"trdsql" installation has done.'
+
 exit 0
