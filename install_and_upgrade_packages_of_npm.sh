@@ -15,6 +15,10 @@ echo 'DONE: Install Prettier'
 echo 'yukichant（テキストデータを詠唱呪文に変換するコマンド）をインストールします'
 npm install -g yukichant
 echo 'yukichant（テキストデータを詠唱呪文に変換するコマンド）のインストールが完了しました'
+echo 'Usage:'
+echo '$ echo Hello,World | chant'
+echo '$ echo 巫女よ五行に元に斬る。戦慄の貪欲使命を隠し。嵐は記憶の行く手を砕ける。 | chant -d'
+echo '$ chant'
 
 echo 'Install pm2 (Advanced, production process manager) ...'
 npm install -g pm2
