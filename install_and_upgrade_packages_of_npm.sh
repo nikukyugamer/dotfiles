@@ -8,6 +8,10 @@ echo 'Install Yarn via npm...'
 npm install -g yarn
 echo 'DONE: Install Yarn via npm'
 
+echo 'Install @google/clasp...'
+npm install -g @google/clasp
+echo 'DONE: @google/clasp installation!'
+
 echo 'Install Prettier...'
 npm install -g prettier
 echo 'DONE: Install Prettier'
