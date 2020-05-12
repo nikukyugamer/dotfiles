@@ -5,6 +5,7 @@ gem install rubocop
 gem install rubocop-rails
 gem install rubocop-rspec
 gem install solargraph
+gem install rb-readline
 
 # gem install mysql2
 # if MySQL version is 8, on macOS,
