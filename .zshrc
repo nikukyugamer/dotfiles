@@ -214,3 +214,19 @@ alias railsserver='bundle exec rails server'
 alias railsconsole='bundle exec rails console'
 alias railsspec='bundle exec rails spec'
 alias railsroutes='bundle exec raips routes'
+
+# For iTerm2 with Shell Integration
+function badge() {
+    printf "\e]1337;SetBadgeFormat=%s\a"\
+    $(echo -n "$1" | base64)
+}
+
+function ssher() {
+    local ssh_config=~/.ssh/config
+    local server=$(cat $ssh_config | grep "Host " | sed "s/Host //g" | fzf)
+    if [ -z "$server" ]; then
+        return
+    fi
+    badge $server
+    ssh $server
+}
