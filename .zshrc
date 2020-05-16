@@ -181,6 +181,9 @@ export LESSCHARSET=utf-8
 # bundle exec = be
 alias be='bundle exec'
 
+# bundle exec rails credentials:edit
+alias berce='bundle exec rails credentials:edit'
+
 # https://github.com/b4b4r07/gomi
 alias rm='gomi'
 alias remove='/bin/rm'
