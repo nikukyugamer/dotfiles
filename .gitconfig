@@ -37,4 +37,8 @@
   pl = pull
   # pu = push
   b = branch
-
+# [credential]
+# macOS
+# helper = osxkeychain
+# Ubuntu
+# helper = store
