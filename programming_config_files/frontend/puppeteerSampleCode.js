@@ -86,3 +86,11 @@ netflixDePuppeteer();
 //
 // await page.select(s, targetValue);
 
+// await 部分を切り出すときは、
+// async function fooBar() {
+//   await page.waitFor(1000);
+// }
+// として定義して、呼び出すときには、
+// await fooBar();
+// とする
+// つまり、async で定義して中にawaitを書き、呼び出すときは await で呼び出す　
