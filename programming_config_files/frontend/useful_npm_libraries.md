@@ -36,3 +36,10 @@ $ yarn add --dev webpack-node-externals
     "webpack-dev-server": "^3.10.1"
   }
 ```
+
+# stylelint の導入
+
+```sh
+$ yarn add --dev stylelint stylelint-config-standard
+```
+
