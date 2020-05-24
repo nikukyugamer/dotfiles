@@ -64,7 +64,7 @@ echo '💪 Install @amanoese/muscular... 💪'
 npm install -g @amanoese/muscular
 echo '💪 DONE: Install @vue/cli-init 💪'
 
-echo 'Install "trello-clo"'
+echo 'Install "trello-cli"'
 npm install -g trello-cli
 echo 'DONE: Install "trello-cli"'
 
