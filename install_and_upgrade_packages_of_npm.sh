@@ -12,6 +12,10 @@ echo 'Install @google/clasp...'
 npm install -g @google/clasp
 echo 'DONE: @google/clasp installation!'
 
+echo 'Install kmdr-cli...'
+npm install -g kmdr
+echo 'DONE: kmdr-cli installation!'
+
 echo 'Install Prettier...'
 npm install -g prettier
 echo 'DONE: Install Prettier'
