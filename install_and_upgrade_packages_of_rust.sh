@@ -10,6 +10,10 @@ echo 'Install broot (A new way to see and navigate directory trees)'
 cargo install broot
 echo '"broot" installation has done'
 
+echo 'Install delta (git-delta) (A syntax-highlighter for git and diff output)'
+cargo install git-delta
+echo '"delta (git-delta)" installation has done'
+
 echo 'Install tealdeer (Community based "tlde" command, which is the same as "man" command)'
 cargo install tealdeer
 tldr --update
