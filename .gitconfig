@@ -16,6 +16,7 @@
   quotepath = false
   # editor = ~/.go/bin/micro
   excludesfile = ~/dotfiles/.gitignore.my
+  pager = delta --plus-color="#012800" --minus-color="#340001" --theme='Monokai Extended'
 [fetch]
   prune = true
 [pager]
@@ -42,3 +43,5 @@
 # helper = osxkeychain
 # Ubuntu
 # helper = store
+[interactive]
+  diffFilter = delta --color-only
