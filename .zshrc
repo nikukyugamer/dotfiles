@@ -180,6 +180,7 @@ export LESSCHARSET=utf-8
 
 # bundle exec = be
 alias be='bundle exec'
+alias ber='bundle exec rails'
 
 # bundle exec rails credentials:edit
 alias berce='bundle exec rails credentials:edit'
