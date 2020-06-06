@@ -1,0 +1,25 @@
+{
+  "yaml.validate": false,
+  "prettier.packageManager": "yarn",
+  "prettier.singleQuote": true,
+  "prettier.semi": false,
+  "prettier.trailingComma": "all",
+  "stylelint.packageManager": "yarn",
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+    // "source.fixAll.tslint": true,
+    // "source.fixAll": true
+  }
+  // "eslint.validate": [
+  //   {
+  //     "javascript",
+  //     "javascriptreact",
+  //     "typescript",
+  //     "typescriptreact"
+  //       "language": "vue",
+  //       "autoFix": true
+  //   }
+  // ]
+}
+
