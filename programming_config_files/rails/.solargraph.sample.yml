@@ -1,10 +1,14 @@
 include:
-  - '**/*.rb'
+  # - 'Rakefile'
+  - "**/*.rb"
 exclude:
   - vendor/**/*
-  - '.bundle/**/*'
-reporters:
-  - rubocop
+  - ".bundle/**/*"
+  - "spec/**/*"
+  # - 'db/schema.rb'
+  # - 'config/**/*'
+  # - 'Guardfile'
+  # - 'bin/**/*'
 require:
   - actioncable
   - actionmailer
@@ -15,3 +19,5 @@ require:
   - activerecord
   - activestorage
   - activesupport
+reporters:
+  - rubocop
