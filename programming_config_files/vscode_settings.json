@@ -1,0 +1,12 @@
+{
+  "solargraph.autoformat": true,
+  "solargraph.diagnostics": true,
+  "solargraph.formatting": true,
+  "ruby.rubocop.configFilePath": ".rubocop.yml",
+  "ruby.rubocop.useBundler": true,
+  "ruby.rubocop.suppressRubocopWarnings": true,
+  "ruby.format": "rubocop",
+  "ruby.rubocop.onSave": true,
+  "editor.formatOnSave": true
+}
+
