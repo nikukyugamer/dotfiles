@@ -8,6 +8,7 @@
   "ruby.format": "rubocop",
   "ruby.rubocop.onSave": true,
   "editor.formatOnSave": true,
-  "powermode.enabled": true
+  "powermode.enabled": true,
+  "powermode.enableShake": false
 }
 
