@@ -15,14 +15,14 @@ umask 0022
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.zsh_history
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=1000000
+SAVEHIST=1000000
 bindkey -v
 # End of lines configured by zsh-newuser-install
 
 # The following lines were added by compinstall
-# 要検討場所
-# zstyle :compinstall filename '/Users/takiya/.zshrc'
+# 補完を有効化する
+# zstyle :compinstall filename '~/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
@@ -44,6 +44,14 @@ precmd() {
 autoload -Uz colors
 colors
 PROMPT="%{${fg[green]}%}%n@%m@%*%{${reset_color}%}%F{yellow}%1v %F{blue}%(5~,%-2~/.../%1~,%~) $ %f"
+
+# https://sanoto-nittc.hatenablog.com/entry/2017/12/16/213735
+setopt auto_list
+setopt auto_menu
+setopt auto_cd
+zstyle ':completion:*:default' menu select=1
+export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 # https://qiita.com/ktr_type23/items/3eb782f98c7a5f4c60b0
 setopt hist_ignore_dups # 重複を記録しない
