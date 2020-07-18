@@ -1,10 +1,8 @@
 # config にテンプレートを設定する
-# $ git config --local commit.template git_commit_template.txt
-# $ git config --local commit.template ~/dotfiles/programming_config_files/git_commit_template.txt
+# $ git config --global commit.template ~/dotfiles/programming_config_files/git_commit_template.txt
 #
 # テンプレートが設定されているかを確認する
-# $ git config --local commit.template
-# git_commit_template.txt # 問題なく設定されていた
+# $ git config commit.template
 #
 # https://daisuke-t-jp.hatenablog.com/entry/2019/08/24/EmojiPrefix
 
