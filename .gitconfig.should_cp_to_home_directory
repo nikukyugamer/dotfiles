@@ -2,4 +2,13 @@
   path = ~/dotfiles/.gitconfig
 # [credential]
 #   helper = osxkeychain
-
+[user]
+    name = Osamu Takiya
+    email = takiya@toran.sakura.ne.jp
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+[core]
+  hooksPath = ~/.config/git/hooks
