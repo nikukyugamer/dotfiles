@@ -1,7 +1,8 @@
 # Summary
 brew install git-now
+mkdir ~/.config/git
 mkdir ~/.config/git/hooks
-vim ~/.config./git/hooks/pre-push
+vim ~/.config/git/hooks/pre-push
 chmod +x ~/.config/git/hooks/pre-push
 vim ~/.gitconfig
 
