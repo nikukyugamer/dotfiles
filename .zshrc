@@ -227,6 +227,9 @@ alias railsconsole='bundle exec rails console'
 alias railsspec='bundle exec rails spec'
 alias railsroutes='bundle exec raips routes'
 
+# For 'gh' command
+eval "$(gh completion -s zsh)"
+
 # For iTerm2 with Shell Integration
 function badge() {
     printf "\e]1337;SetBadgeFormat=%s\a"\
