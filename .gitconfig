@@ -38,7 +38,7 @@
   pl = pull
   # pu = push
   b = branch
-  s = status -s
+  ss = status -s
 # [credential]
 # macOS
 # helper = osxkeychain
