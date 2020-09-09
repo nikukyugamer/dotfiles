@@ -38,6 +38,7 @@
   pl = pull
   # pu = push
   b = branch
+  s = status -s
 # [credential]
 # macOS
 # helper = osxkeychain
@@ -45,3 +46,7 @@
 # helper = store
 [interactive]
   diffFilter = delta --color-only
+[gpg]
+  program = gpg
+[commit]
+  gpgsign = true
