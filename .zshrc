@@ -97,7 +97,7 @@ darwin*)
   alias gl='git log --oneline --graph --decorate=full'
   alias gc='git checkout'
   alias gb='git branch'
-  alias gs='git status'
+  alias gs='git status -s'
   ;;
 linux*)
   alias ls='exa --color=auto'
