@@ -6,6 +6,10 @@ echo 'A "cargo-update" installation has done.'
 
 cargo install-update --all
 
+echo "Install diskonaut (getting a visual treemap representation of what's taking up your disk space)"
+cargo install diskonaut
+echo '"diskonaut" installation has done'
+
 echo 'Install broot (A new way to see and navigate directory trees)'
 cargo install broot
 echo '"broot" installation has done'
