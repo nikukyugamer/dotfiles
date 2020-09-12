@@ -91,7 +91,7 @@ darwin*)
   alias ll="exa -la"
   alias la="unbuffer ls -AG"
   # alias l="unbuffer ls -CFG"
-  alias l="exa -Tl --ignore-glob='vendor|node_modules|.git|.vscode'"
+  alias l="exa -Tl --ignore-glob='vendor|node_modules|.git|.vscode|.history'"
 
   # alias gl='unbuffer git log --oneline --graph --decorate=full'
   # alias gc='unbuffer git checkout'
