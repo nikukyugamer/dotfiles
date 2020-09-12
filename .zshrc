@@ -2,6 +2,9 @@ export LANG="ja_JP.UTF-8"
 export LC_ALL="ja_JP.UTF-8"
 export LANGUAGE="ja_JP.UTF-8"
 
+# For GPG signature (for GitHub)
+export GPG_TTY=$(tty)
+
 # macOS Mojave
 export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
 
