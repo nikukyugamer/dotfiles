@@ -17,7 +17,7 @@ alias gb='git branch'
 alias gs='git status'
 
 # Useful expanded alias for some commands
-alias cat='bat -p'
+alias cat='bat -p --pager "less -X"'
 alias fzf='fzf --ansi'
 
 # rbenv
