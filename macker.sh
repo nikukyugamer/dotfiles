@@ -6,7 +6,7 @@
 echo '----------------------------------------------'
 echo 'Execute update scripts'
 echo '----------------------------------------------'
-n./all_update_and_upgrade_without_golang.sh && ./install_and_upgrade_packages_of_golang.sh && brew upgrade
+./all_update_and_upgrade_without_golang.sh && ./install_and_upgrade_packages_of_golang.sh && brew upgrade
 
 echo '----------------------------------------------'
 echo 'A list of "$ nodenv intall -l"'
