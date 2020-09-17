@@ -81,4 +81,8 @@ echo 'Install @fand/kao'
 npm install -g @fand/kao
 echo 'DONE: Install @fand/kao'
 
+echo 'Install dsstore-cli (Remove .DS_Store)'
+npm install -g dsstore-cli
+echo 'DONE: Install dsstore-cli'
+
 exit 0
