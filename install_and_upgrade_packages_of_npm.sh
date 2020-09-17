@@ -32,9 +32,10 @@ echo 'Install pm2 (Advanced, production process manager) ...'
 npm install -g pm2
 echo 'pm2 is installed!'
 
-echo 'Install textlint...'
-npm install -g textlint
-echo 'DONE: Install textlint'
+# It is not necessary to install for global
+# echo 'Install textlint...'
+# npm install -g textlint
+# echo 'DONE: Install textlint'
 
 echo 'Install jshint...'
 npm install -g jshint
