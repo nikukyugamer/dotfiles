@@ -234,8 +234,8 @@ alias railsroutes='bundle exec raips routes'
 eval "$(gh completion -s zsh)"
 
 # Complement Key-Bind
-# zsh-autosuggestions のキーバインドを option + [ にする
-bindkey '‘' autosuggest-accept
+# zsh-autosuggestions のキーバインドを control + [ にする
+bindkey '^[' autosuggest-accept
 
 # For iTerm2 with Shell Integration
 function badge() {
