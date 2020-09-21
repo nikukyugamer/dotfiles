@@ -6,8 +6,8 @@
 
 ./update_rbenv_nodenv_pyenv_goenv_jenv.sh
 
-# ./update_fzf.sh
-# ./update_cli_tools.sh
+./update_fzf.sh
+./update_cli_tools.sh
 ./update_rust.sh
 
 exit 0
