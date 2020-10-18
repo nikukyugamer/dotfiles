@@ -19,6 +19,11 @@ go get -u github.com/tsenart/vegeta
 echo 'Vegeta Done.'
 echo 'https://camo.githubusercontent.com/417a39e5a142e0877be0a7a6d7a66cb77ea21e8c/687474703a2f2f666330392e64657669616e746172742e6e65742f667334392f692f323030392f3139382f632f632f73736a325f7665676574615f62795f7472756e6b7332342e6a7067'
 
+echo 'Install/Update fillin'
+echo 'https://github.com/itchyny/fillin'
+go get -u github.com/itchyny/fillin
+echo '"fillin" installation has been done.'
+
 echo 'Install/Update lazynpm'
 go get -u github.com/jesseduffield/lazynpm
 echo 'lazynpm installation has been done.'
