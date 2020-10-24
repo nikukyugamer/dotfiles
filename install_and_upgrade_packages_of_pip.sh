@@ -6,20 +6,22 @@ echo '========================================'
 echo 'Upgrade pip Done!'
 echo '========================================'
 
-echo 'Upgrade numpy'
-pip install --upgrade --use-feature=2020-resolver numpy
-echo '========================================'
-echo 'Upgrade numpy Done!'
-echo '========================================'
+# 2020/10/24 scipy のインストールに失敗するため一時的に無効にする
+# echo 'Upgrade numpy'
+# pip install --upgrade --use-feature=2020-resolver numpy
+# echo '========================================'
+# echo 'Upgrade numpy Done!'
+# echo '========================================'
 
-echo '========================================'
-echo 'Upgrade Graphtage'
-echo 'Graphtage: A diff utility for tree-like files such as JSON, XML, HTML, YAML, and CSV.'
-echo '========================================'
-pip install --upgrade --use-feature=2020-resolver graphtage
-echo '========================================'
-echo 'Graphtage: Done!'
-echo '========================================'
+# 2020/10/24 scipy のインストールに失敗するため一時的に無効にする
+# echo '========================================'
+# echo 'Upgrade Graphtage'
+# echo 'Graphtage: A diff utility for tree-like files such as JSON, XML, HTML, YAML, and CSV.'
+# echo '========================================'
+# pip install --upgrade --use-feature=2020-resolver graphtage
+# echo '========================================'
+# echo 'Graphtage: Done!'
+# echo '========================================'
 
 echo 'Upgrade termdown'
 pip install --upgrade --use-feature=2020-resolver termdown
