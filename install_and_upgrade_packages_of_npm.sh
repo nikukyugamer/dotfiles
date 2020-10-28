@@ -12,6 +12,10 @@ echo 'Install @google/clasp...'
 npm install -g @google/clasp
 echo 'DONE: @google/clasp installation!'
 
+echo 'Install fx (JSON CLI tool)'
+npm install -g fx
+echo 'DONE: fx (JSON CLI tool) installation!'
+
 echo 'Install kmdr-cli...'
 npm install -g kmdr
 echo 'DONE: kmdr-cli installation!'
