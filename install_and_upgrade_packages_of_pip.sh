@@ -23,6 +23,12 @@ echo '========================================'
 # echo 'Graphtage: Done!'
 # echo '========================================'
 
+echo 'Upgrade ranger (CLI Filer)'
+pip install --upgrade --use-feature=2020-resolver ranger-fm
+echo '========================================'
+echo 'ranger-fm (ranger) Done!'
+echo '========================================'
+
 echo 'Upgrade termdown'
 pip install --upgrade --use-feature=2020-resolver termdown
 echo '========================================'
