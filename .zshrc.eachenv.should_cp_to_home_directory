@@ -39,6 +39,10 @@ eval "$(pyenv virtualenv-init -)"
 # export PATH="$GOENV_ROOT/bin:$PATH"
 # eval "$(goenv init -)"
 
+# phpenv
+export PATH="$HOME/.phpenv/bin:$PATH"
+eval "$(phpenv init -)"
+
 # direnv
 eval "$(direnv hook zsh)"
 
