@@ -14,10 +14,15 @@
 # gem install pg
 # gem install sqlite3
 # gem install squasher
+
+echo '========================================'
+echo 'Start: RubyGems installation'
 gem install itamae
 gem install ridgepole
 gem install pry
 gem install whenever
+echo 'Done: RubyGems installation'
+echo '========================================'
 
 # For Visual Studio Code
 # gem install ruby-debug-ide
