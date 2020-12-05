@@ -5,7 +5,7 @@
 # Note: Please confirm the latest binary version
 # https://github.com/direnv/direnv/releases
 
-wget https://github.com/direnv/direnv/releases/download/v2.21.2/direnv.linux-amd64
+wget https://github.com/direnv/direnv/releases/download/v2.25.0/direnv.linux-amd64
 mv direnv.linux-amd64 direnv
 chmod +x direnv
 sudo mv direnv /usr/local/bin
