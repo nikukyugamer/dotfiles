@@ -129,4 +129,10 @@ npm install -g dsstore-cli
 echo 'DONE: Install dsstore-cli'
 echo '========================================'
 
+echo '========================================'
+echo 'Install diff-so-fancy'
+npm install -g diff-so-fancy
+echo 'DONE: Install diff-so-fancy'
+echo '========================================'
+
 exit 0
