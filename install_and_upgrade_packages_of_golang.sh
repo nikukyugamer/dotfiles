@@ -236,6 +236,12 @@ go get -u github.com/itchyny/bed/cmd/bed
 echo 'bed Done.'
 echo '========================================'
 
+echo '========================================'
+echo 'Install/Update Gin (Web Framework)'
+go get -u github.com/gin-gonic/gin
+echo 'Gin installation has been done.'
+echo '========================================'
+
 # インストールに失敗することがあるのでコメントアウト
 # echo 'Install/Update "trdsql" (CLI tool that can execute SQL queries on CSV, JSON and etc)'
 # go get -d github.com/noborus/trdsql
