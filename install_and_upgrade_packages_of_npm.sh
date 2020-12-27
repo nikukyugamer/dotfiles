@@ -136,4 +136,11 @@ npm install -g diff-so-fancy
 echo 'DONE: Install diff-so-fancy'
 echo '========================================'
 
+echo '========================================'
+echo 'Install Commitizen (https://github.com/commitizen/cz-cli)'
+npm install -g commitizen
+npm install -g cz-conventional-changelog-ja
+echo 'DONE: Install Commitizen'
+echo '========================================'
+
 exit 0
