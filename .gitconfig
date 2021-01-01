@@ -45,6 +45,8 @@
 # helper = osxkeychain
 # Ubuntu
 # helper = store
+# Windows
+# helper = wincred
 [interactive]
   diffFilter = delta --color-only
 [gpg]
