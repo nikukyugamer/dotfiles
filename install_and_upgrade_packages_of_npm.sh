@@ -138,11 +138,14 @@ echo '========================================'
 
 echo '========================================'
 echo 'Install Commitizen (https://github.com/commitizen/cz-cli)'
+npm uninstall -g commitizen
 npm install -g commitizen
 # "cz-conventional-changelog-ja" is not cool
 # npm install -g cz-conventional-changelog-ja
 # https://github.com/streamich/git-cz
-npm install -g git-cz
+npm uninstall -g cz-conventional-changelog-ja
+npm uninstall -g git-cz
+npm install -g --force git-cz
 echo 'DONE: Install Commitizen'
 echo '========================================'
 
