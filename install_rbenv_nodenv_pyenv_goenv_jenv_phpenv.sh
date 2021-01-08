@@ -22,4 +22,5 @@ git clone https://github.com/jenv/jenv.git ~/.jenv
 # Required: bzip2
 git clone git://github.com/phpenv/phpenv.git ~/.phpenv
 git clone https://github.com/php-build/php-build ~/.phpenv/plugins/php-build
+git clone https://github.com/ngyuki/phpenv-composer.git ~/.phpenv/plugins/phpenv-composer
 
