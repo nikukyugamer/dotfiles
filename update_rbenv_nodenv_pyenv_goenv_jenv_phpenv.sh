@@ -65,4 +65,10 @@ echo '~/.jenv'
 cd ~/.jenv && git pull
 echo '----------'
 
+echo '~/.phpenv'
+cd ~/.phpenv && git pull
+cd ~/.phpenv/plugins/php-build && git pull
+cd ~/.phpenv/plugins/phpenv-composer && git pull
+echo '----------'
+
 exit 0
