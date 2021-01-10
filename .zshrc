@@ -237,6 +237,9 @@ eval "$(gh completion -s zsh)"
 # zsh-autosuggestions のキーバインドを control + [ にする
 bindkey '^[' autosuggest-accept
 
+# nohup コマンドが効くようにする（シェル終了時に起動中のジョブに SIGHUP を送らない）
+setopt nohup
+
 # For iTerm2 with Shell Integration
 function badge() {
     printf "\e]1337;SetBadgeFormat=%s\a"\
