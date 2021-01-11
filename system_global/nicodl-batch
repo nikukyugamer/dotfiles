@@ -1,0 +1,23 @@
+#!/bin/sh
+
+# 必要な環境変数
+# NICODL_DIR, NICODL_USERNAME, NICODL_PASSWORD
+youtube_dl_command_path=$(which youtube-dl)
+
+# ダウンロードリストが書かれたファイルの場所について、相対パスで書く必要がある
+filepath=$(pwd)
+
+cd $NICODL_DIR
+
+echo 'ニコニコ動画のビデオのバッチダウンロードを開始します。'
+
+# ダウンロードリストが書かれたファイルの場所について、相対パスで書く必要がある
+until ${youtube_dl_command_path} --ignore-errors --download-archive .youtube-dl_download-archive --write-all-thumbnails --write-annotations --write-info-json --write-description --write-auto-sub --sleep-interval 15 --max-sleep-interval 30 --format mp4 --username $NICODL_USERNAME --password $NICODL_PASSWORD --batch-file $filepath/$1; do continue; done
+
+echo 'ニコニコ動画のビデオのバッチダウンロードが終了しました。'
+echo "${NICODL_DIR} にダウンロードされたファイルがあります。"
+
+cd -
+
+exit 0
+
