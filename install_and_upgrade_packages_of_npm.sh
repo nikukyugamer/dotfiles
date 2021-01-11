@@ -13,6 +13,13 @@ echo 'DONE: Install Yarn via npm'
 echo '========================================'
 
 echo '========================================'
+echo 'Install yarn-outdated-formatter (format-yarn-outdated)'
+echo 'https://github.com/masawada/yarn-outdated-formatter'
+npm install -g yarn-outdated-formatter
+echo 'DONE: yarn-outdated-formatter installation!'
+echo '========================================'
+
+echo '========================================'
 echo 'Install npm-check-updates (ncu)'
 npm install -g npm-check-updates
 echo 'DONE: npm-check-updates (ncu) installation!'
