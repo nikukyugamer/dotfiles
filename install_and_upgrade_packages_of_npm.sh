@@ -13,6 +13,12 @@ echo 'DONE: Install Yarn via npm'
 echo '========================================'
 
 echo '========================================'
+echo 'Install npm-check-updates (ncu)'
+npm install -g npm-check-updates
+echo 'DONE: npm-check-updates (ncu) installation!'
+echo '========================================'
+
+echo '========================================'
 echo 'Install @google/clasp...'
 npm install -g @google/clasp
 echo 'DONE: @google/clasp installation!'
@@ -139,7 +145,7 @@ echo '========================================'
 echo '========================================'
 echo 'Install Commitizen (https://github.com/commitizen/cz-cli)'
 npm uninstall -g commitizen
-npm install -g commitizen
+npm install -g --force commitizen
 # "cz-conventional-changelog-ja" is not cool
 # npm install -g cz-conventional-changelog-ja
 # https://github.com/streamich/git-cz
