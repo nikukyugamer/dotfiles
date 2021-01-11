@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# 必要な環境変数
+# YTDL_DIR
+cd $YTDL_DIR
+
+# ダウンロードリストが書かれたファイルの場所について、相対パスで書く必要がある
+filepath=$(pwd)
+youtube_dl_command_path=$(which youtube-dl)
+
+echo 'URLリストによるビデオのダウンロードを開始します。'
+
+# ダウンロードリストが書かれたファイルの場所について、相対パスで書く必要がある
+${youtube_dl_command_path} --ignore-errors --download-archive .youtube-dl_download-archive --write-all-thumbnails --write-annotations --write-info-json --write-description --write-auto-sub --sleep-interval 15 --max-sleep-interval 30 --format mp4 --batch-file $filepath/$1
+
+echo 'URLリストによるビデオのダウンロードが終了しました。'
+echo "${YTDL_DIR} にダウンロードされたファイルがあります。"
+
+cd -
+
+exit 0
+
