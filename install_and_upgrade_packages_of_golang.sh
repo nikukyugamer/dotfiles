@@ -6,17 +6,31 @@ mkdir ~/.go
 mkdir ~/.ghq
 echo '========================================'
 
+# echo '========================================'
+# echo 'Install/Update imgdiff (Faster than the fastest in the world pixel-by-pixel image difference tool.)'
+# wget https://github.com/n7olkachev/imgdiff/releases/download/v1.0.0/imgdiff-linux-amd64 && chmod +x imgdiff-linux-amd64 && mv imgdiff-linux-amd64 imgdiff && sudo mv imgdiff /usr/local/bin
+# wget https://github.com/n7olkachev/imgdiff/releases/download/v1.0.0/imgdiff-darwin-amd64
+# echo 'A imgdiff instlattion id done.'
+# echo '========================================'
+
 echo '========================================'
-echo 'Install/Update Hugo'
-mkdir $HOME/hugo_installer
-cd $HOME/hugo_installer
-git clone https://github.com/gohugoio/hugo.git
-cd hugo
-go install --tags extended
-cd $HOME
-/bin/rm -rf hugo_installer
-echo 'Hugo Done.'
+echo 'Install/Update Goreman (A Clone of foreman written in golang)'
+go get -u github.com/mattn/goreman
+echo 'A Goreman instlattion id done.'
 echo '========================================'
+
+# 時間がかかるのでコメントアウト
+# echo '========================================'
+# echo 'Install/Update Hugo'
+# mkdir $HOME/hugo_installer
+# cd $HOME/hugo_installer
+# git clone https://github.com/gohugoio/hugo.git
+# cd hugo
+# go install --tags extended
+# cd $HOME
+# /bin/rm -rf hugo_installer
+# echo 'Hugo Done.'
+# echo '========================================'
 
 echo '========================================'
 echo 'Install/Update Vegeta (A versatile HTTP load testing tool)'
@@ -44,11 +58,12 @@ go get -u github.com/mattn/longcat
 echo 'Looooooooooooooooooooooooooooooooooooooooooooooong cat Done.'
 echo '========================================'
 
-echo '========================================'
-echo 'Install/Update git-chglog (Git CHANGELOG generator)'
-go get -u github.com/git-chglog/git-chglog/cmd/git-chglog
-echo 'git-chglog Done.'
-echo '========================================'
+# エラーが出るのでコメントアウト
+# echo '========================================'
+# echo 'Install/Update git-chglog (Git CHANGELOG generator)'
+# go get -u github.com/git-chglog/git-chglog/cmd/git-chglog
+# echo 'git-chglog Done.'
+# echo '========================================'
 
 echo '========================================'
 echo 'Install/Update ghch (Generate changelog from git history)'
