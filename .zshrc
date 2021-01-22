@@ -196,6 +196,7 @@ export LESSCHARSET=utf-8
 # bundle exec = be
 alias be='bundle exec'
 alias ber='bundle exec rails'
+alias berspec='RAILS_ENV=test bundle exec rails db:migrate:reset && bundle exec rspec'
 
 # bundle exec rails credentials:edit
 alias berce='bundle exec rails credentials:edit'
