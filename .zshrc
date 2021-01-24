@@ -79,6 +79,8 @@ alias diff='colordiff --unified'
 # Docker コマンド
 alias dc='docker container'
 alias di='docker image'
+alias dv='docker volume'
+alias dccp='docker-compose'
 
 # lsに色をつける
 export LSCOLORS=exfxcxdxbxegedabagacad
