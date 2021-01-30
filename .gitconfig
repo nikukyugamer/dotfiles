@@ -43,10 +43,11 @@
   b = branch
   ss = status -s
 # [credential]
+# https://docs.github.com/en/github/using-git/caching-your-github-credentials-in-git
 # macOS
 # helper = osxkeychain
 # Ubuntu
-# helper = store
+# helper = cache
 # Windows
 # helper = wincred
 [interactive]
