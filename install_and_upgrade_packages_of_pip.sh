@@ -118,5 +118,11 @@ pip install --upgrade stormssh
 echo 'stormssh Done!'
 echo '========================================'
 
+echo '========================================'
+echo 'Install and Upgrade streamlink (Record nicolive)'
+pip install --upgrade streamlink
+echo 'A streamlink installation has been done!'
+echo '========================================'
+
 exit 0
 
