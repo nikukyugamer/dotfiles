@@ -1,12 +1,6 @@
 #!/bin/bash
 
 echo '========================================'
-echo 'Install npm...'
-npm install -g npm
-echo 'DONE: Install npm'
-echo '========================================'
-
-echo '========================================'
 echo 'Install Yarn via npm...'
 npm install -g yarn
 echo 'DONE: Install Yarn via npm'
@@ -162,4 +156,12 @@ npm install -g --force git-cz
 echo 'DONE: Install Commitizen'
 echo '========================================'
 
+# シェルの再起動を伴う場合があると npm が not found になってしまうためコメントアウト
+# echo '========================================'
+# echo 'Install npm...'
+# npm install -g npm
+# echo 'DONE: Install npm'
+# echo '========================================'
+
 exit 0
+
