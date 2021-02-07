@@ -257,6 +257,13 @@ go get -u github.com/gin-gonic/gin
 echo 'Gin installation has been done.'
 echo '========================================'
 
+# https://github.com/golang/tools/tree/master/gopls
+echo '========================================'
+echo 'Install/Update gopls, the Go language server'
+GO111MODULE=on go get golang.org/x/tools/gopls@latest
+echo 'gopls installation has been done.'
+echo '========================================'
+
 # インストールに失敗することがあるのでコメントアウト
 # echo 'Install/Update "trdsql" (CLI tool that can execute SQL queries on CSV, JSON and etc)'
 # go get -d github.com/noborus/trdsql
