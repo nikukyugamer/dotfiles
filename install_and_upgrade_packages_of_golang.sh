@@ -6,6 +6,12 @@ mkdir ~/.go
 mkdir ~/.ghq
 echo '========================================'
 
+echo '========================================'
+echo 'Install/Update Docker Hub Tool "hub-tool"...'
+GO111MODULE=on go get github.com/docker/hub-tool
+echo 'hub-tool installatin is done.'
+echo '========================================'
+
 # echo '========================================'
 # echo 'Install/Update imgdiff (Faster than the fastest in the world pixel-by-pixel image difference tool.)'
 # wget https://github.com/n7olkachev/imgdiff/releases/download/v1.0.0/imgdiff-linux-amd64 && chmod +x imgdiff-linux-amd64 && mv imgdiff-linux-amd64 imgdiff && sudo mv imgdiff /usr/local/bin
@@ -16,7 +22,7 @@ echo '========================================'
 echo '========================================'
 echo 'Install/Update Goreman (A Clone of foreman written in golang)'
 go get -u github.com/mattn/goreman
-echo 'A Goreman instlattion id done.'
+echo 'A Goreman instlattion is done.'
 echo '========================================'
 
 # 時間がかかるのでコメントアウト
@@ -94,11 +100,12 @@ go get -u github.com/otiai10/amesh
 echo 'Tokyo Amesh Done.'
 echo '========================================'
 
-echo '========================================'
-echo 'Install/Update peco...'
-go get -u github.com/peco/peco/cmd/peco
-echo 'peco Done'
-echo '========================================'
+# Should be installed by package command
+# echo '========================================'
+# echo 'Install/Update peco...'
+# go get -u github.com/peco/peco/cmd/peco
+# echo 'peco Done'
+# echo '========================================'
 
 echo '========================================'
 echo 'Install/Update ghq...'
@@ -118,17 +125,17 @@ go get -u github.com/b4b4r07/gomi
 echo 'gomi Done'
 echo '========================================'
 
-echo '========================================'
-echo 'Install/Update gore...'
-go get -u github.com/motemen/gore/cmd/gore
-echo 'gore Done'
-echo '========================================'
+# echo '========================================'
+# echo 'Install/Update gore...'
+# go get -u github.com/motemen/gore/cmd/gore
+# echo 'gore Done'
+# echo '========================================'
 
-echo '========================================'
-echo 'Install/Update mdempsky/gocode...'
-go get -u github.com/mdempsky/gocode   # for code completion
-echo 'gocode Done'
-echo '========================================'
+# echo '========================================'
+# echo 'Install/Update mdempsky/gocode...'
+# go get -u github.com/mdempsky/gocode   # for code completion
+# echo 'gocode Done'
+# echo '========================================'
 
 echo '========================================'
 echo 'Install/Update pp...'
@@ -136,29 +143,29 @@ go get -u github.com/k0kubun/pp        # or github.com/davecgh/go-spew/spew
 echo 'pp Done'
 echo '========================================'
 
-echo '========================================'
-echo 'Install/Update godoc...'
-go get -u golang.org/x/tools/cmd/godoc # for using with the :doc colon-command
-echo '========================================'
-echo 'godoc Done'
+# echo '========================================'
+# echo 'Install/Update godoc...'
+# go get -u golang.org/x/tools/cmd/godoc # for using with the :doc colon-command
+# echo '========================================'
+# echo 'godoc Done'
 
-echo '========================================'
-echo 'Install/Update go-symbols...'
-go get -u github.com/acroca/go-symbols      # for VSCode
-echo '========================================'
-echo 'go-symbols Done'
+# echo '========================================'
+# echo 'Install/Update go-symbols...'
+# go get -u github.com/acroca/go-symbols      # for VSCode
+# echo '========================================'
+# echo 'go-symbols Done'
 
-echo '========================================'
-echo 'Install/Update guru...'
-go get -u golang.org/x/tools/cmd/guru       # for VSCode
-echo '========================================'
-echo 'guru Done'
+# echo '========================================'
+# echo 'Install/Update guru...'
+# go get -u golang.org/x/tools/cmd/guru       # for VSCode
+# echo '========================================'
+# echo 'guru Done'
 
-echo '========================================'
-echo 'Install/Update gorename...'
-go get -u golang.org/x/tools/cmd/gorename   # for VSCode
-echo '========================================'
-echo 'gorename Done'
+# echo '========================================'
+# echo 'Install/Update gorename...'
+# go get -u golang.org/x/tools/cmd/gorename   # for VSCode
+# echo '========================================'
+# echo 'gorename Done'
 
 echo '========================================'
 echo 'Install/Update dlv...'
