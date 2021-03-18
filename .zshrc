@@ -227,6 +227,9 @@ alias bipvb='bundle install --path vendor/bundle'
 # Dart
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 
+# Remove EOL's '%' when Golang or so
+export PROMPT_EOL_MARK=''
+
 # With peco
 alias g='git'
 alias -g B='`git branch | peco --prompt "GIT BRANCH>" | head -n 1 | sed -e "s/^\*\s*//g"`'
