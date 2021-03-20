@@ -264,6 +264,12 @@ go get -u github.com/gin-gonic/gin
 echo 'Gin installation has been done.'
 echo '========================================'
 
+echo '========================================'
+echo 'Install/Update echo (Web Framework)'
+go get -u github.com/labstack/echo
+echo 'echo installation has been done.'
+echo '========================================'
+
 # https://github.com/golang/tools/tree/master/gopls
 echo '========================================'
 echo 'Install/Update gopls, the Go language server'
