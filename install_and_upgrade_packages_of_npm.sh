@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# あとでコメントアウトを外す
+# nodenv rehash
+
 echo '========================================'
 echo 'Install Yarn via npm...'
 npm install -g yarn
