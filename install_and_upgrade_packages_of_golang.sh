@@ -20,6 +20,12 @@ echo '========================================'
 # echo '========================================'
 
 echo '========================================'
+echo 'Install/Update A time zone helper'
+go get -u github.com/oz/tz
+echo 'A time zone helper instlattion is done.'
+echo '========================================'
+
+echo '========================================'
 echo 'Install/Update Goreman (A Clone of foreman written in golang)'
 go get -u github.com/mattn/goreman
 echo 'A Goreman instlattion is done.'
