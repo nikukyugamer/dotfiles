@@ -26,6 +26,18 @@ echo 'A time zone helper instlattion is done.'
 echo '========================================'
 
 echo '========================================'
+echo 'Install/Update A tool for exploring a docker image'
+go get -u github.com/wagoodman/dive
+echo 'A tool for exploring a docker image instlattion is done.'
+echo '========================================'
+
+echo '========================================'
+echo 'Install/Update GoTTY (a simple command line tool that turns your CLI tools into web applications)'
+go get -u github.com/yudai/gotty
+echo 'GoTTY instlattion is done.'
+echo '========================================'
+
+echo '========================================'
 echo 'Install/Update Goreman (A Clone of foreman written in golang)'
 go get -u github.com/mattn/goreman
 echo 'A Goreman instlattion is done.'
