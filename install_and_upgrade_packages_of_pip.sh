@@ -24,6 +24,12 @@ echo '========================================'
 # echo '========================================'
 
 echo '========================================'
+echo 'Upgrade WAD (Web application detector)'
+pip install --upgrade wad
+echo 'WAD (Web application detector) Done!'
+echo '========================================'
+
+echo '========================================'
 echo 'Upgrade ranger (CLI Filer)'
 pip install --upgrade ranger-fm
 echo 'ranger-fm (ranger) Done!'
