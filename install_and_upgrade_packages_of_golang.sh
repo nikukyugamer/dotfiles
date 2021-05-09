@@ -20,6 +20,12 @@ echo '========================================'
 # echo '========================================'
 
 echo '========================================'
+echo 'Install/Update IPinfo (https://ipinfo.io/)'
+go get -u github.com/ipinfo/cli/ipinfo
+echo 'An IPinfo instlattion is done.'
+echo '========================================'
+
+echo '========================================'
 echo 'Install/Update A time zone helper'
 go get -u github.com/oz/tz
 echo 'A time zone helper instlattion is done.'
