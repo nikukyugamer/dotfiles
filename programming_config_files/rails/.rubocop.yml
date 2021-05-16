@@ -15,6 +15,7 @@ AllCops:
   - 'Guardfile'
   - 'bin/**/*'
   - 'lib/price-simulator/**/*'
+  - 'tmp/**/*'
 
 Style/StringLiterals:
   EnforcedStyle: single_quotes
