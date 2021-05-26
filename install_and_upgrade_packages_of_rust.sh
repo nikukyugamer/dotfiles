@@ -9,6 +9,12 @@ echo '========================================'
 cargo install-update --all
 
 echo '========================================'
+echo 'Install simple-http-server'
+cargo install simple-http-server
+echo '"simple-http-server" installation has done'
+echo '========================================'
+
+echo '========================================'
 echo "Install diskonaut (getting a visual treemap representation of what's taking up your disk space)"
 cargo install diskonaut
 echo '"diskonaut" installation has done'
