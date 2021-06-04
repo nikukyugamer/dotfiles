@@ -107,11 +107,11 @@ go get -u github.com/greymd/ojichatrix
 echo 'ojichatrix Done.'
 echo '========================================'
 
-echo '========================================'
-echo 'Install/Update dep'
-go get -u github.com/golang/dep/cmd/dep
-echo 'dep Done.'
-echo '========================================'
+# echo '========================================'
+# echo 'Install/Update dep'
+# go get -u github.com/golang/dep/cmd/dep
+# echo 'dep Done.'
+# echo '========================================'
 
 # Solving dependency is hard...
 # echo 'Install/Update Terminal Timer...'
