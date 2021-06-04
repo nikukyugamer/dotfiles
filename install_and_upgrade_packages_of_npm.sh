@@ -23,6 +23,12 @@ echo 'DONE: npm-check-updates (ncu) installation!'
 echo '========================================'
 
 echo '========================================'
+echo 'Install google/zx...'
+npm install -g zx
+echo 'DONE: google/zx installation!'
+echo '========================================'
+
+echo '========================================'
 echo 'Install @google/clasp...'
 npm install -g @google/clasp
 echo 'DONE: @google/clasp installation!'
