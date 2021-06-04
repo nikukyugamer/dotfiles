@@ -46,11 +46,12 @@ npm install -g kmdr
 echo 'DONE: kmdr-cli installation!'
 echo '========================================'
 
-echo '========================================'
-echo 'Install Prettier...'
-npm install -g prettier
-echo 'DONE: Install Prettier'
-echo '========================================'
+# これをグローバルに入れてはいけない
+# echo '========================================'
+# echo 'Install Prettier...'
+# npm install -g prettier
+# echo 'DONE: Install Prettier'
+# echo '========================================'
 
 echo '========================================'
 echo 'yukichant（テキストデータを詠唱呪文に変換するコマンド）をインストールします'
