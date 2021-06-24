@@ -16,7 +16,7 @@ gem 'shrine', '~> 3.0'
 gem 'sorcery'
 gem 'unicorn'
 gem 'wicked_pdf'
-gem 'webpacker', '~> 4.0'
+gem 'webpacker', '~> 5.0'
 gem 'sqlite3', '~> 1.4'
 gem 'turbolinks', '~> 5'
 
