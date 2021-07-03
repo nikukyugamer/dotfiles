@@ -133,7 +133,7 @@ echo '========================================'
 
 echo '========================================'
 echo 'Install/Update ghq...'
-go get -u github.com/motemen/ghq
+go get -u github.com/x-motemen/ghq
 echo 'ghq Done'
 echo '========================================'
 
