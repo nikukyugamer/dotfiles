@@ -8,7 +8,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'foreman'
 gem 'image_processing', '~> 1.2'
 gem 'jbuilder', '~> 2.7'
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 5.0'
 gem 'pundit'
 gem 'rails', '~> 6.1.0'
 gem 'sass-rails', '~> 6'
