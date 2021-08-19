@@ -2,10 +2,10 @@
 
 echo '----------'
 
-echo 'Update npm...'
-npm update -g npm
-echo 'DONE: Update npm'
-echo '----------'
+# echo 'Update npm...'
+# npm update -g npm
+# echo 'DONE: Update npm'
+# echo '----------'
 
 echo 'Update Yarn via npm...'
 npm update -g yarn
