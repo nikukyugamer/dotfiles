@@ -8,7 +8,7 @@ echo '========================================'
 
 echo '========================================'
 echo 'Install/Update Docker Hub Tool "hub-tool"...'
-GO111MODULE=on go get github.com/docker/hub-tool
+GO111MODULE=on go install github.com/docker/hub-tool@latest
 echo 'hub-tool installatin is done.'
 echo '========================================'
 
@@ -21,31 +21,31 @@ echo '========================================'
 
 echo '========================================'
 echo 'Install/Update IPinfo (https://ipinfo.io/)'
-go get -u github.com/ipinfo/cli/ipinfo
+go install github.com/ipinfo/cli/ipinfo@latest
 echo 'An IPinfo instlattion is done.'
 echo '========================================'
 
 echo '========================================'
 echo 'Install/Update A time zone helper'
-go get -u github.com/oz/tz
+go install github.com/oz/tz@latest
 echo 'A time zone helper instlattion is done.'
 echo '========================================'
 
 echo '========================================'
 echo 'Install/Update A tool for exploring a docker image'
-go get -u github.com/wagoodman/dive
+go install github.com/wagoodman/dive@latest
 echo 'A tool for exploring a docker image instlattion is done.'
 echo '========================================'
 
 echo '========================================'
 echo 'Install/Update GoTTY (a simple command line tool that turns your CLI tools into web applications)'
-go get -u github.com/yudai/gotty
+go install github.com/yudai/gotty@latest
 echo 'GoTTY instlattion is done.'
 echo '========================================'
 
 echo '========================================'
 echo 'Install/Update Goreman (A Clone of foreman written in golang)'
-go get -u github.com/mattn/goreman
+go install github.com/mattn/goreman@latest
 echo 'A Goreman instlattion is done.'
 echo '========================================'
 
@@ -64,7 +64,7 @@ echo '========================================'
 
 echo '========================================'
 echo 'Install/Update Vegeta (A versatile HTTP load testing tool)'
-go get -u github.com/tsenart/vegeta
+go install github.com/tsenart/vegeta@latest
 echo 'Vegeta Done.'
 echo 'cf. https://camo.githubusercontent.com/417a39e5a142e0877be0a7a6d7a66cb77ea21e8c/687474703a2f2f666330392e64657669616e746172742e6e65742f667334392f692f323030392f3139382f632f632f73736a325f7665676574615f62795f7472756e6b7332342e6a7067'
 echo '========================================'
@@ -72,193 +72,198 @@ echo '========================================'
 echo '========================================'
 echo 'Install/Update fillin'
 echo 'https://github.com/itchyny/fillin'
-go get -u github.com/itchyny/fillin
+go install github.com/itchyny/fillin@latest
 echo '"fillin" installation has been done.'
 echo '========================================'
 
 echo '========================================'
 echo 'Install/Update lazynpm'
-go get -u github.com/jesseduffield/lazynpm
+go install github.com/jesseduffield/lazynpm@latest
 echo 'lazynpm installation has been done.'
 echo '========================================'
 
 echo '========================================'
 echo 'Install/Update longcat'
-go get -u github.com/mattn/longcat
+go install github.com/mattn/longcat@latest
 echo 'Looooooooooooooooooooooooooooooooooooooooooooooong cat Done.'
 echo '========================================'
 
 # エラーが出るのでコメントアウト
 # echo '========================================'
 # echo 'Install/Update git-chglog (Git CHANGELOG generator)'
-# go get -u github.com/git-chglog/git-chglog/cmd/git-chglog
+# go install github.com/git-chglog/git-chglog/cmd/git-chglog
 # echo 'git-chglog Done.'
 # echo '========================================'
 
 echo '========================================'
 echo 'Install/Update ghch (Generate changelog from git history)'
-go get -u github.com/Songmu/ghch/cmd/ghch
+go install github.com/Songmu/ghch/cmd/ghch@latest
 echo 'ghch Done.'
 echo '========================================'
 
 echo '========================================'
 echo 'Install/Update ojichatrix'
-go get -u github.com/greymd/ojichatrix
+go install github.com/greymd/ojichatrix@latest
 echo 'ojichatrix Done.'
 echo '========================================'
 
 # echo '========================================'
 # echo 'Install/Update dep'
-# go get -u github.com/golang/dep/cmd/dep
+# go install github.com/golang/dep/cmd/dep@latest
 # echo 'dep Done.'
 # echo '========================================'
 
 # Solving dependency is hard...
 # echo 'Install/Update Terminal Timer...'
-# go get -u github.com/drgrib/ttimer
+# go install github.com/drgrib/ttimer@latest
 # echo 'Terminal Timer Done.'
 
 echo '========================================'
 echo 'Install/Update Tokyo Amesh...'
-go get -u github.com/otiai10/amesh
+go install github.com/otiai10/amesh@latest
 echo 'Tokyo Amesh Done.'
 echo '========================================'
 
 # Should be installed by package command
 # echo '========================================'
 # echo 'Install/Update peco...'
-# go get -u github.com/peco/peco/cmd/peco
+# go install github.com/peco/peco/cmd/peco@latest
 # echo 'peco Done'
 # echo '========================================'
 
 echo '========================================'
 echo 'Install/Update ghq...'
-go get -u github.com/x-motemen/ghq
+go install github.com/x-motemen/ghq@latest
 echo 'ghq Done'
 echo '========================================'
 
 echo '========================================'
 echo 'Install/Update hub...'
-go get -u github.com/github/hub
+go install github.com/github/hub@latest
 echo 'hub Done'
 echo '========================================'
 
 echo '========================================'
 echo 'Install/Update gomi...'
-go get -u github.com/b4b4r07/gomi
+go install github.com/b4b4r07/gomi@latest
 echo 'gomi Done'
 echo '========================================'
 
 # echo '========================================'
 # echo 'Install/Update gore...'
-# go get -u github.com/motemen/gore/cmd/gore
+# go install github.com/motemen/gore/cmd/gore
 # echo 'gore Done'
 # echo '========================================'
 
 # echo '========================================'
 # echo 'Install/Update mdempsky/gocode...'
-# go get -u github.com/mdempsky/gocode   # for code completion
+# go install github.com/mdempsky/gocode   # for code completion
 # echo 'gocode Done'
 # echo '========================================'
 
 echo '========================================'
 echo 'Install/Update pp...'
-go get -u github.com/k0kubun/pp        # or github.com/davecgh/go-spew/spew
+# or github.com/davecgh/go-spew/spew@latest
+go install github.com/k0kubun/pp@latest
 echo 'pp Done'
 echo '========================================'
 
 # echo '========================================'
 # echo 'Install/Update godoc...'
-# go get -u golang.org/x/tools/cmd/godoc # for using with the :doc colon-command
+# go install golang.org/x/tools/cmd/godoc # for using with the :doc colon-command
 # echo '========================================'
 # echo 'godoc Done'
 
 # echo '========================================'
 # echo 'Install/Update go-symbols...'
-# go get -u github.com/acroca/go-symbols      # for VSCode
+# go install github.com/acroca/go-symbols      # for VSCode
 # echo '========================================'
 # echo 'go-symbols Done'
 
 # echo '========================================'
 # echo 'Install/Update guru...'
-# go get -u golang.org/x/tools/cmd/guru       # for VSCode
+# go install golang.org/x/tools/cmd/guru       # for VSCode
 # echo '========================================'
 # echo 'guru Done'
 
 # echo '========================================'
 # echo 'Install/Update gorename...'
-# go get -u golang.org/x/tools/cmd/gorename   # for VSCode
+# go install golang.org/x/tools/cmd/gorename   # for VSCode
 # echo '========================================'
 # echo 'gorename Done'
 
 echo '========================================'
 echo 'Install/Update dlv...'
-go get -u github.com/go-delve/delve/cmd/dlv # for VSCode
+# for VSCode
+go install github.com/go-delve/delve/cmd/dlv@latest
 echo 'dlv Done'
 echo '========================================'
 
 # Duplicated? -> (github.com/mdempsky/gocode)
 echo '========================================'
 echo 'Install/Update stamblerre/gocode...'
-go get -u github.com/stamblerre/gocode      # for VSCode
+# for VSCode
+go install github.com/stamblerre/gocode@latest
 echo 'gocode Done'
 echo '========================================'
 
 echo '========================================'
 echo 'Install/Update golint...'
-go get -u golang.org/x/lint/golint          # for VSCode
+# for VSCode
+go install golang.org/x/lint/golint@latest
 echo 'golint Done'
 echo '========================================'
 
 echo '========================================'
 echo 'Install/Update jpcal...'
-go get -u github.com/y-yagi/jpcal
+go install github.com/y-yagi/jpcal@latest
 echo 'jpcal Done'
 echo '========================================'
 
 echo '========================================'
 echo 'Install/Update ojichat...'
-go get -u github.com/greymd/ojichat
+go install github.com/greymd/ojichat@latest
 echo 'ojichat Done'
 echo '========================================'
 
 echo '========================================'
 echo 'Install/Update lazydocker...'
-go get -u github.com/jesseduffield/lazydocker
+go install github.com/jesseduffield/lazydocker@latest
 echo 'lazydocker Done'
 echo '========================================'
 
-echo '========================================'
-echo 'Install/Update micro (Editor)...'
-go get -d github.com/zyedidia/micro/cmd/micro
-cd $GOPATH/src/github.com/zyedidia/micro
-make install
-echo 'micro (Editor) Done'
-echo '========================================'
+# https://github.com/zyedidia/micro#installation
+# echo '========================================'
+# echo 'Install/Update micro (Editor)...'
+# go get -d github.com/zyedidia/micro/cmd/micro@latest
+# cd $GOPATH/src/github.com/zyedidia/micro
+# make install
+# echo 'micro (Editor) Done'
+# echo '========================================'
 
 echo '========================================'
 echo 'Install/Update Slack API in Go...'
-go get -u github.com/nlopes/slack
+go install github.com/nlopes/slack@latest
 echo 'Slack API in Go Done'
 echo '========================================'
 
 echo '========================================'
 echo 'Install/Update "memo" by mattn...'
-go get -u github.com/mattn/memo
+go install github.com/mattn/memo@latest
 echo '"memo" Done'
 echo '========================================'
 
 # https://github.com/qeesung/asciiplayer
 echo '========================================'
 echo 'Install/Update "ASCIIPlayer"...'
-go get -u github.com/qeesung/asciiplayer
+go install github.com/qeesung/asciiplayer@latest
 echo '"ASCIIPlayer" Done'
 echo '========================================'
 
 # Twitter Clinet Powered by mattn
 echo '========================================'
 echo 'Install/Update twty (Twitter Client) developed by mattn'
-go get -u github.com/mattn/twty
+go install github.com/mattn/twty@latest
 echo 'twty (Twitter Client) Done.'
 echo '========================================'
 
@@ -266,38 +271,38 @@ echo '========================================'
 # https://github.com/itchyny/mmv
 echo '========================================'
 echo 'Install/Update mmv'
-go get github.com/itchyny/mmv/cmd/mmv
+go get github.com/itchyny/mmv/cmd/mmv@latest
 echo 'mmv Done.'
 echo '========================================'
 
 echo '========================================'
 echo 'Install/Update jsonui'
-go get -u github.com/gulyasm/jsonui
+go install github.com/gulyasm/jsonui@latest
 echo 'jsonui Done.'
 echo '========================================'
 
 echo '========================================'
 echo 'Install/Update bed (Binary editor written in Go)'
-go get -u github.com/itchyny/bed/cmd/bed
+go install github.com/itchyny/bed/cmd/bed@latest
 echo 'bed Done.'
 echo '========================================'
 
 echo '========================================'
 echo 'Install/Update Gin (Web Framework)'
-go get -u github.com/gin-gonic/gin
+go install github.com/gin-gonic/gin@latest
 echo 'Gin installation has been done.'
 echo '========================================'
 
 echo '========================================'
 echo 'Install/Update echo (Web Framework)'
-go get -u github.com/labstack/echo
+go install github.com/labstack/echo@latest
 echo 'echo installation has been done.'
 echo '========================================'
 
 # https://github.com/golang/tools/tree/master/gopls
 echo '========================================'
 echo 'Install/Update gopls, the Go language server'
-GO111MODULE=on go get golang.org/x/tools/gopls@latest
+GO111MODULE=on go install golang.org/x/tools/gopls@latest
 echo 'gopls installation has been done.'
 echo '========================================'
 
