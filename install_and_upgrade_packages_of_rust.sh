@@ -9,7 +9,15 @@ echo '========================================'
 cargo install-update --all
 
 echo '========================================'
-echo 'Install simple-http-server'
+echo 'install miniserve'
+echo 'miniserve - a CLI tool to serve files and dirs over HTTP'
+# https://github.com/svenstaro/miniserve/issues/568
+cargo install miniserve --locked
+echo '"miniserver" installation has done'
+echo '========================================'
+
+echo '========================================'
+echo 'install simple-http-server'
 cargo install simple-http-server
 echo '"simple-http-server" installation has done'
 echo '========================================'
