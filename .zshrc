@@ -174,6 +174,10 @@ export PATH="$GOROOT/bin:$PATH"
 export GOPATH="$HOME/.go"
 export PATH="$GOPATH/bin:$PATH"
 
+# tfenv
+export PATH="$HOME/.tfenv/bin:$PATH"
+alias tf='terraform'
+
 # direnv
 eval "$(direnv hook zsh)"
 
@@ -273,4 +277,3 @@ function ssher() {
 function docker-tags {
     curl -s https://registry.hub.docker.com/v1/repositories/$1/tags | jq -r '.[].name'
 }
-
