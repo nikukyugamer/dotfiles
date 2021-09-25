@@ -19,6 +19,11 @@ alias gc='git checkout'
 alias gb='git branch'
 alias gs='git status'
 
+alias gitfastpush='git add . && git commit --amend --no-edit && git push -f'
+# gitfastgit
+# gitspeedgit
+# gitspeedpush
+
 # Useful expanded alias for some commands
 alias cat='bat -p --pager "less -X"'
 alias fzf='fzf --ansi'
