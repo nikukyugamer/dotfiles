@@ -20,6 +20,12 @@ echo '========================================'
 # echo '========================================'
 
 echo '========================================'
+echo 'Install/Update act (GitHub Actions Local Exec Tool)'
+go install github.com/nektos/act@latest
+echo 'An act instlattion is done.'
+echo '========================================'
+
+echo '========================================'
 echo 'Install/Update IPinfo (https://ipinfo.io/)'
 go install github.com/ipinfo/cli/ipinfo@latest
 echo 'An IPinfo instlattion is done.'
