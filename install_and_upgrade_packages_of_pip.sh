@@ -131,4 +131,3 @@ echo 'A streamlink installation has been done!'
 echo '========================================'
 
 exit 0
-

@@ -9,50 +9,50 @@ echo '========================================'
 echo '========================================'
 echo 'Install/Update Docker Hub Tool "hub-tool"...'
 GO111MODULE=on go install github.com/docker/hub-tool@latest
-echo 'hub-tool installatin is done.'
+echo 'hub-tool installation is done.'
 echo '========================================'
 
 # echo '========================================'
 # echo 'Install/Update imgdiff (Faster than the fastest in the world pixel-by-pixel image difference tool.)'
 # wget https://github.com/n7olkachev/imgdiff/releases/download/v1.0.0/imgdiff-linux-amd64 && chmod +x imgdiff-linux-amd64 && mv imgdiff-linux-amd64 imgdiff && sudo mv imgdiff /usr/local/bin
 # wget https://github.com/n7olkachev/imgdiff/releases/download/v1.0.0/imgdiff-darwin-amd64
-# echo 'A imgdiff instlattion id done.'
+# echo 'A imgdiff installation id done.'
 # echo '========================================'
 
 echo '========================================'
 echo 'Install/Update act (GitHub Actions Local Exec Tool)'
 go install github.com/nektos/act@latest
-echo 'An act instlattion is done.'
+echo 'An act installation is done.'
 echo '========================================'
 
 echo '========================================'
 echo 'Install/Update IPinfo (https://ipinfo.io/)'
 go install github.com/ipinfo/cli/ipinfo@latest
-echo 'An IPinfo instlattion is done.'
+echo 'An IPinfo installation is done.'
 echo '========================================'
 
 echo '========================================'
 echo 'Install/Update A time zone helper'
 go install github.com/oz/tz@latest
-echo 'A time zone helper instlattion is done.'
+echo 'A time zone helper installation is done.'
 echo '========================================'
 
 echo '========================================'
 echo 'Install/Update A tool for exploring a docker image'
 go install github.com/wagoodman/dive@latest
-echo 'A tool for exploring a docker image instlattion is done.'
+echo 'A tool for exploring a docker image installation is done.'
 echo '========================================'
 
 echo '========================================'
 echo 'Install/Update GoTTY (a simple command line tool that turns your CLI tools into web applications)'
 go install github.com/yudai/gotty@latest
-echo 'GoTTY instlattion is done.'
+echo 'GoTTY installation is done.'
 echo '========================================'
 
 echo '========================================'
 echo 'Install/Update Goreman (A Clone of foreman written in golang)'
 go install github.com/mattn/goreman@latest
-echo 'A Goreman instlattion is done.'
+echo 'A Goreman installation is done.'
 echo '========================================'
 
 # 時間がかかるのでコメントアウト
