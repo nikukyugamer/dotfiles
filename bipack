@@ -1,0 +1,8 @@
+#!/bin/bash -xe
+
+# bundle install pack
+~/.rbenv/shims/bundle config set --local path 'vendor/bundle'
+~/.rbenv/shims/bundle install && ~/.rbenv/shims/gem install solargraph rubocop rubocop-rails rubocop-rspec
+
+exit 0
+
