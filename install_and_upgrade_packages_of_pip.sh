@@ -6,6 +6,12 @@ pip install --upgrade pip
 echo 'Upgrade pip Done!'
 echo '========================================'
 
+echo '========================================'
+echo 'Upgrade pyxattr (For yt-dlp)'
+pip install --upgrade pyxattr
+echo 'Upgrade pyxattr Done!'
+echo '========================================'
+
 # 2020/10/24 scipy のインストールに失敗するため一時的に無効にする
 # echo 'Upgrade numpy'
 # pip install --upgrade numpy
