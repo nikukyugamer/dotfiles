@@ -277,7 +277,7 @@ echo '========================================'
 # https://github.com/itchyny/mmv
 echo '========================================'
 echo 'Install/Update mmv'
-go get github.com/itchyny/mmv/cmd/mmv@latest
+go install github.com/itchyny/mmv/cmd/mmv@latest
 echo 'mmv Done.'
 echo '========================================'
 
