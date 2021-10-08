@@ -66,11 +66,19 @@ pip install --upgrade psycopg2-binary
 echo 'pgcli Done!'
 echo '========================================'
 
-echo '========================================'
-echo 'Install and Upgrade google-images-download command...'
-pip install --upgrade google-images-download
-echo 'google-images-download Done!'
-echo '========================================'
+# Latest how to install
+# pip uninstall google-images-download
+# git clone https://github.com/Joeclinton1/google-images-download.git
+# cd google-images-download && sudo python setup.py install
+# cd ..
+# rm -rf google-images-download
+# source ~/.zshrc
+#
+# echo '========================================'
+# echo 'Install and Upgrade google-images-download command...'
+# pip install --upgrade google-images-download
+# echo 'google-images-download Done!'
+# echo '========================================'
 
 echo '========================================'
 echo 'Install and Upgrade youtube-dl...'
