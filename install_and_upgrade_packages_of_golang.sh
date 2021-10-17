@@ -12,13 +12,6 @@ GO111MODULE=on go install github.com/docker/hub-tool@latest
 echo 'hub-tool installation is done.'
 echo '========================================'
 
-# echo '========================================'
-# echo 'Install/Update imgdiff (Faster than the fastest in the world pixel-by-pixel image difference tool.)'
-# wget https://github.com/n7olkachev/imgdiff/releases/download/v1.0.0/imgdiff-linux-amd64 && chmod +x imgdiff-linux-amd64 && mv imgdiff-linux-amd64 imgdiff && sudo mv imgdiff /usr/local/bin
-# wget https://github.com/n7olkachev/imgdiff/releases/download/v1.0.0/imgdiff-darwin-amd64
-# echo 'A imgdiff installation id done.'
-# echo '========================================'
-
 echo '========================================'
 echo 'Install/Update act (GitHub Actions Local Exec Tool)'
 go install github.com/nektos/act@latest
@@ -55,19 +48,6 @@ go install github.com/mattn/goreman@latest
 echo 'A Goreman installation is done.'
 echo '========================================'
 
-# 時間がかかるのでコメントアウト
-# echo '========================================'
-# echo 'Install/Update Hugo'
-# mkdir $HOME/hugo_installer
-# cd $HOME/hugo_installer
-# git clone https://github.com/gohugoio/hugo.git
-# cd hugo
-# go install --tags extended
-# cd $HOME
-# /bin/rm -rf hugo_installer
-# echo 'Hugo Done.'
-# echo '========================================'
-
 echo '========================================'
 echo 'Install/Update Vegeta (A versatile HTTP load testing tool)'
 go install github.com/tsenart/vegeta@latest
@@ -94,13 +74,6 @@ go install github.com/mattn/longcat@latest
 echo 'Looooooooooooooooooooooooooooooooooooooooooooooong cat Done.'
 echo '========================================'
 
-# エラーが出るのでコメントアウト
-# echo '========================================'
-# echo 'Install/Update git-chglog (Git CHANGELOG generator)'
-# go install github.com/git-chglog/git-chglog/cmd/git-chglog
-# echo 'git-chglog Done.'
-# echo '========================================'
-
 echo '========================================'
 echo 'Install/Update ghch (Generate changelog from git history)'
 go install github.com/Songmu/ghch/cmd/ghch@latest
@@ -113,29 +86,11 @@ go install github.com/greymd/ojichatrix@latest
 echo 'ojichatrix Done.'
 echo '========================================'
 
-# echo '========================================'
-# echo 'Install/Update dep'
-# go install github.com/golang/dep/cmd/dep@latest
-# echo 'dep Done.'
-# echo '========================================'
-
-# Solving dependency is hard...
-# echo 'Install/Update Terminal Timer...'
-# go install github.com/drgrib/ttimer@latest
-# echo 'Terminal Timer Done.'
-
 echo '========================================'
 echo 'Install/Update Tokyo Amesh...'
 go install github.com/otiai10/amesh@latest
 echo 'Tokyo Amesh Done.'
 echo '========================================'
-
-# Should be installed by package command
-# echo '========================================'
-# echo 'Install/Update peco...'
-# go install github.com/peco/peco/cmd/peco@latest
-# echo 'peco Done'
-# echo '========================================'
 
 echo '========================================'
 echo 'Install/Update ghq...'
@@ -155,48 +110,12 @@ go install github.com/b4b4r07/gomi@latest
 echo 'gomi Done'
 echo '========================================'
 
-# echo '========================================'
-# echo 'Install/Update gore...'
-# go install github.com/motemen/gore/cmd/gore
-# echo 'gore Done'
-# echo '========================================'
-
-# echo '========================================'
-# echo 'Install/Update mdempsky/gocode...'
-# go install github.com/mdempsky/gocode   # for code completion
-# echo 'gocode Done'
-# echo '========================================'
-
 echo '========================================'
 echo 'Install/Update pp...'
 # or github.com/davecgh/go-spew/spew@latest
 go install github.com/k0kubun/pp@latest
 echo 'pp Done'
 echo '========================================'
-
-# echo '========================================'
-# echo 'Install/Update godoc...'
-# go install golang.org/x/tools/cmd/godoc # for using with the :doc colon-command
-# echo '========================================'
-# echo 'godoc Done'
-
-# echo '========================================'
-# echo 'Install/Update go-symbols...'
-# go install github.com/acroca/go-symbols      # for VSCode
-# echo '========================================'
-# echo 'go-symbols Done'
-
-# echo '========================================'
-# echo 'Install/Update guru...'
-# go install golang.org/x/tools/cmd/guru       # for VSCode
-# echo '========================================'
-# echo 'guru Done'
-
-# echo '========================================'
-# echo 'Install/Update gorename...'
-# go install golang.org/x/tools/cmd/gorename   # for VSCode
-# echo '========================================'
-# echo 'gorename Done'
 
 echo '========================================'
 echo 'Install/Update dlv...'
@@ -237,15 +156,6 @@ echo 'Install/Update lazydocker...'
 go install github.com/jesseduffield/lazydocker@latest
 echo 'lazydocker Done'
 echo '========================================'
-
-# https://github.com/zyedidia/micro#installation
-# echo '========================================'
-# echo 'Install/Update micro (Editor)...'
-# go get -d github.com/zyedidia/micro/cmd/micro@latest
-# cd $GOPATH/src/github.com/zyedidia/micro
-# make install
-# echo 'micro (Editor) Done'
-# echo '========================================'
 
 echo '========================================'
 echo 'Install/Update Slack API in Go...'
@@ -311,13 +221,5 @@ echo 'Install/Update gopls, the Go language server'
 GO111MODULE=on go install golang.org/x/tools/gopls@latest
 echo 'gopls installation has been done.'
 echo '========================================'
-
-# インストールに失敗することがあるのでコメントアウト
-# echo 'Install/Update "trdsql" (CLI tool that can execute SQL queries on CSV, JSON and etc)'
-# go get -d github.com/noborus/trdsql
-# cd $GOPATH/src/github.com/noborus/trdsql
-# make
-# make install
-# echo '"trdsql" installation has done.'
 
 exit 0
