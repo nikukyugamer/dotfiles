@@ -1,7 +1,6 @@
 #!/bin/bash -xe
 
 # Ubuntu
-sudo apt-get install source-highlight -y
+sudo apt install -y source-highlight
 
 exit 0
-

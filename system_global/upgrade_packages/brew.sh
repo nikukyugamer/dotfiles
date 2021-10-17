@@ -6,4 +6,3 @@ if [ "`echo $UNAME | grep Darwin`" ]; then
 fi
 
 exit 0
-

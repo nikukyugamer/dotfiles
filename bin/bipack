@@ -5,4 +5,3 @@
 ~/.rbenv/shims/bundle install && ~/.rbenv/shims/gem install solargraph rubocop rubocop-rails rubocop-rspec
 
 exit 0
-

@@ -8,4 +8,3 @@ sudo apt update -y
 sudo apt install helm -y
 
 exit 0
-

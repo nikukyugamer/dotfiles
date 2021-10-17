@@ -6,23 +6,11 @@ source ~/dotfiles/.zshrc
 # If you use macOS, install vim by Homebrew and uncomment a below line
 # alias vi='/usr/local/bin/vim'
 
-# If Pygments is already installed, please uncomment a below line
-# Note: It is a buggy...
-# alias cat='pygmentize'
-
-alias vimvimrc='vim ~/dotfiles/.vimrc'
-alias vimzshrc='vim ~/dotfiles/.zshrc'
-alias vimgitconfig='vim ~/dotfiles/.gitconfig'
-
 alias gl='git log --oneline --graph --decorate=full'
 alias gc='git checkout'
 alias gb='git branch'
 alias gs='git status'
-
 alias gitfastpush='git add . && git commit --amend --no-edit && git push -f'
-# gitfastgit
-# gitspeedgit
-# gitspeedpush
 
 # Useful expanded alias for some commands
 alias cat='bat -p --pager "less -X"'
@@ -83,4 +71,3 @@ zplug "junegunn/fzf", as:command, use:bin/fzf-tmux
 zplug "mollifier/anyframe"
 
 zplug load
-

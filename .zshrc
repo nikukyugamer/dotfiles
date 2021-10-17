@@ -38,9 +38,9 @@ bindkey -e
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' formats ' [%b]'
 precmd() {
-    psvar=()
-    LANG=en_US.UTF-8 vcs_info
-    psvar[1]=$vcs_info_msg_0_
+  psvar=()
+  LANG=en_US.UTF-8 vcs_info
+  psvar[1]=$vcs_info_msg_0_
 }
 
 # colored prompt
@@ -73,22 +73,11 @@ setopt inc_append_history # 履歴をインクリメンタルに追加
 bindkey "^R" history-incremental-search-backward
 bindkey "^S" history-incremental-search-forward
 
-# diffに色を付ける
-alias diff='colordiff --unified'
-
 # Docker コマンド
 alias dc='docker container'
 alias di='docker image'
 alias dv='docker volume'
-alias dccp='docker-compose'
-
-# peco
-alias p='peco'
-
-# lsに色をつける
-export LSCOLORS=exfxcxdxbxegedabagacad
-export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
-zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
+alias dcp='docker-compose'
 
 # macOS と Linux で色の付け方が異なる
 # macOS か否か の判定には sw_vers の終了ステータスが使える
@@ -153,15 +142,10 @@ else
   # その他のディストリビューションの場合はここに書く
 fi
 
-# npm (yarn) for local
-# Should I use 'npx'?
 export PATH="$PATH:./node_modules/.bin"
-
-# yarn global path
-# export PATH="$PATH:`yarn global bin`"
 export PATH="$PATH:$HOME/.config/yarn/global/node_modules/.bin"
 
-# golang
+# Golang
 export GOENV_ROOT="$HOME/.goenv"
 export PATH="$GOENV_ROOT/bin:$PATH"
 eval "$(goenv init -)"
@@ -176,10 +160,10 @@ alias tf='terraform'
 # direnv
 eval "$(direnv hook zsh)"
 
-# embulk
+# Embulk
 export PATH="$HOME/.embulk/bin:$PATH"
 
-# editor
+# Default editor
 export EDITOR="vim"
 
 # fzf
@@ -197,31 +181,23 @@ alias gghome='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
 # lessの文字化けを防ぐ
 export LESSCHARSET=utf-8
 
-# bundle exec = be
+# For Bundler
 alias be='bundle exec'
 alias ber='bundle exec rails'
-alias berspec='RAILS_ENV=test bundle exec rails db:migrate:reset && bundle exec rspec'
-
-# bundle exec rails credentials:edit
 alias berce='bundle exec rails credentials:edit'
+
+# For Rails
+alias railsserver='bundle exec rails server'
+alias railsconsole='bundle exec rails console'
+alias railsspec='bundle exec rails spec'
+alias railsroutes='bundle exec rails routes'
 
 # https://github.com/b4b4r07/gomi
 alias rm='gomi'
 alias remove='/bin/rm'
-alias sudo-remove='sudo /bin/rm'
 
 # Add my binaries
 export PATH="$PATH:$HOME/dotfiles/bin"
-
-# Add my aliases
-# alias ytdl='youtube-dl --ignore-errors --download-archive .youtube-dl_download-archive --write-all-thumbnails --write-annotations --write-info-json --write-description --write-auto-sub --sleep-interval 15 --max-sleep-interval 30 --format mp4'
-
-# Editor is micro
-export EDITOR=vim
-# export EDITOR=micro
-
-# Bundler Aliases
-alias bipvb='bundle install --path vendor/bundle'
 
 # Dart
 export PATH="$PATH":"$HOME/.pub-cache/bin"
@@ -236,12 +212,6 @@ alias -g LR='`git branch -a | peco --query "remotes/ " --prompt "GIT REMOTE BRAN
 alias -g C='`git log --oneline | peco | cut -d" " -f1`'
 alias -g R='`git reflog | peco | cut -d" " -f1`'
 
-# For Rails
-alias railsserver='bundle exec rails server'
-alias railsconsole='bundle exec rails console'
-alias railsspec='bundle exec rails spec'
-alias railsroutes='bundle exec raips routes'
-
 # For 'gh' command
 eval "$(gh completion -s zsh)"
 
@@ -254,21 +224,21 @@ setopt nohup
 
 # For iTerm2 with Shell Integration
 function badge() {
-    printf "\e]1337;SetBadgeFormat=%s\a"\
-    $(echo -n "$1" | base64)
+  printf "\e]1337;SetBadgeFormat=%s\a"\
+  $(echo -n "$1" | base64)
 }
 
 function ssher() {
-    local ssh_config=~/.ssh/config
-    local server=$(cat $ssh_config | grep "Host " | sed "s/Host //g" | fzf)
-    if [ -z "$server" ]; then
-        return
-    fi
-    badge $server
-    ssh $server
+  local ssh_config=~/.ssh/config
+  local server=$(cat $ssh_config | grep "Host " | sed "s/Host //g" | fzf)
+  if [ -z "$server" ]; then
+      return
+  fi
+  badge $server
+  ssh $server
 }
 
 # $ docker search "by tags"
 function docker-tags {
-    curl -s https://registry.hub.docker.com/v1/repositories/$1/tags | jq -r '.[].name'
+  curl -s https://registry.hub.docker.com/v1/repositories/$1/tags | jq -r '.[].name'
 }
