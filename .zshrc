@@ -94,28 +94,23 @@ zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'c
 # macOS か否か の判定には sw_vers の終了ステータスが使える
 case "${OSTYPE}" in
 darwin*)
-  # alias ls="unbuffer ls -G"
-  alias ls="exa"
-   # alias ll="unbuffer ls -alFG"
-  alias ll="exa -la"
+  alias ls="lsd"
+  alias ll="lsd -la"
   alias la="unbuffer ls -AG"
-  # alias l="unbuffer ls -CFG"
   alias l="exa -Tl --ignore-glob='vendor|node_modules|.git|.vscode|.history'"
 
-  # alias gl='unbuffer git log --oneline --graph --decorate=full'
-  # alias gc='unbuffer git checkout'
-  # alias gb='unbuffer git branch'
-  # alias gs='unbuffer git status'
   alias gl='git log --oneline --graph --decorate=full'
   alias gc='git checkout'
   alias gb='git branch'
   alias gs='git status -s'
   ;;
 linux*)
-  alias ls='exa --color=auto'
-  alias ll='exa -la --color=auto'
-  alias la='exa -A --color=auto'
-  alias l='exa -CF --color=auto'
+  alias ls='lsd'
+  alias ll='lsd -la'
+  alias l='lsd -l'
+  alias la='lsd -a'
+  alias lla='lsd -la'
+  alias lt='lsd --tree'
 
   # カラー指定をする方法がわからん
   alias gl='git log --oneline --graph --decorate=full'
@@ -155,7 +150,7 @@ elif grep -e '^NAME="Ubuntu' $RELEASE_FILE >/dev/null; then
 elif grep -e '^NAME="Linux Mint' $RELEASE_FILE >/dev/null; then
   export LESSOPEN='| /usr/share/source-highlight/src-hilite-lesspipe.sh %s'
 else
- # その他のディストリビューションの場合はここに書く
+  # その他のディストリビューションの場合はここに書く
 fi
 
 # npm (yarn) for local

@@ -17,6 +17,13 @@ echo '"miniserver" installation has done'
 echo '========================================'
 
 echo '========================================'
+# https://github.com/Peltoche/lsd
+echo 'Install "lsd"（モダンな "ls" コマンド）'
+cargo install --git https://github.com/Peltoche/lsd.git --branch master
+echo '"lsd" installation has done'
+echo '========================================'
+
+echo '========================================'
 echo 'install simple-http-server'
 cargo install simple-http-server
 echo '"simple-http-server" installation has done'
