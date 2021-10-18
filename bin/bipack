@@ -1,7 +1,12 @@
-#!/bin/bash -xe
+#!/bin/bash
+set -euo pipefail
+# cd "$(dirname "$0")"
 
-# bundle install pack
+echo 'Ruby version:'
+~/.rbenv/shims/ruby -v
+
 ~/.rbenv/shims/bundle config set --local path 'vendor/bundle'
 ~/.rbenv/shims/bundle install && ~/.rbenv/shims/gem install solargraph rubocop rubocop-rails rubocop-rspec
 
 exit 0
+
