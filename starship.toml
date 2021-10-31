@@ -8,7 +8,8 @@ truncation_symbol = ".../"
 home_symbol = "~/"
 
 [character]
-success_symbol = "[🐈](bold green)"
+success_symbol = "[🐈](bg:#800080 fg:#ff1493)" # (bold green)"
+error_symbol = "[❌](bg:#00ff00 fg:#4b0082)" # (bold red)"
 
 # Disable the package module, hiding it from the prompt completely
 # [package]
@@ -21,7 +22,8 @@ symbol = ""
 symbol = "🔺"
 
 [aws.region_aliases]
-ap-northeast-1 = "tokyo"
+# ap-northeast-1 = "tokyo"
+ap-northeast-1 = ""
 
 [aws]
 style = "bold blue"
@@ -41,11 +43,17 @@ conflicted = "🏳"
 ahead = "🏎💨"
 behind = "😰"
 diverged = "😵"
-up_to_date = "✓"
+up_to_date = "👍"
 untracked = "🤷‍"
 stashed = "📦"
 modified = "📝"
 staged = '[++\($count\)](green)'
 renamed = "👅"
 deleted = "🗑"
+
+[username]
+style_user = "white bold"
+style_root = "black bold"
+format = "user: [$user]($style) "
+disabled = false
 
