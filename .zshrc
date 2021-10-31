@@ -43,10 +43,13 @@ precmd() {
   psvar[1]=$vcs_info_msg_0_
 }
 
+# Starship
+eval "$(starship init zsh)"
+
 # colored prompt
-autoload -Uz colors
-colors
-PROMPT="%{${fg[green]}%}%n@%m@%*%{${reset_color}%}%F{yellow}%1v %F{blue}%(5~,%-2~/.../%1~,%~) $ %f"
+# autoload -Uz colors
+# colors
+# PROMPT="%{${fg[green]}%}%n@%m@%*%{${reset_color}%}%F{yellow}%1v %F{blue}%(5~,%-2~/.../%1~,%~) $ %f"
 
 # https://sanoto-nittc.hatenablog.com/entry/2017/12/16/213735
 setopt auto_list
