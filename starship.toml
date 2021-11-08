@@ -1,3 +1,5 @@
+# $ cp starship.toml ~/.config
+
 add_newline = true
 
 [directory]
