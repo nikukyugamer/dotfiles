@@ -12,6 +12,16 @@ pip install --upgrade pyxattr
 echo 'Upgrade pyxattr Done!'
 echo '========================================'
 
+# yt-dlp is a youtube-dl fork based on the now inactive youtube-dlc.
+echo '========================================'
+echo 'Upgrade yt-dlp'
+pip install --upgrade yt-dlp
+# pip install --upgrade youtube-comment-downloader
+pip install --upgrade https://github.com/egbertbouman/youtube-comment-downloader/archive/master.zip
+pip install --upgrade chat_downloader
+echo 'Upgrade yt-dlp Done!'
+echo '========================================'
+
 # 2020/10/24 scipy のインストールに失敗するため一時的に無効にする
 # echo 'Upgrade numpy'
 # pip install --upgrade numpy
