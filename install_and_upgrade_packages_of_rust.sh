@@ -9,6 +9,13 @@ echo '========================================'
 cargo install-update --all
 
 echo '========================================'
+echo 'Install Deno'
+echo 'Deno is a JavaScript/TypeScript runtime with secure defaults and a great developer experience.'
+cargo install deno --locked
+echo '"Deno" installation has done'
+echo '========================================'
+
+echo '========================================'
 echo 'install miniserve'
 echo 'miniserve - a CLI tool to serve files and dirs over HTTP'
 # https://github.com/svenstaro/miniserve/issues/568
