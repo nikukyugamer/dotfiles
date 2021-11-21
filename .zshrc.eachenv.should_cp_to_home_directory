@@ -55,6 +55,9 @@ eval "$(heroku autocomplete:script zsh)"
 # zplug
 export ZPLUG_HOME="$HOME/.zplug"
 
+# 自作シェルスクリプトなどを置く場所
+export PATH="$HOME/bin:$PATH"
+
 # TODO: 別ファイルに切り出す
 source ~/.zplug/init.zsh
 # 入力途中に候補をうっすら表示
