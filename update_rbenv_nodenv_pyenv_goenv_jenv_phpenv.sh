@@ -72,3 +72,4 @@ cd ~/.phpenv/plugins/phpenv-composer && git pull
 echo '----------'
 
 exit 0
+

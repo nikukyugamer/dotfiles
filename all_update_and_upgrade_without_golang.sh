@@ -11,3 +11,4 @@
 ./update_rust.sh
 
 exit 0
+

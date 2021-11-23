@@ -223,3 +223,4 @@ echo 'gopls installation has been done.'
 echo '========================================'
 
 exit 0
+

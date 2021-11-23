@@ -12,3 +12,4 @@ chmod +x ~/.embulk/bin/embulk
 ~/.embulk/bin/embulk gem install embulk-filter-ruby_proc
 
 exit 0
+

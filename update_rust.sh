@@ -7,3 +7,4 @@ echo "Let's update Rust!"
 rustup update stable
 
 exit 0
+

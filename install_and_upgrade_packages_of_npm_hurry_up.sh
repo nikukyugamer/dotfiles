@@ -28,3 +28,4 @@ echo 'DONE: Install Commitizen'
 echo '========================================'
 
 exit 0
+
