@@ -18,8 +18,8 @@ umask 0022
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.zsh_history
-HISTSIZE=1000000
-SAVEHIST=1000000
+HISTSIZE=500
+SAVEHIST=500
 bindkey -v
 # End of lines configured by zsh-newuser-install
 
