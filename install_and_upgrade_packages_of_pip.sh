@@ -130,7 +130,7 @@ echo '========================================'
 
 # https://github.com/alexdredmon/cuteuid
 echo '========================================'
-echo 'Install and Upgrade awsebcli'
+echo 'Install and Upgrade cuteuid'
 pip install --upgrade cuteuid
 echo 'cuteuid Done!'
 echo '========================================'
