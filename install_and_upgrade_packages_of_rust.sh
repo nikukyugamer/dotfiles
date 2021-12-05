@@ -11,7 +11,8 @@ cargo install-update --all
 echo '========================================'
 echo 'Install Deno'
 echo 'Deno is a JavaScript/TypeScript runtime with secure defaults and a great developer experience.'
-cargo install deno --locked
+# cargo install deno --locked
+# thread 'main' panicked at 'called `Result::unwrap()` on an `Err` value: Unable to build http client: builder error: Unknown TLS backend passed to `use_preconfigured_tls`'
 echo '"Deno" installation has done'
 echo '========================================'
 
