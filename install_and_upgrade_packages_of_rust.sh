@@ -17,6 +17,13 @@ echo '"Deno" installation has done'
 echo '========================================'
 
 echo '========================================'
+echo 'Install ripgrep-all'
+# https://github.com/phiresky/ripgrep-all
+cargo install ripgrep_all
+echo '"ripgrep-all" installation has done'
+echo '========================================'
+
+echo '========================================'
 echo 'install miniserve'
 echo 'miniserve - a CLI tool to serve files and dirs over HTTP'
 # https://github.com/svenstaro/miniserve/issues/568
