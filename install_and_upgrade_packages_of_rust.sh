@@ -16,6 +16,8 @@ echo 'Deno is a JavaScript/TypeScript runtime with secure defaults and a great d
 echo '"Deno" installation has done'
 echo '========================================'
 
+cargo install onefetch
+
 echo '========================================'
 echo 'GitUI provides you with the comfort of a git GUI but right in your terminal'
 echo 'Install gitui'
