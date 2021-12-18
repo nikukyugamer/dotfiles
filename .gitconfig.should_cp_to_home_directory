@@ -7,12 +7,17 @@
 # Ubuntu
 # helper = cache
 [user]
-    name = Osamu Takiya
-    email = takiya@toran.sakura.ne.jp
+  name = Osamu Takiya
+  email = takiya@toran.sakura.ne.jp
 [filter "lfs"]
-    clean = git-lfs clean -- %f
-    smudge = git-lfs smudge -- %f
-    process = git-lfs filter-process
-    required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge --skip -- %f
+  process = git-lfs filter-process --skip
+  required = true
 [core]
   hooksPath = ~/.config/git/hooks
+[credential "https://github.com"]
+  helper = !/usr/bin/gh auth git-credential
+[sequence]
+  editor = interactive-rebase-tool
+
