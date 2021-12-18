@@ -17,6 +17,14 @@ echo '"Deno" installation has done'
 echo '========================================'
 
 echo '========================================'
+echo 'GitUI provides you with the comfort of a git GUI but right in your terminal'
+echo 'Install gitui'
+# https://github.com/extrawurst/gitui
+cargo install gitui
+echo '"gitui" installation has done'
+echo '========================================'
+
+echo '========================================'
 echo 'Install tokei'
 # https://github.com/XAMPPRocky/tokei
 cargo install tokei
