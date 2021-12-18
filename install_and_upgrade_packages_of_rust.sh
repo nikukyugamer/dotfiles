@@ -16,6 +16,7 @@ echo 'Deno is a JavaScript/TypeScript runtime with secure defaults and a great d
 echo '"Deno" installation has done'
 echo '========================================'
 
+cargo install git-interactive-rebase-tool
 cargo install onefetch
 
 echo '========================================'
