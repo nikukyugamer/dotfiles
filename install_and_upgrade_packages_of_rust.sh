@@ -17,6 +17,13 @@ echo '"Deno" installation has done'
 echo '========================================'
 
 echo '========================================'
+echo 'Install tokei'
+# https://github.com/XAMPPRocky/tokei
+cargo install tokei
+echo '"tokei" installation has done'
+echo '========================================'
+
+echo '========================================'
 echo 'Install ripgrep-all'
 # https://github.com/phiresky/ripgrep-all
 cargo install ripgrep_all
