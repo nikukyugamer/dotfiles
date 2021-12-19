@@ -9,6 +9,9 @@ echo '========================================'
 # https://github.com/pypa/pipx
 pip install pipx
 
+# https://github.com/pypa/pipenv
+pip install pipenv
+
 echo '========================================'
 echo 'Upgrade pyxattr (For yt-dlp)'
 pip install --upgrade pyxattr
