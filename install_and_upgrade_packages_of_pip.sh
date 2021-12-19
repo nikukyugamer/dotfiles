@@ -6,6 +6,9 @@ pip install --upgrade pip
 echo 'Upgrade pip Done!'
 echo '========================================'
 
+# https://github.com/pypa/pipx
+pip install pipx
+
 echo '========================================'
 echo 'Upgrade pyxattr (For yt-dlp)'
 pip install --upgrade pyxattr
