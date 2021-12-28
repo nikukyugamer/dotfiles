@@ -245,3 +245,7 @@ function ssher() {
 function docker-tags {
   curl -s https://registry.hub.docker.com/v1/repositories/$1/tags | jq -r '.[].name'
 }
+
+# /usr/local/bin は最優先とみなしていいので、最終的に変更しておく（awscli 対策）
+export PATH="/usr/local/bin:$PATH"
+
