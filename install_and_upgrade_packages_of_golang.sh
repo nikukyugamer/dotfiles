@@ -68,6 +68,9 @@ go install github.com/jesseduffield/lazynpm@latest
 echo 'lazynpm installation has been done.'
 echo '========================================'
 
+# https://github.com/jesseduffield/lazygit
+go install github.com/jesseduffield/lazygit@latest
+
 echo '========================================'
 echo 'Install/Update longcat'
 go install github.com/mattn/longcat@latest
