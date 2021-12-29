@@ -177,9 +177,10 @@ export PATH="$HOME/.composer/vendor/bin:$PATH"
 export COMPOSER_HOME="$HOME/.composer" # using zsh on Ubuntu, default COMPOSER_HOME is $HOME/.config/composer ??
 export PATH="$PATH:./vendor/bin"
 
-# ghq and hub
+# ghq
 alias gg='cd $(ghq root)/$(ghq list | peco)'
-alias gghome='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
+alias gghome='gh repo view --web $(ghq list | peco | cut -d "/" -f 2,3)'
+# WSL2 の場合は export BROWSER="/mnt/c/Program\ Files/Google/Chrome\ Dev/Application/chrome.exe" などと指定するとよい
 
 # lessの文字化けを防ぐ
 export LESSCHARSET=utf-8
