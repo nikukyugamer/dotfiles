@@ -1,0 +1,19 @@
+{
+  "Prompt": "peco>",
+  "StickySelection": false,
+  "Keymap": {
+    "Pgup": "peco.ScrollPageUp",
+    "Pgdn": "peco.ScrollPageDown",
+    "C-t": "peco.ToggleRangeMode",
+    "C-h": "peco.ToggleSingleKeyJump"
+  },
+  "Style": {
+    "Basic": ["on_default", "default"],
+    "SavedSelection": ["bold", "on_yellow", "white"],
+    "Selected": ["underline", "on_cyan", "black"],
+    "Query": ["yellow", "bold"],
+    "Matched": ["red", "on_blue"]
+  },
+  "Use256Color": true
+}
+
