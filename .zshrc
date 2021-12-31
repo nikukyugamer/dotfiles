@@ -88,7 +88,9 @@ alias dclss='dcls | peco | cut -d "|" -f 2 | sed "s/^[ \t]*//"'
 # コンテナ内でコマンドを実行する ($ dcexec ls -la)
 alias dcexec='docker container exec -it $(docker container ls --all --format "{{.State}}\t| {{.Names}} | {{.Image}} | {{.ID}}" | peco | cut -d "|" -f 2) | sed "s/^[ \t]*//"'
 # コンテナに /bin/bash で入る
-alias dcbash='dcexec /bin/bash'
+afunction dcbash () {
+  docker container exec -it $(dclss) /bin/bash
+}
 # イメージ一覧を最小限の情報で表示する
 alias dils='docker image ls --format "{{.Repository}}:{{.Tag}} ({{.ID}}) / {{.CreatedSince}}" | sed -e "1d" | sed "/docker\/*/d" | sed "/k8s.gcr.io\/*/d" | sort -h'
 # イメージ名を peco で選択できるようにする
