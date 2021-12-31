@@ -12,6 +12,9 @@ pip install pipx
 # https://github.com/pypa/pipenv
 pip install pipenv
 
+# https://github.com/TomasTomecek/sen
+pip install sen
+
 echo '========================================'
 echo 'Upgrade pyxattr (For yt-dlp)'
 pip install --upgrade pyxattr
