@@ -129,6 +129,14 @@ linux*)
   ;;
 esac
 
+# git 用便利コマンド
+function ghash () {
+  TARGET_LINE=$(git log --oneline --graph --decorate=full | peco)
+
+  echo $TARGET_LINE
+  echo $TARGET_LINE | cut -d ' ' -f 2 | clip.exe
+}
+
 # apt-get の親切機能（Debian だけの機能らしいので注意）
 RELEASE_FILE=/etc/os-release
 if [[ "${OSTYPE}" =~ .*darwin.* ]]; then
