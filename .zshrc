@@ -102,6 +102,8 @@ funciton diexec () {
 }
 
 # Docker Compose コマンドを簡単に扱えるようにする
+alias dcom='docker-compose'
+
 # cf. $ dcomexec web ls -la / $ DOCKER_COMPOSE_TARGET_SERVICE=web dcom ls
 function dcomexec () {
   TARGET_SERVICE=$DOCKER_COMPOSE_TARGET_SERVICE
