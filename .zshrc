@@ -81,6 +81,23 @@ alias dc='docker container'
 alias di='docker image'
 alias dv='docker volume'
 alias dcp='docker-compose'
+# コンテナ一覧を最小限の情報で表示する
+alias dcls='docker container ls --all --format "{{.State}}\t| {{.Names}} | {{.Image}} | {{.ID}}"'
+# コンテナ名を peco で選択できるようにする（さらにパイプでクリップボードに渡すなどすると便利）
+alias dclss='dcls | peco | cut -d "|" -f 2 | sed "s/^[ \t]*//"'
+# コンテナ内でコマンドを実行する ($ dcexec ls -la)
+alias dcexec='docker container exec -it $(docker container ls --all --format "{{.State}}\t| {{.Names}} | {{.Image}} | {{.ID}}" | peco | cut -d "|" -f 2) | sed "s/^[ \t]*//"'
+# コンテナに /bin/bash で入る
+alias dcbash='dcexec /bin/bash'
+# イメージ一覧を最小限の情報で表示する
+alias dils='docker image ls --format "{{.Repository}}:{{.Tag}} ({{.ID}}) / {{.CreatedSince}}" | sed -e "1d" | sed "/docker\/*/d" | sed "/k8s.gcr.io\/*/d" | sort -h'
+# イメージ名を peco で選択できるようにする
+alias dilss='dils | peco | cut -d " " -f 1 | sed "s/^[ \t]*//"'
+# peco 経由でイメージを選んでコマンドを実行する ($ diexec inspect)
+# 引数を使うため function にする
+funciton diexec () {
+  docker image $@ $(dilss)
+}
 
 # macOS と Linux で色の付け方が異なる
 # macOS か否か の判定には sw_vers の終了ステータスが使える
