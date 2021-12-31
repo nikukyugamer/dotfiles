@@ -99,6 +99,14 @@ funciton diexec () {
   docker image $@ $(dilss)
 }
 
+# Docker Compose コマンドを簡単に扱えるようにする
+# cf. $ dcomexec web ls -la / $ DOCKER_COMPOSE_TARGET_SERVICE=web dcom ls
+function dcomexec () {
+  TARGET_SERVICE=$DOCKER_COMPOSE_TARGET_SERVICE
+
+  docker-compose exec $TARGET_SERVICE $@
+}
+
 # macOS と Linux で色の付け方が異なる
 # macOS か否か の判定には sw_vers の終了ステータスが使える
 case "${OSTYPE}" in
