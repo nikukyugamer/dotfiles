@@ -92,7 +92,7 @@ afunction dcbash () {
   docker container exec -it $(dclss) /bin/bash
 }
 # イメージ一覧を最小限の情報で表示する
-alias dils='docker image ls --format "{{.Repository}}:{{.Tag}} ({{.ID}}) / {{.CreatedSince}}" | sed -e "1d" | sed "/docker\/.*/d" | sed "/k8s.gcr.io\/.*/d" | sort -h'
+alias dils='docker image ls --format "{{.Repository}}:{{.Tag}} ({{.ID}}) / {{.CreatedSince}}" | sed "/docker\/.*/d" | sed "/k8s.gcr.io\/.*/d" | sort -h'
 # イメージ名を peco で選択できるようにする
 alias dilss='dils | peco | cut -d " " -f 1 | sed "s/^[ \t]*//"'
 # peco 経由でイメージを選んでコマンドを実行する ($ diexec inspect)
