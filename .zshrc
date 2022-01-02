@@ -232,6 +232,7 @@ alias railsserver='bundle exec rails server'
 alias railsconsole='bundle exec rails console'
 alias railsspec='bundle exec rails spec'
 alias railsroutes='bundle exec rails routes'
+alias railscred='bundle exec rails credentials:edit'
 
 # https://github.com/b4b4r07/gomi
 alias rm='gomi'
