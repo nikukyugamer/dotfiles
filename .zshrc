@@ -80,7 +80,6 @@ bindkey "^S" history-incremental-search-forward
 alias dc='docker container'
 alias di='docker image'
 alias dv='docker volume'
-alias dcp='docker-compose'
 # コンテナ一覧を最小限の情報で表示する
 alias dcls='docker container ls --all --format "{{.State}}\t| {{.Names}} | {{.Image}} | {{.ID}}"'
 # コンテナ名を peco で選択できるようにする（さらにパイプでクリップボードに渡すなどすると便利）
@@ -102,13 +101,13 @@ funciton diexec () {
 }
 
 # Docker Compose コマンドを簡単に扱えるようにする
-alias dcom='docker-compose'
+alias dcom='docker compose'
 
 # cf. $ dcomexec web ls -la / $ DOCKER_COMPOSE_TARGET_SERVICE=web dcom ls
 function dcomexec () {
   TARGET_SERVICE=$DOCKER_COMPOSE_TARGET_SERVICE
 
-  docker-compose exec $TARGET_SERVICE $@
+  docker compose exec $TARGET_SERVICE $@
 }
 
 # macOS と Linux で色の付け方が異なる
