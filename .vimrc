@@ -5,6 +5,8 @@ if OSTYPE == "Darwin\n"
 endif
 
 set encoding=utf-8
+set fileformats=unix,dos,mac
+set nofixeol
 set number
 set notitle
 set ambiwidth=double
