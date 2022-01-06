@@ -2,6 +2,10 @@
 
 add_newline = true
 
+# "[WARN] - (starship::utils): Executing command "node" timed out." 対策
+# 単位はミリ秒
+command_timeout = 2000
+
 [directory]
 truncation_length = 2
 # truncation_symbol が有効だと truncate_to_repo は無効（というか意味がない）
@@ -58,4 +62,3 @@ style_user = "white bold"
 style_root = "black bold"
 format = "user: [$user]($style) "
 disabled = false
-
