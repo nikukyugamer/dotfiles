@@ -74,3 +74,10 @@ zplug "junegunn/fzf", as:command, use:bin/fzf-tmux
 zplug "mollifier/anyframe"
 
 zplug load
+
+# For WSL2
+# export BROWSER="/mnt/c/Program\ Files/Google/Chrome\ Dev/Application/chrome.exe"
+
+# VOLTA は package.json に必ず上書きしてしまうので、現状 (2022/01/06) ではまだ常用できない
+# export VOLTA_HOME="$HOME/.volta"
+# export PATH="$VOLTA_HOME/bin:$PATH"
