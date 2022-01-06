@@ -7,13 +7,16 @@ echo 'Upgrade pip Done!'
 echo '========================================'
 
 # https://github.com/pypa/pipx
-pip install pipx
+pip install --upgrade pipx
 
 # https://github.com/pypa/pipenv
-pip install pipenv
+pip install --upgrade pipenv
 
 # https://github.com/TomasTomecek/sen
-pip install sen
+pip install --upgrade sen
+
+# https://aws-encryption-sdk-cli.readthedocs.io/en/latest/
+pip install --upgrade aws-encryption-sdk-cli
 
 echo '========================================'
 echo 'Upgrade pyxattr (For yt-dlp)'
