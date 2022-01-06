@@ -7,5 +7,6 @@ cd /tmp && curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "a
 cd /tmp && unzip awscliv2.zip
 cd /tmp && sudo ./aws/install --bin-dir /usr/local/bin --install-dir /usr/local/aws-cli --update
 
-exit 0
+aws --version
 
+exit 0
