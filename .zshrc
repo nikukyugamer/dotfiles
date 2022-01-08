@@ -83,12 +83,14 @@ alias dv='docker volume'
 # コンテナ一覧を最小限の情報で表示する
 alias dcls='docker container ls --all --format "{{.State}}\t| {{.Names}} | {{.Image}} | {{.ID}}"'
 # コンテナ名を peco で選択できるようにする（さらにパイプでクリップボードに渡すなどすると便利）
-alias dclss='dcls | peco | cut -d "|" -f 2 | sed "s/^[ \t]*//"'
+alias dclss='dcls | peco | cut -d "|" -f 2 | sed "s/^[ \t]*//" | sed -z "s/\n//g" | sed -z "s/ //g"'
 # コンテナ内でコマンドを実行する ($ dcexec ls -la)
 alias dcexec='docker container exec -it $(docker container ls --all --format "{{.State}}\t| {{.Names}} | {{.Image}} | {{.ID}}" | peco | cut -d "|" -f 2) | sed "s/^[ \t]*//"'
 # コンテナに /bin/bash で入る
-afunction dcbash () {
-  docker container exec -it $(dclss) /bin/bash
+function dcbash () {
+  TARGET_CONTAINER_NAME=$(dclss)
+
+  docker container start ${TARGET_CONTAINER_NAME} && docker container exec -it ${TARGET_CONTAINER_NAME} /bin/bash
 }
 # イメージ一覧を最小限の情報で表示する
 alias dils='docker image ls --format "{{.Repository}}:{{.Tag}} ({{.ID}}) / {{.CreatedSince}}" | sed "/docker\/.*/d" | sed "/k8s.gcr.io\/.*/d" | sort -h'
