@@ -94,7 +94,10 @@ alias dcexec='docker container exec -it $(docker container ls --all --format "{{
 function dcsh () {
   TARGET_CONTAINER_NAME=$(dclss)
 
-  docker container start ${TARGET_CONTAINER_NAME} && docker container exec -it ${TARGET_CONTAINER_NAME} /bin/sh
+  echo '[$ docker container start]'
+  docker container start ${TARGET_CONTAINER_NAME}
+  echo '[$ docker container exec ... /bin/sh]'
+  docker container exec -it ${TARGET_CONTAINER_NAME} /bin/sh
 }
 
 # コンテナに /bin/bash で入る
@@ -103,7 +106,7 @@ function dcbash () {
 
   echo '[$ docker container start]'
   docker container start ${TARGET_CONTAINER_NAME}
-  echo '[$ docker container exec]'
+  echo '[$ docker container exec ... /bin/bash]'
   docker container exec -it ${TARGET_CONTAINER_NAME} /bin/bash
 }
 
@@ -334,3 +337,5 @@ function docker-tags {
 # /usr/local/bin は最優先とみなしていいので、最終的に変更しておく（awscli 対策）
 export PATH="/usr/local/bin:$PATH"
 
+# Google Cloud
+alias gcps='gcloud alpha storage'
