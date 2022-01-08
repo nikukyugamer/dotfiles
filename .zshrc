@@ -80,26 +80,71 @@ bindkey "^S" history-incremental-search-forward
 alias dc='docker container'
 alias di='docker image'
 alias dv='docker volume'
+
 # コンテナ一覧を最小限の情報で表示する
 alias dcls='docker container ls --all --format "{{.State}}\t| {{.Names}} | {{.Image}} | {{.ID}}"'
+
 # コンテナ名を peco で選択できるようにする（さらにパイプでクリップボードに渡すなどすると便利）
 alias dclss='dcls | peco | cut -d "|" -f 2 | sed "s/^[ \t]*//" | sed -z "s/\n//g" | sed -z "s/ //g"'
+
 # コンテナ内でコマンドを実行する ($ dcexec ls -la)
 alias dcexec='docker container exec -it $(docker container ls --all --format "{{.State}}\t| {{.Names}} | {{.Image}} | {{.ID}}" | peco | cut -d "|" -f 2) | sed "s/^[ \t]*//"'
+
+# コンテナに /bin/sh で入る
+function dcsh () {
+  TARGET_CONTAINER_NAME=$(dclss)
+
+  docker container start ${TARGET_CONTAINER_NAME} && docker container exec -it ${TARGET_CONTAINER_NAME} /bin/sh
+}
+
 # コンテナに /bin/bash で入る
 function dcbash () {
   TARGET_CONTAINER_NAME=$(dclss)
 
-  docker container start ${TARGET_CONTAINER_NAME} && docker container exec -it ${TARGET_CONTAINER_NAME} /bin/bash
+  echo '[$ docker container start]'
+  docker container start ${TARGET_CONTAINER_NAME}
+  echo '[$ docker container exec]'
+  docker container exec -it ${TARGET_CONTAINER_NAME} /bin/bash
 }
+
+# 新たにコンテナを作成する（シェルは自分で引数で指定する）
+function dccreate () {
+  # オプションは最小限にしている（-p 3000:3000 などは省略）
+  NAME=$(date '+%Y%m%d_%H%M%S')
+
+  docker container run --name xbox_${NAME} --interactive --tty -p 3000:3000 $(dilss)
+}
+
+# コンテナを実行してすぐにぶっ壊す
+alias dcrun='docker container run --rm $(dilss)'
+
+# コンテナを一覧から選んで破壊する
+function dcrm () {
+  TARGET_CONTAINER_NAME=$(dclss)
+
+  echo '[$ docker container stop]'
+  docker container stop ${TARGET_CONTAINER_NAME}
+  echo '[$ docker container rm]'
+  docker container rm ${TARGET_CONTAINER_NAME}
+}
+
 # イメージ一覧を最小限の情報で表示する
 alias dils='docker image ls --format "{{.Repository}}:{{.Tag}} ({{.ID}}) / {{.CreatedSince}}" | sed "/docker\/.*/d" | sed "/k8s.gcr.io\/.*/d" | sort -h'
 # イメージ名を peco で選択できるようにする
 alias dilss='dils | peco | cut -d " " -f 1 | sed "s/^[ \t]*//"'
+
 # peco 経由でイメージを選んでコマンドを実行する ($ diexec inspect)
 # 引数を使うため function にする
 funciton diexec () {
   docker image $@ $(dilss)
+}
+
+# イメージを一覧から選んで破壊する
+function dirm () {
+  TARGET_IMAGE_NAME=$(dilss)
+
+  echo '[$ docker image rm]'
+  docker image rm ${TARGET_IMAGE_NAME}
 }
 
 # Docker Compose コマンドを簡単に扱えるようにする
