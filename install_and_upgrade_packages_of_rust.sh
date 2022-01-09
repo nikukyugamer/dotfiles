@@ -22,6 +22,8 @@ function cargo_install_update_all() {
   echo '======================================================='
   echo "[LOG] END: $ cargo install-update --all"
   echo '======================================================='
+
+  echo '**********************************************************************'
 }
 
 install_cargo cargo-update
