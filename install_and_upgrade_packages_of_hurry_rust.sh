@@ -14,6 +14,9 @@ function install_cargo() {
   echo '======================================================='
 }
 
+# Required:
+# alpine: $ apk add build-base openssl
+
 cargo install --git https://github.com/Peltoche/lsd.git --branch master # https://github.com/Peltoche/lsd
 install_cargo bat
 install_cargo exa
