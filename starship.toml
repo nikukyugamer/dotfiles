@@ -44,7 +44,7 @@ utc_time_offset = "local"
 time_range = "-"
 
 [git_branch]
-symbol = "🌱"
+symbol = "🌱git:"
 
 [git_status]
 conflicted = "🏳"
