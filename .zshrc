@@ -115,6 +115,7 @@ function dccreate () {
   # オプションは最小限にしている（-p 3000:3000 などは省略）
   NAME=$(date '+%Y%m%d_%H%M%S')
 
+  echo '[$ docker container run]'
   docker container run --name xbox_${NAME} --interactive --tty -p 3000:3000 $(dilss)
 }
 
@@ -139,6 +140,7 @@ alias dilss='dils | peco | cut -d " " -f 1 | sed "s/^[ \t]*//"'
 # peco 経由でイメージを選んでコマンドを実行する ($ diexec inspect)
 # 引数を使うため function にする
 funciton diexec () {
+  echo '[$ docker image $@]'
   docker image $@ $(dilss)
 }
 
