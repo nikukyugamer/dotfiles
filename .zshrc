@@ -112,11 +112,11 @@ function dcbash () {
 
 # 新たにコンテナを作成する（シェルは自分で引数で指定する）
 function dccreate () {
-  # オプションは最小限にしている（-p 3000:3000 などは省略）
   NAME=$(date '+%Y%m%d_%H%M%S')
+  RANDOM_PORT_NUMBER=$(shuf -i 10000-65000 -n 1)
 
-  echo '[$ docker container run]'
-  docker container run --name xbox_${NAME} --interactive --tty -p 3000:3000 $(dilss)
+  echo "[$ docker container run -p ${RANDOM_PORT_NUMBER}:${RANDOM_PORT_NUMBER}]"
+  docker container run --name xbox_${NAME} --interactive --tty -p ${RANDOM_PORT_NUMBER}:${RANDOM_PORT_NUMBER} $(dilss)
 }
 
 # コンテナを実行してすぐにぶっ壊す
