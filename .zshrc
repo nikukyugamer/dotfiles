@@ -86,6 +86,7 @@ alias dcls='docker container ls --all --format "{{.State}}\t| {{.Names}} | {{.Im
 
 # コンテナ名を peco で選択できるようにする（さらにパイプでクリップボードに渡すなどすると便利）
 alias dclss='dcls | peco | cut -d "|" -f 2 | sed "s/^[ \t]*//" | sed -z "s/\n//g" | sed -z "s/ //g"'
+alias DC='$(dclss)'
 
 # コンテナ内でコマンドを実行する ($ dcexec ls -la)
 alias dcexec='docker container exec -it $(docker container ls --all --format "{{.State}}\t| {{.Names}} | {{.Image}} | {{.ID}}" | peco | cut -d "|" -f 2) | sed "s/^[ \t]*//"'
@@ -146,6 +147,7 @@ function dcrm () {
 alias dils='docker image ls --format "{{.Repository}}:{{.Tag}} ({{.ID}}) / {{.CreatedSince}}" | sed "/docker\/.*/d" | sed "/k8s.gcr.io\/.*/d" | sort -h'
 # イメージ名を peco で選択できるようにする
 alias dilss='dils | peco | cut -d " " -f 1 | sed "s/^[ \t]*//"'
+alias DI='$(dilss)'
 
 # peco 経由でイメージを選んでコマンドを実行する ($ diexec inspect)
 # 引数を使うため function にする
