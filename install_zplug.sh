@@ -5,4 +5,3 @@ curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/instal
 echo "DO 'zplug install' manually"
 
 exit 0
-

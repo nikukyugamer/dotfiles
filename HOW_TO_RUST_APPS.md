@@ -29,4 +29,3 @@ $ silicon main.rs -o main.png
 ```bash
 $ monolith https:://www.yahoo.co.jp/ > yahoo.html
 ```
-

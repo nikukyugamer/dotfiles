@@ -14,4 +14,3 @@ cd google-cloud-sdk
 ./install.sh
 
 exit 0
-
