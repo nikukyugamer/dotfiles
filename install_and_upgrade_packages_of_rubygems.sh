@@ -1,55 +1,32 @@
-#!/bin/bash -xe
+#!/bin/bash
 
-# gem install rubocop-performance
-# gem install rubocop
-# gem install rubocop-rails
-# gem install rubocop-rspec
-# gem install solargraph
-# gem install rb-readline
+function install_gem() {
+  echo '======================================================='
+  echo "[LOG] START: $ gem install $1"
+  echo '======================================================='
 
-# gem install mysql2
-# if MySQL version is 8, on macOS,
-# $ gem install mysql2 -- --local build.mysql2 "--with-ldflags=-L/usr/local/opt/openssl/lib"
+  gem install "$1"
 
-# gem install pg
-# gem install sqlite3
-# gem install squasher
+  echo '======================================================='
+  echo "[LOG] END: $ gem install $1"
+  echo '======================================================='
+}
 
-echo '========================================'
-echo 'Start: RubyGems installation'
-gem install itamae
-gem install ridgepole
-gem install pry
-gem install whenever
-echo 'Done: RubyGems installation'
-echo '========================================'
+function gem_update() {
+  echo '======================================================='
+  echo "[LOG] START: $ gem update"
+  echo '======================================================='
 
-# For Visual Studio Code
-# gem install ruby-debug-ide
-# gem install debase
+  gem update
 
-# https://impsbl.hatenablog.jp/entry/RubyInVSCode1
-# Solargraph さえあればどれも必須ではないっぽい（か、依存関係で入っている）
-# gem install rcodetools
-# gem install ruby-lint
-# gem install reek
-# gem install faster
-# gem install debride
+  echo '======================================================='
+  echo "[LOG] END: $ gem update"
+  echo '======================================================='
+}
 
-# gem install bundler-diff
+install_gem pry
+install_gem whenever
 
-# gem install rspec
-# gem install foreman
-
-# For 'kv'
-# gem install curses
-
-# gem install twurl
-
-# rails new 時などのトラブル防止
-# gem uninstall fileutils
-
-gem update
+gem_update
 
 exit 0
-
