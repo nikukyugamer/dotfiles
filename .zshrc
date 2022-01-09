@@ -110,6 +110,16 @@ function dcbash () {
   docker container exec -it ${TARGET_CONTAINER_NAME} /bin/bash
 }
 
+# コンテナに /bin/zsh で入る
+function dczsh () {
+  TARGET_CONTAINER_NAME=$(dclss)
+
+  echo '[$ docker container start]'
+  docker container start ${TARGET_CONTAINER_NAME}
+  echo '[$ docker container exec ... /bin/zsh]'
+  docker container exec -it ${TARGET_CONTAINER_NAME} /bin/zsh
+}
+
 # 新たにコンテナを作成する（シェルは自分で引数で指定する）
 function dccreate () {
   NAME=$(date '+%Y%m%d_%H%M%S')
