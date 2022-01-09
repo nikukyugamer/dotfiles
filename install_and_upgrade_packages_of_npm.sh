@@ -1,177 +1,68 @@
 #!/bin/bash
 
-# あとでコメントアウトを外す
-# nodenv rehash
+function npm_install_g() {
+  echo '======================================================='
+  echo "[LOG] START: $ npm install -g $1"
+  echo '======================================================='
 
-echo '========================================'
-echo 'Install Yarn via npm...'
-npm install -g yarn
-echo 'DONE: Install Yarn via npm'
-echo '========================================'
+  npm install -g "$1"
 
-echo '========================================'
-echo 'Install yarn-outdated-formatter (format-yarn-outdated)'
-echo 'https://github.com/masawada/yarn-outdated-formatter'
-npm install -g yarn-outdated-formatter
-echo 'DONE: yarn-outdated-formatter installation!'
-echo '========================================'
+  echo '======================================================='
+  echo "[LOG] END: $ npm install -g $1"
+  echo '======================================================='
 
-echo '========================================'
-echo 'Install npm-check-updates (ncu)'
-npm install -g npm-check-updates
-echo 'DONE: npm-check-updates (ncu) installation!'
-echo '========================================'
+  echo '**********************************************************************'
+}
 
-echo '========================================'
-echo 'Install google/zx...'
-npm install -g zx
-echo 'DONE: google/zx installation!'
-echo '========================================'
+function install_git_cz() {
+  echo '======================================================='
+  echo '[LOG] START: git-cz installation'
+  echo '======================================================='
 
-echo '========================================'
-echo 'Install @google/clasp...'
-npm install -g @google/clasp
-echo 'DONE: @google/clasp installation!'
-echo '========================================'
+  NODE_VERSION_WITHOUT_V=$(node -v | sed 's/^v//')
+  GIT_CZ_PATH="/home/meganekko/.nodenv/versions/${NODE_VERSION_WITHOUT_V}/lib/node_modules/git-cz"
 
-echo '========================================'
-echo 'Install fx (JSON CLI tool)'
-npm install -g fx
-echo 'DONE: fx (JSON CLI tool) installation!'
-echo '========================================'
+  echo "[LOG] START (Step 1): $ npm install -g commitizen"
+  npm install -g commitizen # https://github.com/commitizen/cz-cli
+  echo "[LOG] END (Step 1): $ npm install -g commitizen"
 
-echo '========================================'
-echo 'Install kmdr-cli...'
-npm install -g kmdr
-echo 'DONE: kmdr-cli installation!'
-echo '========================================'
+  echo '------------------------------------------------------'
 
-# これをグローバルに入れてはいけない
-# echo '========================================'
-# echo 'Install Prettier...'
-# npm install -g prettier
-# echo 'DONE: Install Prettier'
-# echo '========================================'
+  echo "[LOG] START (Step 2): $ npm install -g --force git-cz"
+  rm -rf "$GIT_CZ_PATH"
+  npm uninstall -g git-cz
+  npm install -g --force git-cz # https://github.com/streamich/git-cz
+  echo "[LOG] END (Step 2): $ npm install -g --force git-cz"
 
-echo '========================================'
-echo 'yukichant（テキストデータを詠唱呪文に変換するコマンド）をインストールします'
-npm install -g yukichant
-echo 'yukichant（テキストデータを詠唱呪文に変換するコマンド）のインストールが完了しました'
-echo 'Usage:'
-echo '$ echo Hello,World | chant'
-echo '巫女よ五行に元に斬る。戦慄の貪欲使命を隠し。嵐は記憶の行く手を砕ける。'
-echo '$ echo 巫女よ五行に元に斬る。戦慄の貪欲使命を隠し。嵐は記憶の行く手を砕ける。 | chant -d'
-echo 'Hello,World'
-echo '========================================'
+  echo '======================================================='
+  echo '[LOG] END: git-cz installation'
+  echo '======================================================='
 
-echo '========================================'
-echo 'Install pm2 (Advanced, production process manager) ...'
-npm install -g pm2
-echo 'pm2 is installed!'
-echo '========================================'
+  echo '**********************************************************************'
+}
 
-# It is not necessary to install for global
-# echo 'Install textlint...'
-# npm install -g textlint
-# echo 'DONE: Install textlint'
-
-echo '========================================'
-echo 'Install jshint...'
-npm install -g jshint
-echo 'DONE: Install jshint'
-echo '========================================'
-
-echo '========================================'
-echo 'Install js-beautify...'
-npm install -g js-beautify
-echo 'DONE: Install js-beautify'
-echo '========================================'
-
-echo '========================================'
-echo 'Install typescript...'
-npm install -g typescript
-echo 'DONE: Install typescript'
-echo '========================================'
-
-echo '========================================'
-echo 'Install ts-node...'
-npm install -g ts-node
-echo 'DONE: Install ts-node'
-echo '========================================'
-
-echo '========================================'
-echo 'Install capture-website-cli...'
-npm install -g capture-website-cli
-echo 'DONE: Install capture-website-cli'
-echo '========================================'
-
-echo '========================================'
-echo 'Install @vue/cli...'
-npm install -g @vue/cli
-echo 'DONE: Install @vue/cli'
-echo '========================================'
-
-echo '========================================'
-echo 'Install @vue/cli-init...'
-npm install -g @vue/cli-init
-echo 'DONE: Install @vue/cli-init'
-echo '========================================'
-
-echo '========================================'
-echo '💪 Install @amanoese/muscular... 💪'
-npm install -g @amanoese/muscular
-echo '💪 DONE: Install @vue/cli-init 💪'
-echo '========================================'
-
-echo '========================================'
-echo 'Install "trello-cli"'
-npm install -g trello-cli
-echo 'DONE: Install "trello-cli"'
-echo '========================================'
-
-echo '========================================'
-echo 'Install "jsonlint"'
-npm install -g jsonlint
-echo 'DONE: Install "jsonlint"'
-echo '========================================'
-
-echo '========================================'
-echo 'Install @fand/kao'
-npm install -g @fand/kao
-echo 'DONE: Install @fand/kao'
-echo '========================================'
-
-echo '========================================'
-echo 'Install dsstore-cli (Remove .DS_Store)'
-npm install -g dsstore-cli
-echo 'DONE: Install dsstore-cli'
-echo '========================================'
-
-echo '========================================'
-echo 'Install diff-so-fancy'
-npm install -g diff-so-fancy
-echo 'DONE: Install diff-so-fancy'
-echo '========================================'
-
-echo '========================================'
-echo 'Install Commitizen (https://github.com/commitizen/cz-cli)'
-npm uninstall -g commitizen
-npm install -g --force commitizen
-# "cz-conventional-changelog-ja" is not cool
-# npm install -g cz-conventional-changelog-ja
-# https://github.com/streamich/git-cz
-npm uninstall -g cz-conventional-changelog-ja
-npm uninstall -g git-cz
-npm install -g --force git-cz
-echo 'DONE: Install Commitizen'
-echo '========================================'
-
-# シェルの再起動を伴う場合があると npm が not found になってしまうためコメントアウト
-# echo '========================================'
-# echo 'Install npm...'
-# npm install -g npm
-# echo 'DONE: Install npm'
-# echo '========================================'
+npm_install_g yarn
+npm_install_g yarn-outdated-formatter # https://github.com/masawada/yarn-outdated-formatter
+npm_install_g npm-check-updates
+npm_install_g zx
+npm_install_g @google/clasp
+npm_install_g fx
+npm_install_g kmdr
+npm_install_g yukichant
+npm_install_g pm2
+npm_install_g jshint
+npm_install_g js-beautify
+npm_install_g typescript
+npm_install_g ts-node
+npm_install_g capture-website-cli
+npm_install_g @vue/cli
+npm_install_g @vue/cli-init
+npm_install_g @amanoese/muscular
+npm_install_g trello-cli
+npm_install_g jsonlint
+npm_install_g @fand/kao
+npm_install_g dsstore-cli
+npm_install_g diff-so-fancy
+install_git_cz
 
 exit 0
-
