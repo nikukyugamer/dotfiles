@@ -256,4 +256,5 @@ export PATH="/usr/local/bin:$PATH"
 # Google Cloud
 alias gcps='gcloud alpha storage'
 
-source ~/dotfiles/.zshrc.docker
+# エディタでのハイライトを効かせるために拡張子を .zshrc としている
+source ~/dotfiles/.zshrc.docker.zshrc
