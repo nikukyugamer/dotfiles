@@ -1,5 +1,3 @@
-source ~/dotfiles/.zshrc.docker
-
 export LANG="ja_JP.UTF-8"
 export LC_ALL="ja_JP.UTF-8"
 export LANGUAGE="ja_JP.UTF-8"
@@ -257,3 +255,5 @@ export PATH="/usr/local/bin:$PATH"
 
 # Google Cloud
 alias gcps='gcloud alpha storage'
+
+source ~/dotfiles/.zshrc.docker

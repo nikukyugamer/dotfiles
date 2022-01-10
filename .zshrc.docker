@@ -18,13 +18,16 @@ function dvlss () {
   docker volume ls -q | peco | sed "s/^[ \t]*//" | sed -z "s/\n//g" | sed -z "s/ //g"
 }
 
+function dvrm () {
+  docker volume rm "$(dvlss)"
+}
+
 ## git s B と同等のエイリアス
 alias DV='$(dvlss)'
 
 # Docker Image
 function dibuild () {
   CURRENT_DATETIME=$(date '+%Y%m%d_%H%M%S')
-  RANDOM_PORT_NUMBER=$(shuf -i 10000-65000 -n 1)
 
   echo "[$ docker image build --tag xbox_image_${CURRENT_DATETIME}:latest (--file ./Dockerfile .)]"
   docker image build --tag xbox_image_"$CURRENT_DATETIME":latest "$@"
