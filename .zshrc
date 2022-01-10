@@ -138,15 +138,28 @@ function dcrm () {
   TARGET_CONTAINER_NAME=$(dclss)
 
   echo '[$ docker container stop]'
+  echo "[STOPPED] ${TARGET_CONTAINER_NAME}"
   docker container stop ${TARGET_CONTAINER_NAME}
+
   echo '[$ docker container rm]'
+  echo "[REMOVED] ${TARGET_CONTAINER_NAME}"
   docker container rm ${TARGET_CONTAINER_NAME}
 }
 
 # イメージ一覧を最小限の情報で表示する
 alias dils='docker image ls --format "{{.Repository}}:{{.Tag}} ({{.ID}}) / {{.CreatedSince}}" | sed "/docker\/.*/d" | sed "/k8s.gcr.io\/.*/d" | sort -h'
+
 # イメージ名を peco で選択できるようにする
-alias dilss='dils | peco | cut -d " " -f 1 | sed "s/^[ \t]*//"'
+function dilss () {
+  DILS_PECO=$(dils | peco)
+
+  if [ $(echo $DILS_PECO | cut -d " " -f 1 | sed "s/^[ \t]*//" | sed -z "s/\n//g" | sed -z "s/ //g") = '<none>:<none>' ]; then
+    echo $DILS_PECO | cut -d " " -f 2 | sed "s/^[ \t]*//" | sed -z "s/\n//g" | sed -z "s/ //g" | sed "s/(//g" | sed "s/)//g"
+  else
+    echo $DILS_PECO | cut -d " " -f 1 | sed "s/^[ \t]*//" | sed -z "s/\n//g" | sed -z "s/ //g"
+  fi
+}
+
 alias DI='$(dilss)'
 
 # peco 経由でイメージを選んでコマンドを実行する ($ diexec inspect)
@@ -161,6 +174,7 @@ function dirm () {
   TARGET_IMAGE_NAME=$(dilss)
 
   echo '[$ docker image rm]'
+  echo "[REMOVED] ${TARGET_IMAGE_NAME}"
   docker image rm ${TARGET_IMAGE_NAME}
 }
 
