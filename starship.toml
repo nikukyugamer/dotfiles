@@ -19,6 +19,16 @@ error_symbol = "[❌](bg:#00ff00 fg:#4b0082)" # (bold red)"
 # [package]
 # disabled = true
 
+[kubernetes]
+style = "cyan purple"
+symbol = "⛵kube:"
+disabled = true
+
+[kubernetes.context_aliases]
+"dev.local.cluster.k8s" = "dev"
+".*/openshift-cluster/.*" = "openshift"
+"gke_.*_(?P<cluster>[\\w-]+)" = "gke-$cluster"
+
 [nodejs]
 symbol = ""
 
@@ -64,4 +74,3 @@ style_user = "white bold"
 style_root = "black bold"
 format = "user: [$user]($style) "
 disabled = false
-
