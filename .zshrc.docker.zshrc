@@ -10,7 +10,7 @@ function dvcreate () {
   CURRENT_DATETIME=$(date '+%Y%m%d_%H%M%S')
 
   # TODO: name や tag は判別のために自分で決められてもいいかも
-  echo "[$ docker volume create --driver=local --name=xbox_volume_${CURRENT_DATETIME}]"
+  echo "[$ docker volume create --driver=local --name=xbox_volume_${CURRENT_DATETIME} '$@']"
   docker volume create --driver=local --name=xbox_volume_"$CURRENT_DATETIME" "$@"
 }
 
@@ -29,7 +29,7 @@ alias DV='$(dvlss)'
 function dibuild () {
   CURRENT_DATETIME=$(date '+%Y%m%d_%H%M%S')
 
-  echo "[$ docker image build --tag xbox_image_${CURRENT_DATETIME}:latest (--file ./Dockerfile .)]"
+  echo "[$ docker image build --tag xbox_image_${CURRENT_DATETIME}:latest '$@']"
   docker image build --tag xbox_image_"$CURRENT_DATETIME":latest "$@"
 }
 
@@ -53,7 +53,7 @@ alias DI='$(dilss)'
 ## peco 経由でイメージを選んでコマンドを実行する (ex. $ diexec inspect)
 ## 引数を使うため function にする
 funciton diexec () {
-  echo '[$ docker image $@]'
+  echo '[$ docker image $@ $(dilss)]'
   docker image $@ $(dilss)
 }
 
@@ -61,7 +61,7 @@ funciton diexec () {
 function dirm () {
   TARGET_IMAGE_NAME=$(dilss)
 
-  echo '[$ docker image rm]'
+  echo '[$ docker image rm $(dilss)]'
   echo "[REMOVED] ${TARGET_IMAGE_NAME}"
   docker image rm ${TARGET_IMAGE_NAME}
 }
@@ -81,9 +81,9 @@ alias dcexec='docker container exec -it $(docker container ls --all --format "{{
 function dcsh () {
   TARGET_CONTAINER_NAME=$(dclss)
 
-  echo '[$ docker container start]'
+  echo '[$ docker container start $(dclss)]'
   docker container start ${TARGET_CONTAINER_NAME}
-  echo '[$ docker container exec ... /bin/sh]'
+  echo '[$ docker container exec -it $(dclss) /bin/sh]'
   docker container exec -it ${TARGET_CONTAINER_NAME} /bin/sh
 }
 
@@ -93,7 +93,7 @@ function dcbash () {
 
   echo '[$ docker container start]'
   docker container start ${TARGET_CONTAINER_NAME}
-  echo '[$ docker container exec ... /bin/bash]'
+  echo '[$ docker container exec -it $(dclss) /bin/bash]'
   docker container exec -it ${TARGET_CONTAINER_NAME} /bin/bash
 }
 
@@ -101,19 +101,28 @@ function dcbash () {
 function dczsh () {
   TARGET_CONTAINER_NAME=$(dclss)
 
-  echo '[$ docker container start]'
+  echo '[$ docker container start $(dclss)]'
   docker container start ${TARGET_CONTAINER_NAME}
-  echo '[$ docker container exec ... /bin/zsh]'
+  echo '[$ docker container exec -it $(dclss) /bin/zsh]'
   docker container exec -it ${TARGET_CONTAINER_NAME} /bin/zsh
 }
 
-## 新たにコンテナを作成する（シェルは自分で引数で指定する）
+## 新たにコンテナを作成する（シェルは /bin/bash）
 function dccreate () {
   CURRENT_DATETIME=$(date '+%Y%m%d_%H%M%S')
   RANDOM_PORT_NUMBER=$(shuf -i 10000-65000 -n 1)
 
-  echo "[$ docker container run -p ${RANDOM_PORT_NUMBER}:${RANDOM_PORT_NUMBER}]"
-  docker container run --name xbox_container_${CURRENT_DATETIME} --interactive --tty -p ${RANDOM_PORT_NUMBER}:${RANDOM_PORT_NUMBER} $@ $(dilss)
+  echo "[$ docker container run -p ${RANDOM_PORT_NUMBER}:${RANDOM_PORT_NUMBER} '$' $(dilss) /bin/bash]"
+  docker container run --name xbox_container_${CURRENT_DATETIME} --interactive --tty -p ${RANDOM_PORT_NUMBER}:${RANDOM_PORT_NUMBER} "$@" $(dilss) /bin/bash
+}
+
+## 新たにコンテナを作成する（シェルは /bin/sh）
+function dccreate_sh () {
+  CURRENT_DATETIME=$(date '+%Y%m%d_%H%M%S')
+  RANDOM_PORT_NUMBER=$(shuf -i 10000-65000 -n 1)
+
+  echo "[$ docker container run -p ${RANDOM_PORT_NUMBER}:${RANDOM_PORT_NUMBER} '$' $(dilss) /bin/sh]"
+  docker container run --name xbox_container_${CURRENT_DATETIME} --interactive --tty -p ${RANDOM_PORT_NUMBER}:${RANDOM_PORT_NUMBER} "$@" $(dilss) /bin/sh
 }
 
 ## コンテナを実行してすぐにぶっ壊す
@@ -123,11 +132,11 @@ alias dcrun='docker container run --rm $(dilss)'
 function dcrm () {
   TARGET_CONTAINER_NAME=$(dclss)
 
-  echo '[$ docker container stop]'
+  echo '[$ docker container stop $(dclss)]'
   echo "[STOPPED] ${TARGET_CONTAINER_NAME}"
   docker container stop ${TARGET_CONTAINER_NAME}
 
-  echo '[$ docker container rm]'
+  echo '[$ docker container rm $(dclss)]'
   echo "[REMOVED] ${TARGET_CONTAINER_NAME}"
   docker container rm ${TARGET_CONTAINER_NAME}
 }
