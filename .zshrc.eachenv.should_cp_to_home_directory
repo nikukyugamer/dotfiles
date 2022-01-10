@@ -1,5 +1,8 @@
 source ~/dotfiles/.zshrc
 
+# alias imgcat='timg'
+# alias imgcat='/mnt/d/Program\ Files/MassiGra/MassiGra.exe'
+
 # ここを書き換えればプロンプトをオーバーライドできる
 # PROMPT="%{${fg[green]}%}%n@%m@%*%{${reset_color}%}%F{yellow}%1v %F{blue}%(5~,%-2~/.../%1~,%~) $ %f"
 
