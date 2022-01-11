@@ -85,3 +85,5 @@ zplug load
 # VOLTA は package.json に必ず上書きしてしまうので、現状 (2022/01/06) ではまだ常用できない
 # export VOLTA_HOME="$HOME/.volta"
 # export PATH="$VOLTA_HOME/bin:$PATH"
+
+source ~/.zshrc.userown.zshrc
