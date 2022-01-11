@@ -126,7 +126,10 @@ function dccreate_sh () {
 }
 
 ## コンテナを実行してすぐにぶっ壊す
-alias dcrun='docker container run --rm $(dilss)'
+function dcrun () {
+  echo '[$ docker container run --rm "$@" {{dilss}}]'
+  docker container run --rm "$@" $(dilss)
+}
 
 ## コンテナを一覧から選んで破壊する
 function dcrm () {
