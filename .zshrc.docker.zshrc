@@ -34,7 +34,7 @@ function dibuild () {
 }
 
 ## イメージ一覧を最小限の情報で表示する
-alias dils='docker image ls --format "{{.Repository}}:{{.Tag}} ({{.ID}}) / {{.CreatedSince}}" | sed "/docker\/.*/d" | sed "/k8s.gcr.io\/.*/d" | sed "/.*<none>.*/d" | sort -h'
+alias dils='docker image ls --format "{{.Repository}}:{{.Tag}} ({{.ID}}) / {{.CreatedSince}}" | sed "/docker\/.*/d" | sed "/k8s.gcr.io\/.*/d" | sed "/.*<none>.*/d" | sed "/vsc-.*/d" | sort -h'
 
 ## イメージ名を peco で選択できるようにする
 function dilss () {
