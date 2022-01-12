@@ -1,17 +1,20 @@
 {
-  "solargraph.autoformat": true,
-  "solargraph.diagnostics": true,
-  "solargraph.formatting": true,
-  "ruby.rubocop.configFilePath": ".rubocop.yml",
+  // なんちゃって JSON でも OK
   "ruby.rubocop.useBundler": true,
-  "ruby.rubocop.suppressRubocopWarnings": true,
-  "ruby.format": "rubocop",
-  "ruby.rubocop.onSave": true,
-  "editor.formatOnSave": true,
-  "powermode.enabled": true,
-  "powermode.enableShake": false,
-  "[javascript]": {
-    "editor.formatOnSave": false
+  // "ruby.rubocop.configFilePath": "YOUR_HOME/REPO/.rubocop.yml",
+  // "ruby.rubocop.executePath": "YOUR_HOME/.rbenv/shims/",
+  "yaml.validate": false,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.DS_Store": true
+  },
+  // ファイルブラウザには表示するが、検索から除外する
+  "search.exclude": {
+    ".cahce": true,
+    ".yarn": true,
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/tmp": true
   }
 }
-
