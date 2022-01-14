@@ -258,3 +258,7 @@ alias gcps='gcloud alpha storage'
 
 # エディタでのハイライトを効かせるために拡張子を .zshrc としている
 source ~/dotfiles/.zshrc.docker.zshrc
+
+# Deno
+export DENO_INSTALL="$HOME/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
