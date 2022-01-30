@@ -14,21 +14,6 @@ function go_install() {
   echo '**********************************************************************'
 }
 
-function init_directories() {
-  echo '======================================================='
-  echo "[LOG] START: Init directories for Go"
-  echo '======================================================='
-
-  mkdir -p ~/.go
-  mkdir -p ~/.ghq
-
-  echo '======================================================='
-  echo "[LOG] END: Init directories for Go"
-  echo '======================================================='
-
-  echo '**********************************************************************'
-}
-
 go_install github.com/docker/hub-tool@latest # GO111MODULE=on
 go_install github.com/nektos/act@latest # act (GitHub Actions Local Exec Tool)
 go_install github.com/ipinfo/cli/ipinfo@latest # IPinfo (https://ipinfo.io/)
