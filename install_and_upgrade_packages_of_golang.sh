@@ -64,4 +64,9 @@ go_install github.com/itchyny/bed/cmd/bed@latest # Binary editor written in Go
 go_install github.com/gin-gonic/gin@latest # Gin (Web Framework)
 go_install github.com/labstack/echo/v4@latest # echo (Web Framework) https://echo.labstack.com/
 
+# For Visual Studio Code
+go install -v golang.org/x/tools/gopls@latest
+go install -v github.com/ramya-rao-a/go-outline@latest
+go install -v golang.org/x/tools/cmd/goimports@latest
+
 exit 0
