@@ -19,7 +19,7 @@ install_pip pipx # https://github.com/pypa/pipx
 install_pip pipenv # https://github.com/pypa/pipenv
 
 install_pip aws-encryption-sdk-cli # https://aws-encryption-sdk-cli.readthedocs.io/en/latest/
-install_pip awsebcli
+install_pip awsebcli # 不要と思われるのでコメントアウト
 install_pip bottle
 install_pip chat_downloader
 install_pip cuteuid # https://github.com/alexdredmon/cuteuid
@@ -36,7 +36,7 @@ install_pip ranger-fm # ranger (CLI Filer)
 install_pip sen # https://github.com/TomasTomecek/sen
 install_pip setuptools
 install_pip stormssh
-install_pip streamlink
+# install_pip streamlink # 不要と思われるのでコメントアウト
 install_pip termdown
 install_pip twitterscraper # https://github.com/taspinar/twitterscraper
 install_pip wad # WAD (Web application detector)
