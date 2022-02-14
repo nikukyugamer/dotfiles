@@ -86,4 +86,8 @@ zplug load
 # export VOLTA_HOME="$HOME/.volta"
 # export PATH="$VOLTA_HOME/bin:$PATH"
 
+# zoxide (https://github.com/ajeetdsouza/zoxide)
+eval "$(zoxide init zsh)"
+export _ZO_FZF_OPTS="--preview=''"
+
 source ~/.zshrc.userown.zshrc
