@@ -9,5 +9,6 @@
 ./update_fzf.sh
 ./update_cli_tools.sh
 ./update_rust.sh
+./install_and_update_deno.sh
 
 exit 0
