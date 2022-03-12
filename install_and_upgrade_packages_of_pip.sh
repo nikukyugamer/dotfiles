@@ -36,7 +36,7 @@ install_pip ranger-fm # ranger (CLI Filer)
 install_pip sen # https://github.com/TomasTomecek/sen
 install_pip setuptools
 install_pip stormssh
-# install_pip streamlink # pip で入れると依存関係が激しくて失敗することが多いのでコメントアウト
+install_pip streamlink # pip で入れないと TLS 周りでエラーが出るので、pip で入れる
 install_pip termdown
 install_pip twitterscraper # https://github.com/taspinar/twitterscraper
 install_pip wad # WAD (Web application detector)
