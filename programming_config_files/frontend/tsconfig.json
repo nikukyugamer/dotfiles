@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "es2015",
-    "lib": ["es2019", "dom", "dom.iterable"],
+    "target": "es2021",
+    "module": "es2021",
+    "lib": ["es2021", "dom", "dom.iterable"],
     "allowJs": false,
     "strict": true,
     "noImplicitAny": true,
@@ -16,6 +16,6 @@
     "strictBindCallApply": true,
     "strictPropertyInitialization": true,
     "noImplicitThis": true,
-    "alwaysStrict": true,
+    "alwaysStrict": true
   }
 }

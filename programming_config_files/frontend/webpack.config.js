@@ -1,8 +1,6 @@
 const path = require('path');
-// const Dotenv = require('dotenv-webpack');
 
 module.exports = {
-  // target: 'node',
   mode: 'development',
   entry: path.resolve(__dirname, './src/js/entry.js'),
   output: {
@@ -19,12 +17,4 @@ module.exports = {
       },
     ],
   },
-  // node: {
-  //   fs: 'empty',
-  //   __dirname: false
-  // },
-  // externals: {
-  //   puppeteer: 'require("puppeteer")'
-  // },
-  // plugins: [new Dotenv()]
 };
