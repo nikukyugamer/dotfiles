@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "es2021",
-    "module": "es2021",
+    "module": "esnext",
     "lib": ["es2021", "dom", "dom.iterable"],
     "allowJs": false,
     "strict": true,
