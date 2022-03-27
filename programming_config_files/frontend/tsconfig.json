@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "es2021",
     "module": "esnext",
+    "moduleResolution": "node",
     "lib": ["es2021", "dom", "dom.iterable"],
     "allowJs": false,
     "strict": true,
@@ -10,12 +11,14 @@
     "forceConsistentCasingInFileNames": true,
     "sourceMap": true,
     "outDir": "./dist",
-
     "strictNullChecks": true,
     "strictFunctionTypes": true,
     "strictBindCallApply": true,
     "strictPropertyInitialization": true,
     "noImplicitThis": true,
     "alwaysStrict": true
+  },
+  "ts-node": {
+    "files": true
   }
 }
