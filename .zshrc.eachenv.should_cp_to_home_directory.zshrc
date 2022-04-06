@@ -1,5 +1,7 @@
 source ~/dotfiles/.zshrc
 
+alias serve='~/.cargo/bin/miniserve .'
+
 # alias imgcat='timg'
 # alias imgcat='/mnt/d/Program\ Files/MassiGra/MassiGra.exe'
 
