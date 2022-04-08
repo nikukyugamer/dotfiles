@@ -19,7 +19,7 @@ install_pip pipx # https://github.com/pypa/pipx
 install_pip pipenv # https://github.com/pypa/pipenv
 
 install_pip aws-encryption-sdk-cli # https://aws-encryption-sdk-cli.readthedocs.io/en/latest/
-install_pip awsebcli # 不要と思われるのでコメントアウト
+# install_pip awsebcli # 不要と思われるのでコメントアウト
 install_pip bottle
 install_pip chat_downloader
 install_pip cuteuid # https://github.com/alexdredmon/cuteuid
