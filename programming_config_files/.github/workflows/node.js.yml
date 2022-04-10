@@ -28,3 +28,7 @@ jobs:
     - name: Jest
       run: |
         yarn test
+    - name: Codecov の結果をアップロードする
+      uses: codecov/codecov-action@v2
+      with:
+        directory: ./.coverage
