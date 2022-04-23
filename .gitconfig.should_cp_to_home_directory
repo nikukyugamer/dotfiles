@@ -20,4 +20,3 @@
   helper = !/usr/bin/gh auth git-credential
 [sequence]
   editor = interactive-rebase-tool
-
