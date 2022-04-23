@@ -1,6 +1,7 @@
 source ~/dotfiles/.zshrc
 
 alias serve='~/.cargo/bin/miniserve .'
+alias gu='~/.cargo/bin/gitui'
 
 # alias imgcat='timg'
 # alias imgcat='/mnt/d/Program\ Files/MassiGra/MassiGra.exe'
