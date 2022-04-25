@@ -57,6 +57,7 @@ npm_install_g jsonlint
 npm_install_g kmdr
 npm_install_g npm-check-updates
 npm_install_g pm2
+npm_install_g @railway/cli
 npm_install_g trello-cli
 npm_install_g ts-node
 npm_install_g typescript
