@@ -1,9 +1,18 @@
 #!/bin/bash -e
 
-heroku update
+UNAME=`uname -a`
+
+if [ "`echo $UNAME | grep arm`" ]; then
+  # arm では heroku update は 404エラー になる
+  echo 'arm: Heroku CLI の アップデート をスキップします'
+elif [ "`echo $UNAME | grep aarch64`" ]; then
+  # arm では heroku update は 404エラー になる
+  echo 'aarch64: Heroku CLI の アップデート をスキップします'
+else
+  heroku update
+fi
 heroku plugins:install heroku-accounts
 
-UNAME=`uname -a`
 if [ "`echo $UNAME | grep Darwin`" ]; then
   echo 'Update circleci...'
   circleci update
@@ -11,6 +20,10 @@ elif [ "`echo $UNAME | grep arm`" ]; then
   # 現状、arm では動作しない
   # circleci update
   echo 'Skip "circleci update"'
+elif [ "`echo $UNAME | grep aarch64`" ]; then
+  # 現状、arm では動作しない
+  # circleci update
+  echo 'aarch64: Skip "circleci update"'
 elif [ "`echo $UNAME | grep Ubuntu`" ]; then
   echo 'Update circleci...'
   circleci update
@@ -23,4 +36,3 @@ else
 fi
 
 exit 0
-
