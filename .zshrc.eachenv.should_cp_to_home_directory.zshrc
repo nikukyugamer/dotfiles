@@ -49,10 +49,6 @@ eval "$(phpenv init -)"
 # direnv
 eval "$(direnv hook zsh)"
 
-# jenv
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
-
 # To configure your current shell run source $HOME/.cargo/env
 export PATH="$HOME/.cargo/bin:$PATH"
 
@@ -92,5 +88,10 @@ zplug load
 # zoxide (https://github.com/ajeetdsouza/zoxide)
 eval "$(zoxide init zsh)"
 export _ZO_FZF_OPTS="--preview=''"
+
+# ../completions/jenv.bash:15: command not found: complete を避けるため最後の方で読む
+# jenv
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
 
 source ~/.zshrc.userown.zshrc
