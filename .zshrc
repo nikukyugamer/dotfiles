@@ -152,14 +152,13 @@ export PATH="$PATH:$HOME/.config/yarn/global/node_modules/.bin"
 
 # Golang
 # https://zenn.dev/tennashi/articles/3b87a8d924bc9c43573e
-export GO11MODULE=on
+# export GO11MODULE=on # 1.13 以降は不要
 export GOENV_ROOT="$HOME/.goenv"
 export PATH="$GOENV_ROOT/bin:$PATH"
-# export PATH="$GOROOT/bin:$PATH"
-# export GOPATH="$HOME/.go"
-# export PATH="$GOPATH/bin:$PATH"
-export GOENV_DISABLE_GOPATH=0
-eval "$(goenv init -)"
+eval "$(goenv init -)" # goenv init しないと $GOROOT や $GOPATH が定義されない
+export PATH="$GOROOT/bin:$PATH"
+export PATH="$GOPATH/bin:$PATH"
+### export GOENV_DISABLE_GOPATH=0
 
 # tfenv
 export PATH="$HOME/.tfenv/bin:$PATH"
