@@ -15,7 +15,8 @@ alias gu='~/.cargo/bin/gitui'
 alias gl='git log --oneline --graph --decorate=full'
 alias gc='git checkout'
 alias gb='git branch'
-alias gs='git status'
+alias gs='git switch'
+alias gsb='git switch B'
 alias gitfastpush='git add . && git commit --amend --no-edit && git push -f'
 
 # Useful expanded alias for some commands
