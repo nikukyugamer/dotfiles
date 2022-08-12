@@ -39,6 +39,7 @@ install_pip stormssh
 install_pip streamlink # pip で入れないと TLS 周りでエラーが出るので、pip で入れる
 install_pip termdown
 install_pip twitterscraper # https://github.com/taspinar/twitterscraper
+install_pip twspace-dl # https://github.com/HoloArchivists/twspace-dl
 install_pip wad # WAD (Web application detector)
 install_pip youtube-dl
 install_pip yt-dlp
