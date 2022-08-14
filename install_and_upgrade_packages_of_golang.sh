@@ -57,4 +57,7 @@ go install -v golang.org/x/tools/cmd/goimports@latest
 # dog on go = doggo
 go install -v github.com/mr-karan/doggo/cmd/doggo@latest
 
+# shell2http (https://github.com/msoap/shell2http)
+go install -v github.com/msoap/shell2http@latest
+
 exit 0
