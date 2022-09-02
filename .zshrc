@@ -73,8 +73,8 @@ setopt hist_expand # 補完時にヒストリを自動的に展開
 setopt inc_append_history # 履歴をインクリメンタルに追加
 
 # インクリメンタルからの検索
-bindkey "^R" history-incremental-search-backward
-bindkey "^S" history-incremental-search-forward
+# bindkey "^R" history-incremental-search-backward
+# bindkey "^S" history-incremental-search-forward
 
 # macOS と Linux で色の付け方が異なる
 ## macOS か否か の判定には sw_vers の終了ステータスが使える
