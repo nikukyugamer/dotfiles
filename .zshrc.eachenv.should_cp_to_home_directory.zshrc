@@ -72,8 +72,8 @@ zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-history-substring-search", defer:3
 # zplug "b4b4r07/enhancd", use:init.sh
 # 本体（連携前提のパーツ）
-zplug "junegunn/fzf-bin", as:command, from:gh-r, rename-to:fzf
-zplug "junegunn/fzf", as:command, use:bin/fzf-tmux
+# zplug "junegunn/fzf-bin", as:command, from:gh-r, rename-to:fzf
+# zplug "junegunn/fzf", as:command, use:bin/fzf-tmux
 # fzf でよく使う関数の詰め合わせ
 zplug "mollifier/anyframe"
 
