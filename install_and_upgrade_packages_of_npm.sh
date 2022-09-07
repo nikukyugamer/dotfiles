@@ -62,6 +62,7 @@ npm_install_g @railway/cli
 npm_install_g trello-cli
 npm_install_g ts-node
 npm_install_g typescript
+npm_install_g wrangler # Cloudflare の CLI
 npm_install_g yarn
 npm_install_g yarn-outdated-formatter # https://github.com/masawada/yarn-outdated-formatter
 npm_install_g yukichant
