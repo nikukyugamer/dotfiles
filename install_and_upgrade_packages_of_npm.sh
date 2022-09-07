@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 function npm_install_g() {
   echo '======================================================='
@@ -50,6 +50,7 @@ npm_install_g capture-website-cli
 npm_install_g crontab-ui
 npm_install_g diff-so-fancy
 npm_install_g dsstore-cli
+npm_install_g firebase-tools
 npm_install_g fx
 npm_install_g js-beautify
 npm_install_g jshint
