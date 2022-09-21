@@ -52,6 +52,7 @@ npm_install_g diff-so-fancy
 npm_install_g dsstore-cli
 npm_install_g firebase-tools
 npm_install_g fx
+npm_install_g http-server
 npm_install_g js-beautify
 npm_install_g jshint
 npm_install_g jsonlint
