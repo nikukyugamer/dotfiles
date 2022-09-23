@@ -44,13 +44,9 @@ function install_git_cz() {
 npm_install_g @amanoese/muscular
 npm_install_g @fand/kao
 npm_install_g @google/clasp
-npm_install_g @vue/cli
-npm_install_g @vue/cli-init
-npm_install_g capture-website-cli
 npm_install_g crontab-ui
 npm_install_g diff-so-fancy
 npm_install_g dsstore-cli
-npm_install_g firebase-tools
 npm_install_g fx
 npm_install_g http-server
 npm_install_g js-beautify
@@ -58,11 +54,13 @@ npm_install_g jshint
 npm_install_g jsonlint
 npm_install_g kmdr
 npm_install_g npm-check-updates
+# 30s かかるので保留
+# npm_install_g pageres-cli
 npm_install_g pm2
 npm_install_g @railway/cli
-npm_install_g trello-cli
 npm_install_g ts-node
 npm_install_g typescript
+npm_install_g vercel
 npm_install_g wrangler # Cloudflare の CLI
 npm_install_g yarn
 npm_install_g yarn-outdated-formatter # https://github.com/masawada/yarn-outdated-formatter
