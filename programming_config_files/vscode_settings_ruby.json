@@ -2,7 +2,9 @@
   "ruby.rubocop.executePath": "HOME/.rbenv/shims/",
   "ruby.rubocop.configFilePath": "REPO/.rubocop.yml",
   "ruby.rubocop.useBundler": false,
+  "ruby.useLanguageServer": false,
   "[ruby]": {
+    // 保存時に自動的に Lint を走らせるためにはこの設定がキモ
     "editor.formatOnSave": true,
   "yaml.validate": false,
   "files.exclude": {
