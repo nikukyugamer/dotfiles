@@ -1,11 +1,11 @@
 [include]
   path = ~/dotfiles/.gitconfig
 # [credential]
-# https://docs.github.com/en/github/using-git/caching-your-github-credentials-in-git
-# macOS
-# helper = osxkeychain
-# Ubuntu
-# helper = cache
+  # https://docs.github.com/en/github/using-git/caching-your-github-credentials-in-git
+  # macOS
+  # helper = osxkeychain
+  # Ubuntu
+  # helper = cache
 [user]
   name = Osamu Takiya
   email = takiya@toran.sakura.ne.jp
