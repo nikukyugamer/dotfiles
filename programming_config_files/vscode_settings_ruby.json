@@ -1,8 +1,9 @@
 {
-  // なんちゃって JSON でも OK
-  "ruby.rubocop.useBundler": true,
-  // "ruby.rubocop.configFilePath": "YOUR_HOME/REPO/.rubocop.yml",
-  // "ruby.rubocop.executePath": "YOUR_HOME/.rbenv/shims/",
+  "ruby.rubocop.executePath": "HOME/.rbenv/shims/",
+  "ruby.rubocop.configFilePath": "REPO/.rubocop.yml",
+  "ruby.rubocop.useBundler": false,
+  "[ruby]": {
+    "editor.formatOnSave": true,
   "yaml.validate": false,
   "files.exclude": {
     "**/.git": true,
