@@ -1,14 +1,16 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-./install_and_upgrade_packages_of_pip.sh
-./install_and_upgrade_packages_of_rust.sh
-./install_and_upgrade_packages_of_npm.sh
+# install_and_upgrade_packages
+$HOME/dotfiles/install_and_upgrade_packages_of_pip.sh
+$HOME/dotfiles/install_and_upgrade_packages_of_rust.sh
+$HOME/dotfiles/install_and_upgrade_packages_of_npm.sh
 
-./update_rbenv_nodenv_pyenv_goenv_jenv_phpenv.sh
+# update_scripts
+$HOME/dotfiles/update_scripts/update_rbenv_nodenv_pyenv_goenv_jenv_phpenv.sh
+$HOME/dotfiles/update_scripts/update_fzf.sh
+$HOME/dotfiles/update_scripts/update_cli_tools.sh
+$HOME/dotfiles/update_scripts/update_rust.sh
 
-./update_fzf.sh
-./update_cli_tools.sh
-./update_rust.sh
-./install_and_update_deno.sh
+$HOME/dotfiles/install_and_update_deno.sh
 
 exit 0
