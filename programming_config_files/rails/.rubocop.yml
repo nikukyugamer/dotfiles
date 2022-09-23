@@ -14,7 +14,6 @@ AllCops:
   - 'config/**/*'
   - 'Guardfile'
   - 'bin/**/*'
-  - 'lib/price-simulator/**/*'
   - 'tmp/**/*'
 
 Style/StringLiterals:
