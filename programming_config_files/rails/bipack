@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+echo '**********'
+echo '$ ruby -v'
+echo '**********'
+~/.rbenv/shims/ruby -v
+
+echo '**********'
+echo '$ bundle config set --local path vendor/bundle'
+echo '**********'
+~/.rbenv/shims/bundle config set --local path 'vendor/bundle'
+
+echo '**********'
+echo '$ gem install bundler solargraph rubocop*'
+echo '**********'
+~/.rbenv/shims/gem install bundler solargraph rubocop rubocop-rails rubocop-rspec rubocop-performance
+
+echo '**********'
+echo '$ bundle install'
+echo '**********'
+~/.rbenv/shims/bundle install
+
+exit 0
