@@ -4,6 +4,7 @@ require:
   - rubocop-rails
 
 AllCops:
+  NewCops: enable
   DisplayCopNames: true
   Exclude:
   - 'vendor/**/*'
