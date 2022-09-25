@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
 git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
@@ -23,5 +23,8 @@ git clone https://github.com/jenv/jenv.git ~/.jenv
 git clone https://github.com/phpenv/phpenv.git ~/.phpenv
 git clone https://github.com/php-build/php-build ~/.phpenv/plugins/php-build
 git clone https://github.com/ngyuki/phpenv-composer.git ~/.phpenv/plugins/phpenv-composer
+
+# tfenv
+git clone https://github.com/tfutils/tfenv.git ~/.tfenv
 
 exit 0
