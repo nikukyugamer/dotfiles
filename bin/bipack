@@ -6,7 +6,7 @@ echo 'Ruby version:'
 ~/.rbenv/shims/ruby -v
 
 ~/.rbenv/shims/bundle config set --local path 'vendor/bundle'
-~/.rbenv/shims/bundle install && ~/.rbenv/shims/gem install solargraph rubocop rubocop-rails rubocop-rspec
+~/.rbenv/shims/bundle install && ~/.rbenv/shims/gem install solargraph rubocop rubocop-rails rubocop-rspec rubocop-performance
 
 exit 0
 
