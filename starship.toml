@@ -9,7 +9,7 @@ truncation_length = 2
 # truncation_symbol が有効だと truncate_to_repo は無効（というか意味がない）
 # truncate_to_repo = true
 truncation_symbol = ".../"
-home_symbol = "~/"
+# home_symbol = "~/"
 
 [character]
 success_symbol = "[🐈](bg:#800080 fg:#ff1493)" # (bold green)"
