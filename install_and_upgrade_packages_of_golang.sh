@@ -15,7 +15,6 @@ function go_install() {
 }
 
 go_install github.com/docker/hub-tool@latest # GO111MODULE=on
-go_install github.com/nektos/act@latest # act (GitHub Actions Local Exec Tool)
 go_install github.com/ipinfo/cli/ipinfo@latest # IPinfo (https://ipinfo.io/)
 go_install github.com/oz/tz@latest # A time zone helper
 # go_install github.com/wagoodman/dive@latest # A tool for exploring a docker image
