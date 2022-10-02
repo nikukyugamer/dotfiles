@@ -46,7 +46,6 @@ go_install github.com/mattn/twty@latest # twty (Twitter Client) developed by mat
 go_install github.com/itchyny/mmv/cmd/mmv@latest # Rename multiple files using your $EDITOR https://github.com/itchyny/mmv
 # go_install github.com/gulyasm/jsonui@latest
 go_install github.com/itchyny/bed/cmd/bed@latest # Binary editor written in Go
-go_install github.com/gin-gonic/gin@latest # Gin (Web Framework)
 go_install github.com/labstack/echo/v4@latest # echo (Web Framework) https://echo.labstack.com/
 
 # For Visual Studio Code
