@@ -49,14 +49,21 @@ go_install github.com/itchyny/bed/cmd/bed@latest # Binary editor written in Go
 go_install github.com/labstack/echo/v4@latest # echo (Web Framework) https://echo.labstack.com/
 
 # For Visual Studio Code
+echo "gopls@latest をインストールします"
 go install -v golang.org/x/tools/gopls@latest
+
+echo "go-outline@latest をインストールします"
 go install -v github.com/ramya-rao-a/go-outline@latest
+
+echo "goimports@latest をインストールします"
 go install -v golang.org/x/tools/cmd/goimports@latest
 
 # dog on go = doggo
-go install -v github.com/mr-karan/doggo/cmd/doggo@latest
+echo "doggo@latest をインストールします"
+go install -v github.com/mr-karan/doggo/cmd/doggo@5e611d9706ec6a2b5b9ee5cbec4cbee21f5c4632
 
 # shell2http (https://github.com/msoap/shell2http)
+echo "shell2http@latest をインストールします"
 go install -v github.com/msoap/shell2http@latest
 
 exit 0
