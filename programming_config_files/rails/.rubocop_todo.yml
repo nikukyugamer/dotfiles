@@ -149,7 +149,3 @@ Naming/AccessorMethodName:
 # ヘルパーの中にインスタンス変数を使うなということだが、いったん無効にする
 Rails/HelperInstanceVariable:
   Enabled: false
-
-AsciiComments:
-  Enabled: false
-
