@@ -8,15 +8,15 @@ AllCops:
   NewCops: enable
   DisplayCopNames: true
   Exclude:
-  - 'vendor/**/*'
-  - 'node_modules/**/*'
-  - 'spec/**/*'
-  - 'db/schema.rb'
-  - 'db/**/*'
-  - 'config/**/*'
-  - 'Guardfile'
-  - 'bin/**/*'
-  - 'tmp/**/*'
+    - 'vendor/**/*'
+    - 'node_modules/**/*'
+    - 'spec/**/*'
+    - 'db/schema.rb'
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'Guardfile'
+    - 'bin/**/*'
+    - 'tmp/**/*'
 
 Style/Documentation:
   Enabled: false
