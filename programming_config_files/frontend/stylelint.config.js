@@ -1,6 +1,6 @@
 module.exports = {
   plugins: ['stylelint-order'],
-  extends: ['stylelint-config-standard'],
+  extends: ['stylelint-config-standard-scss', 'stylelint-config-recess-order'],
   rules: {
     'at-rule-no-unknown': [
       true,
@@ -15,7 +15,6 @@ module.exports = {
       },
     ],
     'string-quotes': 'single',
-    'order/properties-alphabetical-order': true,
   },
   ignoreFiles: ['**/node_modules/**'],
 }
