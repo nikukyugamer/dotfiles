@@ -19,11 +19,14 @@ yarn add -dev stylelint stylelint-config-standard-scss postcss stylelint-config-
 # ESLint
 yarn add --dev eslint eslint-config-prettier eslint-config-standard @typescript-eslint/parser @typescript-eslint/eslint-plugin
 
-# ESLint Plug-In
-# yarn add --dev eslint-plugin-jest
-# yarn add --dev eslint-plugin-cypress
-
 # Jest
 yarn add --dev jest ts-jest
+yarn add --dev eslint-plugin-jest
+
+# Cypress
+yarn add --dev cypress
+yarn add --dev eslint-plugin-cypress
+# 独自拡張なので Cypress標準 で書いたほうが安全
+# yarn add --dev @testing-library/cypress
 
 exit 0
