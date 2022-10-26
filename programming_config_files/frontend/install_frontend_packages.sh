@@ -22,6 +22,7 @@ yarn add --dev eslint eslint-config-prettier eslint-config-standard @typescript-
 # Jest
 yarn add --dev jest ts-jest
 yarn add --dev eslint-plugin-jest
+yarn add --dev @types/jest
 
 # Cypress
 yarn add --dev cypress
