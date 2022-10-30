@@ -46,6 +46,7 @@ go_install github.com/itchyny/mmv/cmd/mmv@latest # Rename multiple files using y
 # go_install github.com/gulyasm/jsonui@latest
 go_install github.com/itchyny/bed/cmd/bed@latest # Binary editor written in Go
 go_install github.com/labstack/echo/v4@latest # echo (Web Framework) https://echo.labstack.com/
+go_install github.com/charmbracelet/vhs@latest
 
 # For Visual Studio Code
 echo "gopls@latest をインストールします"
