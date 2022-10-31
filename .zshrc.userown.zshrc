@@ -21,3 +21,6 @@
 #     . ~/.ssh-agent
 # fi
 # ssh-add -l >& /dev/null || ssh-add
+
+# Windows Explorer
+alias expl="explorer.exe ."
