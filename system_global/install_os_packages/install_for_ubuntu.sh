@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 sudo apt update
+sudo apt install -y whois
 sudo apt install -y dialog rsync zsh unzip
 sudo apt install -y locales fonts-ipafont fonts-ipaexfont
 sudo apt install -y gh peco direnv expect neovim unar rclone
