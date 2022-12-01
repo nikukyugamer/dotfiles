@@ -1,3 +1,4 @@
+// $ mkdir -p .vscode && cp .vscode-settings.jsonc .vscode/settings.json
 {
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -14,37 +15,36 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  // css, scss ファイルは Stylelint でフォーマットするため、Pretteir によるフォーマットを回避
+  // css, scss ファイルは Stylelint でフォーマットするため、 Prettier によるフォーマットを回避
   "css.validate": false,
   "[css]": {
     "editor.formatOnSave": false,
     "editor.codeActionsOnSave": {
       "source.fixAll.stylelint": true
-    },
+    }
   },
   "scss.validate": false,
   "[scss]": {
     "editor.formatOnSave": false,
     "editor.codeActionsOnSave": {
       "source.fixAll.stylelint": true
-    },
+    }
   },
   "eslint.alwaysShowStatus": true,
   "eslint.format.enable": true,
   "eslint.packageManager": "yarn",
-  "prettier.configPath": "/home/meganekko/.ghq/github.com/true-runes/suikoden-election-2022-frontend/.prettierrc.js",
-  "prettier.ignorePath": "/home/meganekko/.ghq/github.com/true-runes/suikoden-election-2022-frontend/.prettierignore",
+  "prettier.configPath": "/home/takiya/.ghq/github.com/nikukyugamer/boilerplate-playwright/.prettierrc.js",
+  "prettier.ignorePath": "/home/takiya/.ghq/github.com/nikukyugamer/boilerplate-playwright/.prettierignore",
   "prettier.semi": false,
   "prettier.singleQuote": true,
   "prettier.withNodeModules": true,
   "stylelint.packageManager": "yarn",
-  "stylelint.configFile": "/home/meganekko/.ghq/github.com/true-runes/suikoden-election-2022-frontend/stylelint.config.js",
+  "stylelint.configFile": "/home/takiya/.ghq/github.com/nikukyugamer/boilerplate-playwright/stylelint.config.js",
   "stylelint.validate": [
     "css",
     "less",
     "postcss",
     "scss"
   ],
-  "jestrunner.configPath": "/home/meganekko/.ghq/github.com/true-runes/suikoden-election-2022-frontend/jest.config.js"
+  "jestrunner.configPath": "/home/takiya/.ghq/github.com/nikukyugamer/boilerplate-playwright/jest.config.js"
 }
-
