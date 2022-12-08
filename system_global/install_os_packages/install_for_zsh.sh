@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Ubuntu (Debian)
-sudo apt install zsh -y
-chsh /usr/bin/zsh
+sudo apt install -y zsh
+chsh -s /usr/bin/zsh
 
 exit 0
