@@ -2,15 +2,20 @@
 set -euxo pipefail
 cd ""$(dirname ""$0"")""
 
-mkdir ~/.gcloud
-cd ~/.gcloud
 
 # バージョンに注意
-wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-367.0.0-linux-x86_64.tar.gz
-tar xvzf google-cloud-sdk-367.0.0-linux-x86_64.tar.gz
-rm google-cloud-sdk-367.0.0-linux-x86_64.tar.gz
+# https://cloud.google.com/sdk/docs/install?hl=ja
+FILENAME="google-cloud-cli-410.0.0-linux-x86_64.tar.gz"
+WORKDIR="/tmp/google_cloud_sdk_install"
 
-cd google-cloud-sdk
+mkdir $WORKDIR
+wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/$FILENAME -O $WORKDIR/$FILENAME
+
+cd $WORKDIR
+tar xvzf $FILENAME
+rm $FILENAME
+
+cd $WORKDIR/google-cloud-sdk
 ./install.sh
 
 exit 0
