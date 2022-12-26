@@ -37,6 +37,9 @@ eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
+# Poetry
+export PATH="$HOME/.local/bin:$PATH"
+
 # goenv
 # ここにこの順番（トップでインクルードする上でのこの順番）だと正しく適用されないのでコメントアウトする
 # export GOENV_ROOT="$HOME/.goenv"
