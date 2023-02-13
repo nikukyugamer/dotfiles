@@ -265,4 +265,14 @@ source ~/dotfiles/.zshrc.docker.zshrc
 export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
+# 1Password CLI
+function opget () {
+  # Vault の絞り込みを行うこともできるが、面倒になるだけなので採用しなかった
+  # op item list --vault $(op vault list | peco | cut -d " " -f 1) | peco | cut -d " " -f 1
+  ITEM_ID=$(op item list | peco | cut -d " " -f 1)
+
+  op item get $ITEM_ID
+  op item get --format json $ITEM_ID
+}
+
 # cargo や go で入れたものを eval する際などは読み込みの順序に注意する（ここに書くと動かないときがある）
