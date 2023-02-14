@@ -22,6 +22,10 @@
 # fi
 # ssh-add -l >& /dev/null || ssh-add
 
+# Flutter
+export FLUTTER_HOME=$HOME/flutter
+export PATH=$PATH:$FLUTTER_HOME/bin
+
 # Windows Explorer
 alias expl="explorer.exe ."
 
