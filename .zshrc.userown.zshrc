@@ -25,6 +25,7 @@
 # Flutter
 export FLUTTER_HOME=$HOME/flutter
 export PATH=$PATH:$FLUTTER_HOME/bin
+# export CHROME_EXECUTABLE="/Applications/Google Chrome Dev.app/Contents/MacOS/Google Chrome Dev"
 
 # Windows Explorer
 alias expl="explorer.exe ."
