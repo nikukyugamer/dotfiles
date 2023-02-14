@@ -19,5 +19,9 @@
     "**/node_modules": true,
     "**/bower_components": true,
     "**/tmp": true
-  }
+  },
+  "editor.fontFamily": "HackGen Console NFJ",
+  // "editor.fontFamily": "PlemolJP Console NFJ",
+  // "terminal.integrated.fontFamily": "HackGen Console NFJ"
+  "terminal.integrated.fontFamily": "PlemolJP Console NFJ"
 }

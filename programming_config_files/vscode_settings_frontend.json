@@ -51,5 +51,9 @@
     "less",
     "postcss",
     "scss"
-  ]
+  ],
+  "editor.fontFamily": "HackGen Console NFJ",
+  // "editor.fontFamily": "PlemolJP Console NFJ",
+  // "terminal.integrated.fontFamily": "HackGen Console NFJ"
+  "terminal.integrated.fontFamily": "PlemolJP Console NFJ"
 }
