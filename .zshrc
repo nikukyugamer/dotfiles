@@ -275,4 +275,9 @@ function opget () {
   op item get --format json $ITEM_ID
 }
 
+# pnpm
+export PNPM_HOME="$HOME/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
+
 # cargo や go で入れたものを eval する際などは読み込みの順序に注意する（ここに書くと動かないときがある）
