@@ -12,5 +12,6 @@ $HOME/dotfiles/update_scripts/update_cli_tools.sh
 $HOME/dotfiles/update_scripts/update_rust.sh
 
 $HOME/dotfiles/install_and_update_deno.sh
+$HOME/dotfiles/install_pnpm.sh
 
 exit 0
