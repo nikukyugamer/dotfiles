@@ -22,7 +22,7 @@ alias gitfastpush='git add . && git commit --amend --no-edit && git push -f'
 # pnpx という旧コマンドはあるが接頭語 "pn" は統一したいので "pnx" とする
 alias pn='pnpm'
 alias pnx='pnpm exec'
-alias pnr='pnpm run'
+alias pnrun='pnpm run'
 
 # Useful expanded alias for some commands
 alias cat='bat -p --pager "less -X"'
