@@ -1,4 +1,4 @@
-#!/bin/bash -xe
+#!/usr/bin/env bash -xe
 
 # cf. How to update: circleci update install
 curl -fLSs https://circle.ci/cli | sudo bash

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -euxo pipefail
 cd "$(dirname "$0")"
 
@@ -8,4 +8,3 @@ sudo apt update
 sudo apt install -y docker-ctop
 
 exit 0
-

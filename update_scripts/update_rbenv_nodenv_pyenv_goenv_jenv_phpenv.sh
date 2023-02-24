@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 echo '----------'
 
@@ -72,4 +72,3 @@ cd ~/.phpenv/plugins/phpenv-composer && git pull
 echo '----------'
 
 exit 0
-

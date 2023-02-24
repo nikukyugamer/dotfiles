@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -euo pipefail
 # cd "$(dirname "$0")"
 
@@ -9,4 +9,3 @@ echo 'Ruby version:'
 ~/.rbenv/shims/bundle install && ~/.rbenv/shims/gem install solargraph rubocop rubocop-rails rubocop-rspec rubocop-performance
 
 exit 0
-

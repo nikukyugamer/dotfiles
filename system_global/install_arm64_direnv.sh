@@ -1,4 +1,4 @@
-#!/bin/bash -xe
+#!/usr/bin/env bash -xe
 
 # If you install direnv via make install, it's necessary for root to execute go command
 # This condition is severe so this script supports installation via downloading binary directly

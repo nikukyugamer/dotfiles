@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Ubuntu (Debian)
 sudo apt install -y zsh

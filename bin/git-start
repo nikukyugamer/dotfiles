@@ -1,7 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 branch=$1
 
 git checkout -b $branch
 git commit --allow-empty -m "${branch}"
-

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 echo 'Install/Update fzf'
 cd ~/.fzf && git pull
@@ -19,4 +19,3 @@ expect -c "
 
   exit 0
 "
-

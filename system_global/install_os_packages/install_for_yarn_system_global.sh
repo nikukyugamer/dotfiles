@@ -1,4 +1,4 @@
-#!/bin/bash -xe
+#!/usr/bin/env bash -xe
 
 # Ubuntu
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
