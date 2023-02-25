@@ -67,4 +67,8 @@ go install -v github.com/mr-karan/doggo/cmd/doggo@5e611d9706ec6a2b5b9ee5cbec4cbe
 echo "shell2http@latest をインストールします"
 go install -v github.com/msoap/shell2http@latest
 
+# インタプリタ (REPL)
+echo "yaegi をインストールします"
+go install -v github.com/traefik/yaegi/cmd/yaegi@latest
+
 exit 0
