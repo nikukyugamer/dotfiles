@@ -44,4 +44,8 @@ install_pip wad # WAD (Web application detector)
 install_pip youtube-dl
 install_pip yt-dlp
 
+# ChatGPT API を用いたシェルスクリプト生成ツール
+# 要 v3.10 以上
+# install_pip wanna
+
 exit 0
