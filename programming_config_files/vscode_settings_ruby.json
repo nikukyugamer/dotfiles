@@ -1,11 +1,20 @@
 {
-  "ruby.rubocop.executePath": "HOME/.rbenv/shims/",
+  "editor.formatOnPaste": false,
+  "editor.formatOnSaveMode": "file",
+  "editor.renderWhitespace": "all",
+  "solargraph.diagnostics": false,
+  "solargraph.commandPath": "$HOME/.rbenv/shims/solargraph",
+  "solargraph.bundlerPath": "$HOME/.rbenv/shims/bundle",
+  "solargraph.definitions": true,
+  "solargraph.references": true,
+  "ruby.rubocop.executePath": "$HOME/.rbenv/shims/",
   "ruby.rubocop.configFilePath": "REPO/.rubocop.yml",
   "ruby.rubocop.useBundler": false,
   "ruby.useLanguageServer": false,
   "[ruby]": {
     // 保存時に自動的に Lint を走らせるためにはこの設定がキモ
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": true
+  },
   "yaml.validate": false,
   "files.exclude": {
     "**/.git": true,
@@ -20,8 +29,8 @@
     "**/bower_components": true,
     "**/tmp": true
   },
-  "editor.fontFamily": "HackGen Console NFJ",
+  // "editor.fontFamily": "HackGen Console NFJ",
   // "editor.fontFamily": "PlemolJP Console NFJ",
   // "terminal.integrated.fontFamily": "HackGen Console NFJ"
-  "terminal.integrated.fontFamily": "PlemolJP Console NFJ"
+  // "terminal.integrated.fontFamily": "PlemolJP Console NFJ"
 }
