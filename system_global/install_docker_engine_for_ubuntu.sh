@@ -20,6 +20,7 @@ echo "$ sudo service docker status"
 echo
 echo "一般ユーザでも実行できるようにするならグループ設定をすること"
 echo "$ sudo usermod -aG docker TARGET_USER"
+echo "設定を反映させるためにはシェルを再起動する必要がある"
 
 echo
 echo "権限があるかどうかは $ docker image ls で一覧が表示できるかどうかでわかる"

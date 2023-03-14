@@ -11,7 +11,7 @@ echo "$ ln -s ~/.vimrc ~/.config/nvim"
 
 echo
 echo "やること その2"
-echo ".zshrc にエイリアスを作ること"
+echo ".zshrc.userown.zshrc などにエイリアスを作ること"
 echo "alias vim=/usr/bin/nvim"
 
 exit 0
