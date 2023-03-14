@@ -1,4 +1,5 @@
-#!/usr/bin/env bash -xe
+#!/usr/bin/env bash
+set -xe
 
 # Ubuntu
 curl https://cli-assets.heroku.com/install.sh | sh
