@@ -45,15 +45,15 @@ install_cargo gitui # https://github.com/extrawurst/gitui
 install_cargo grex
 install_cargo hyperfine
 install_cargo kiro-editor
-install_cargo miniserve --locked # https://github.com/svenstaro/miniserve/issues/568
-install_cargo monolith # https://github.com/Y2Z/monolith
+# install_cargo miniserve --locked # https://github.com/svenstaro/miniserve/issues/568
+# install_cargo monolith # https://github.com/Y2Z/monolith
 install_cargo onefetch
 install_cargo procs
 install_cargo ripgrep
 # install_cargo ripgrep_all # https://github.com/phiresky/ripgrep-all # ffmpeg が必要で影響範囲が広い
 install_cargo sd # Alt "sed" https://github.com/chmln/sd
-install_cargo silicon
-install_cargo simple-http-server
+# install_cargo silicon
+# install_cargo simple-http-server
 install_cargo tealdeer
 install_cargo tokei # https://github.com/XAMPPRocky/tokei
 install_cargo zoxide
