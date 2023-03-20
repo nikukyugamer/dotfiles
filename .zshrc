@@ -272,7 +272,14 @@ function opget () {
   ITEM_ID=$(op item list | peco | cut -d " " -f 1)
 
   op item get $ITEM_ID
-  op item get --format json $ITEM_ID
+  op item get --format json $ITEM_ID | jq
+}
+
+# LastPass CLI
+lpassget () {
+  ITEM_ID=$(lpass ls | peco | sed -E 's/.*\[id: ([0-9]+)\].*/\1/')
+  lpass show $ITEM_ID
+  lpass show --json $ITEM_ID | jq
 }
 
 # pnpm
