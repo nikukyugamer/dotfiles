@@ -40,13 +40,18 @@ ap-northeast-1 = "tokyo"
 # ap-northeast-1 = ""
 
 [aws]
+format = 'on [$symbol($profile)(\($region\) )(\[$duration\] )]($style)'
 style = "bold blue"
 symbol = "⛅aws:"
 force_display = true
 
+[gcloud.region_aliases]
+asia-northeast1 = "tokyo"
+
 [gcloud]
+format = 'on [$symbol$account(@$domain)(\($region\))]($style) '
 style = "bold green"
-symbol = "🌈gcloud:"
+symbol = "🌈gcp:"
 
 [time]
 disabled = false
