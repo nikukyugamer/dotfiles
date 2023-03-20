@@ -32,3 +32,7 @@ alias expl="explorer.exe ."
 
 # 1Password CLI
 export ONE_PASSWORD_MY_PASSWORD=op://Personal/jjztc5so2hlsskzuhzu2toh3cu/password
+
+# WSLg で日本語キーボードにする
+# 現在の設定を確認するコマンドは setxkbmap -print -verbose 10
+# setxkbmap -layout jp
