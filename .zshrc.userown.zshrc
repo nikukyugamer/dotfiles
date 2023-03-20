@@ -3,6 +3,9 @@
 # alias berspec="bundle exec rspec --format documentation"
 # alias mpc="/mnt/d/Program\ Files/MPC-BE/mpc-be64.exe"
 
+# ソースからビルドした最新の git
+# PATH=$HOME/bin/latest_git/bin:$PATH
+
 # Mozc
 # https://astherier.com/blog/2021/07/windows11-wsl2-wslg-japanese/
 # export GTK_IM_MODULE=fcitx
