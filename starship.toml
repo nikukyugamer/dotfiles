@@ -4,6 +4,10 @@ add_newline = true
 # 単位はミリ秒
 command_timeout = 15000
 
+[hostname]
+# bold dimmed green だと薄暗く (dimmed) になるので除外する
+style = "bold green"
+
 [directory]
 truncation_length = 2
 # truncation_symbol が有効だと truncate_to_repo は無効（というか意味がない）
