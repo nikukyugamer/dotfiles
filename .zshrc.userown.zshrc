@@ -39,3 +39,7 @@ export ONE_PASSWORD_MY_PASSWORD=op://Personal/jjztc5so2hlsskzuhzu2toh3cu/passwor
 # WSLg で日本語キーボードにする
 # 現在の設定を確認するコマンドは setxkbmap -print -verbose 10
 # setxkbmap -layout jp
+
+# sudo でエイリアスが使えるようにする（sudo vim で neovim になるようにする）
+# https://qiita.com/homoluctus/items/ba1a6d03df85e65fc85a
+# alias sudo="sudo "
