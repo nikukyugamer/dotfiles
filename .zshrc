@@ -46,11 +46,6 @@ precmd() {
 # Starship
 eval "$(starship init zsh)"
 
-# colored prompt
-# autoload -Uz colors
-# colors
-# PROMPT="%{${fg[green]}%}%n@%m@%*%{${reset_color}%}%F{yellow}%1v %F{blue}%(5~,%-2~/.../%1~,%~) $ %f"
-
 # https://sanoto-nittc.hatenablog.com/entry/2017/12/16/213735
 setopt auto_list
 setopt auto_menu
@@ -71,10 +66,6 @@ setopt hist_save_no_dups # 古いコマンドと同じものは無視
 setopt hist_no_store # historyコマンドは履歴に登録しない
 setopt hist_expand # 補完時にヒストリを自動的に展開
 setopt inc_append_history # 履歴をインクリメンタルに追加
-
-# インクリメンタルからの検索
-# bindkey "^R" history-incremental-search-backward
-# bindkey "^S" history-incremental-search-forward
 
 # macOS と Linux で色の付け方が異なる
 ## macOS か否か の判定には sw_vers の終了ステータスが使える
@@ -116,6 +107,7 @@ function ghash () {
 
 # apt-get の親切機能（Debian だけの機能らしいので注意）
 RELEASE_FILE=/etc/os-release
+
 if [[ "${OSTYPE}" =~ .*darwin.* ]]; then
   # 何もしない
 elif grep -e '^NAME="Ubuntu' $RELEASE_FILE >/dev/null; then
@@ -147,23 +139,25 @@ else
   # その他のディストリビューションの場合はここに書く
 fi
 
+# 不要か移動すべきかも
 export PATH="$PATH:./node_modules/.bin"
 export PATH="$PATH:$HOME/.config/yarn/global/node_modules/.bin"
 
+# 不要か移動すべきかも
 # Golang
 # https://zenn.dev/tennashi/articles/3b87a8d924bc9c43573e
-# export GO11MODULE=on # 1.13 以降は不要
 export GOENV_ROOT="$HOME/.goenv"
 export PATH="$GOENV_ROOT/bin:$PATH"
 eval "$(goenv init -)" # goenv init しないと $GOROOT や $GOPATH が定義されない
 export PATH="$GOROOT/bin:$PATH"
 export PATH="$GOPATH/bin:$PATH"
-### export GOENV_DISABLE_GOPATH=0
 
+# 不要か移動すべきかも
 # tfenv
 export PATH="$HOME/.tfenv/bin:$PATH"
 alias tf='terraform'
 
+# 不要か移動すべきかも
 # direnv
 eval "$(direnv hook zsh)"
 
@@ -173,6 +167,7 @@ export PATH="$HOME/.embulk/bin:$PATH"
 # Default editor
 export EDITOR="vim"
 
+# 不要か移動すべきかも
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -197,14 +192,14 @@ alias berce='bundle exec rails credentials:edit'
 # For Rails
 alias railsserver='bundle exec rails server'
 alias railsconsole='bundle exec rails console'
-alias railsspec='bundle exec rails spec'
 alias railsroutes='bundle exec rails routes'
-alias railscred='bundle exec rails credentials:edit'
+alias railscreds='bundle exec rails credentials:edit'
 
 # https://github.com/b4b4r07/gomi
 alias rm='gomi'
 alias remove='/bin/rm'
 
+# 不要か移動すべきかも
 # Add my binaries
 export PATH="$PATH:$HOME/dotfiles/bin"
 
@@ -282,6 +277,7 @@ lpassget () {
   lpass show --json $ITEM_ID | jq
 }
 
+# 不要か移動すべきかも
 # pnpm
 export PNPM_HOME="$HOME/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"

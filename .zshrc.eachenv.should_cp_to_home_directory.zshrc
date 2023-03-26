@@ -1,10 +1,6 @@
 source ~/dotfiles/.zshrc
 
-alias serve='~/.cargo/bin/miniserve .'
 alias gu='~/.cargo/bin/gitui'
-
-# alias imgcat='timg'
-# alias imgcat='/mnt/d/Program\ Files/MassiGra/MassiGra.exe'
 
 # ここを書き換えればプロンプトをオーバーライドできる
 # PROMPT="%{${fg[green]}%}%n@%m@%*%{${reset_color}%}%F{yellow}%1v %F{blue}%(5~,%-2~/.../%1~,%~) $ %f"
@@ -17,7 +13,6 @@ alias gc='git checkout'
 alias gb='git branch'
 alias gs='git switch'
 alias gsb='git switch B'
-alias gitfastpush='git add . && git commit --amend --no-edit && git push -f'
 
 # pnpx という旧コマンドはあるが接頭語 "pn" は統一したいので "pnx" とする
 alias pn='pnpm'
@@ -42,15 +37,6 @@ eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-# Poetry
-export PATH="$HOME/.local/bin:$PATH"
-
-# goenv
-# ここにこの順番（トップでインクルードする上でのこの順番）だと正しく適用されないのでコメントアウトする
-# export GOENV_ROOT="$HOME/.goenv"
-# export PATH="$GOENV_ROOT/bin:$PATH"
-# eval "$(goenv init -)"
-
 # phpenv
 export PATH="$HOME/.phpenv/bin:$PATH"
 eval "$(phpenv init -)"
@@ -60,9 +46,6 @@ eval "$(direnv hook zsh)"
 
 # To configure your current shell run source $HOME/.cargo/env
 export PATH="$HOME/.cargo/bin:$PATH"
-
-# Heroku
-eval "$(heroku autocomplete:script zsh)"
 
 # zplug
 export ZPLUG_HOME="$HOME/.zplug"
@@ -86,13 +69,6 @@ zplug "zsh-users/zsh-history-substring-search", defer:3
 zplug "mollifier/anyframe"
 
 zplug load
-
-# For WSL2
-# export BROWSER="/mnt/c/Program\ Files/Google/Chrome\ Dev/Application/chrome.exe"
-
-# VOLTA は package.json に必ず上書きしてしまうので、現状 (2022/01/06) ではまだ常用できない
-# export VOLTA_HOME="$HOME/.volta"
-# export PATH="$VOLTA_HOME/bin:$PATH"
 
 # zoxide (https://github.com/ajeetdsouza/zoxide)
 eval "$(zoxide init zsh)"
