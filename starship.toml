@@ -65,6 +65,7 @@ time_range = "-"
 
 [git_branch]
 symbol = "🌱git:"
+format = "[$symbol$branch(:$remote_branch)]($style)"
 
 [git_status]
 conflicted = "🏳"
