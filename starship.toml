@@ -23,6 +23,10 @@ error_symbol = "[❌](bg:#00ff00 fg:#4b0082)" # (bold red)"
 # [package]
 # disabled = true
 
+[package]
+# あまり有用でないので disabled にした
+disabled = true
+
 [kubernetes]
 style = "cyan purple"
 symbol = "⛵kube:"
@@ -35,27 +39,32 @@ disabled = true
 
 [nodejs]
 symbol = ""
+format = '[$symbol($version)]($style) '
 
 [ruby]
-symbol = "🔺"
+symbol = "💎"
+detect_files = ['.ruby-version', 'Gemfile']
+format = '[$symbol($version)]($style) '
+version_format = 'v${raw}'
+detect_extensions = ['rb']
 
 [aws.region_aliases]
 ap-northeast-1 = "tokyo"
 # ap-northeast-1 = ""
 
 [aws]
-format = '[$symbol($profile)(\($region\) )(\[$duration\] )]($style)'
+format = '[$symbol($profile)(\($region\))(\[$duration\])]($style) '
 style = "bold blue"
-symbol = "⛅aws:"
+symbol = "aws:" # ⛅
 force_display = true
 
 [gcloud.region_aliases]
 asia-northeast1 = "tokyo"
 
 [gcloud]
-format = '[$symbol$account(@$domain)(\($region\))]($style)'
+format = '[$symbol$account(@$domain)(\($region\))]($style) '
 style = "bold green"
-symbol = "🌈gcp:"
+symbol = "gcp:" # 🌈
 
 [time]
 disabled = false
@@ -64,16 +73,17 @@ utc_time_offset = "local"
 time_range = "-"
 
 [git_branch]
-symbol = "🌱git:"
-format = "[$symbol$branch(:$remote_branch)]($style)"
+symbol = "git:" # 🌱
+format = "[$symbol$branch(:$remote_branch)]($style) "
 
 [git_status]
+format = '([\[$all_status$ahead_behind\]]($style) )'
 conflicted = "🏳"
 ahead = "🏎💨"
 behind = "😰"
 diverged = "😵"
 up_to_date = "👍"
-untracked = "🤷‍"
+untracked = "🤷"
 stashed = "📦"
 modified = "📝"
 staged = '[++\($count\)](green)'
@@ -89,7 +99,7 @@ disabled = false
 [cmd_duration]
 min_time = 1_000 # msec
 show_milliseconds = false
-format = ' 実行時間: [$duration]($style) '
+format = '実行時間: [$duration]($style) '
 style = 'bold yellow'
 disabled = false
 # 以降の行はデスクトップ通知に関する設定
