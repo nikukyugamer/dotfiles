@@ -58,7 +58,6 @@ npm_install_g npm-check-updates
 # 30s かかるので保留
 # npm_install_g pageres-cli
 npm_install_g pm2
-npm_install_g @railway/cli
 npm_install_g ts-node
 npm_install_g typescript
 npm_install_g vercel

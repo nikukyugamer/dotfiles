@@ -49,6 +49,7 @@ install_cargo kiro-editor
 # install_cargo monolith # https://github.com/Y2Z/monolith
 # install_cargo onefetch # M2 Mac でインストールに失敗するのでスキップ
 install_cargo procs
+install_cargo railwayapp
 install_cargo ripgrep
 # install_cargo ripgrep_all # https://github.com/phiresky/ripgrep-all # ffmpeg が必要で影響範囲が広い
 install_cargo sd # Alt "sed" https://github.com/chmln/sd
