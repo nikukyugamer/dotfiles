@@ -79,4 +79,8 @@ export _ZO_FZF_OPTS="--preview=''"
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 
+# Fly.io CLI
+export FLYCTL_INSTALL="$HOME/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
+
 source ~/.zshrc.userown.zshrc
