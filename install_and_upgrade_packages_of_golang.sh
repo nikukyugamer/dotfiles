@@ -48,6 +48,7 @@ go_install github.com/itchyny/bed/cmd/bed@latest # Binary editor written in Go
 go_install github.com/labstack/echo/v4@latest # echo (Web Framework) https://echo.labstack.com/
 go_install github.com/charmbracelet/vhs@latest
 go_install github.com/k1LoW/tbls@main # tbls is a CI-Friendly tool for document a database
+go_install github.com/wader/fq@latest # Tool, language and decoders for working with binary data.
 
 # For Visual Studio Code
 echo "gopls@latest をインストールします"
