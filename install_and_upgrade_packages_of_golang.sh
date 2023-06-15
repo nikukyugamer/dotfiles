@@ -72,4 +72,7 @@ go install -v github.com/msoap/shell2http@latest
 echo "yaegi をインストールします"
 go install -v github.com/traefik/yaegi/cmd/yaegi@latest
 
+# actionlint (Lint for GitHub Actions)
+go install -v github.com/rhysd/actionlint/cmd/actionlint@latest
+
 exit 0
