@@ -25,8 +25,8 @@
 # fi
 # ssh-add -l >& /dev/null || ssh-add
 
-# Flutter
-export FLUTTER_HOME=$HOME/flutter
+# Flutter (Use fvm)
+export FLUTTER_HOME=$HOME/fvm/default
 export PATH=$PATH:$FLUTTER_HOME/bin
 # export CHROME_EXECUTABLE="/Applications/Google Chrome Dev.app/Contents/MacOS/Google Chrome Dev"
 
