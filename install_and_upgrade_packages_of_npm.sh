@@ -59,6 +59,8 @@ npm_install_g npm-check-updates
 # 30s かかるので保留
 # npm_install_g pageres-cli
 npm_install_g pm2
+# グローバルに入れておいたほうが VS Code で有用（問題があるようなら外す）
+npm_install_g prettier
 npm_install_g ts-node
 npm_install_g typescript
 npm_install_g vercel
