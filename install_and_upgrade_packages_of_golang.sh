@@ -61,8 +61,8 @@ echo "goimports@latest をインストールします"
 go install -v golang.org/x/tools/cmd/goimports@latest
 
 # dog on go = doggo
-echo "doggo@latest をインストールします"
-go install -v github.com/mr-karan/doggo/cmd/doggo@5e611d9706ec6a2b5b9ee5cbec4cbee21f5c4632
+# echo "doggo@latest をインストールします"
+# go install -v github.com/mr-karan/doggo/cmd/doggo@5e611d9706ec6a2b5b9ee5cbec4cbee21f5c4632
 
 # shell2http (https://github.com/msoap/shell2http)
 echo "shell2http@latest をインストールします"
