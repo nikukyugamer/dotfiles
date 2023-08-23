@@ -5,6 +5,7 @@ require:
   - rubocop-rails
 
 AllCops:
+  TargetRubyVersion: 3.3.7
   NewCops: enable
   DisplayCopNames: true
   Exclude:
