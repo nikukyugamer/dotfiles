@@ -2,7 +2,7 @@
 
 function install_cargo() {
   echo '======================================================='
-  echo "[LOG] START: $ cargo install $1"
+
   echo '======================================================='
 
   cargo install "$1"
@@ -62,5 +62,6 @@ install_cargo zoxide
 tldr --update
 
 # install_cargo deno --locked
+cargo install railwayapp --locked
 
 exit 0
