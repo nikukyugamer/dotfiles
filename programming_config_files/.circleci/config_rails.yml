@@ -3,7 +3,7 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:2.6.5
-      - image: circleci/postgres:11.2
+      - image: circleci/postgres:11.14
         environment:
           - POSTGRES_USER: root
           - POSTGRES_PASSWORD: root
