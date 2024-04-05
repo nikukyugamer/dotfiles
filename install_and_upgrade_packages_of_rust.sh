@@ -5,7 +5,7 @@ function install_cargo() {
 
   echo '======================================================='
 
-  cargo install "$1"
+  cargo install "$1" --locked
 
   echo '======================================================='
   echo "[LOG] END: $ cargo install $1"
