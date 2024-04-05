@@ -58,6 +58,7 @@ install_cargo sd # Alt "sed" https://github.com/chmln/sd
 install_cargo tealdeer
 install_cargo tokei # https://github.com/XAMPPRocky/tokei
 install_cargo zoxide
+install_cargo xcompress
 
 tldr --update
 
