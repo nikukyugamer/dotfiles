@@ -84,7 +84,7 @@ darwin*)
 linux*)
   alias ls='lsd'
   alias ll='lsd -la'
-  alias l='lsd -l'
+  alias l="exa -Tl --ignore-glob='vendor|node_modules|.git|.vscode|.history'"
   alias la='lsd -a'
   alias lla='lsd -la'
   alias lt='lsd --tree'
