@@ -13,5 +13,6 @@ $HOME/dotfiles/update_scripts/update_rust.sh
 
 $HOME/dotfiles/install_and_update_deno.sh
 $HOME/dotfiles/install_pnpm.sh
+$HOME/dotfiles/install_bun.sh
 
 exit 0
