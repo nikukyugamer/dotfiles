@@ -43,3 +43,8 @@ export ONE_PASSWORD_MY_PASSWORD=op://Personal/jjztc5so2hlsskzuhzu2toh3cu/passwor
 # sudo でエイリアスが使えるようにする（sudo vim で neovim になるようにする）
 # https://qiita.com/homoluctus/items/ba1a6d03df85e65fc85a
 # alias sudo="sudo "
+
+# Mac で rbenv を直接インストールする場合に必要
+# これがないと rbenv install だけでなく fastlane で SSL に失敗したりもする
+# export LDFLAGS="-L/opt/homebrew/opt/openssl@3/lib"
+# export RUBY_CONFIGURE_OPTS="--disable-shared --with-openssl-dir=$(brew --prefix openssl@3)"
