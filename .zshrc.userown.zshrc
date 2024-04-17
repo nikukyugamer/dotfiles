@@ -48,3 +48,6 @@ export ONE_PASSWORD_MY_PASSWORD=op://Personal/jjztc5so2hlsskzuhzu2toh3cu/passwor
 # これがないと rbenv install だけでなく fastlane で SSL に失敗したりもする
 # export LDFLAGS="-L/opt/homebrew/opt/openssl@3/lib"
 # export RUBY_CONFIGURE_OPTS="--disable-shared --with-openssl-dir=$(brew --prefix openssl@3)"
+
+# Android CLI for Mac
+# export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
