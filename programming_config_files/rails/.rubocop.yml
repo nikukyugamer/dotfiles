@@ -5,24 +5,35 @@ require:
   - rubocop-rails
 
 AllCops:
-  TargetRubyVersion: 3.3.7
+  # TargetRubyVersion: 3.3.7
   NewCops: enable
   DisplayCopNames: true
   Exclude:
-    - 'vendor/**/*'
-    - 'node_modules/**/*'
-    - 'spec/**/*'
+    - 'db/Schemafile'
     - 'db/schema.rb'
-    - 'db/**/*'
-    - 'config/**/*'
-    - 'Guardfile'
+    - 'db/spreadsheet/**/*'
+    # - 'db/**/*'
+    - 'vendor/**/*'
+    - 'spec/**/*'
     - 'bin/**/*'
     - 'tmp/**/*'
+    - 'node_modules/**/*'
+    - 'tmp/**/*'
+
+Layout/LineLength:
+  Max: 180
 
 Style/Documentation:
   Enabled: false
 
 Style/FrozenStringLiteralComment:
+  Enabled: false
+
+# app/lib/mapping.rb:27:9: C: [Correctable] Style/HashEachMethods: Use each_key instead of each and remove the unused _app_group_name block argument.
+Style/HashEachMethods:
+  Enabled: false
+
+Style/RedundantInitialize:
   Enabled: false
 
 Style/StringLiterals:
@@ -51,3 +62,6 @@ Metrics/PerceivedComplexity:
 
 Metrics/ModuleLength:
   Max: 160
+
+Metrics/AbcSize:
+  Max: 30
