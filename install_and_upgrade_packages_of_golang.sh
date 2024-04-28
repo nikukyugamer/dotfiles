@@ -75,4 +75,7 @@ go install -v github.com/traefik/yaegi/cmd/yaegi@latest
 # actionlint (Lint for GitHub Actions)
 go install -v github.com/rhysd/actionlint/cmd/actionlint@latest
 
+# shfmt (https://github.com/mvdan/sh#shfmt)
+go install -v mvdan.cc/sh/v3/cmd/shfmt@latest
+
 exit 0
