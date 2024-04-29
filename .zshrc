@@ -6,7 +6,7 @@ export LANGUAGE="ja_JP.UTF-8"
 export GPG_TTY=$(tty)
 
 # macOS Mojave
-export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
+# export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
 
 # For Ruby app servers breaking on High Sierra
 # https://blog.phusion.nl/2017/10/13/why-ruby-app-servers-break-on-macos-high-sierra-and-what-can-be-done-about-it/
