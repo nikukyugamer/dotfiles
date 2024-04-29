@@ -2,21 +2,21 @@
 
 function go_install() {
   echo '======================================================='
-  echo "[LOG] START: $ go install $1"
+  echo "[LOG] START: $ go install -v $1"
   echo '======================================================='
 
-  go install "$1"
+  go install -v "$1"
 
   echo '======================================================='
-  echo "[LOG] END: $ go install $1"
+  echo "[LOG] END: $ go install -v $1"
   echo '======================================================='
 
   echo '**********************************************************************'
 }
 
-go_install github.com/docker/hub-tool@latest # GO111MODULE=on
+go_install github.com/docker/hub-tool@latest   # GO111MODULE=on
 go_install github.com/ipinfo/cli/ipinfo@latest # IPinfo (https://ipinfo.io/)
-go_install github.com/oz/tz@latest # A time zone helper
+go_install github.com/oz/tz@latest             # A time zone helper
 # go_install github.com/wagoodman/dive@latest # A tool for exploring a docker image
 # go_install github.com/yudai/gotty@latest # a simple command line tool that turns your CLI tools into web applications
 go_install github.com/mattn/goreman@latest # A Clone of foreman written in golang
@@ -41,38 +41,38 @@ go_install github.com/jesseduffield/lazydocker@latest
 go_install github.com/nlopes/slack@latest
 go_install github.com/mattn/memo@latest
 # go_install github.com/qeesung/asciiplayer@latest # https://github.com/qeesung/asciiplayer
-go_install github.com/mattn/twty@latest # twty (Twitter Client) developed by mattn
+go_install github.com/mattn/twty@latest          # twty (Twitter Client) developed by mattn
 go_install github.com/itchyny/mmv/cmd/mmv@latest # Rename multiple files using your $EDITOR https://github.com/itchyny/mmv
 # go_install github.com/gulyasm/jsonui@latest
 go_install github.com/itchyny/bed/cmd/bed@latest # Binary editor written in Go
-go_install github.com/labstack/echo/v4@latest # echo (Web Framework) https://echo.labstack.com/
+go_install github.com/labstack/echo/v4@latest    # echo (Web Framework) https://echo.labstack.com/
 go_install github.com/charmbracelet/vhs@latest
 go_install github.com/k1LoW/tbls@main # tbls is a CI-Friendly tool for document a database
 go_install github.com/wader/fq@latest # Tool, language and decoders for working with binary data.
 
 # For Visual Studio Code
-echo "gopls@latest をインストールします"
-go install -v golang.org/x/tools/gopls@latest
+# echo "gopls@latest をインストールします"
+go_install golang.org/x/tools/gopls@latest
 
-echo "go-outline@latest をインストールします"
-go install -v github.com/ramya-rao-a/go-outline@latest
+# echo "go-outline@latest をインストールします"
+go_install github.com/ramya-rao-a/go-outline@latest
 
-echo "goimports@latest をインストールします"
-go install -v golang.org/x/tools/cmd/goimports@latest
+# echo "goimports@latest をインストールします"
+go_install golang.org/x/tools/cmd/goimports@latest
 
 # dog on go = doggo
 # echo "doggo@latest をインストールします"
 # go install -v github.com/mr-karan/doggo/cmd/doggo@5e611d9706ec6a2b5b9ee5cbec4cbee21f5c4632
 
 # shell2http (https://github.com/msoap/shell2http)
-echo "shell2http@latest をインストールします"
-go install -v github.com/msoap/shell2http@latest
+# echo "shell2http@latest をインストールします"
+go_install github.com/msoap/shell2http@latest
 
 # インタプリタ (REPL)
-echo "yaegi をインストールします"
-go install -v github.com/traefik/yaegi/cmd/yaegi@latest
+# echo "yaegi をインストールします"
+go_install github.com/traefik/yaegi/cmd/yaegi@latest
 
 # actionlint (Lint for GitHub Actions)
-go install -v github.com/rhysd/actionlint/cmd/actionlint@latest
+go_install github.com/rhysd/actionlint/cmd/actionlint@latest
 
 exit 0
