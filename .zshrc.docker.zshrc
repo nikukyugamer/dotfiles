@@ -1,4 +1,5 @@
 # Docker コマンド 一般
+# cf. dc には計算コマンドもある (https://blanktar.jp/blog/2015/04/dc-calculate)
 alias dc='docker container'
 alias di='docker image'
 alias dv='docker volume'
@@ -6,7 +7,7 @@ alias dv='docker volume'
 # Docker Volume
 alias dvls='docker volume ls'
 
-function dvcreate () {
+function dvcreate() {
   CURRENT_DATETIME=$(date '+%Y%m%d_%H%M%S')
 
   # TODO: name や tag は判別のために自分で決められてもいいかも
@@ -14,19 +15,16 @@ function dvcreate () {
   docker volume create --driver=local --name=xbox_volume_"$CURRENT_DATETIME" "$@"
 }
 
-function dvlss () {
+function dvlss() {
   docker volume ls -q | peco | sed "s/^[ \t]*//" | sed -z "s/\n//g" | sed -z "s/ //g"
 }
 
-function dvrm () {
+function dvrm() {
   docker volume rm "$(dvlss)"
 }
 
-## git s B と同等のエイリアス
-alias DV='$(dvlss)'
-
 # Docker Image
-function dibuild () {
+function dibuild() {
   CURRENT_DATETIME=$(date '+%Y%m%d_%H%M%S')
 
   echo '[$ docker image build --tag xbox_image_${CURRENT_DATETIME}:latest "$@"]'
@@ -37,7 +35,7 @@ function dibuild () {
 alias dils='docker image ls --format "{{.Repository}}:{{.Tag}} ({{.ID}}) / {{.CreatedSince}}" | sed "/docker\/.*/d" | sed "/k8s.gcr.io\/.*/d" | sed "/.*<none>.*/d" | sed "/vsc-.*/d" | sort -h'
 
 ## イメージ名を peco で選択できるようにする
-function dilss () {
+function dilss() {
   DILS_PECO=$(dils | peco)
 
   if [ $(echo $DILS_PECO | cut -d " " -f 1 | sed "s/^[ \t]*//" | sed -z "s/\n//g" | sed -z "s/ //g") = '<none>:<none>' ]; then
@@ -47,18 +45,15 @@ function dilss () {
   fi
 }
 
-## git s B と同等のエイリアス
-alias DI='$(dilss)'
-
 ## peco 経由でイメージを選んでコマンドを実行する (ex. $ diexec inspect)
 ## 引数を使うため function にする
-funciton diexec () {
+function diexec() {
   echo '[$ docker image "$@" {{dilss}}]'
   docker image $@ $(dilss)
 }
 
 ## イメージを一覧から選んで破壊する
-function dirm () {
+function dirm() {
   TARGET_IMAGE_NAME=$(dilss)
 
   echo '[$ docker image rm {{dilss}}]'
@@ -78,7 +73,7 @@ alias DC='$(dclss)'
 alias dcexec='docker container exec -it $(docker container ls --all --format "{{.State}}\t| {{.Names}} | {{.Image}} | {{.ID}}" | peco | cut -d "|" -f 2) | sed "s/^[ \t]*//"'
 
 ## コンテナに /bin/sh で入る
-function dcsh () {
+function dcsh() {
   TARGET_CONTAINER_NAME=$(dclss)
 
   echo '[$ docker container start {{dclss}}]'
@@ -88,7 +83,7 @@ function dcsh () {
 }
 
 ## コンテナに /bin/bash で入る
-function dcbash () {
+function dcbash() {
   TARGET_CONTAINER_NAME=$(dclss)
 
   echo '[$ docker container start] {{dclss}}'
@@ -98,7 +93,7 @@ function dcbash () {
 }
 
 ## コンテナに /bin/zsh で入る
-function dczsh () {
+function dczsh() {
   TARGET_CONTAINER_NAME=$(dclss)
 
   echo '[$ docker container start {{dclss}}]'
@@ -108,7 +103,7 @@ function dczsh () {
 }
 
 ## 新たにコンテナを作成する（シェルは /bin/bash）
-function dccreate () {
+function dccreate() {
   CURRENT_DATETIME=$(date '+%Y%m%d_%H%M%S')
   RANDOM_PORT_NUMBER=$(shuf -i 10000-65000 -n 1)
 
@@ -117,7 +112,7 @@ function dccreate () {
 }
 
 ## 新たにコンテナを作成する（シェルは /bin/sh）
-function dccreate_sh () {
+function dccreate_sh() {
   CURRENT_DATETIME=$(date '+%Y%m%d_%H%M%S')
   RANDOM_PORT_NUMBER=$(shuf -i 10000-65000 -n 1)
 
@@ -126,13 +121,13 @@ function dccreate_sh () {
 }
 
 ## コンテナを実行してすぐにぶっ壊す
-function dcrun () {
+function dcrun() {
   echo '[$ docker container run --rm "$@" {{dilss}}]'
   docker container run --rm "$@" $(dilss)
 }
 
 ## コンテナを一覧から選んで破壊する
-function dcrm () {
+function dcrm() {
   TARGET_CONTAINER_NAME=$(dclss)
 
   echo '[$ docker container stop {{dclss}}]'
@@ -149,7 +144,7 @@ function dcrm () {
 alias dcom='docker compose'
 
 ## cf. $ dcomexec web ls -la / $ DOCKER_COMPOSE_TARGET_SERVICE=web dcom ls
-function dcomexec () {
+function dcomexec() {
   TARGET_SERVICE=$DOCKER_COMPOSE_TARGET_SERVICE
 
   docker compose exec $TARGET_SERVICE $@
