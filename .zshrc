@@ -12,16 +12,16 @@ export GPG_TTY=$(tty)
 # https://blog.phusion.nl/2017/10/13/why-ruby-app-servers-break-on-macos-high-sierra-and-what-can-be-done-about-it/
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
-# Permission of Files and Directorys
+# Permission of Files and Directories
 # umask 0022 == chmod 0644
 umask 0022
 
-# Lines configured by zsh-newuser-install
+# Lines configured by zsh-new_user-install
 HISTFILE=~/.zsh_history
-HISTSIZE=2000
-SAVEHIST=2000
+HISTSIZE=100000
+SAVEHIST=100000
 bindkey -v
-# End of lines configured by zsh-newuser-install
+# End of lines configured by zsh-new_user-install
 
 # The following lines were added by compinstall
 # 補完を有効化する
@@ -32,6 +32,12 @@ compinit
 
 # keybind like emacs
 bindkey -e
+
+# コマンドを Vim で編集する
+# cf. https://dev.classmethod.jp/articles/eetann-zle-edit-command-line/
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey "^N" edit-command-line
 
 # Git branch
 # http://liosk.blog103.fc2.com/blog-entry-209.html
@@ -55,17 +61,17 @@ export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 # https://qiita.com/ktr_type23/items/3eb782f98c7a5f4c60b0
-setopt hist_ignore_dups # 重複を記録しない
-setopt EXTENDED_HISTORY # 開始と終了を記録
-setopt share_history # historyを共有
-setopt hist_ignore_all_dups # ヒストリに追加されるコマンド行が古いものと同じなら古いものを削除
-setopt hist_ignore_space # スペースで始まるコマンド行はヒストリリストから削除
-setopt hist_verify # ヒストリを呼び出してから実行する間に一旦編集可能
-setopt hist_reduce_blanks # 余分な空白は詰めて記録
-setopt hist_save_no_dups # 古いコマンドと同じものは無視
-setopt hist_no_store # historyコマンドは履歴に登録しない
-setopt hist_expand # 補完時にヒストリを自動的に展開
-setopt inc_append_history # 履歴をインクリメンタルに追加
+setopt hist_ignore_dups # history の重複を記録しない
+setopt EXTENDED_HISTORY # history の開始と終了を記録
+setopt share_history # history を共有する
+setopt hist_ignore_all_dups # history に追加されるコマンド行が古いものと同じなら古いものを削除
+setopt hist_ignore_space # history にてスペースで始まるコマンド行は削除する
+setopt hist_verify # history にて呼び出してから実行する間に一旦編集可能
+setopt hist_reduce_blanks # history の余分な空白を詰めて記録
+setopt hist_save_no_dups # history にて古いコマンドと同じものは無視
+setopt hist_no_store # history にて history コマンド自体は履歴に登録しない
+setopt hist_expand # 補完時に history を自動的に展開する
+setopt inc_append_history # history をインクリメンタルに追加する
 
 # macOS と Linux で色の付け方が異なる
 ## macOS か否か の判定には sw_vers の終了ステータスが使える
