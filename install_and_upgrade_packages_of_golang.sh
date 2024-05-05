@@ -75,4 +75,7 @@ go_install github.com/traefik/yaegi/cmd/yaegi@latest
 # actionlint (Lint for GitHub Actions)
 go_install github.com/rhysd/actionlint/cmd/actionlint@latest
 
+# https://github.com/mithrandie/csvq
+go_install github.com/mithrandie/csvq@latest
+
 exit 0
