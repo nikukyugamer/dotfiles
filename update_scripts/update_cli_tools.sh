@@ -11,8 +11,8 @@ elif [ "`echo $UNAME | grep aarch64`" ]; then
   echo 'aarch64: Heroku CLI の アップデート をスキップします'
 else
   heroku update
+  heroku plugins:install heroku-accounts
 fi
-heroku plugins:install heroku-accounts
 
 if [ "`echo $UNAME | grep Darwin`" ]; then
   echo 'Update circleci...'
