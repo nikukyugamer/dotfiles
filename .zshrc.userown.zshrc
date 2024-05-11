@@ -51,3 +51,32 @@ export ONE_PASSWORD_MY_PASSWORD=op://Personal/jjztc5so2hlsskzuhzu2toh3cu/passwor
 
 # Android CLI for Mac
 # export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
+
+# # Tailscale for WSL2
+# # WSL2 だと Tailscale が自動起動しないのでシェル起動時に無理やり起動する
+# # https://github.com/tailscale/tailscale/issues/562#issuecomment-1017392542
+# # Starting Tailscale daemon automatically if not running...
+# TAILSCALED_PROCESS=`ps aux | grep tailscaled | grep -v grep`
+# AUTH_KEY=YOUR_AUTH_KEY
+# if [ -z "$TAILSCALED_PROCESS" ]; then
+#   # sudo tailscaled > /dev/null 2>&1 &
+#   # disown
+#   echo "Tailscale を起動します。(.zshrc.userown.zshrc)"
+#   sudo /bin/nohup /usr/sbin/tailscaled > /dev/null 2>&1 &
+#   sleep 5
+#   sudo /bin/tailscale up --ssh --authkey $YOUR_AUTH_KEY
+#   echo "Tailscale を起動しました。(.zshrc.userown.zshrc)"
+# else
+#   echo "Tailscale はすでに起動しています。(.zshrc.userown.zshrc)"
+# fi
+
+# # cron for WSL2
+# CRON_STATUS=$(sudo service cron status)
+# # "cron is not running" を含むかどうかを確認
+# if [[ $CRON_STATUS =~ "cron is not running" ]]; then
+#   echo "cron のサービスを起動（再起動）します。(.zshrc.userown.zshrc)"
+#   sudo service cron restart
+#   echo "cron のサービスを起動（再起動）しました。(.zshrc.userown.zshrc)"
+# else
+#   echo "cron のサービスはすでに起動されています。(.zshrc.userown.zshrc)"
+# fi
