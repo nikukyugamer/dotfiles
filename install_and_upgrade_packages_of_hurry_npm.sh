@@ -22,7 +22,7 @@ function install_git_cz() {
   echo '======================================================='
 
   NODE_VERSION_WITHOUT_V=$(node -v | sed 's/^v//')
-  GIT_CZ_PATH="/home/meganekko/.nodenv/versions/${NODE_VERSION_WITHOUT_V}/lib/node_modules/git-cz"
+  GIT_CZ_PATH="$HOME/.nodenv/versions/${NODE_VERSION_WITHOUT_V}/lib/node_modules/git-cz"
 
   echo "[LOG] START (Step 1): $ npm install -g commitizen"
   npm install -g commitizen # https://github.com/commitizen/cz-cli
