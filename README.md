@@ -66,7 +66,7 @@ $ sudo chmod +x /usr/local/bin/composer
 - How to install by composer
     - `$ composer global require phpunit/phpunit`
 - check
-    - `$ /home/meganekko/.composer/vendor/bin/phpunit -v`
+    - `$ $HOME/.composer/vendor/bin/phpunit -v`
     - `$ composer config --global --list`
         - shown `[home] /home/your_account_name/.config/composer`
 
