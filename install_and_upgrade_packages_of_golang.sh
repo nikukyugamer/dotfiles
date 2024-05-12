@@ -78,4 +78,7 @@ go_install github.com/rhysd/actionlint/cmd/actionlint@latest
 # https://github.com/mithrandie/csvq
 go_install github.com/mithrandie/csvq@latest
 
+# https://github.com/Clever/csvlint
+go_install github.com/Clever/csvlint/cmd/csvlint@latest
+
 exit 0
