@@ -57,4 +57,7 @@ install_pip mypy
 # https://docs.asciinema.org/manual/
 install_pip asciinema
 
+# https://yamllint.readthedocs.io/en/stable/
+install_pip yamllint
+
 exit 0
