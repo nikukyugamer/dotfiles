@@ -53,7 +53,9 @@ npm_install_g fx
 npm_install_g http-server
 npm_install_g js-beautify
 npm_install_g jshint
-npm_install_g jsonlint
+# npm_install_g jsonlint
+# https://github.com/prantlf/jsonlint
+npm_install_g @prantlf/jsonlint
 npm_install_g kmdr
 npm_install_g npm-check-updates
 # 30s かかるので保留
