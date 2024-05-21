@@ -17,8 +17,11 @@
 [core]
   hooksPath = ~/.config/git/hooks
 [credential "https://github.com"]
-  # macOS の場合は brew で gh を入れるので場所が異なる
+  # macOS の場合はプロセッサの違いで brew により入る場所が異なる
+  # Apple Silicon
   helper = !/opt/homebrew/bin/gh auth git-credential
+  # Intel
+  # helper = !/usr/local/bin/gh auth git-credential
 [sequence]
   editor = interactive-rebase-tool
 [ghq]
