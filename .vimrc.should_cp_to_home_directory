@@ -1,3 +1,3 @@
-# Neovim を使う場合には以下のコマンドを実行して設定ファイルを有効にすること
-# $ mkdir -p ~/.config/nvim && ln -s ~/.vimrc ~/.config/nvim/init.vim
+" Neovim を使う場合には以下のコマンドを実行して設定ファイルを有効にすること
+" $ mkdir -p ~/.config/nvim && ln -s ~/.vimrc ~/.config/nvim/init.vim
 source ~/dotfiles/.vimrc
