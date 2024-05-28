@@ -1,27 +1,20 @@
+# Emacs のキーバインドにする
+bindkey -e
+
 export LANG="ja_JP.UTF-8"
 export LC_ALL="ja_JP.UTF-8"
 export LANGUAGE="ja_JP.UTF-8"
 
-# For GPG signature (for GitHub)
+# For GPG signature (GitHub)
 export GPG_TTY=$(tty)
-
-# macOS Mojave
-# export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
-
-# For Ruby app servers breaking on High Sierra
-# https://blog.phusion.nl/2017/10/13/why-ruby-app-servers-break-on-macos-high-sierra-and-what-can-be-done-about-it/
-export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
 # Permission of Files and Directories
 # umask 0022 == chmod 0644
 umask 0022
 
-# Lines configured by zsh-new_user-install
 HISTFILE=~/.zsh_history
 HISTSIZE=100000
 SAVEHIST=100000
-bindkey -v
-# End of lines configured by zsh-new_user-install
 
 # The following lines were added by compinstall
 # 補完を有効化する
@@ -29,9 +22,6 @@ bindkey -v
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
-
-# keybind like emacs
-bindkey -e
 
 # コマンドを Vim で編集する
 # cf. https://dev.classmethod.jp/articles/eetann-zle-edit-command-line/
@@ -74,7 +64,8 @@ setopt hist_expand # 補完時に history を自動的に展開する
 setopt inc_append_history # history をインクリメンタルに追加する
 
 # macOS と Linux で色の付け方が異なる
-## macOS か否か の判定には sw_vers の終了ステータスが使える
+# $ echo $OSTYPE は、Ubuntu や CentOS だと linux-gnu になり、macOS だと darwinXY.Z になる
+# cf. macOS だけに存在するコマンド $ sw_vers の終了ステータスで判別する方法もある
 case "${OSTYPE}" in
 darwin*)
   alias ls="lsd"
@@ -108,23 +99,32 @@ function ghash () {
   TARGET_LINE=$(git log --oneline --graph --decorate=full | peco)
 
   echo $TARGET_LINE
+
+  # FIXME: macOS なら /usr/bin/pbcopy にして、WSL2 ならば clip.exe にする
+  # ただしもちろん SSH で入った場合には pbcopy は正常に動かないので注意
   echo $TARGET_LINE | cut -d ' ' -f 2 | clip.exe
 }
 
-# apt-get の親切機能（Debian だけの機能らしいので注意）
+# OS ごとに処理を分けるテンプレート
+
+# このファイルが存在する環境は限られているので注意する
 RELEASE_FILE=/etc/os-release
 
 if [[ "${OSTYPE}" =~ .*darwin.* ]]; then
-  # 何もしない
+  # macOS の場合の処理をここに書く
 elif grep -e '^NAME="Ubuntu' $RELEASE_FILE >/dev/null; then
-  # AWS だと存在しなかったのでコメントアウト……
-  # source /etc/zsh_command_not_found
+  # Ubuntu の場合の処理をここに書く
 elif grep -e '^NAME="Linux Mint' $RELEASE_FILE >/dev/null; then
-  # AWS だと存在しなかったのでコメントアウト……
-  # source /etc/zsh_command_not_found
+  # Linux Mint の場合の処理をここに書く
+elif grep -e '^NAME="CentOS' $RELEASE_FILE >/dev/null; then
+  # CentOS の場合の処理をここに書く
+elif grep -e '^NAME="Amazon' $RELEASE_FILE >/dev/null; then
+  # Amazon Linux の場合の処理をここに書く
 else
-  # その他の場合の処理（CentOS とかも差し当たりここ）
+  # その他の場合の処理をここに書く
 fi
+
+# FIXME: source-highlight 周りの箇所は "bat" コマンドにより不要になったのでバッサリ削除する
 
 # less に色を付ける（要 install source-highlight）
 export LESS='-i -M -R' # -N はコピペがしにくいので付けたい場合は手動で付ける
