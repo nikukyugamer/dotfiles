@@ -1,23 +1,26 @@
-set encoding=utf-8
-set fileformats=unix,dos,mac
-set nofixeol
-set number
-set notitle
 set ambiwidth=double
-set expandtab
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
 set autoindent
-set smartindent
-set list
-" 2018-09-27 突然のエラー（macOS のアップデートによるもの）
-" set listchars=tab:»-,trail:-,eol:,extends:»,precedes:«,nbsp:%
-set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%
-set nrformats-=octal
-set history=50
-set whichwrap=b,s,[,],<,>
 set backspace=indent,eol,start
+" https://pocke.hatenablog.com/entry/2014/10/26/145646
+set clipboard&
+set clipboard^=unnamedplus
+set encoding=utf-8
+set expandtab
+set fileformats=unix,dos,mac
+set history=50
+set list
+set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%
+set nofixeol
+" set noautoindent
+set notitle
+set nrformats-=octal
+set number
+" set paste
+set shiftwidth=2
+set smartindent
+set softtabstop=2
+set tabstop=2
+set whichwrap=b,s,[,],<,>
 set wildmenu
 
 autocmd BufWritePre * :%s/\s\+$//ge
@@ -27,10 +30,6 @@ highlight DiffAdd    cterm=bold ctermfg=10 ctermbg=22
 highlight DiffDelete cterm=bold ctermfg=10 ctermbg=52
 highlight DiffChange cterm=bold ctermfg=10 ctermbg=17
 highlight DiffText   cterm=bold ctermfg=10 ctermbg=21
-
-" 都度変える必要あり
-" set paste
-" set noautoindent
 
 " auto comment off
 augroup auto_comment_off
