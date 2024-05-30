@@ -258,16 +258,23 @@ export PATH="$HOME/.bun/bin:$PATH"
 # cargo や go で入れたものを eval する際などは読み込みの順序に注意する（ここに書くと動かないときがある）
 
 # OS ごとに処理を分けるテンプレート
+RELEASE_FILE=/etc/os-release
 if [[ "${OSTYPE}" =~ .*darwin.* ]]; then
   # macOS の場合の処理をここに書く
+  echo "Hello, macOS!"
 elif grep -e '^NAME="Ubuntu' $RELEASE_FILE >/dev/null; then
   # Ubuntu の場合の処理をここに書く
+  echo "Hello, Ubuntu!"
 elif grep -e '^NAME="Linux Mint' $RELEASE_FILE >/dev/null; then
   # Linux Mint の場合の処理をここに書く
+  echo "Hello, Linux Mint!"
 elif grep -e '^NAME="CentOS' $RELEASE_FILE >/dev/null; then
   # CentOS の場合の処理をここに書く
+  echo "Hello, CentOS!"
 elif grep -e '^NAME="Amazon' $RELEASE_FILE >/dev/null; then
   # Amazon Linux の場合の処理をここに書く
+  echo "Hello, Amazon Linux!"
 else
   # その他の場合の処理をここに書く
+  echo "Hello, Anonymous OS!"
 fi
