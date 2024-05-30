@@ -105,45 +105,8 @@ function ghash () {
   echo $TARGET_LINE | cut -d ' ' -f 2 | clip.exe
 }
 
-# OS ごとに処理を分けるテンプレート
-
-# このファイルが存在する環境は限られているので注意する
-RELEASE_FILE=/etc/os-release
-
-if [[ "${OSTYPE}" =~ .*darwin.* ]]; then
-  # macOS の場合の処理をここに書く
-elif grep -e '^NAME="Ubuntu' $RELEASE_FILE >/dev/null; then
-  # Ubuntu の場合の処理をここに書く
-elif grep -e '^NAME="Linux Mint' $RELEASE_FILE >/dev/null; then
-  # Linux Mint の場合の処理をここに書く
-elif grep -e '^NAME="CentOS' $RELEASE_FILE >/dev/null; then
-  # CentOS の場合の処理をここに書く
-elif grep -e '^NAME="Amazon' $RELEASE_FILE >/dev/null; then
-  # Amazon Linux の場合の処理をここに書く
-else
-  # その他の場合の処理をここに書く
-fi
-
-# FIXME: source-highlight 周りの箇所は "bat" コマンドにより不要になったのでバッサリ削除する
-
-# less に色を付ける（要 install source-highlight）
+# cf. https://qiita.com/delphinus/items/b04752bb5b64e6cc4ea9
 export LESS='-i -M -R' # -N はコピペがしにくいので付けたい場合は手動で付ける
-
-# 一箇所だけだからいいが、以下の判定部分が増えると DRY でなくなるだろう
-RELEASE_FILE=/etc/os-release
-if [[ "${OSTYPE}" =~ .*darwin.* ]]; then
-  export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
-elif grep -e '^NAME="CentOS' $RELEASE_FILE >/dev/null; then
-  export LESSOPEN='| /usr/bin/src-hilite-lesspipe.sh %s'
-elif grep -e '^NAME="Amazon' $RELEASE_FILE >/dev/null; then
-  # Amazon Linuxの場合はここに書く
-elif grep -e '^NAME="Ubuntu' $RELEASE_FILE >/dev/null; then
-  export LESSOPEN='| /usr/share/source-highlight/src-hilite-lesspipe.sh %s'
-elif grep -e '^NAME="Linux Mint' $RELEASE_FILE >/dev/null; then
-  export LESSOPEN='| /usr/share/source-highlight/src-hilite-lesspipe.sh %s'
-else
-  # その他のディストリビューションの場合はここに書く
-fi
 
 # 不要か移動すべきかも
 export PATH="$PATH:./node_modules/.bin"
@@ -293,3 +256,18 @@ export PATH="$PNPM_HOME:$PATH"
 export PATH="$HOME/.bun/bin:$PATH"
 
 # cargo や go で入れたものを eval する際などは読み込みの順序に注意する（ここに書くと動かないときがある）
+
+# OS ごとに処理を分けるテンプレート
+if [[ "${OSTYPE}" =~ .*darwin.* ]]; then
+  # macOS の場合の処理をここに書く
+elif grep -e '^NAME="Ubuntu' $RELEASE_FILE >/dev/null; then
+  # Ubuntu の場合の処理をここに書く
+elif grep -e '^NAME="Linux Mint' $RELEASE_FILE >/dev/null; then
+  # Linux Mint の場合の処理をここに書く
+elif grep -e '^NAME="CentOS' $RELEASE_FILE >/dev/null; then
+  # CentOS の場合の処理をここに書く
+elif grep -e '^NAME="Amazon' $RELEASE_FILE >/dev/null; then
+  # Amazon Linux の場合の処理をここに書く
+else
+  # その他の場合の処理をここに書く
+fi
