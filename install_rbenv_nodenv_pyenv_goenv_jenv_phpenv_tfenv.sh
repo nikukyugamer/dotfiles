@@ -6,8 +6,6 @@ git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-bu
 git clone https://github.com/nodenv/nodenv.git ~/.nodenv
 git clone https://github.com/nodenv/node-build.git ~/.nodenv/plugins/node-build
 
-# ~/.anyenv 配下に入るのでだめ
-# curl -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 git clone https://github.com/yyuu/pyenv-virtualenv.git ~/.pyenv/plugins/pyenv-virtualenv
 
@@ -19,7 +17,6 @@ git clone https://github.com/syndbg/goenv.git ~/.goenv
 git clone https://github.com/jenv/jenv.git ~/.jenv
 
 # https://github.com/phpenv/phpenv
-# Required: bzip2
 git clone https://github.com/phpenv/phpenv.git ~/.phpenv
 git clone https://github.com/php-build/php-build ~/.phpenv/plugins/php-build
 git clone https://github.com/ngyuki/phpenv-composer.git ~/.phpenv/plugins/phpenv-composer
