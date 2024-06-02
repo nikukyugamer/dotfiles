@@ -1,0 +1,33 @@
+[include]
+  path = ~/dotfiles/.gitconfig
+[core]
+  hooksPath = ~/.config/git/hooks
+[ghq]
+  root = ~/.ghq
+[user]
+  name = Osamu Takiya
+  email = takiya@toran.sakura.ne.jp
+  # プロジェクトごとに $ git config user.signingkey YOUR_SIGNING_KEY のように設定してもいい
+  # signingkey = YOUR_SIGNING_KEY
+[commit]
+  # プロジェクトごとに $ git config commit.gpgsign true のように設定してもといい
+  # gpgsign = true
+[gpg]
+  # プロジェクトごとに $ git config gpg.program gpg のように設定してもといい
+  # Ubuntu
+  # program = gpg
+[credential "https://github.com"]
+  # Ubuntu
+  # helper = !/usr/bin/gh auth git-credential
+  # macOS (Apple Silicon Chip)
+  # helper = !/opt/homebrew/bin/gh auth git-credential
+  # macOS (Intel Chip)
+  # helper = !/usr/local/bin/gh auth git-credential
+[credential]
+  # cf. https://docs.github.com/ja/get-started/getting-started-with-git/caching-your-github-credentials-in-git
+  # macOS
+  # helper = osxkeychain
+  # Ubuntu
+  # helper = cache
+  # Windows
+  # helper = wincred
