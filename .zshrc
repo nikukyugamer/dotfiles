@@ -187,6 +187,8 @@ function ssher() {
   ssh $server
 }
 
+# FIXME: もはや URI やディレクトリ、戻り値等が変わってしまっているので、削除して、別途ツールを探すなどする
+# cf. https://qiita.com/satodoc/items/8a28e84e6467e49b3f85 （この情報も古い）
 # $ docker search "by tags"
 function docker-tags {
   curl -s https://registry.hub.docker.com/v1/repositories/$1/tags | jq -r '.[].name'
