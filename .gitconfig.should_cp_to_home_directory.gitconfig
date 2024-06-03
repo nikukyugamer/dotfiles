@@ -16,6 +16,8 @@
   # プロジェクトごとに $ git config gpg.program gpg のように設定してもといい
   # Ubuntu
   # program = gpg
+  # macOS ($ brew intsall gpg)
+  # program = gpg
 [credential "https://github.com"]
   # Ubuntu
   # helper = !/usr/bin/gh auth git-credential
