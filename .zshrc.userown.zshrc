@@ -1,4 +1,8 @@
 # ユーザごとに独自に設定したい内容を記述する
+
+# デフォルトエディタ
+# export EDITOR=$(which nvim)
+
 # alias vscode="/mnt/c/Users/USERNAME/AppData/Local/Programs/Microsoft\ VS\ Code\ Insiders/Code\ -\ Insiders.exe"
 # alias berspec="bundle exec rspec --format documentation"
 # alias mpc="/mnt/d/Program\ Files/MPC-BE/mpc-be64.exe"
