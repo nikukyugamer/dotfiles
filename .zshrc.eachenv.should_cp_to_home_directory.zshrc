@@ -1,5 +1,7 @@
 source ~/dotfiles/.zshrc
 
+EDITOR=$(which nvim)
+
 alias gu='~/.cargo/bin/gitui'
 
 # ここを書き換えればプロンプトをオーバーライドできる
