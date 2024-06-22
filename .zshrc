@@ -19,6 +19,7 @@ SAVEHIST=100000
 # The following lines were added by compinstall
 # 補完を有効化する
 # zstyle :compinstall filename '~/.zshrc'
+fpath+=$HOME/dotfiles/zsh_completions
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
