@@ -64,7 +64,7 @@ npm_install_g pm2
 # グローバルに入れておいたほうが VS Code で有用（問題があるようなら外す）
 npm_install_g prettier
 npm_install_g ts-node
-npm install_g tsx # https://github.com/privatenumber/tsx
+npm_install_g tsx # https://github.com/privatenumber/tsx
 npm_install_g typescript
 npm_install_g vercel
 npm_install_g wrangler # Cloudflare の CLI
