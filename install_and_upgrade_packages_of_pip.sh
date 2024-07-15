@@ -24,7 +24,7 @@ install_pip bottle
 install_pip chat_downloader
 install_pip cuteuid # https://github.com/alexdredmon/cuteuid
 install_pip glances
-install_pip httpie
+# install_pip httpie # yt-dlp とライブラリがバッティングするのでコメントアウト
 install_pip https://github.com/egbertbouman/youtube-comment-downloader/archive/master.zip
 install_pip instaloader
 install_pip mycli
