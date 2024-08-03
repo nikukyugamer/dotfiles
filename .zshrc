@@ -101,9 +101,10 @@ function ghash () {
 
   echo $TARGET_LINE
 
-  # FIXME: macOS なら /usr/bin/pbcopy にして、WSL2 ならば clip.exe にする
+  # FIXME: macOS なら /usr/bin/pbcopy にして、WSL2 ならば uclip.exe にする
+  # uclip: https://github.com/suzusime/uclip
   # ただしもちろん SSH で入った場合には pbcopy は正常に動かないので注意
-  echo $TARGET_LINE | cut -d ' ' -f 2 | clip.exe
+  echo $TARGET_LINE | cut -d ' ' -f 2 | uclip.exe
 }
 
 # cf. https://qiita.com/delphinus/items/b04752bb5b64e6cc4ea9
