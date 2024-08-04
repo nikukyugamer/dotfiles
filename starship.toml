@@ -64,7 +64,7 @@ asia-northeast1 = "tokyo"
 [gcloud]
 format = '[$symbol$account(@$domain)(\($region\))]($style) '
 style = "bold green"
-symbol = "gcp:" # 🌈
+symbol = "gcloud:" # 🌈
 
 [time]
 disabled = false
