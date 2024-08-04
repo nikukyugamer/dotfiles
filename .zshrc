@@ -16,6 +16,12 @@ HISTFILE=~/.zsh_history
 HISTSIZE=100000
 SAVEHIST=100000
 
+# TODO: 書く場所をここでなくもうちょっと意味ごとにまとめたい
+# TODO: 正確な分岐にするには Apple Silicon の条件も追加する必要がある
+if [[ "${OSTYPE}" =~ .*darwin.* ]]; then
+  export PATH="/opt/homebrew/bin:$PATH"
+fi
+
 # The following lines were added by compinstall
 # 補完を有効化する
 # zstyle :compinstall filename '~/.zshrc'
