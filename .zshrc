@@ -19,7 +19,7 @@ SAVEHIST=100000
 # TODO: 書く場所をここでなくもうちょっと意味ごとにまとめたい
 # TODO: 正確な分岐にするには Apple Silicon の条件も追加する必要がある
 if [[ "${OSTYPE}" =~ .*darwin.* ]]; then
-  export PATH="/opt/homebrew/bin:$PATH"
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 # The following lines were added by compinstall
