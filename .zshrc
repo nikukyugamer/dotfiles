@@ -138,8 +138,6 @@ export LESSCHARSET=utf-8
 
 # For Bundler
 alias be='bundle exec'
-alias ber='bundle exec rails'
-alias berce='bundle exec rails credentials:edit'
 
 # For Rails
 alias railsserver='bundle exec rails server'
@@ -203,6 +201,7 @@ function docker-tags {
 }
 
 # /usr/local/bin は最優先とみなしていいので、最終的に変更しておく（awscli 対策）
+# TODO: ~/bin を優先したい場合も出てきたので再考の余地あり
 export PATH="/usr/local/bin:$PATH"
 
 # Google Cloud
