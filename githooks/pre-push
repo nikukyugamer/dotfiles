@@ -1,4 +1,4 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 set -euo pipefail
 
 PUSH_COMMAND_DETAIL=$(ps -ocommand= -p $PPID)
