@@ -1,0 +1,16 @@
+#!/bin/env bash
+set -euo pipefail
+
+PUSH_COMMAND_DETAIL=$(ps -ocommand= -p $PPID)
+PROHIBITED_OPTIONS='git push --force|git push -f'
+ERROR_MESSAGE="ERROR: --force や -f オプションの使用は禁じられています。"
+
+echo "[LOG] git push コマンド (pre-push): $PUSH_COMMAND_DETAIL"
+
+if [[ $PUSH_COMMAND_DETAIL =~ $PROHIBITED_OPTIONS ]]; then
+  echo $ERROR_MESSAGE
+
+  exit 1
+fi
+
+exit 0
