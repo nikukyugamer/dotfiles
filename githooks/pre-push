@@ -2,12 +2,12 @@
 set -euo pipefail
 
 PUSH_COMMAND_DETAIL=$(ps -ocommand= -p $PPID)
-PROHIBITED_OPTIONS='\-\-force|\-f'
+PROHIBITED_OPTIONS='--force|-f'
 ERROR_MESSAGE="ERROR: --force や -f オプションの使用は禁じられています。"
 
 echo "push_command: $PUSH_COMMAND_DETAIL"
 
-if [[ $PUSH_COMMAND_DETAIL =~ \b($PROHIBITED_OPTIONS)\b ]]; then
+if [[ $PUSH_COMMAND_DETAIL =~ \s*($PROHIBITED_OPTIONS)\s* ]]; then
   echo $ERROR_MESSAGE
 
   exit 1
