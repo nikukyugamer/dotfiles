@@ -40,15 +40,6 @@ rye_tools_install wad            # WAD (Web application detector)
 rye_tools_install youtube-dl
 rye_tools_install yt-dlp
 
-# 開発用（個別のプロジェクトごとに入れることを前提としたいので、コメントアウト）
-# rye_tools_install poetry
-# rye_tools_install ruff
-# rye_tools_install mypy
-
-# ChatGPT API を用いたシェルスクリプト生成ツール
-# 要 v3.10 以上
-# rye_tools_install wanna
-
 # asciinema is a suite of tools for recording, replaying, and sharing terminal sessions.
 # https://docs.asciinema.org/manual/
 rye_tools_install asciinema
