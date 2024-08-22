@@ -15,5 +15,6 @@
 "$HOME"/dotfiles/install_and_update_deno.sh
 "$HOME"/dotfiles/install_and_update_pnpm.sh
 "$HOME"/dotfiles/install_and_update_bun.sh
+"$HOME"/dotfiles/install_and_update_rye.sh
 
 exit 0
