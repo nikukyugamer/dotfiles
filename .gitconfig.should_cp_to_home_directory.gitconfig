@@ -5,16 +5,14 @@
 [user]
   name = Osamu Takiya
   email = takiya@toran.sakura.ne.jp
-  # プロジェクトごとに $ git config user.signingkey YOUR_SIGNING_KEY のように設定してもいい
+  # プロジェクトごとに $ git config --local user.signingkey YOUR_SIGNING_KEY のように設定してもいい
   # signingkey = YOUR_SIGNING_KEY
 [commit]
-  # プロジェクトごとに $ git config commit.gpgsign true のように設定してもといい
+  # プロジェクトごとに $ git config --local commit.gpgsign true のように設定してもいい
   # gpgsign = true
 [gpg]
-  # プロジェクトごとに $ git config gpg.program gpg のように設定してもといい
-  # Ubuntu
-  # program = gpg
-  # macOS ($ brew intsall gpg)
+  # プロジェクトごとに $ git config --local gpg.program gpg のように設定してもいい
+  # 初回は gpg をパッケージでインストールする必要がある
   # program = gpg
 [credential "https://github.com"]
   # Ubuntu

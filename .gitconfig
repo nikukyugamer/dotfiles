@@ -1,53 +1,42 @@
 [init]
   defaultBranch = main
-[merge]
-  tool = vimdiff
-  conflictstyle = diff3
-  prompt = false
-  ff = false
-[pull]
-  ff = only
-[push]
-  default = current
-  autoSetupRemote = true
+[core]
+  autocrlf = input
+  quotepath = false
+  # 以下のファイルで指定してしまうと分かりづらいので、原則としては .git/info/exclude に記述する
+  # excludesfile = ~/.gitignore.myown.gitignore
+  pager = delta
+  hooksPath = ~/.githooks
 [alias]
   tree = log --graph --pretty=format:'%x09%C(auto) %h %Cgreen %ar %Creset%x09"%C(cyan ul)%an%Creset" %x09%C(auto)%s %d'
   s = switch
   b = branch
   ss = status -s
   coam = commit --amend -C HEAD --date=now
+[fetch]
+  prune = true
+[pull]
+  ff = only
+[push]
+  default = current
+  autoSetupRemote = true
+[merge]
+  tool = vimdiff
+  conflictstyle = diff3
+  prompt = false
+  ff = false
 [diff]
   tool = vimdiff
   colorMoved = default # default は zebra
 [difftool]
   prompt = false
+[interactive]
+  diffFilter = delta --color-only
 [sequence]
   editor = interactive-rebase-tool
-[core]
-  autocrlf = input
-  quotepath = false
-  # 以下のファイルで指定してしまうと分かりづらいので、原則としては .git/info/exclude に記述する
-  excludesfile = ~/dotfiles/.gitignore.myown.gitignore
-  pager = delta
-  hooksPath = ~/.githooks
-[fetch]
-  prune = true
 [pager]
   branch = cat
   config = cat
-[filter "lfs"]
-  clean = git-lfs clean -- %f
-  smudge = git-lfs smudge --skip -- %f
-  process = git-lfs filter-process --skip
-  required = true
-[delta]
-  navigate = true
-  dark = true
-  light = false
-  side-by-side = false
-  line-numbers = true
-[interactive]
-  diffFilter = delta --color-only
 [color]
   ui = true
 [color "diff-highlight"]
@@ -63,3 +52,14 @@
   old = red bold
   new = green bold
   whitespace = red reverse
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge --skip -- %f
+  process = git-lfs filter-process --skip
+  required = true
+[delta]
+  navigate = true
+  dark = true
+  light = false
+  side-by-side = false
+  line-numbers = true
