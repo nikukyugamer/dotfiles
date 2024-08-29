@@ -7,6 +7,4 @@ cp .zshrc.userown.zshrc ~/.zshrc.userown.zshrc.sample
 cp .vimrc.should_cp_to_home_directory ~/.vimrc.sample
 cp .gitconfig.should_cp_to_home_directory ~/.gitconfig.sample
 
-# cp .czrc ~/.czrc
-
 exit 0
