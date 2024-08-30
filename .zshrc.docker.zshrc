@@ -15,6 +15,7 @@ function dvcreate() {
   docker volume create --driver=local --name=xbox_volume_"$CURRENT_DATETIME" "$@"
 }
 
+# NOTE: mac の sed では "-z" が使えない
 function dvlss() {
   docker volume ls -q | peco | sed "s/^[ \t]*//" | sed -z "s/\n//g" | sed -z "s/ //g"
 }
@@ -35,6 +36,7 @@ function dibuild() {
 alias dils='docker image ls --format "{{.Repository}}:{{.Tag}} ({{.ID}}) / {{.CreatedSince}}" | sed "/docker\/.*/d" | sed "/k8s.gcr.io\/.*/d" | sed "/.*<none>.*/d" | sed "/vsc-.*/d" | sort -h'
 
 ## イメージ名を peco で選択できるようにする
+# NOTE: mac の sed では "-z" が使えない
 function dilss() {
   DILS_PECO=$(dils | peco)
 
@@ -66,6 +68,7 @@ function dirm() {
 alias dcls='docker container ls --all --format "{{.State}}\t| {{.Names}} | {{.Image}} | {{.ID}}"'
 
 ## コンテナ名を peco で選択できるようにする（さらにパイプでクリップボードに渡すなどすると便利）
+# NOTE: mac の sed では "-z" が使えない
 alias dclss='dcls | peco | cut -d "|" -f 2 | sed "s/^[ \t]*//" | sed -z "s/\n//g" | sed -z "s/ //g"'
 alias DC='$(dclss)'
 
