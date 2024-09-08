@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
+set -euxo pipefail
+cd "$(dirname "$0")"
 
-echo 'CURRENT rustc Version is ...'
+echo '現在の rustc のバージョン:'
 rustc --version
 
-echo "Let's update Rust!"
+echo "Rust をアップデートします。"
 rustup update stable
 
 exit 0

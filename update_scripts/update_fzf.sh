@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
+set -euxo pipefail
+cd "$(dirname "$0")"
 
-echo 'Install/Update fzf'
+echo 'Update fzf'
 cd ~/.fzf && git pull
 
 expect -c "
