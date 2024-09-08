@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
-set -euxo pipefail
-cd "$(dirname "$0")"
-
-echo 'Update fzf'
-cd ~/.fzf && git pull
+echo 'fzf をアップデートします。'
+cd "$HOME"/.fzf && git pull
 
 expect -c "
   spawn ./install

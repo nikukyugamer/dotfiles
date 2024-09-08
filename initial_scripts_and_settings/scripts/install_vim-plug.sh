@@ -4,7 +4,7 @@ set -euxo pipefail
 # 公式リポジトリ
 # https://github.com/junegunn/vim-plug
 
-# Neovim
+# Neovim（今のところ、Neovim を使う前提としている）
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 # Vim

@@ -45,6 +45,7 @@ npm_install_g @amanoese/muscular
 npm_install_g @devcontainers/cli
 npm_install_g @fand/kao
 npm_install_g @google/clasp
+npm_install_g @prantlf/jsonlint # https://github.com/prantlf/jsonlint
 npm_install_g aicommits
 npm_install_g crontab-ui
 npm_install_g diff-so-fancy
@@ -52,18 +53,15 @@ npm_install_g dsstore-cli
 npm_install_g fx
 npm_install_g http-server
 npm_install_g js-beautify
-# https://github.com/prantlf/jsonlint
-npm_install_g @prantlf/jsonlint
 npm_install_g kmdr
 npm_install_g npm-check-updates
 npm_install_g pm2
-# グローバルに入れておいたほうが VS Code で有用（問題があるようなら外す）
-npm_install_g prettier
+npm_install_g prettier # グローバルに入れておいたほうが VS Code で有用（問題があるようなら外す）
 npm_install_g ts-node
 npm_install_g tsx # https://github.com/privatenumber/tsx
 npm_install_g typescript
 npm_install_g vercel
-npm_install_g wrangler # Cloudflare の CLI
+npm_install_g wrangler
 npm_install_g yarn
 npm_install_g yarn-outdated-formatter # https://github.com/masawada/yarn-outdated-formatter
 npm_install_g yukichant

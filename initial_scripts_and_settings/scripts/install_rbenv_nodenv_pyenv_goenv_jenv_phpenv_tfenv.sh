@@ -15,8 +15,8 @@ git clone https://github.com/yyuu/pyenv-virtualenv.git "$HOME"/.pyenv/plugins/py
 git clone https://github.com/syndbg/goenv.git "$HOME"/.goenv
 
 # https://github.com/jenv/jenv
-# $ /usr/libexec/java_home -V
-# $ jenv add /Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home
+# Ubuntu: $ jenv add /usr/lib/jvm/java-11-openjdk-amd64/
+# macOS: $ jenv add /Library/Java/JavaVirtualMachines/jdk1.8.0_162.jdk/Contents/Home
 git clone https://github.com/jenv/jenv.git "$HOME"/.jenv
 
 # https://github.com/phpenv/phpenv
