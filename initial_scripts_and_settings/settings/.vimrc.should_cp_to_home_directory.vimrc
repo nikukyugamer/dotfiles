@@ -3,7 +3,7 @@
 source ~/dotfiles/.vimrc
 
 " $ mkdir -p ~/.config/nvim/colors
-" vim molokai.vim / https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim
-" vim tender.vim / https://raw.githubusercontent.com/jacoborus/tender.vim/master/colors/tender.vim
+" vim ~/.config/nvim/colors/molokai.vim <- https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim の内容をコピペする
+" vim ~/.config/nvim/colors/tender.vim <- https://raw.githubusercontent.com/jacoborus/tender.vim/master/colors/tender.vim の内容をコピペする
 " colorscheme tender
-" colorscheme molokai
+" colorscheme molokai " こちらの使用を推奨
