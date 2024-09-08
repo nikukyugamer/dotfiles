@@ -1,4 +1,6 @@
-#!/usr/bin/env bash -e
+#!/usr/bin/env bash
+set -euxo pipefail
+cd "$(dirname "$0")"
 
 # amd64
 wget https://github.com/tianon/gosu/releases/download/1.14/gosu-amd64 -O /tmp/gosu

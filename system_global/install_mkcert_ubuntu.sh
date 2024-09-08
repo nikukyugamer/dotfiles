@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 set -euxo pipefail
+cd "$(dirname "$0")"
 
 # mkcert is a simple tool for making locally-trusted development certificates.
 # https://github.com/FiloSottile/mkcert

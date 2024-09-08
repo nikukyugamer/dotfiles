@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 set -euxo pipefail
+cd "$(dirname "$0")"
 
 # ドキュメントは以下参照
 # https://developer.1password.com/docs/cli
