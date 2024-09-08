@@ -15,13 +15,13 @@ function rye_tools_install() {
 }
 
 rye_tools_install asciidoc               # git のビルド用
+rye_tools_install asciinema              # https://docs.asciinema.org/manual/
 rye_tools_install aws-encryption-sdk-cli # https://aws-encryption-sdk-cli.readthedocs.io/en/latest/
 rye_tools_install bottle
 rye_tools_install chat_downloader
 rye_tools_install cuteuid # https://github.com/alexdredmon/cuteuid
 rye_tools_install glances
 rye_tools_install httpie
-rye_tools_install youtube-comment-downloader
 rye_tools_install instaloader
 rye_tools_install mycli
 rye_tools_install pgcli
@@ -37,14 +37,9 @@ rye_tools_install termdown
 rye_tools_install twitterscraper # https://github.com/taspinar/twitterscraper
 rye_tools_install twspace-dl     # https://github.com/HoloArchivists/twspace-dl
 rye_tools_install wad            # WAD (Web application detector)
+rye_tools_install yamllint       # https://yamllint.readthedocs.io/en/stable/
+rye_tools_install youtube-comment-downloader
 rye_tools_install youtube-dl
 rye_tools_install yt-dlp
-
-# asciinema is a suite of tools for recording, replaying, and sharing terminal sessions.
-# https://docs.asciinema.org/manual/
-rye_tools_install asciinema
-
-# https://yamllint.readthedocs.io/en/stable/
-rye_tools_install yamllint
 
 exit 0

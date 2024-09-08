@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+set -euxo pipefail
+cd "$(dirname "$0")"
 
 # https://github.com/embulk/embulk
 curl --create-dirs -o ~/.embulk/bin/embulk -L "https://dl.embulk.org/embulk-latest.jar"
