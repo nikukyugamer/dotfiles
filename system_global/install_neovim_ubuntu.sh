@@ -6,7 +6,7 @@ sudo apt install -y neovim
 
 echo
 echo "やること その1"
-echo "~/.config/nvim/init.vim にエイリアスを作ること"
+echo "$HOME/.config/nvim/init.vim にエイリアスを作ること"
 echo "$ mkdir -p ~/.config/nvim && ln -s ~/.vimrc ~/.config/nvim/init.vim"
 
 echo

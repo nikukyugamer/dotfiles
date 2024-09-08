@@ -1,4 +1,6 @@
-#!/usr/bin/env bash -xe
+#!/usr/bin/env bash
+set -euxo pipefail
+cd "$(dirname "$0")"
 
 # If you install direnv via make install, it's necessary for root to execute go command
 # This condition is severe so this script supports installation via downloading binary directly

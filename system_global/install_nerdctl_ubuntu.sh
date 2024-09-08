@@ -1,4 +1,6 @@
-#!/usr/bin/env bash -e
+#!/usr/bin/env bash
+set -euxo pipefail
+cd "$(dirname "$0")"
 
 mkdir -p /tmp/nerdctl_workdir
 
