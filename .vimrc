@@ -37,3 +37,12 @@ augroup auto_comment_off
   autocmd BufEnter * setlocal formatoptions-=r
   autocmd BufEnter * setlocal formatoptions-=o
 augroup END
+
+" vim-plug
+" インストールは ":PlugInstall" (https://github.com/junegunn/vim-plug#usage)
+call plug#begin()
+Plug 'mechatroner/rainbow_csv'
+call plug#end()
+
+" Rainbow CSV (https://github.com/mechatroner/rainbow_csv)
+let g:rcsv_colorpairs = [['red', 'red'], ['blue', 'blue'], ['green', 'green'], ['magenta', 'magenta'], ['NONE', 'NONE'], ['darkred', 'darkred'], ['darkblue', 'darkblue'], ['darkgreen', 'darkgreen'], ['darkmagenta', 'darkmagenta'], ['darkcyan', 'darkcyan']]
