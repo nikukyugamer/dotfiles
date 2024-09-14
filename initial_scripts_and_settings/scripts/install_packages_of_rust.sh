@@ -50,6 +50,7 @@ install_cargo railwayapp
 install_cargo ripgrep
 install_cargo ripgrep_all # ffmpeg などが必要
 install_cargo sd          # Alt "sed" https://github.com/chmln/sd
+install_cargo simple-http-server
 install_cargo tealdeer
 install_cargo tokei # https://github.com/XAMPPRocky/tokei
 install_cargo xcompress
