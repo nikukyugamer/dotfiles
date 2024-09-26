@@ -6,7 +6,7 @@ on:
 jobs:
   cypress_gss2022_frontend:
     name: Cypress での E2E テスト
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4.2.0
       - name: 環境を確認する
