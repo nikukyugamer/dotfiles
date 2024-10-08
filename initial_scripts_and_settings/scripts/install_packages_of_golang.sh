@@ -36,6 +36,7 @@ go_install github.com/mattn/memo@latest
 go_install github.com/mattn/twty@latest       # twty (Twitter Client) developed by mattn
 go_install github.com/mithrandie/csvq@latest  # https://github.com/mithrandie/csvq
 go_install github.com/msoap/shell2http@latest # shell2http (https://github.com/msoap/shell2http)
+go_install github.com/neilotoole/sq@latest # sq is a command line tool that provides jq-style access to structured data sources: SQL databases, or document formats like CSV or Excel. It is the lovechild of sql+jq.
 go_install github.com/nlopes/slack@latest
 go_install github.com/otiai10/amesh@latest
 go_install github.com/oz/tz@latest # A time zone helper
