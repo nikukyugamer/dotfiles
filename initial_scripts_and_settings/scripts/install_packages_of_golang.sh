@@ -42,6 +42,7 @@ go_install github.com/otiai10/amesh@latest
 go_install github.com/oz/tz@latest # A time zone helper
 go_install github.com/ramya-rao-a/go-outline@latest
 go_install github.com/rhysd/actionlint/cmd/actionlint@latest # actionlint (Lint for GitHub Actions)
+go_install github.com/simonwhitaker/gibo@latest # https://github.com/simonwhitaker/gibo@latest
 go_install github.com/traefik/yaegi/cmd/yaegi@latest         # インタプリタ (REPL)
 go_install github.com/wader/fq@latest                        # Tool, language and decoders for working with binary data.
 go_install github.com/x-motemen/ghq@latest
