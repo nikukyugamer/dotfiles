@@ -31,6 +31,7 @@ rye_tools_install pyxattr
 rye_tools_install ranger-fm # ranger (CLI Filer)
 rye_tools_install sen       # https://github.com/TomasTomecek/sen
 rye_tools_install setuptools
+rye_tools_install sqruff
 rye_tools_install stormssh
 rye_tools_install streamlink
 rye_tools_install termdown
