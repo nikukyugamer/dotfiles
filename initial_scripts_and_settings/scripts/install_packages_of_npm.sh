@@ -57,6 +57,7 @@ npm_install_g kmdr
 npm_install_g npm-check-updates
 npm_install_g pm2
 npm_install_g prettier # グローバルに入れておいたほうが VS Code で有用（問題があるようなら外す）
+npm_install_g textlint
 npm_install_g ts-node
 npm_install_g tsx # https://github.com/privatenumber/tsx
 npm_install_g typescript
