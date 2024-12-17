@@ -54,13 +54,17 @@ install_cargo simple-http-server
 install_cargo tealdeer
 install_cargo tokei # https://github.com/XAMPPRocky/tokei
 install_cargo xcompress
-install_cargo zoxide
 
 # https://github.com/dathere/qsv
-# --features python は Python のバージョンによりインストールに失敗するので原則として外すことにする
+# "--features python" は Python のバージョンによりインストールに失敗するので原則として外すことにする
 # cargo install qsv --locked --features feature_capable,apply,fetch,foreach,geocode,luau,polars,python,self_update,ui
-cargo install qsv --locked --features feature_capable,apply,fetch,foreach,geocode,luau,polars,self_update,ui
+echo
+echo 'Install "qsv"'
+cargo install qsv --locked --bin qsv --features feature_capable,apply,fetch,foreach,geocode,luau,polars,self_update,ui
 
+echo
+
+echo 'Update "tealdeer (tldr)"'
 tldr --update
 
 exit 0
