@@ -54,6 +54,7 @@ npm_install_g fx
 npm_install_g http-server
 npm_install_g js-beautify
 npm_install_g kmdr
+npm_install_g @mermaid-js/mermaid-cli # https://github.com/mermaid-js/mermaid-cli
 npm_install_g npm-check-updates
 npm_install_g pm2
 npm_install_g prettier # グローバルに入れておいたほうが VS Code で有用（問題があるようなら外す）
