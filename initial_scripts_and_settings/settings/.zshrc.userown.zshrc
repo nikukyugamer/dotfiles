@@ -84,3 +84,10 @@ export ONE_PASSWORD_MY_PASSWORD=op://Personal/jjztc5so2hlsskzuhzu2toh3cu/passwor
 # else
 #   echo "cron のサービスはすでに起動されています。(.zshrc.userown.zshrc)"
 # fi
+
+# Rye
+# alias vactivate=". .venv/bin/activate"
+# alias rrp="rye run python"
+
+# Lazygit
+# alias lg="lazygit"
