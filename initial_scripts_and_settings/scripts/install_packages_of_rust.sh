@@ -45,6 +45,7 @@ install_cargo gitui # https://github.com/extrawurst/gitui
 install_cargo grex
 install_cargo hyperfine
 install_cargo kiro-editor
+install_cargo macchina # https://github.com/Macchina-CLI/macchina
 install_cargo procs
 install_cargo railwayapp
 install_cargo ripgrep
