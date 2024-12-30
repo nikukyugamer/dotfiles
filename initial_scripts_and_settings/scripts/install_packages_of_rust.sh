@@ -54,6 +54,7 @@ install_cargo simple-http-server
 install_cargo tealdeer
 install_cargo tokei # https://github.com/XAMPPRocky/tokei
 install_cargo xcompress
+install_cargo yazi-fm yazi-cli # https://yazi-rs.github.io/
 
 # https://github.com/dathere/qsv
 # "--features python" は Python のバージョンによりインストールに失敗するので原則として外すことにする
