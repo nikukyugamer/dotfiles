@@ -48,6 +48,7 @@ npm_install_g @google/clasp
 npm_install_g @prantlf/jsonlint # https://github.com/prantlf/jsonlint
 npm_install_g aicommits
 npm_install_g crontab-ui
+npm_install_g daff # daff: data diff (https://github.com/paulfitz/daff)
 npm_install_g diff-so-fancy
 npm_install_g dsstore-cli
 npm_install_g fx
