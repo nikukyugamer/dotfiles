@@ -14,7 +14,7 @@ function go_install() {
   echo '**********************************************************************'
 }
 
-go_install github.com/b4b4r07/gomi@latest
+go_install github.com/babarot/gomi@latest
 go_install github.com/charmbracelet/vhs@latest
 go_install github.com/Clever/csvlint/cmd/csvlint@latest # https://github.com/Clever/csvlint
 go_install github.com/docker/hub-tool@latest            # GO111MODULE=on
