@@ -41,6 +41,7 @@ go_install github.com/nlopes/slack@latest
 go_install github.com/otiai10/amesh@latest
 go_install github.com/oz/tz@latest # A time zone helper
 go_install github.com/ramya-rao-a/go-outline@latest
+go_install github.com/rclone/rclone@latest # https://rclone.org/
 go_install github.com/rhysd/actionlint/cmd/actionlint@latest # actionlint (Lint for GitHub Actions)
 go_install github.com/simonwhitaker/gibo@latest # https://github.com/simonwhitaker/gibo@latest
 go_install github.com/traefik/yaegi/cmd/yaegi@latest         # インタプリタ (REPL)
