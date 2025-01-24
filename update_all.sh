@@ -3,7 +3,9 @@
 # CLI ツールのアップデート
 "$HOME"/dotfiles/update_scripts/update_rbenv_nodenv_pyenv_goenv_jenv_phpenv.sh
 "$HOME"/dotfiles/update_scripts/update_fzf.sh
-"$HOME"/dotfiles/update_scripts/update_cli_tools.sh
+
+# Heroku や CircleCI はもはやファーストチョイスではないため、コメントアウトする
+# "$HOME"/dotfiles/update_scripts/update_cli_tools.sh
 
 # パッケージのアップデート
 "$HOME"/dotfiles/update_scripts/update_packages_of_rye_tools.sh

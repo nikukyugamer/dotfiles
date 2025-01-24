@@ -2,6 +2,10 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 
+# Heroku や CircleCI はもはやファーストチョイスではないため、このスクリプトは実行されない
+# 将来的にはどうなるかわからないので、一応残しておくが、頃合いを見て削除してよい
+# cf. update_all.sh
+
 UNAME=$(uname -a)
 
 if echo "$UNAME" | grep -q arm; then
