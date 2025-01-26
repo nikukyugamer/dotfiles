@@ -86,7 +86,8 @@ export ONE_PASSWORD_MY_PASSWORD=op://Personal/jjztc5so2hlsskzuhzu2toh3cu/passwor
 # fi
 
 # Rye
-# alias vactivate=". .venv/bin/activate"
+# venv というエイリアスは衝突しそうで怖いので十分気をつけて意識しておく
+# alias venv=". .venv/bin/activate"
 # alias rrp="rye run python"
 
 # Lazygit
