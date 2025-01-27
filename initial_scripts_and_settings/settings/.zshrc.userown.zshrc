@@ -1,22 +1,30 @@
 # ユーザごとに独自に設定したい内容を記述する
 
-# デフォルトエディタ
+# Neovim をデフォルトのエディタにする
 # export EDITOR=$(which nvim)
 
-# alias vscode="/mnt/c/Users/USERNAME/AppData/Local/Programs/Microsoft\ VS\ Code\ Insiders/Code\ -\ Insiders.exe"
-# alias berspec="bundle exec rspec --format documentation"
-# alias mpc="/mnt/d/Program\ Files/MPC-BE/mpc-be64.exe"
-
-# ソースからビルドした最新の git
+# ソースからビルドした最新の git を使う
 # PATH=$HOME/bin/latest_git/bin:$PATH
 
-# Mozc
-# https://astherier.com/blog/2021/07/windows11-wsl2-wslg-japanese/
-# export GTK_IM_MODULE=fcitx
-# export QT_IM_MODULE=fcitx
-# export XMODIFIERS=@im=fcitx
-# export DefaultIMModule=fcitx
+# Flutter (Use fvm)
+# export FLUTTER_HOME=$HOME/fvm/default
+# export PATH=$PATH:$FLUTTER_HOME/bin
 
+# 1Password CLI
+# export ONE_PASSWORD_MY_PASSWORD=op://Personal/jjztc5so2hlsskzuhzu2toh3cu/password
+
+# sudo でエイリアスが使えるようにする（sudo vim で neovim になるようにする）
+# https://qiita.com/homoluctus/items/ba1a6d03df85e65fc85a
+# alias sudo="sudo "
+
+# Rye
+# venv というエイリアスは衝突しそうで怖いので十分気をつけて意識しておく
+# alias venv=". .venv/bin/activate"
+
+# Lazygit
+# alias lg="lazygit"
+
+# DeepL API
 # export DEEPL_TOKEN=
 
 # ssh-agent
@@ -29,32 +37,39 @@
 # fi
 # ssh-add -l >& /dev/null || ssh-add
 
-# Flutter (Use fvm)
-export FLUTTER_HOME=$HOME/fvm/default
-export PATH=$PATH:$FLUTTER_HOME/bin
-# export CHROME_EXECUTABLE="/Applications/Google Chrome Dev.app/Contents/MacOS/Google Chrome Dev"
-
-# Windows Explorer
-alias expl="explorer.exe ."
-
-# 1Password CLI
-export ONE_PASSWORD_MY_PASSWORD=op://Personal/jjztc5so2hlsskzuhzu2toh3cu/password
-
-# WSLg で日本語キーボードにする
-# 現在の設定を確認するコマンドは setxkbmap -print -verbose 10
-# setxkbmap -layout jp
-
-# sudo でエイリアスが使えるようにする（sudo vim で neovim になるようにする）
-# https://qiita.com/homoluctus/items/ba1a6d03df85e65fc85a
-# alias sudo="sudo "
-
-# Mac で rbenv を直接インストールする場合に必要
+################################################################################
+# 以下は Mac 特有の設定
+################################################################################
+# Mac で rbenv を直接インストールする場合に必要（現在は不要？）
 # これがないと rbenv install だけでなく fastlane で SSL に失敗したりもする
 # export LDFLAGS="-L/opt/homebrew/opt/openssl@3/lib"
 # export RUBY_CONFIGURE_OPTS="--disable-shared --with-openssl-dir=$(brew --prefix openssl@3)"
 
 # Android CLI for Mac
 # export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
+
+# Google Chrome Dev
+# export CHROME_EXECUTABLE="/Applications/Google Chrome Dev.app/Contents/MacOS/Google Chrome Dev"
+
+################################################################################
+# 以下は WSL2 特有の設定
+################################################################################
+# alias vscode="/mnt/c/Users/USERNAME/AppData/Local/Programs/Microsoft\ VS\ Code\ Insiders/Code\ -\ Insiders.exe"
+# alias mpc="/mnt/d/Program\ Files/MPC-BE/mpc-be64.exe"
+
+# WSLg で日本語キーボードにする
+# 現在の設定を確認するコマンドは setxkbmap -print -verbose 10
+# setxkbmap -layout jp
+
+# Mozc
+# https://astherier.com/blog/2021/07/windows11-wsl2-wslg-japanese/
+# export GTK_IM_MODULE=fcitx
+# export QT_IM_MODULE=fcitx
+# export XMODIFIERS=@im=fcitx
+# export DefaultIMModule=fcitx
+
+# Windows Explorer
+# alias expl="explorer.exe ."
 
 # # Tailscale for WSL2
 # # WSL2 だと Tailscale が自動起動しないのでシェル起動時に無理やり起動する
@@ -84,11 +99,3 @@ export ONE_PASSWORD_MY_PASSWORD=op://Personal/jjztc5so2hlsskzuhzu2toh3cu/passwor
 # else
 #   echo "cron のサービスはすでに起動されています。(.zshrc.userown.zshrc)"
 # fi
-
-# Rye
-# venv というエイリアスは衝突しそうで怖いので十分気をつけて意識しておく
-# alias venv=". .venv/bin/activate"
-# alias rrp="rye run python"
-
-# Lazygit
-# alias lg="lazygit"
