@@ -60,14 +60,23 @@ install_cargo xh # https://github.com/ducaale/xh
 install_cargo yazi-fm yazi-cli # https://yazi-rs.github.io/
 
 # https://github.com/dathere/qsv
-# "--features python" は Python のバージョンによりインストールに失敗するので原則として外すことにする
-# cargo install qsv --locked --features feature_capable,apply,fetch,foreach,geocode,luau,polars,python,self_update,ui
-echo
-echo 'Install "qsv"'
-cargo install qsv --locked --bin qsv --features feature_capable,apply,fetch,foreach,geocode,luau,polars,self_update,ui
+# "--features python" オプションは、Python のバージョンによってはインストールに失敗するので原則として外すことにする
 
-echo
+# NOTE: 一時的対応
+# 依存関係の影響上、インストールに失敗するため、https://github.com/YS-L/csvlens のバージョンでインストール可否を判別する
+# cf. https://github.com/dathere/qsv/issues/2543
+# cf. https://github.com/dathere/qsv/issues/2574
+# cf. https://github.com/dathere/qsv/issues/2582
 
+csvlens_version=$(cargo search csvlens | grep "csvlens = " | sed -E "s/csvlens = \"([0-9]+\.[0-9]+\.[0-9]+)\".*/\1/")
+if [ "$csvlens_version" != "0.12.0" ]; then
+  echo
+  echo 'Install "qsv"'
+  cargo install qsv --locked --bin qsv --features feature_capable,apply,fetch,foreach,geocode,luau,polars,self_update,ui
+fi
+
+# tealdeer を更新する
+echo
 echo 'Update "tealdeer (tldr)"'
 tldr --update
 
