@@ -52,6 +52,7 @@ npm_install_g crontab-ui
 npm_install_g daff # daff: data diff (https://github.com/paulfitz/daff)
 npm_install_g diff-so-fancy
 npm_install_g dsstore-cli
+npm_install_g firebase-tools # Firebase CLI (https://github.com/firebase/firebase-tools)
 npm_install_g fx
 npm_install_g http-server
 npm_install_g js-beautify
