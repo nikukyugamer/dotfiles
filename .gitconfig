@@ -3,8 +3,9 @@
 [core]
   autocrlf = input
   quotepath = false
-  # 以下のファイルで指定してしまうと分かりづらいので、原則としては .git/info/exclude に記述する
-  # excludesfile = ~/.gitignore.myown.gitignore
+  # 以下のファイルで指定してしまうと影響が大きいので、原則としては .git/info/exclude に記述すべき
+  # ~/dotfiles に置くべきか ~/ にコピーすべきかは悩みどころ
+  excludesfile = ~/dotfiles/.gitignore.myown.gitignore
   pager = delta
   hooksPath = ~/.githooks
 [alias]
