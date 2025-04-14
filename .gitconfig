@@ -36,8 +36,11 @@
 [sequence]
   editor = interactive-rebase-tool
 [pager]
-  branch = cat
-  config = cat
+  branch = bat --paging=always --pager 'less -XF'
+  config = bat --paging=always --pager 'less -XF'
+  log = bat --paging=always --pager 'less -XF'
+  status = bat --paging=always --pager 'less -XF'
+  tag = bat --paging=always --pager 'less -XF'
 [color]
   ui = true
 [color "diff-highlight"]
