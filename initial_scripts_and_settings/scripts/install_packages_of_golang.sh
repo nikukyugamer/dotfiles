@@ -30,6 +30,7 @@ go_install github.com/jesseduffield/lazygit@latest # https://github.com/jesseduf
 go_install github.com/jesseduffield/lazynpm@latest
 go_install github.com/k1LoW/tbls@main         # tbls is a CI-Friendly tool for document a database
 go_install github.com/labstack/echo/v4@latest # echo (Web Framework) https://echo.labstack.com/
+go_install github.com/mackee/go-readability/cmd/readability@latest # go-readability
 go_install github.com/mattn/goreman@latest    # A Clone of foreman written in golang
 go_install github.com/mattn/longcat@latest
 go_install github.com/mattn/memo@latest
