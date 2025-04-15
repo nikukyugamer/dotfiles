@@ -6,7 +6,7 @@ jobs:
     name: The Scheme
     runs-on: ubuntu-latest
     container:
-      image: ruby:3.4.2
+      image: ruby:3.4.3
       env:
         BUNDLE_PATH: vendor/bundle
     services:
