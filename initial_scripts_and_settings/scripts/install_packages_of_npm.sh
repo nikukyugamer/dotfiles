@@ -42,6 +42,7 @@ function install_git_cz() {
 }
 
 npm_install_g @amanoese/muscular
+npm_install_g @anthropic-ai/claude-code # https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview
 npm_install_g @biomejs/biome
 npm_install_g @devcontainers/cli
 npm_install_g @fand/kao
