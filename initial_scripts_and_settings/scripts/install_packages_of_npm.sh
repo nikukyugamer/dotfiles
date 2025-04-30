@@ -41,6 +41,8 @@ function install_git_cz() {
   echo '**********************************************************************'
 }
 
+npm_install_g npm
+
 npm_install_g @amanoese/muscular
 npm_install_g @anthropic-ai/claude-code # https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview
 npm_install_g @biomejs/biome
