@@ -57,7 +57,6 @@ TARGET_PACKAGE_NAMES=(
   tailspin # https://github.com/bensadeh/tailspin (A log file highlighter)
   tealdeer
   tokei # https://github.com/XAMPPRocky/tokei
-  uv
   xcompress
   xh # https://github.com/ducaale/xh
   yazi-fm
@@ -109,14 +108,15 @@ echo '[LOG (END)] Update tealdeer "$ tldr --update"'
 echo '======================================================='
 echo
 
-# lsd は直接リポジトリを指定してインストールする必要がある
+# uv は直接リポジトリを指定してインストールする必要がある
 echo
 echo '======================================================='
-echo '[LOG (START)] Install or Update "lsd"'
+echo '[LOG (START)] Install or Update "uv"'
 echo '======================================================='
-cargo install --git https://github.com/Peltoche/lsd.git --branch master # https://github.com/Peltoche/lsd
+# https://docs.astral.sh/uv/getting-started/installation/#cargo
+cargo install --git https://github.com/astral-sh/uv uv
 echo '======================================================='
-echo '[LOG (END)] Install or Update "lsd"'
+echo '[LOG (END)] Install or Update "uv"'
 echo '======================================================='
 echo
 
