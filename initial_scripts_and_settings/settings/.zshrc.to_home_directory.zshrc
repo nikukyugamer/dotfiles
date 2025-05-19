@@ -33,9 +33,6 @@ eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-# Rye
-source "$HOME/.rye/env"
-
 # phpenv
 export PATH="$HOME/.phpenv/bin:$PATH"
 eval "$(phpenv init -)"
