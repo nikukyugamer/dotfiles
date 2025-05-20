@@ -73,6 +73,8 @@ TARGET_PACKAGE_NAMES=(
   hyperfine
   kiro-editor
   macchina # https://github.com/Macchina-CLI/macchina
+  monolith # https://github.com/Y2Z/monolith
+  onefetch # https://github.com/o2sh/onefetch
   procs
   railwayapp
   ripgrep
