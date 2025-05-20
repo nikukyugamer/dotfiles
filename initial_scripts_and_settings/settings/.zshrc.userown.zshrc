@@ -17,8 +17,10 @@
 # https://qiita.com/homoluctus/items/ba1a6d03df85e65fc85a
 # alias sudo="sudo "
 
-# Rye
-# venv というエイリアスは衝突しそうで怖いので十分気をつけて意識しておく
+# uv tool
+# export PATH="$HOME/.local/bin:$PATH"
+
+# uv
 # alias venv=". .venv/bin/activate"
 
 # Lazygit
