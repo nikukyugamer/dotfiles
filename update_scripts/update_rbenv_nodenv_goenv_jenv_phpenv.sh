@@ -12,14 +12,6 @@ echo "$HOME/.rbenv/plugins/ruby-build"
 cd "$HOME/.rbenv/plugins/ruby-build" && git pull
 echo '----------'
 
-echo "$HOME/.pyenv/plugins/pyenv-virtualenv"
-cd "$HOME/.pyenv/plugins/pyenv-virtualenv" && git pull
-echo '----------'
-
-echo "$HOME/.pyenv/plugins/python-build"
-cd "$HOME/.pyenv/plugins/python-build" && git pull
-echo '----------'
-
 echo "$HOME/.nodenv"
 cd "$HOME/.nodenv" && git pull
 echo '----------'

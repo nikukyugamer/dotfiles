@@ -8,10 +8,6 @@ git clone https://github.com/sstephenson/ruby-build.git "$HOME"/.rbenv/plugins/r
 git clone https://github.com/nodenv/nodenv.git "$HOME"/.nodenv
 git clone https://github.com/nodenv/node-build.git "$HOME"/.nodenv/plugins/node-build
 
-# Python は Rye に統一されつつあるので、不要になりつつある
-git clone https://github.com/pyenv/pyenv.git "$HOME"/.pyenv
-git clone https://github.com/yyuu/pyenv-virtualenv.git "$HOME"/.pyenv/plugins/pyenv-virtualenv
-
 git clone https://github.com/syndbg/goenv.git "$HOME"/.goenv
 
 # https://github.com/jenv/jenv
