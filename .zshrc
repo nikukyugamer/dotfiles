@@ -36,6 +36,10 @@ autoload -Uz edit-command-line
 zle -N edit-command-line
 bindkey "^N" edit-command-line
 
+# '/' を単語の境界として認める
+# cf. https://blog.3qe.us/entry/2025/05/20/201219
+typeset -g WORDCHARS=${WORDCHARS:s@/@}
+
 # Git branch
 # http://liosk.blog103.fc2.com/blog-entry-209.html
 autoload -Uz vcs_info
