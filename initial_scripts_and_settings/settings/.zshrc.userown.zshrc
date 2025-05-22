@@ -1,5 +1,11 @@
 # ユーザごとに独自に設定したい内容を記述する
 
+# macOS にて option + ←→ で単語単位で移動できるようにする
+# bindkey "\e[1;5D" backward-word
+# bindkey "\e[1;3D" backward-word
+# bindkey "\e[1;5C" forward-word
+# bindkey "\e[1;3C" forward-word
+
 # Neovim をデフォルトのエディタにする
 # export EDITOR=$(which nvim)
 
