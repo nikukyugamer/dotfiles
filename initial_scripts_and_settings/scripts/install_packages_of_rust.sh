@@ -89,7 +89,7 @@ TARGET_PACKAGE_NAMES=(
   xh # https://github.com/ducaale/xh
   yazi-fm
   yazi-cli # https://yazi-rs.github.io/
-  zoxide
+  zoxide # https://github.com/ajeetdsouza/zoxide
 )
 
 # "URL バイナリ名" というテキストを配列で持つ
