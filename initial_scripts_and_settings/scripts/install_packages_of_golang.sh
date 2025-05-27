@@ -19,6 +19,7 @@ go_install github.com/charmbracelet/vhs@latest
 go_install github.com/Clever/csvlint/cmd/csvlint@latest # https://github.com/Clever/csvlint
 go_install github.com/docker/hub-tool@latest            # GO111MODULE=on
 go_install github.com/go-delve/delve/cmd/dlv@latest     # for VSCode
+go_install github.com/gphotosuploader/gphotos-uploader-cli@latest
 go_install github.com/greymd/ojichat@latest
 go_install github.com/greymd/ojichatrix@latest
 go_install github.com/ipinfo/cli/ipinfo@latest   # IPinfo (https://ipinfo.io/)
