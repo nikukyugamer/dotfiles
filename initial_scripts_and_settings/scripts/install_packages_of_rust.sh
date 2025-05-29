@@ -12,21 +12,6 @@ function install_cargo_first_time() {
   echo
 }
 
-# "$1" は "URL バイナリ名" というテキストである
-function install_cargo_first_time_via_git() {
-  echo '======================================================='
-  echo "[LOG (START)] $ cargo install --git $1"
-  echo '======================================================='
-  # SC2086: Double quote to prevent globbing and word splitting
-  # shellcheck disable=SC2086
-  cargo install --git $1
-  echo '======================================================='
-  echo "[LOG (END)] $ cargo install --git $1"
-  echo '======================================================='
-
-  echo
-}
-
 # "cargo-update" を用いてアップデートする
 function cargo_install_update() {
   local package_name="$1"
@@ -92,12 +77,6 @@ TARGET_PACKAGE_NAMES=(
   zoxide # https://github.com/ajeetdsouza/zoxide
 )
 
-# "URL バイナリ名" というテキストを配列で持つ
-# ここに該当するバイナリは cargo install によりアップデートされるので cargo-update は不要（のはず）
-TARGET_PACKAGE_URL_AND_BIN_NAME_STRINGS=(
-  "https://github.com/astral-sh/uv uv"
-)
-
 # 現在のインストール状況の一覧を表示する
 echo '現在のインストール状況の一覧を表示する'
 $(which cargo) install-update --list
@@ -128,5 +107,21 @@ done
 # cf. https://github.com/YS-L/csvlens
 # cf. https://github.com/dathere/qsv/issues/2543, https://github.com/dathere/qsv/issues/2574, https://github.com/dathere/qsv/issues/2582
 cargo install qsv --locked --bin qsv --features feature_capable,apply,fetch,foreach,geocode,luau,self_update
+
+####################
+# $ cargo install --git は毎回インストールされるのでコミットハッシュをチェックしてからインストールする
+####################
+# 今のところ uv のみなのでベタ書きしているが、増えたらどうするかは考え中（コード行数を取りすぎ）
+if command -v uv >/dev/null 2>&1; then
+  # 現在のバイナリのコミット取得（uv --version の出力にSHAが含まれる）
+  INSTALLED_SHA=$(uv --version 2>&1 | grep -oE '[0-9a-f]{7}')
+else
+  INSTALLED_SHA=""
+fi
+
+LATEST_SHA=$(git ls-remote https://github.com/astral-sh/uv HEAD | cut -f1 | cut -c1-7)
+if [ "$LATEST_SHA" != "$INSTALLED_SHA" ]; then
+  cargo install --git https://github.com/astral-sh/uv uv
+fi
 
 exit 0
