@@ -100,18 +100,25 @@ for package_name in "${TARGET_PACKAGE_NAMES[@]}"; do
   cargo_install_update "$package_name"
 done
 
-# qsv は依存関係のバージョンの関係上、しばらくは下記コマンドでインストールする
-# 本来は feature_capable,apply,fetch,foreach,geocode,luau,polars,self_update,ui の --features でインストールしたい
-# "--features python" オプションは、Python のバージョンによってはインストールに失敗するので原則として外すことにする
-# cf. https://github.com/dathere/qsv/blob/master/docs/FEATURES.md
-# cf. https://github.com/YS-L/csvlens
-# cf. https://github.com/dathere/qsv/issues/2543, https://github.com/dathere/qsv/issues/2574, https://github.com/dathere/qsv/issues/2582
-cargo install qsv --locked --bin qsv --features feature_capable,apply,fetch,foreach,geocode,luau,self_update
 
 ####################
 # $ cargo install --git は毎回インストールされるのでコミットハッシュをチェックしてからインストールする
 ####################
-# 今のところ uv のみなのでベタ書きしているが、増えたらどうするかは考え中（コード行数を取りすぎ）
+
+# "qsv" のインストール
+if command -v qsv >/dev/null 2>&1; then
+  INSTALLED_VERSION=$(qsv --version | grep -o 'qsv [0-9]\+\.[0-9]\+\.[0-9]\+' | sed 's/qsv //')
+else
+  INSTALLED_VERSION=""
+fi
+
+LATEST_VERSION=$(curl -s https://api.github.com/repos/dathere/qsv/releases/latest | jq -r '.tag_name')
+
+if [ "$LATEST_VERSION" != "$INSTALLED_VERSION" ]; then
+  cargo install --git https://github.com/dathere/qsv qsv --features="feature_capable"
+fi
+
+# "uv" のインストール
 if command -v uv >/dev/null 2>&1; then
   # 現在のバイナリのコミット取得（uv --version の出力にSHAが含まれる）
   INSTALLED_SHA=$(uv --version 2>&1 | grep -oE '[0-9a-f]{7}')
@@ -120,6 +127,7 @@ else
 fi
 
 LATEST_SHA=$(git ls-remote https://github.com/astral-sh/uv HEAD | cut -f1 | cut -c1-7)
+
 if [ "$LATEST_SHA" != "$INSTALLED_SHA" ]; then
   cargo install --git https://github.com/astral-sh/uv uv
 fi
