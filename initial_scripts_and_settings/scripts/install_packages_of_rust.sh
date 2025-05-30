@@ -120,15 +120,14 @@ fi
 
 # "uv" のインストール
 if command -v uv >/dev/null 2>&1; then
-  # 現在のバイナリのコミット取得（uv --version の出力にSHAが含まれる）
-  INSTALLED_SHA=$(uv --version 2>&1 | grep -oE '[0-9a-f]{7}')
+  INSTALLED_VERSION=$(uv --version | grep -o '[0-9]\+\.[0-9]\+\.[0-9]\+')
 else
-  INSTALLED_SHA=""
+  INSTALLED_VERSION=""
 fi
 
-LATEST_SHA=$(git ls-remote https://github.com/astral-sh/uv HEAD | cut -f1 | cut -c1-7)
+LATEST_VERSION=$(curl -s https://api.github.com/repos/astral-sh/uv/releases/latest | jq -r '.tag_name')
 
-if [ "$LATEST_SHA" != "$INSTALLED_SHA" ]; then
+if [ "$LATEST_VERSION" != "$INSTALLED_VERSION" ]; then
   cargo install --git https://github.com/astral-sh/uv uv
 fi
 
