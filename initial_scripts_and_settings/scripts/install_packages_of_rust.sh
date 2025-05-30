@@ -115,7 +115,7 @@ fi
 LATEST_VERSION=$(curl -s https://api.github.com/repos/dathere/qsv/releases/latest | jq -r '.tag_name')
 
 if [ "$LATEST_VERSION" != "$INSTALLED_VERSION" ]; then
-  cargo install --git https://github.com/dathere/qsv qsv --features="feature_capable"
+  cargo install --git https://github.com/dathere/qsv qsv --features all_features
 fi
 
 # "uv" のインストール
