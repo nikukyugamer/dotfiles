@@ -48,6 +48,9 @@ format = '[$symbol($version)]($style) '
 version_format = 'v${raw}'
 detect_extensions = ['rb']
 
+[python]
+python_binary = ['python']
+
 [aws.region_aliases]
 ap-northeast-1 = "tokyo"
 # ap-northeast-1 = ""
