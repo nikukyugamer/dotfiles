@@ -41,38 +41,39 @@ function is_cargo_package_installed() {
 
 # 複数の箇所で用いるため、対象のパッケージ名を配列で持つ
 # 追加や削除はここに対して行う
+# アルファベット順が原則だが、優先度が高いものは上に配置する
 TARGET_PACKAGE_NAMES=(
-  ag
-  bat
-  bottom
-  broot
-  cargo-update
-  diskonaut
-  du-dust
-  exa
-  fd-find
-  git-delta
-  git-interactive-rebase-tool
+  bat # 優先度高 https://github.com/sharkdp/bat
+  cargo-update # 優先度高 https://github.com/nabijaczleweli/cargo-update
+  lsd # 優先度高 https://github.com/lsd-rs/lsd
+  starship # 優先度高 https://github.com/starship/starship
+  ag # https://github.com/rcoh/angle-grinder
+  bottom # Alt "top" https://github.com/ClementTsang/bottom
+  broot # https://github.com/Canop/broot
+  diskonaut # https://github.com/imsnif/diskonaut
+  du-dust # https://github.com/bootandy/dust
+  # eza # lsd から乗り換えるときはこれ https://github.com/eza-community/eza
+  fd-find # https://github.com/sharkdp/fd
+  git-delta # https://github.com/dandavison/delta
+  git-interactive-rebase-tool # https://github.com/MitMaro/git-interactive-rebase-tool
   gitui # https://github.com/extrawurst/gitui
-  grex
-  hyperfine
-  kiro-editor
+  grex # https://github.com/pemistahl/grex
+  hyperfine # https://github.com/sharkdp/hyperfine
   macchina # https://github.com/Macchina-CLI/macchina
   monolith # https://github.com/Y2Z/monolith
   onefetch # https://github.com/o2sh/onefetch
-  procs
-  railwayapp
-  ripgrep
-  ripgrep_all # ffmpeg などがインストールされていることが前提となる
+  procs # https://github.com/dalance/procs
+  railwayapp # https://github.com/railwayapp/cli
+  ripgrep # https://github.com/BurntSushi/ripgrep
+  ripgrep_all # ffmpeg などがインストールされていることが前提となる https://github.com/phiresky/ripgrep-all
   sd # Alt "sed" https://github.com/chmln/sd
-  simple-http-server
-  starship
+  simple-http-server # https://github.com/TheWaWaR/simple-http-server
   tailspin # https://github.com/bensadeh/tailspin (A log file highlighter)
-  tealdeer
+  tealdeer # https://github.com/tealdeer-rs/tealdeer
   tokei # https://github.com/XAMPPRocky/tokei
-  xcompress
+  xcompress # https://github.com/magiclen/xcompress
   xh # https://github.com/ducaale/xh
-  yazi-fm
+  yazi-fm # https://github.com/sxyazi/yazi
   yazi-cli # https://yazi-rs.github.io/
   zoxide # https://github.com/ajeetdsouza/zoxide
 )
