@@ -2,11 +2,11 @@
 
 function install_cargo_first_time() {
   echo '======================================================='
-  echo "[LOG (START)] $ cargo install $1"
+  echo "[LOG (START)] $ cargo install --locked $1"
   echo '======================================================='
-  cargo install "$1"
+  cargo install --locked "$1"
   echo '======================================================='
-  echo "[LOG (END)] $ cargo install $1"
+  echo "[LOG (END)] $ cargo install --locked $1"
   echo '======================================================='
 
   echo
@@ -17,11 +17,11 @@ function cargo_install_update() {
   local package_name="$1"
 
   echo '======================================================='
-  echo "[LOG (START)] $ cargo install-update $package_name"
+  echo "[LOG (START)] $ cargo install-update --locked -- $package_name"
   echo '======================================================='
-  cargo install-update "$package_name"
+  cargo install-update --locked -- "$package_name"
   echo '======================================================='
-  echo "[LOG (END)] $ cargo install-update $package_name"
+  echo "[LOG (END)] $ cargo install-update --locked -- $package_name"
   echo '======================================================='
 
   echo
