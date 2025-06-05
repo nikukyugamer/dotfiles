@@ -103,7 +103,7 @@ done
 
 
 ####################
-# $ cargo install --git は毎回インストールされるのでコミットハッシュをチェックしてからインストールする
+# $ cargo install --git だと毎回インストールされるので、コミットハッシュをチェックしてからインストールする
 ####################
 
 # "qsv" のインストール
@@ -112,11 +112,18 @@ if command -v qsv >/dev/null 2>&1; then
 else
   INSTALLED_VERSION=""
 fi
-
 LATEST_VERSION=$(curl -s https://api.github.com/repos/dathere/qsv/releases/latest | jq -r '.tag_name')
 
 if [ "$LATEST_VERSION" != "$INSTALLED_VERSION" ]; then
+  eco '======================================================='
+  echo "[LOG (START)] $ cargo install --locked --git https://github.com/dathere/qsv qsv --features all_features"
+  echo '======================================================='
+
   cargo install --git https://github.com/dathere/qsv qsv --features all_features
+
+  echo '======================================================='
+  echo "[LOG (END)] $ cargo install --locked --git https://github.com/dathere/qsv qsv --features all_features"
+  echo '======================================================='
 fi
 
 # "uv" のインストール
@@ -125,11 +132,18 @@ if command -v uv >/dev/null 2>&1; then
 else
   INSTALLED_VERSION=""
 fi
-
 LATEST_VERSION=$(curl -s https://api.github.com/repos/astral-sh/uv/releases/latest | jq -r '.tag_name')
 
 if [ "$LATEST_VERSION" != "$INSTALLED_VERSION" ]; then
-  cargo install --git https://github.com/astral-sh/uv uv
+  echo '======================================================='
+  echo "[LOG (START)] $ cargo install --locked --git https://github.com/astral-sh/uv uv"
+  echo '======================================================='
+
+  cargo install --locked --git https://github.com/astral-sh/uv uv
+
+  echo '======================================================='
+  echo "[LOG (END)] $ cargo install --locked --git https://github.com/astral-sh/uv uv"
+  echo '======================================================='
 fi
 
 exit 0
