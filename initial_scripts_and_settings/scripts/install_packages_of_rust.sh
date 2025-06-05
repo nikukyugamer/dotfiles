@@ -115,7 +115,7 @@ fi
 LATEST_VERSION=$(curl -s https://api.github.com/repos/dathere/qsv/releases/latest | jq -r '.tag_name')
 
 if [ "$LATEST_VERSION" != "$INSTALLED_VERSION" ]; then
-  eco '======================================================='
+  echo '======================================================='
   echo "[LOG (START)] $ cargo install --locked --git https://github.com/dathere/qsv qsv --features all_features"
   echo '======================================================='
 
