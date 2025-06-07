@@ -90,23 +90,15 @@ for package_name in "${TARGET_PACKAGE_NAMES[@]}"; do
   fi
 done
 
-# 初期インストールコマンドを実行する（"--git" の場合）
-for url_and_bin_name in "${TARGET_PACKAGE_URL_AND_BIN_NAME_STRINGS[@]}"; do
-  install_cargo_first_time_via_git "$url_and_bin_name"
-done
-
 # すでにインストールされているパッケージのアップデートを実行する
 # cf. https://github.com/nabijaczleweli/cargo-update
 for package_name in "${TARGET_PACKAGE_NAMES[@]}"; do
   cargo_install_update "$package_name"
 done
 
-
 ####################
-# $ cargo install --git だと毎回インストールされるので、コミットハッシュをチェックしてからインストールする
+# qsv のインストール
 ####################
-
-# "qsv" のインストール
 if command -v qsv >/dev/null 2>&1; then
   INSTALLED_VERSION=$(qsv --version | grep -o 'qsv [0-9]\+\.[0-9]\+\.[0-9]\+' | sed 's/qsv //')
 else
@@ -114,19 +106,52 @@ else
 fi
 LATEST_VERSION=$(curl -s https://api.github.com/repos/dathere/qsv/releases/latest | jq -r '.tag_name')
 
-if [ "$LATEST_VERSION" != "$INSTALLED_VERSION" ]; then
-  echo '======================================================='
-  echo "[LOG (START)] $ cargo install --locked --git https://github.com/dathere/qsv qsv --features all_features"
-  echo '======================================================='
-
-  cargo install --git https://github.com/dathere/qsv qsv --features all_features
-
-  echo '======================================================='
-  echo "[LOG (END)] $ cargo install --locked --git https://github.com/dathere/qsv qsv --features all_features"
-  echo '======================================================='
+ARCHITECTURE=$(uname -m)
+if [[ "$ARCHITECTURE" == "arm64" ]]; then
+  DOWNLOAD_URL="https://github.com/dathere/qsv/releases/download/$LATEST_VERSION/qsv-$LATEST_VERSION-aarch64-apple-darwin.zip"
+elif [[ "$ARCHITECTURE" == "x86_64" ]]; then
+  if [[ -f /etc/debian_version ]]; then
+    DOWNLOAD_URL="https://github.com/dathere/qsv/releases/download/$LATEST_VERSION/qsv-$LATEST_VERSION-x86_64-unknown-linux-musl.zip"
+  else
+    DOWNLOAD_URL="https://github.com/dathere/qsv/releases/download/$LATEST_VERSION/qsv-$LATEST_VERSION-x86_64-unknown-linux-gnu.zip"
+  fi
+else
+  # TODO: ここの分岐に入ったときにどうするか（今はとりあえず x86_64 の URL を使う）
+  DOWNLOAD_URL="https://github.com/dathere/qsv/releases/download/$LATEST_VERSION/qsv-$LATEST_VERSION-x86_64-unknown-linux-gnu.zip"
 fi
 
+if [ "$LATEST_VERSION" != "$INSTALLED_VERSION" ]; then
+  echo '======================================================='
+  echo "[LOG (START)] Downloading and installing qsv from $DOWNLOAD_URL"
+  echo '======================================================='
+
+  # ダウンロードする
+  curl -L -o /tmp/qsv-"$LATEST_VERSION".zip "$DOWNLOAD_URL"
+  # 展開する
+  unzip -o /tmp/qsv-"$LATEST_VERSION".zip -d /tmp/qsv-"$LATEST_VERSION"
+  # インストール（ファイルコピー）する
+  cp /tmp/qsv-"$LATEST_VERSION"/qsv "$HOME"/.cargo/bin
+  cp /tmp/qsv-"$LATEST_VERSION"/qsvdp "$HOME"/.cargo/bin
+  cp /tmp/qsv-"$LATEST_VERSION"/qsvlite "$HOME"/.cargo/bin
+  cp /tmp/qsv-"$LATEST_VERSION"/qsvlite_nightly "$HOME"/.cargo/bin
+  cp /tmp/qsv-"$LATEST_VERSION"/qsvpy310 "$HOME"/.cargo/bin
+  cp /tmp/qsv-"$LATEST_VERSION"/qsvpy311 "$HOME"/.cargo/bin
+  cp /tmp/qsv-"$LATEST_VERSION"/qsvpy312 "$HOME"/.cargo/bin
+  cp /tmp/qsv-"$LATEST_VERSION"/qsvpy313 "$HOME"/.cargo/bin
+  # 不要なファイルを削除する
+  /bin/rm -rf /tmp/qsv-"$LATEST_VERSION"
+  /bin/rm /tmp/qsv-"$LATEST_VERSION".zip
+
+  echo '======================================================='
+  echo "[LOG (END)] Downloaded and installed qsv from $DOWNLOAD_URL"
+  echo '======================================================='
+else
+  echo "qsv is already up to date (version: $INSTALLED_VERSION)"
+fi
+
+####################
 # "uv" のインストール
+####################
 if command -v uv >/dev/null 2>&1; then
   INSTALLED_VERSION=$(uv --version | grep -o '[0-9]\+\.[0-9]\+\.[0-9]\+')
 else
@@ -134,16 +159,42 @@ else
 fi
 LATEST_VERSION=$(curl -s https://api.github.com/repos/astral-sh/uv/releases/latest | jq -r '.tag_name')
 
+ARCHITECTURE=$(uname -m)
+
+if [[ "$ARCHITECTURE" == "arm64" ]]; then
+  FILENAME="uv-aarch64-apple-darwin"
+  DOWNLOAD_URL="https://github.com/astral-sh/uv/releases/download/$LATEST_VERSION/$FILENAME.tar.gz"
+elif [[ "$ARCHITECTURE" == "x86_64" ]]; then
+  FILENAME="uv-x86_64-unknown-linux-gnu"
+  DOWNLOAD_URL="https://github.com/astral-sh/uv/releases/download/$LATEST_VERSION/$FILENAME.tar.gz"
+else
+  # TODO: ここの分岐に入ったときにどうするか（今はとりあえず x86_64 の URL を使う）
+  FILENAME="uv-x86_64-unknown-linux-gnu"
+  DOWNLOAD_URL="https://github.com/astral-sh/uv/releases/download/$LATEST_VERSION/$FILENAME.tar.gz"
+fi
+
 if [ "$LATEST_VERSION" != "$INSTALLED_VERSION" ]; then
   echo '======================================================='
-  echo "[LOG (START)] $ cargo install --locked --git https://github.com/astral-sh/uv uv"
+  echo "[LOG (START)] Downloading and installing uv from $DOWNLOAD_URL"
   echo '======================================================='
 
-  cargo install --locked --git https://github.com/astral-sh/uv uv
+  # ダウンロードする
+  curl -L -o /tmp/uv-"$LATEST_VERSION".tar.gz "$DOWNLOAD_URL"
+  # 展開する
+  mkdir -p /tmp/"$LATEST_VERSION"
+  tar -xzf /tmp/uv-"$LATEST_VERSION".tar.gz -C /tmp/"$LATEST_VERSION"
+  # インストール（ファイルコピー）する
+  cp /tmp/"$LATEST_VERSION"/"$FILENAME"/uv "$HOME"/.cargo/bin
+  cp /tmp/"$LATEST_VERSION"/"$FILENAME"/uvx "$HOME"/.cargo/bin
+  # 不要なファイルを削除する
+  /bin/rm -rf /tmp/"$FILENAME"
+  /bin/rm /tmp/uv-"$LATEST_VERSION".tar.gz
 
   echo '======================================================='
-  echo "[LOG (END)] $ cargo install --locked --git https://github.com/astral-sh/uv uv"
+  echo "[LOG (END)] Downloaded and installed uv from $DOWNLOAD_URL"
   echo '======================================================='
+else
+  echo "uv is already up to date (version: $INSTALLED_VERSION)"
 fi
 
 exit 0
