@@ -7,6 +7,7 @@
 # bindkey "\e[1;3C" forward-word
 
 # Neovim をデフォルトのエディタにする
+# alias vim="nvim"
 # export EDITOR=$(which nvim)
 
 # ソースからビルドした最新の git を使う
