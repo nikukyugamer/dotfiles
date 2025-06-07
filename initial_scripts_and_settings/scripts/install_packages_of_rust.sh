@@ -130,14 +130,11 @@ if [ "$LATEST_VERSION" != "$INSTALLED_VERSION" ]; then
   # 展開する
   unzip -o /tmp/qsv-"$LATEST_VERSION".zip -d /tmp/qsv-"$LATEST_VERSION"
   # インストール（ファイルコピー）する
-  cp /tmp/qsv-"$LATEST_VERSION"/qsv "$HOME"/.cargo/bin
-  cp /tmp/qsv-"$LATEST_VERSION"/qsvdp "$HOME"/.cargo/bin
-  cp /tmp/qsv-"$LATEST_VERSION"/qsvlite "$HOME"/.cargo/bin
-  cp /tmp/qsv-"$LATEST_VERSION"/qsvlite_nightly "$HOME"/.cargo/bin
-  cp /tmp/qsv-"$LATEST_VERSION"/qsvpy310 "$HOME"/.cargo/bin
-  cp /tmp/qsv-"$LATEST_VERSION"/qsvpy311 "$HOME"/.cargo/bin
-  cp /tmp/qsv-"$LATEST_VERSION"/qsvpy312 "$HOME"/.cargo/bin
-  cp /tmp/qsv-"$LATEST_VERSION"/qsvpy313 "$HOME"/.cargo/bin
+  for file in qsv qsvdp qsvlite qsvlite_nightly qsvpy310 qsvpy311 qsvpy312 qsvpy313; do
+    if [ -f "/tmp/qsv-$LATEST_VERSION/$file" ]; then
+      cp "/tmp/qsv-$LATEST_VERSION/$file" "$HOME/.cargo/bin"
+    fi
+  done
   # 不要なファイルを削除する
   /bin/rm -rf /tmp/qsv-"$LATEST_VERSION"
   /bin/rm /tmp/qsv-"$LATEST_VERSION".zip
