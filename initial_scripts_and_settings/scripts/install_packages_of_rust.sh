@@ -90,11 +90,6 @@ for package_name in "${TARGET_PACKAGE_NAMES[@]}"; do
   fi
 done
 
-# 初期インストールコマンドを実行する（"--git" の場合）
-for url_and_bin_name in "${TARGET_PACKAGE_URL_AND_BIN_NAME_STRINGS[@]}"; do
-  install_cargo_first_time_via_git "$url_and_bin_name"
-done
-
 # すでにインストールされているパッケージのアップデートを実行する
 # cf. https://github.com/nabijaczleweli/cargo-update
 for package_name in "${TARGET_PACKAGE_NAMES[@]}"; do
@@ -112,11 +107,14 @@ fi
 LATEST_VERSION=$(curl -s https://api.github.com/repos/dathere/qsv/releases/latest | jq -r '.tag_name')
 
 ARCHITECTURE=$(uname -m)
-# FIXME: -gnu だと GLIBC エラーになる可能性があるし -musl にすると sqlp が使えないので、どうするか考える
 if [[ "$ARCHITECTURE" == "arm64" ]]; then
   DOWNLOAD_URL="https://github.com/dathere/qsv/releases/download/$LATEST_VERSION/qsv-$LATEST_VERSION-aarch64-apple-darwin.zip"
 elif [[ "$ARCHITECTURE" == "x86_64" ]]; then
-  DOWNLOAD_URL="https://github.com/dathere/qsv/releases/download/$LATEST_VERSION/qsv-$LATEST_VERSION-x86_64-unknown-linux-gnu.zip"
+  if [[ -f /etc/debian_version ]]; then
+    DOWNLOAD_URL="https://github.com/dathere/qsv/releases/download/$LATEST_VERSION/qsv-$LATEST_VERSION-x86_64-unknown-linux-musl.zip"
+  else
+    DOWNLOAD_URL="https://github.com/dathere/qsv/releases/download/$LATEST_VERSION/qsv-$LATEST_VERSION-x86_64-unknown-linux-gnu.zip"
+  fi
 else
   # TODO: ここの分岐に入ったときにどうするか（今はとりあえず x86_64 の URL を使う）
   DOWNLOAD_URL="https://github.com/dathere/qsv/releases/download/$LATEST_VERSION/qsv-$LATEST_VERSION-x86_64-unknown-linux-gnu.zip"
