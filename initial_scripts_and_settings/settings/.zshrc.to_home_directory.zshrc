@@ -68,6 +68,10 @@ zplug "mollifier/anyframe"
 
 zplug load
 
+# zoxide (https://github.com/ajeetdsouza/zoxide)
+eval "$(zoxide init zsh)"
+export _ZO_FZF_OPTS="--preview=''"
+
 # ../completions/jenv.bash:15: command not found: complete を避けるため最後の方で読む
 # jenv
 export PATH="$HOME/.jenv/bin:$PATH"
