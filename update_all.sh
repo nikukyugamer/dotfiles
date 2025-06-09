@@ -4,6 +4,8 @@
 "$HOME"/dotfiles/update_scripts/update_rbenv_nodenv_goenv_jenv_phpenv.sh
 "$HOME"/dotfiles/update_scripts/update_fzf.sh
 
+echo
+
 # パッケージのアップデート
 "$HOME"/dotfiles/update_scripts/update_packages_of_uv_tools.sh
 "$HOME"/dotfiles/update_scripts/update_packages_of_rust.sh
