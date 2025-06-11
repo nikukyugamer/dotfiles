@@ -97,6 +97,14 @@ for package_name in "${TARGET_PACKAGE_NAMES[@]}"; do
 done
 
 ####################
+# Lindera のインストール（辞書は全部入り）
+####################
+# https://github.com/lindera/lindera
+# https://crates.io/crates/lindera-cli
+# 凄まじく時間がかかるので、デフォルトではコメントアウトする
+# cargo install lindera-cli --features ipadic,ipadic-neologd,unidic,ko-dic,cc-cedict
+
+####################
 # qsv のインストール
 ####################
 if command -v qsv >/dev/null 2>&1; then
