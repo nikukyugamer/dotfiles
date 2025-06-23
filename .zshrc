@@ -264,6 +264,9 @@ lpassget () {
   lpass show --json $ITEM_ID | jq
 }
 
+# fnm (https://github.com/Schniz/fnm)
+eval "$(fnm env --use-on-cd --shell zsh)"
+
 # cargo や go で入れたものを eval する際などは読み込みの順序に注意する（ここに書くと動かないときがある）
 
 # OS ごとに処理を分けるテンプレート

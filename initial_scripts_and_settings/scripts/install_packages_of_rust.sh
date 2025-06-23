@@ -47,6 +47,7 @@ TARGET_PACKAGE_NAMES=(
   cargo-update # 優先度高 https://github.com/nabijaczleweli/cargo-update
   lsd # 優先度高 https://github.com/lsd-rs/lsd
   starship # 優先度高 https://github.com/starship/starship
+
   ag # https://github.com/rcoh/angle-grinder
   bottom # Alt "top" https://github.com/ClementTsang/bottom
   broot # https://github.com/Canop/broot
@@ -54,6 +55,7 @@ TARGET_PACKAGE_NAMES=(
   du-dust # https://github.com/bootandy/dust
   # eza # lsd から乗り換えるときはこれ https://github.com/eza-community/eza
   fd-find # https://github.com/sharkdp/fd
+  fnm # https://github.com/Schniz/fnm
   git-delta # https://github.com/dandavison/delta
   git-interactive-rebase-tool # https://github.com/MitMaro/git-interactive-rebase-tool
   gitui # https://github.com/extrawurst/gitui
