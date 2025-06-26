@@ -111,10 +111,11 @@ function ghash () {
 
   echo $TARGET_LINE
 
-  # FIXME: macOS なら /usr/bin/pbcopy にして、WSL2 ならば uclip.exe にする
-  # uclip: https://github.com/suzusime/uclip
-  # ただしもちろん SSH で入った場合には pbcopy は正常に動かないので注意
-  echo $TARGET_LINE | cut -d ' ' -f 2 | uclip.exe
+  if [[ "$OSTYPE" == "darwin"* ]]; then
+    echo $TARGET_LINE | cut -d ' ' -f 2 | /usr/bin/pbcopy
+  else
+    echo $TARGET_LINE | cut -d ' ' -f 2 | uclip.exe
+  fi
 }
 
 # cf. https://qiita.com/delphinus/items/b04752bb5b64e6cc4ea9
@@ -153,10 +154,6 @@ alias railsrunner='bundle exec rails runner'
 # https://github.com/b4b4r07/gomi
 alias rm='gomi'
 alias remove='/bin/rm'
-
-# 不要か移動すべきかも
-# Add my binaries
-export PATH="$PATH:$HOME/dotfiles/bin"
 
 # Dart
 export PATH="$PATH":"$HOME/.pub-cache/bin"
@@ -208,15 +205,11 @@ function docker-tags {
 # TODO: ~/bin を優先したい場合も出てきたので再考の余地あり
 export PATH="/usr/local/bin:$PATH"
 
-# Google Cloud
-alias gcps='gcloud alpha storage'
-
 # エディタでのハイライトを効かせるために拡張子を .zshrc としている
 source ~/dotfiles/.zshrc.docker.zshrc
 
 # Node.js & Yarn
 export PATH="$PATH:./node_modules/.bin"
-export PATH="$PATH:$HOME/.config/yarn/global/node_modules/.bin"
 
 # Golang
 # https://zenn.dev/tennashi/articles/3b87a8d924bc9c43573e
