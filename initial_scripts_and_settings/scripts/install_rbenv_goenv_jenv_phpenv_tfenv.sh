@@ -5,9 +5,6 @@ cd "$(dirname "$0")"
 git clone https://github.com/sstephenson/rbenv.git "$HOME"/.rbenv
 git clone https://github.com/sstephenson/ruby-build.git "$HOME"/.rbenv/plugins/ruby-build
 
-git clone https://github.com/nodenv/nodenv.git "$HOME"/.nodenv
-git clone https://github.com/nodenv/node-build.git "$HOME"/.nodenv/plugins/node-build
-
 git clone https://github.com/syndbg/goenv.git "$HOME"/.goenv
 
 # https://github.com/jenv/jenv

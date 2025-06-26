@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # CLI ツールのアップデート
-"$HOME"/dotfiles/update_scripts/update_rbenv_nodenv_goenv_jenv_phpenv.sh
+"$HOME"/dotfiles/update_scripts/update_rbenv_goenv_jenv_phpenv.sh
 "$HOME"/dotfiles/update_scripts/update_fzf.sh
 
 echo
