@@ -12,14 +12,6 @@ echo "$HOME/.rbenv/plugins/ruby-build"
 cd "$HOME/.rbenv/plugins/ruby-build" && git pull
 echo '----------'
 
-echo "$HOME/.nodenv"
-cd "$HOME/.nodenv" && git pull
-echo '----------'
-
-echo "$HOME/.nodenv/plugins/node-build"
-cd "$HOME/.nodenv/plugins/node-build" && git pull
-echo '----------'
-
 echo "$HOME/.goenv"
 cd "$HOME/.goenv" && git pull
 echo '----------'
