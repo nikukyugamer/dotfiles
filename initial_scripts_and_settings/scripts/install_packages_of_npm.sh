@@ -49,6 +49,7 @@ npm_install_g @biomejs/biome
 npm_install_g @devcontainers/cli
 npm_install_g @fand/kao
 npm_install_g @google/clasp
+npm install_g @google/gemini-cli
 npm_install_g @openai/codex # https://github.com/openai/codex
 npm_install_g @prantlf/jsonlint # https://github.com/prantlf/jsonlint
 npm_install_g aicommits
