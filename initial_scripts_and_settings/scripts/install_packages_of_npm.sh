@@ -14,33 +14,6 @@ function npm_install_g() {
   echo '**********************************************************************'
 }
 
-function install_git_cz() {
-  echo '======================================================='
-  echo '[LOG] START: git-cz installation'
-  echo '======================================================='
-
-  NODE_VERSION_WITHOUT_V=$(node -v | sed 's/^v//')
-  GIT_CZ_PATH="$HOME/.nodenv/versions/${NODE_VERSION_WITHOUT_V}/lib/node_modules/git-cz"
-
-  echo "[LOG] START (Step 1): $ npm install -g commitizen"
-  npm install -g commitizen # https://github.com/commitizen/cz-cli
-  echo "[LOG] END (Step 1): $ npm install -g commitizen"
-
-  echo '------------------------------------------------------'
-
-  echo "[LOG] START (Step 2): $ npm install -g --force git-cz"
-  rm -rf "$GIT_CZ_PATH"
-  npm uninstall -g git-cz
-  npm install -g --force git-cz # https://github.com/streamich/git-cz
-  echo "[LOG] END (Step 2): $ npm install -g --force git-cz"
-
-  echo '======================================================='
-  echo '[LOG] END: git-cz installation'
-  echo '======================================================='
-
-  echo '**********************************************************************'
-}
-
 npm_install_g npm
 
 npm_install_g @amanoese/muscular
@@ -77,6 +50,8 @@ npm_install_g yarn-outdated-formatter # https://github.com/masawada/yarn-outdate
 npm_install_g yukichant
 npm_install_g zx
 
-install_git_cz
+# git-cz
+npm_install_g commitizen
+npm_install_g git-cz
 
 exit 0
