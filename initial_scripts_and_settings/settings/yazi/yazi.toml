@@ -1,0 +1,3 @@
+[mgr]
+# デフォルトは false である
+show_hidden = true

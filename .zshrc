@@ -208,7 +208,7 @@ export PATH="/usr/local/bin:$PATH"
 # エディタでのハイライトを効かせるために拡張子を .zshrc としている
 source ~/dotfiles/.zshrc.docker.zshrc
 
-# Node.js & Yarn
+# Node.js & Package Managers
 export PATH="$PATH:./node_modules/.bin"
 
 # Golang

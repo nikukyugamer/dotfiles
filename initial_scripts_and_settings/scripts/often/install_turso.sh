@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -euxo pipefail
 
+# SQLite for Production. Powered by libSQL.
 # 公式ドキュメント
 # https://docs.turso.tech/quickstart
 

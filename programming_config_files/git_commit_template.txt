@@ -1,8 +1,0 @@
-# Emoji Prefix
-# ✨ : Add features.
-# ♻️  : Refactoring.
-# 🐛 : Fix bugs.
-# 🧹 : Remove unused features or resources.
-# 🎨 : Update resources.
-# 🚧 : Work In Progress.
-# 📝 : Fix typos or update references.
