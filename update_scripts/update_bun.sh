@@ -3,6 +3,6 @@ set -euo pipefail
 cd "$(dirname "$0")"
 
 # インストール時と同じスクリプトを実行すればアップデートできる
-"$HOME"/dotfiles/initial_scripts_and_settings/scripts/install_bun.sh
+"$HOME"/dotfiles/initial_scripts_and_settings/scripts/cli_installers/install_bun.sh
 
 exit 0
