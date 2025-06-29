@@ -4,6 +4,7 @@
 "$HOME"/dotfiles/update_scripts/cli_installers/update_rbenv_goenv_jenv_phpenv.sh
 "$HOME"/dotfiles/update_scripts/cli_installers/update_fzf.sh
 
+# 改行を入れて見た目を整える
 echo
 
 # パッケージのアップデート
@@ -11,6 +12,9 @@ echo
 "$HOME"/dotfiles/update_scripts/packages/update_packages_of_rust.sh
 "$HOME"/dotfiles/update_scripts/packages/update_packages_of_npm.sh
 "$HOME"/dotfiles/update_scripts/packages/update_packages_of_golang.sh
+
+# 改行を入れて見た目を整える
+echo
 
 # 処理系のアップデート
 "$HOME"/dotfiles/update_scripts/cli_installers/update_bun.sh
