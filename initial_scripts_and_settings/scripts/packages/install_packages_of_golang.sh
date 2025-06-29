@@ -14,6 +14,8 @@ function go_install() {
   echo '**********************************************************************'
 }
 
+go_install mvdan.cc/sh/v3/cmd/shfmt@latest
+
 go_install github.com/babarot/gomi@latest
 go_install github.com/charmbracelet/vhs@latest
 go_install github.com/Clever/csvlint/cmd/csvlint@latest # https://github.com/Clever/csvlint
