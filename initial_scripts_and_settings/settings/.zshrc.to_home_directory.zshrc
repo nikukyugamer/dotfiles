@@ -27,14 +27,6 @@ alias fzf='fzf --ansi'
 export PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
 
-# pyenv
-# uv へ全面的に移行するので pyenv は使わないようにする
-# ただし不自由が出たら pyenv を使うかもしれない
-# export PATH="$HOME/.pyenv/bin:$PATH"
-# eval "$(pyenv init --path)"
-# eval "$(pyenv init -)"
-# eval "$(pyenv virtualenv-init -)"
-
 # phpenv
 export PATH="$HOME/.phpenv/bin:$PATH"
 eval "$(phpenv init -)"
