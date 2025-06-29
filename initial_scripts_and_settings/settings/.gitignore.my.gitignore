@@ -1,0 +1,13 @@
+# Visual Studio Code
+.history/
+.vscode/
+
+# macOS
+.DS_Store
+.localized
+
+# Vim
+*.swp
+
+# direnv
+.envrc
