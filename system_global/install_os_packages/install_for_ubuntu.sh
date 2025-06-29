@@ -15,6 +15,6 @@ sudo apt install -y cmake
 sudo apt install -y gettext asciidoc docbook2x libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev
 
 echo
-echo "環境によっては $ pip install asciidoc が必要になる"
+echo "環境によっては uv で asciidoc を入れる必要がある"
 
 exit 0
