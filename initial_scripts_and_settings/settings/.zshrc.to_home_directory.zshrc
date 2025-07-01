@@ -1,57 +1,63 @@
 source ~/dotfiles/.zshrc
 
+# プロンプトのオーバーライド
+# PROMPT="%{${fg[green]}%}%n@%m@%*%{${reset_color}%}%F{yellow}%1v %F{blue}%(5~,%-2~/.../%1~,%~) $ %f"
+
+# --------------------------------------------------------------------------------
+# PATH の拡張
+# --------------------------------------------------------------------------------
 # 自作シェルスクリプトなどを置く場所
 export PATH="$HOME/bin:$PATH"
 
 # To configure your current shell run source $HOME/.cargo/env
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# Fly.io CLI
-export FLYCTL_INSTALL="$HOME/.fly"
-export PATH="$FLYCTL_INSTALL/bin:$PATH"
-
 # Homebrew on Mac
 # export PATH=/opt/homebrew/bin:$PATH
-
-# プロンプトのオーバーライド
-# PROMPT="%{${fg[green]}%}%n@%m@%*%{${reset_color}%}%F{yellow}%1v %F{blue}%(5~,%-2~/.../%1~,%~) $ %f"
+# --------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------
-# バージョン管理ツールや CLI など
+# バージョン管理ツール
 # --------------------------------------------------------------------------------
-# zoxide (https://github.com/ajeetdsouza/zoxide)
-eval "$(zoxide init zsh)"
-export _ZO_FZF_OPTS="--preview=''"
+# mise (https://mise.jdx.dev/)
+# cargo でインストールされる
+# バッティングするバージョン管理ツールがある場合は順番依存になるので注意すること
+eval "$(mise activate zsh)"
 
-# rbenv
-export PATH=$HOME/.rbenv/bin:$PATH
-eval "$(rbenv init -)"
+# fnm (https://github.com/Schniz/fnm)
+# cargo でインストールされる
+eval "$(fnm env --use-on-cd --shell zsh)"
 
 # phpenv
 export PATH="$HOME/.phpenv/bin:$PATH"
 eval "$(phpenv init -)"
 
+# rbenv
+export PATH=$HOME/.rbenv/bin:$PATH
+eval "$(rbenv init -)"
+# --------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------
+# CLI
+# --------------------------------------------------------------------------------
+# Fly.io CLI
+export FLYCTL_INSTALL="$HOME/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
+
 # direnv
 eval "$(direnv hook zsh)"
 
-# jenv
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
-
-# fnm (https://github.com/Schniz/fnm)
-eval "$(fnm env --use-on-cd --shell zsh)"
+# zoxide (https://github.com/ajeetdsouza/zoxide)
+eval "$(zoxide init zsh)"
+export _ZO_FZF_OPTS="--preview=''"
 # --------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------
 # alias
 # --------------------------------------------------------------------------------
-# If you use macOS, install vim by Homebrew and uncomment a below line
-# alias vi='/usr/local/bin/vim'
-
 alias gu='~/.cargo/bin/gitui'
 alias gl='git log --oneline --graph --decorate=full'
 
-# Useful expanded alias for some commands
 alias cat='bat -p --pager "less -X"'
 alias fzf='fzf --ansi'
 # --------------------------------------------------------------------------------

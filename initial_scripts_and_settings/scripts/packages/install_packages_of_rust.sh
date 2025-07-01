@@ -75,6 +75,7 @@ TARGET_PACKAGE_NAMES=(
   tailspin # https://github.com/bensadeh/tailspin (A log file highlighter)
   tealdeer # https://github.com/tealdeer-rs/tealdeer
   tokei # https://github.com/XAMPPRocky/tokei
+  usage-cli # https://github.com/jdx/usage (Dependency of "mise")
   xcompress # https://github.com/magiclen/xcompress
   xh # https://github.com/ducaale/xh
   yazi-fm # https://github.com/sxyazi/yazi
