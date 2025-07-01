@@ -211,6 +211,7 @@ source ~/dotfiles/.zshrc.docker.zshrc
 # Node.js & Package Managers
 export PATH="$PATH:./node_modules/.bin"
 
+# TODO: このあたりは .zshrc.to_home_directory.zshrc に移動してもよい
 # Golang
 # https://zenn.dev/tennashi/articles/3b87a8d924bc9c43573e
 export GOENV_ROOT="$HOME/.goenv"
@@ -256,9 +257,6 @@ lpassget () {
   lpass show $ITEM_ID
   lpass show --json $ITEM_ID | jq
 }
-
-# fnm (https://github.com/Schniz/fnm)
-eval "$(fnm env --use-on-cd --shell zsh)"
 
 # cargo や go で入れたものを eval する際などは読み込みの順序に注意する（ここに書くと動かないときがある）
 
