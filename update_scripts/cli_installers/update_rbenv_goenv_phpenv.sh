@@ -20,10 +20,6 @@ echo "$HOME/.goenv/plugins/go-build"
 cd "$HOME/.goenv/plugins/go-build" && git pull
 echo '----------'
 
-echo "$HOME/.jenv"
-cd "$HOME/.jenv" && git pull
-echo '----------'
-
 echo "$HOME/.phpenv"
 cd "$HOME/.phpenv" && git pull
 cd "$HOME/.phpenv/plugins/php-build" && git pull
