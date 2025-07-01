@@ -107,7 +107,10 @@ done
 # https://github.com/lindera/lindera
 # https://crates.io/crates/lindera-cli
 # 凄まじく時間がかかるので、デフォルトではコメントアウトする
-# cargo install lindera-cli --features ipadic,ipadic-neologd,unidic,ko-dic,cc-cedict
+echo
+echo "Lindera のインストールは時間がかかるので、必要なときに手動で実行する。"
+echo "$ cargo install lindera-cli --features ipadic,ipadic-neologd,unidic,ko-dic,cc-cedict"
+echo
 
 ####################
 # qsv のインストール
