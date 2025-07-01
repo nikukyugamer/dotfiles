@@ -230,16 +230,9 @@ alias tf='terraform'
 # direnv
 eval "$(direnv hook zsh)"
 
-# Deno
-export DENO_INSTALL="$HOME/.deno"
-export PATH="$DENO_INSTALL/bin:$PATH"
-
 # pnpm（Ubuntu も macOS も共通）
 export PNPM_HOME="$HOME/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
-
-# bun（Ubuntu も macOS も共通）
-export PATH="$HOME/.bun/bin:$PATH"
 
 # 1Password CLI
 function opget () {

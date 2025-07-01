@@ -98,9 +98,6 @@ source ~/.zshrc.userown.zshrc
 # esac
 # # pnpm end
 
-# # bun completions
-# [ -s "~/.bun/_bun" ] && source "~/.bun/_bun"
-
 # ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 # export PATH="~/.rd/bin:$PATH"
 # ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)

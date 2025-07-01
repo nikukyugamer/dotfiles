@@ -17,8 +17,6 @@ echo
 echo
 
 # 処理系のアップデート
-"$HOME"/dotfiles/update_scripts/cli_installers/update_bun.sh
-"$HOME"/dotfiles/update_scripts/cli_installers/update_deno.sh
 "$HOME"/dotfiles/update_scripts/cli_installers/update_pnpm.sh
 "$HOME"/dotfiles/update_scripts/cli_installers/update_rust.sh
 
