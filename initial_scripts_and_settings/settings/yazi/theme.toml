@@ -1,2 +1,3 @@
 [flavor]
+# $ git clone https://github.com/dracula/yazi.git ~/.config/yazi/flavors/dracula.yazi
 dark = "dracula"
