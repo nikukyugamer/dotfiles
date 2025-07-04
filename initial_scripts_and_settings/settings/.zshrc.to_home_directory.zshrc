@@ -31,10 +31,6 @@ eval "$(fnm env --use-on-cd --shell zsh)"
 # phpenv
 export PATH="$HOME/.phpenv/bin:$PATH"
 eval "$(phpenv init -)"
-
-# rbenv
-export PATH=$HOME/.rbenv/bin:$PATH
-eval "$(rbenv init -)"
 # --------------------------------------------------------------------------------
 
 # --------------------------------------------------------------------------------
