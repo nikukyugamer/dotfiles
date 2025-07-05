@@ -1,4 +1,5 @@
 source ~/.zplug/init.zsh
+source ~/dotfiles/.zshrc.docker.zshrc
 
 # --------------------------------------------------------------------------------
 # zsh の基本機能
@@ -75,6 +76,9 @@ export GPG_TTY=$(tty)
 # -N はコピペがしにくいので付けたい場合は手動で付ける
 export LESS="-i -M -R"
 
+# Ruby
+export RUBY_YJIT_ENABLE=1
+
 # composer
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 export COMPOSER_HOME="$HOME/.composer"
@@ -82,6 +86,13 @@ export PATH="$PATH:./vendor/bin"
 
 # lessの文字化けを防ぐ
 export LESSCHARSET="utf-8"
+
+# macOS での grep は GNU の "ggrep" を用いる
+# TODO: sed や date や xargs などもその方がよい
+if [[ "${OSTYPE}" =~ .*darwin.* ]]; then
+  export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
+  alias grep="/opt/homebrew/opt/grep/libexec/gnubin/grep"
+fi
 
 # Dart
 export PATH="$PATH":"$HOME/.pub-cache/bin"
@@ -129,12 +140,68 @@ export ZPLUG_HOME="$HOME/.zplug"
 # phpenv
 export PATH="$HOME/.phpenv/bin:$PATH"
 
+# fvm & Flutter
+export FLUTTER_HOME=$HOME/fvm/default
+export PATH=$PATH:$FLUTTER_HOME/bin
+
 # rbenv
 export PATH=$HOME/.rbenv/bin:$PATH
+
+# uv tools
+export PATH="/Users/takiya/.local/bin:$PATH"
+
+# Android SDK (CLI)
+if [[ "${OSTYPE}" =~ .*darwin.* ]]; then
+  export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
+fi
+
+# Android Studio Platform-Tools
+# こちらは Android Studio の状況に縛られる
+if [[ "${OSTYPE}" =~ .*darwin.* ]]; then
+  export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
+fi
+
+# Android SDK Platform-Tools (CLI)
+# こちらは ローカル CLI のインストール状況に縛られる
+# NOTE: こちらを優先するという意思表示から PATH の先頭に追加している（状況に応じて変更すること）
+if [[ "${OSTYPE}" =~ .*darwin.* ]]; then
+  export PATH="/Users/takiya/android/platform-tools:$PATH"
+fi
+
+# PostgreSQL 17
+if [[ "${OSTYPE}" =~ .*darwin.* ]]; then
+  export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
+fi
+
+# MySQL Client
+if [[ "${OSTYPE}" =~ .*darwin.* ]]; then
+  export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+fi
+
+# SQLite Client
+if [[ "${OSTYPE}" =~ .*darwin.* ]]; then
+  export PATH="/opt/homebrew/opt/sqlite/bin:$PATH"
+fi
 
 # --------------------------------------------------------------------------------
 # eval（環境変数の後に設定しないとたいていダメ）
 # --------------------------------------------------------------------------------
+# zoxide (https://github.com/ajeetdsouza/zoxide)
+eval "$(zoxide init zsh)"
+
+# mise (https://mise.jdx.dev/)
+# cargo でインストールされる
+# バッティングするバージョン管理ツールがある場合は順番依存になるので注意すること
+eval "$(mise activate zsh)"
+
+# fnm (https://github.com/Schniz/fnm)
+# cargo でインストールされる
+eval "$(fnm env --use-on-cd --shell zsh)"
+
+# Starship
+# cargo でインストールされる
+eval "$(starship init zsh)"
+
 # goenv
 eval "$(goenv init -)"
 
@@ -148,22 +215,28 @@ eval "$(phpenv init -)"
 eval "$(rbenv init -)"
 
 # --------------------------------------------------------------------------------
-# 環境変数 その2（例外）
+# 環境変数 その2（順番依存などがある場合の例外）
 # --------------------------------------------------------------------------------
 # goenv で入れた Go の PATH の設定
 # goenv init しないと $GOROOT や $GOPATH が定義されないので注意する
 export PATH="$GOROOT/bin:$PATH"
 export PATH="$GOPATH/bin:$PATH"
 
+# zoxide
+export _ZO_FZF_OPTS="--preview=''"
+
 # --------------------------------------------------------------------------------
 # エイリアス
 # --------------------------------------------------------------------------------
-alias g="git"
-alias tf="terraform"
-alias gu="~/.cargo/bin/gitui"
-alias gl="git log --oneline --graph --decorate=full"
 alias cat="bat -p --pager 'less -X'"
 alias fzf="fzf --ansi"
+alias g="git"
+alias gl="git log --oneline --graph --decorate=full"
+alias gu="~/.cargo/bin/gitui"
+alias lg="lazygit"
+alias sqlite="sqlite3"
+alias tf="terraform"
+alias vim="nvim"
 
 # ghq
 alias gg="cd \$(ghq root)/\$(ghq list | peco)"
@@ -177,6 +250,18 @@ alias railsroutes="bundle exec rails routes"
 alias railscreds="bundle exec rails credentials:edit"
 alias railsrunner="bundle exec rails runner"
 
+# Python
+alias venv=". .venv/bin/activate"
+
+# Neovim
+if [[ "${OSTYPE}" =~ .*darwin.* ]]; then
+  alias vim="/opt/homebrew/bin/nvim"
+  alias vi="/opt/homebrew/bin/nvim"
+elif [[ "${OSTYPE}" =~ .*linux.* ]]; then
+  alias vim="/usr/bin/nvim"
+  alias vi="/usr/bin/nvim"
+fi
+
 # gomi
 alias rm="gomi"
 alias remove="/bin/rm"
@@ -188,6 +273,7 @@ alias -g LR='`git branch -a | peco --query "remotes/ " --prompt "GIT REMOTE BRAN
 alias -g C='`git log --oneline | peco | cut -d" " -f1`'
 alias -g R='`git reflog | peco | cut -d" " -f1`'
 
+# ls や git など
 case "${OSTYPE}" in
 darwin*)
   alias ls="lsd"
@@ -249,7 +335,8 @@ ghash() {
 
   if [[ "$OSTYPE" == "darwin"* ]]; then
     echo "$TARGET_LINE" | cut -d ' ' -f 2 | /usr/bin/pbcopy
-  else
+  elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    # WSL 2 を想定しているので uclip.exe を使う
     echo "$TARGET_LINE" | cut -d ' ' -f 2 | uclip.exe
   fi
 }
@@ -299,4 +386,68 @@ zplug "zsh-users/zsh-history-substring-search", defer:3 # ヒストリの補完�
 zplug "mollifier/anyframe" # fzf でよく使う関数の詰め合わせ
 
 zplug load
+
 # --------------------------------------------------------------------------------
+# WSL 2（切り出してもいいかも）
+# --------------------------------------------------------------------------------
+# alias vscode="/mnt/c/Users/USERNAME/AppData/Local/Programs/Microsoft\ VS\ Code\ Insiders/Code\ -\ Insiders.exe"
+# alias mpc="/mnt/d/Program\ Files/MPC-BE/mpc-be64.exe"
+
+# WSLg で日本語キーボードにする
+# 現在の設定を確認するコマンドは setxkbmap -print -verbose 10
+# setxkbmap -layout jp
+
+# Mozc
+# https://astherier.com/blog/2021/07/windows11-wsl2-wslg-japanese/
+# export GTK_IM_MODULE=fcitx
+# export QT_IM_MODULE=fcitx
+# export XMODIFIERS=@im=fcitx
+# export DefaultIMModule=fcitx
+
+# Windows Explorer
+# alias expl="explorer.exe ."
+
+# # Tailscale for WSL2
+# # WSL2 だと Tailscale が自動起動しないのでシェル起動時に無理やり起動する
+# # https://github.com/tailscale/tailscale/issues/562#issuecomment-1017392542
+# # Starting Tailscale daemon automatically if not running...
+# TAILSCALED_PROCESS=`ps aux | grep tailscaled | grep -v grep`
+# AUTH_KEY=YOUR_AUTH_KEY
+# if [ -z "$TAILSCALED_PROCESS" ]; then
+#   # sudo tailscaled > /dev/null 2>&1 &
+#   # disown
+#   echo "Tailscale を起動します。"
+#   sudo /bin/nohup /usr/sbin/tailscaled > /dev/null 2>&1 &
+#   sleep 5
+#   sudo /bin/tailscale up --ssh --authkey $YOUR_AUTH_KEY
+#   echo "Tailscale を起動しました。"
+# else
+#   echo "Tailscale はすでに起動しています。"
+# fi
+
+# # cron for WSL2
+# CRON_STATUS=$(sudo service cron status)
+# # "cron is not running" を含むかどうかを確認
+# if [[ $CRON_STATUS =~ "cron is not running" ]]; then
+#   echo "cron のサービスを起動（再起動）します。"
+#   sudo service cron restart
+#   echo "cron のサービスを起動（再起動）しました。"
+# else
+#   echo "cron のサービスはすでに起動されています。"
+# fi
+
+# --------------------------------------------------------------------------------
+# 秘匿情報（ここはあとで home directory の .zshrc に移動する）
+# --------------------------------------------------------------------------------
+# 1Password CLI
+export ONE_PASSWORD_MY_PASSWORD="<YOUR_1Password_URL>"
+
+# OpenAI API
+# 安直に全体に設定すると破産の恐れがあるが、とりえあず設定する
+export OPENAI_API_KEY="<YOUR_OPENAI_API_KEY>"
+
+# Gemini CLI (API)
+export GEMINI_API_KEY="<YOUR_GEMINI_API_KEY>"
+
+# DeepL API
+export DEEPL_TOKEN="<YOUR_DEEPL_TOKEN>"
