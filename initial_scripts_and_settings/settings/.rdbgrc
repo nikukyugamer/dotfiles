@@ -1,6 +1,9 @@
 # debug.rb configuration
-# https://github.com/ruby/debug#configuration
+
+# <https://github.com/ruby/debug#configuration>
+
 config set irb_console true
 
-# https://docs.ruby-lang.org/ja/latest/library/logger.html
-config set log_level warn
+# <https://docs.ruby-lang.org/ja/latest/library/logger.html>
+
+config set log_level WARN
