@@ -185,6 +185,12 @@ fi
 # --------------------------------------------------------------------------------
 # eval（環境変数の後に設定しないとたいていダメ）
 # --------------------------------------------------------------------------------
+# Homebrew on Linux
+if [[ "${OSTYPE}" =~ .*linux.* ]]; then
+  # いったんハードコーディングしている
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
+
 # zoxide (https://github.com/ajeetdsouza/zoxide)
 eval "$(zoxide init zsh)"
 
