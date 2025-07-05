@@ -147,7 +147,7 @@ export PATH=$PATH:$FLUTTER_HOME/bin
 export PATH=$HOME/.rbenv/bin:$PATH
 
 # uv tools
-export PATH="/Users/takiya/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 # Android SDK (CLI)
 if [[ "${OSTYPE}" =~ .*darwin.* ]]; then
@@ -164,7 +164,7 @@ fi
 # こちらは ローカル CLI のインストール状況に縛られる
 # NOTE: こちらを優先するという意思表示から PATH の先頭に追加している（状況に応じて変更すること）
 if [[ "${OSTYPE}" =~ .*darwin.* ]]; then
-  export PATH="/Users/takiya/android/platform-tools:$PATH"
+  export PATH="$HOME/android/platform-tools:$PATH"
 fi
 
 # PostgreSQL 17
