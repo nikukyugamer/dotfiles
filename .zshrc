@@ -120,6 +120,18 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export FLYCTL_INSTALL="$HOME/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
 
+# zplug
+export ZPLUG_HOME="$HOME/.zplug"
+
+# cargo
+. "$HOME/.cargo/env"
+
+# phpenv
+export PATH="$HOME/.phpenv/bin:$PATH"
+
+# rbenv
+export PATH=$HOME/.rbenv/bin:$PATH
+
 # --------------------------------------------------------------------------------
 # eval（環境変数の後に設定しないとたいていダメ）
 # --------------------------------------------------------------------------------
@@ -129,16 +141,19 @@ eval "$(goenv init -)"
 # direnv
 eval "$(direnv hook zsh)"
 
+# phpenv
+eval "$(phpenv init -)"
+
+# rbenv
+eval "$(rbenv init -)"
+
 # --------------------------------------------------------------------------------
 # 環境変数 その2（例外）
 # --------------------------------------------------------------------------------
 # goenv で入れた Go の PATH の設定
-# goenv init しないと $GOROOT や $GOPATH が定義されない ので注意する
+# goenv init しないと $GOROOT や $GOPATH が定義されないので注意する
 export PATH="$GOROOT/bin:$PATH"
 export PATH="$GOPATH/bin:$PATH"
-
-# zplug
-export ZPLUG_HOME="$HOME/.zplug"
 
 # --------------------------------------------------------------------------------
 # エイリアス
@@ -267,7 +282,10 @@ opget() {
 
 # LastPass CLI
 lpassget() {
+  # TODO: ログインが求められるときは op を使って半自動ログインしたい
+  # TODO: ログインを求められないときもあるから分岐が必要かも
   ITEM_ID=$(lpass ls | peco | sed -E 's/.*\[id: ([0-9]+)\].*/\1/')
+
   lpass show $ITEM_ID
   lpass show --json $ITEM_ID | jq
 }
@@ -282,17 +300,3 @@ zplug "mollifier/anyframe" # fzf でよく使う関数の詰め合わせ
 
 zplug load
 # --------------------------------------------------------------------------------
-
-# --------------------------------------------------------------------------------
-# バージョン管理ツール
-# --------------------------------------------------------------------------------
-# phpenv
-export PATH="$HOME/.phpenv/bin:$PATH"
-eval "$(phpenv init -)"
-
-# rbenv
-export PATH=$HOME/.rbenv/bin:$PATH
-eval "$(rbenv init -)"
-
-# cargo
-. "$HOME/.cargo/env"
