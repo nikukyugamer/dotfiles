@@ -1,10 +1,5 @@
 # ユーザごとに独自に設定したい内容を記述する
 
-# macOS にて option + ←→ で単語単位で移動できるようにする
-# bindkey "\e[1;5D" backward-word
-# bindkey "\e[1;3D" backward-word
-# bindkey "\e[1;5C" forward-word
-# bindkey "\e[1;3C" forward-word
 
 # Neovim をデフォルトのエディタにする
 # alias vim="nvim"
@@ -47,7 +42,7 @@
 # ssh-add -l >& /dev/null || ssh-add
 
 ################################################################################
-# 以下は Mac 特有の設定
+# macOS
 ################################################################################
 # Mac で rbenv を直接インストールする場合に必要（現在は不要？）
 # これがないと rbenv install だけでなく fastlane で SSL に失敗したりもする
@@ -61,7 +56,7 @@
 # export CHROME_EXECUTABLE="/Applications/Google Chrome Dev.app/Contents/MacOS/Google Chrome Dev"
 
 ################################################################################
-# 以下は WSL2 特有の設定
+# WSL2
 ################################################################################
 # alias vscode="/mnt/c/Users/USERNAME/AppData/Local/Programs/Microsoft\ VS\ Code\ Insiders/Code\ -\ Insiders.exe"
 # alias mpc="/mnt/d/Program\ Files/MPC-BE/mpc-be64.exe"
