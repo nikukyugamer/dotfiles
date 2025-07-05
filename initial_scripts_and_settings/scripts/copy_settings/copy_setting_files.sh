@@ -5,7 +5,6 @@ cd "$(dirname "$0")"
 # 既存のファイルがあった場合に上書きしないように一時的な名前でコピーする
 # したがって、適用させるためにはファイル名を変更する必要がある
 cp "$HOME/dotfiles/initial_scripts_and_settings/settings/.zshrc.to_home_directory.zshrc" "$HOME"/.zshrc.from_dotfiles
-cp "$HOME"/dotfiles/initial_scripts_and_settings/settings/.zshrc.userown.zshrc "$HOME"/.zshrc.userown.zshrc.from_dotfiles
 cp "$HOME"/dotfiles/initial_scripts_and_settings/settings/.zshenv.to_home_directory.zshenv "$HOME"/.zshenv.from_dotfiles
 cp "$HOME"/dotfiles/initial_scripts_and_settings/settings/.vimrc.should_cp_to_home_directory.vimrc "$HOME"/.vimrc.from_dotfiles
 cp "$HOME"/dotfiles/initial_scripts_and_settings/settings/.gitconfig.should_cp_to_home_directory.gitconfig "$HOME"/.gitconfig.from_dotfiles
