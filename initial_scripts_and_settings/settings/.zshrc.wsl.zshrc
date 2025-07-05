@@ -1,5 +1,7 @@
+# 秘匿情報が多く入るようならばホームディレクトリへの移動を考える
+
 # --------------------------------------------------------------------------------
-# WSL 2（切り出してもいいかも）
+# WSL 2
 # --------------------------------------------------------------------------------
 # alias vscode="/mnt/c/Users/USERNAME/AppData/Local/Programs/Microsoft\ VS\ Code\ Insiders/Code\ -\ Insiders.exe"
 # alias mpc="/mnt/d/Program\ Files/MPC-BE/mpc-be64.exe"
