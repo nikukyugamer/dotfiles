@@ -63,7 +63,13 @@ export LANG="ja_JP.UTF-8"
 export LC_ALL="ja_JP.UTF-8"
 export LANGUAGE="ja_JP.UTF-8"
 
-export EDITOR="vim"
+if command -v nvim >/dev/null 2>&1; then
+  export EDITOR=nvim
+elif command -v vim >/dev/null 2>&1; then
+  export EDITOR=vim
+else
+  export EDITOR=vi
+fi
 
 # Homebrew on macOS
 export PATH="/opt/homebrew/bin:$PATH"
