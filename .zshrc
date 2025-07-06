@@ -1,6 +1,58 @@
 source ~/.zplug/init.zsh
 
 # --------------------------------------------------------------------------------
+# eval で読み込むもの
+# --------------------------------------------------------------------------------
+# cargo
+. "$HOME/.cargo/env"
+# To configure your current shell run source $HOME/.cargo/env
+export PATH="$HOME/.cargo/bin:$PATH"
+
+# zoxide (https://github.com/ajeetdsouza/zoxide)
+# cargo でインストールされる
+eval "$(zoxide init zsh)"
+export _ZO_FZF_OPTS="--preview=''"
+
+# mise (https://mise.jdx.dev/)
+# cargo でインストールされる
+# バッティングするバージョン管理ツールがある場合は順番依存になるので注意すること
+eval "$(mise activate zsh)"
+
+# fnm (https://github.com/Schniz/fnm)
+# cargo でインストールされる
+eval "$(fnm env --use-on-cd --shell zsh)"
+
+# Starship
+# cargo でインストールされる
+eval "$(starship init zsh)"
+
+# Homebrew on Linux
+if [[ "${OSTYPE}" =~ .*linux.* ]]; then
+  # いったんハードコーディングしている
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
+
+# goenv
+export GOENV_ROOT="$HOME/.goenv"
+export PATH="$GOENV_ROOT/bin:$PATH"
+eval "$(goenv init -)"
+# goenv で入れた Go の PATH の設定
+# goenv init しないと $GOROOT や $GOPATH が定義されないので注意する
+export PATH="$GOROOT/bin:$PATH"
+export PATH="$GOPATH/bin:$PATH"
+
+# direnv
+eval "$(direnv hook zsh)"
+
+# phpenv
+export PATH="$HOME/.phpenv/bin:$PATH"
+eval "$(phpenv init -)"
+
+# rbenv
+eval "$(rbenv init -)"
+export PATH=$HOME/.rbenv/bin:$PATH
+
+# --------------------------------------------------------------------------------
 # zsh の基本機能
 # --------------------------------------------------------------------------------
 # デフォルトのパーミッションを設定する
@@ -105,9 +157,6 @@ export PATH="$PATH":"$HOME/.pub-cache/bin"
 # EOL に表示されるマークである "%" を削除する
 export PROMPT_EOL_MARK=""
 
-# goenv
-export GOENV_ROOT="$HOME/.goenv"
-export PATH="$GOENV_ROOT/bin:$PATH"
 
 # Embulk
 export PATH="$HOME/.embulk/bin:$PATH"
@@ -129,8 +178,6 @@ export PATH="/usr/local/bin:$PATH"
 # 自作シェルスクリプトなどを置く場所
 export PATH="$HOME/bin:$PATH"
 
-# To configure your current shell run source $HOME/.cargo/env
-export PATH="$HOME/.cargo/bin:$PATH"
 
 # Fly.io CLI
 export FLYCTL_INSTALL="$HOME/.fly"
@@ -139,18 +186,10 @@ export PATH="$FLYCTL_INSTALL/bin:$PATH"
 # zplug
 export ZPLUG_HOME="$HOME/.zplug"
 
-# cargo
-. "$HOME/.cargo/env"
-
-# phpenv
-export PATH="$HOME/.phpenv/bin:$PATH"
 
 # fvm & Flutter
 export FLUTTER_HOME=$HOME/fvm/default
 export PATH=$PATH:$FLUTTER_HOME/bin
-
-# rbenv
-export PATH=$HOME/.rbenv/bin:$PATH
 
 # uv tools
 export PATH="$HOME/.local/bin:$PATH"
@@ -187,54 +226,6 @@ fi
 if [[ "${OSTYPE}" =~ .*darwin.* ]]; then
   export PATH="/opt/homebrew/opt/sqlite/bin:$PATH"
 fi
-
-# --------------------------------------------------------------------------------
-# eval（環境変数の後に設定しないとたいていダメ）
-# --------------------------------------------------------------------------------
-# Homebrew on Linux
-if [[ "${OSTYPE}" =~ .*linux.* ]]; then
-  # いったんハードコーディングしている
-  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-fi
-
-# zoxide (https://github.com/ajeetdsouza/zoxide)
-eval "$(zoxide init zsh)"
-
-# mise (https://mise.jdx.dev/)
-# cargo でインストールされる
-# バッティングするバージョン管理ツールがある場合は順番依存になるので注意すること
-eval "$(mise activate zsh)"
-
-# fnm (https://github.com/Schniz/fnm)
-# cargo でインストールされる
-eval "$(fnm env --use-on-cd --shell zsh)"
-
-# Starship
-# cargo でインストールされる
-eval "$(starship init zsh)"
-
-# goenv
-eval "$(goenv init -)"
-
-# direnv
-eval "$(direnv hook zsh)"
-
-# phpenv
-eval "$(phpenv init -)"
-
-# rbenv
-eval "$(rbenv init -)"
-
-# --------------------------------------------------------------------------------
-# 環境変数 その2（順番依存などがある場合の例外）
-# --------------------------------------------------------------------------------
-# goenv で入れた Go の PATH の設定
-# goenv init しないと $GOROOT や $GOPATH が定義されないので注意する
-export PATH="$GOROOT/bin:$PATH"
-export PATH="$GOPATH/bin:$PATH"
-
-# zoxide
-export _ZO_FZF_OPTS="--preview=''"
 
 # --------------------------------------------------------------------------------
 # エイリアス
