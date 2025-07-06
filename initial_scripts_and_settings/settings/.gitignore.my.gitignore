@@ -1,3 +1,8 @@
+# Claude Code
+CLAUDE.md
+.claude/
+**/.claude/settings.local.json
+
 # Visual Studio Code
 .history/
 .vscode/
@@ -11,3 +16,19 @@
 
 # direnv
 .envrc
+
+# .env
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# log
+*.log
+
+# tmp
+tmp/
+
+# node_modules
+node_modules/
