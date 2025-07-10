@@ -11,6 +11,7 @@ cp "$HOME"/dotfiles/initial_scripts_and_settings/settings/.gitconfig.should_cp_t
 cp "$HOME"/dotfiles/initial_scripts_and_settings/settings/.rdbgrc "$HOME"/.rdbgrc.from_dotfiles
 
 # 安全のために追記にしているので重複行は手動で適宜削除する
+mkdir -p "$HOME"/.config/git
 cat "$HOME"/dotfiles/initial_scripts_and_settings/settings/.gitignore.my.gitignore >> "$HOME"/.config/git/ignore
 
 # 以下のロジックは関数化したいがまだちょっと早い気がしているので、コピペしている
