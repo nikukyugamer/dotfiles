@@ -141,11 +141,16 @@ export PATH="$PATH:./vendor/bin"
 # lessの文字化けを防ぐ
 export LESSCHARSET="utf-8"
 
+# grep
 # macOS での grep は GNU の "ggrep" を用いる
 # TODO: sed や date や xargs などもその方がよい
 if [[ "${OSTYPE}" =~ .*darwin.* ]]; then
   export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"
-  alias grep="/opt/homebrew/opt/grep/libexec/gnubin/grep"
+  alias grep="/opt/homebrew/opt/grep/libexec/gnubin/grep --color=always -n -H"
+elif [[ "${OSTYPE}" =~ .*linux.* ]]; then
+  alias grep="grep --color=always -n -H"
+else
+  alias grep="grep --color=always -n -H"
 fi
 
 # Dart
