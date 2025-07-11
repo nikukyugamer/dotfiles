@@ -23,6 +23,7 @@ $ mv ~/.vimrc.from_dotfiles ~/.vimrc
 $ mkdir -p ~/.config/nvim && ln -s ~/.vimrc ~/.config/nvim/init.vim
 
 # カラースキームの設定ファイルの作成
+$ mkdir -p ~/.config/nvim/colors
 $ curl https://raw.githubusercontent.com/tomasr/molokai/master/colors/molokai.vim > ~/.config/nvim/colors/molokai.vim
 $ curl https://raw.githubusercontent.com/jacoborus/tender.vim/master/colors/tender.vim > ~/.config/nvim/colors/tender.vim
 ```
