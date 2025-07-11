@@ -111,6 +111,12 @@ else
   export EDITOR=vi
 fi
 
+# Android & Java in Android
+# export JAVA_HOME=/Applications/"Android Studio.app"/Contents/jbr/Contents/Home
+# export PATH=$PATH:/Applications/"Android Studio.app"/Contents/jbr/Contents/Home/bin
+# export PATH=$PATH:~/Library/Android/sdk/platform-tools
+# export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+
 # To configure your current shell run source $HOME/.cargo/env
 export PATH="$HOME/.cargo/bin:$PATH"
 
