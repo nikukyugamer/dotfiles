@@ -1,2 +1,8 @@
 # 原則ここには書かない（書く必要がない）
-# rbenv などが読み込まれないからってここに書くのではなく "source" の順番を疑うなどする
+
+# cargo
+. "$HOME/.cargo/env"
+
+# rbenv
+export PATH=$HOME/.rbenv/bin:$PATH
+eval "$(rbenv init -)"
