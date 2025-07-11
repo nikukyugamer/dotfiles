@@ -18,8 +18,8 @@ echo "cf. https://github.com/leoafarias/fvm/issues/796"
 echo
 echo "インストール後はシェルの設定ファイルに環境変数を設定すること"
 echo "# Flutter (Use fvm)"
-echo "export FLUTTER_HOME=$HOME/fvm/default"
-echo "export PATH=$PATH:$FLUTTER_HOME/bin"
+echo 'export FLUTTER_HOME=$HOME/fvm/default'
+echo 'export PATH=$PATH:$FLUTTER_HOME/bin'
 
 # curl -fsSL https://fvm.app/install.sh | bash
 
