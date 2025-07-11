@@ -26,10 +26,15 @@ fi
 
 # 契約直後に実行すること
 ~/dotfiles/initial_scripts_and_settings/scripts/copy_settings/copy_setting_files.sh
-~/dotfiles/initial_scripts_and_settings/scripts/version_managers/install_rbenv_goenv_phpenv.sh
+
 ~/dotfiles/initial_scripts_and_settings/scripts/version_managers/install_fvm.sh
-~/dotfiles/initial_scripts_and_settings/scripts/cli_installers/install_rust.sh
+~/dotfiles/initial_scripts_and_settings/scripts/version_managers/install_rbenv_goenv_phpenv_tfenv.sh
+
+~/dotfiles/initial_scripts_and_settings/scripts/cli_installers/install_fzf.sh
 ~/dotfiles/initial_scripts_and_settings/scripts/cli_installers/install_pnpm.sh
+~/dotfiles/initial_scripts_and_settings/scripts/cli_installers/install_rust.sh
+~/dotfiles/initial_scripts_and_settings/scripts/cli_installers/install_vim-plug.sh
+~/dotfiles/initial_scripts_and_settings/scripts/cli_installers/install_zplug.sh
 
 # 実行時のディレクトリに戻る
 cd "$original_dir"
