@@ -63,7 +63,6 @@ TARGET_PACKAGE_NAMES=(
   hyperfine # https://github.com/sharkdp/hyperfine
   just # https://github.com/casey/just
   macchina # https://github.com/Macchina-CLI/macchina
-  mise # https://github.com/jdx/mise
   monolith # https://github.com/Y2Z/monolith
   onefetch # https://github.com/o2sh/onefetch
   procs # https://github.com/dalance/procs

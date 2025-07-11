@@ -24,17 +24,20 @@ if [ -d "$HOME"/.rbenv ]; then
     exit 1
 fi
 
-# 契約直後に実行すること
+# セットアップの直後に実行する（設定ファイルのコピー等）
 ~/dotfiles/initial_scripts_and_settings/scripts/copy_settings/copy_setting_files.sh
 
-~/dotfiles/initial_scripts_and_settings/scripts/version_managers/install_fvm.sh
-~/dotfiles/initial_scripts_and_settings/scripts/version_managers/install_rbenv_goenv_phpenv_tfenv.sh
-
+# 初回のみのインストール（以降は各ツールで自己完結してアップデートされる）
+~/dotfiles/initial_scripts_and_settings/scripts/cli_installers/install_homebrew.sh
 ~/dotfiles/initial_scripts_and_settings/scripts/cli_installers/install_fzf.sh
 ~/dotfiles/initial_scripts_and_settings/scripts/cli_installers/install_pnpm.sh
 ~/dotfiles/initial_scripts_and_settings/scripts/cli_installers/install_rust.sh
 ~/dotfiles/initial_scripts_and_settings/scripts/cli_installers/install_vim-plug.sh
 ~/dotfiles/initial_scripts_and_settings/scripts/cli_installers/install_zplug.sh
+
+# バージョン管理ツール（独立してインストールできる）
+~/dotfiles/initial_scripts_and_settings/scripts/version_managers/install_fvm.sh
+~/dotfiles/initial_scripts_and_settings/scripts/version_managers/install_rbenv_goenv_phpenv_tfenv.sh
 
 echo
 echo 'zsh に変更していない場合にはインストール後に $ chsh -s /usr/bin/zsh を実行すること。'
