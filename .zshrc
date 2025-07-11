@@ -3,11 +3,6 @@ source ~/.zplug/init.zsh
 # --------------------------------------------------------------------------------
 # eval で読み込むもの
 # --------------------------------------------------------------------------------
-# cargo
-. "$HOME/.cargo/env"
-# To configure your current shell run source $HOME/.cargo/env
-export PATH="$HOME/.cargo/bin:$PATH"
-
 # zoxide (https://github.com/ajeetdsouza/zoxide)
 # cargo でインストールされる
 eval "$(zoxide init zsh)"
@@ -41,16 +36,9 @@ eval "$(goenv init -)"
 export PATH="$GOROOT/bin:$PATH"
 export PATH="$GOPATH/bin:$PATH"
 
-# direnv
-eval "$(direnv hook zsh)"
-
 # phpenv
 export PATH="$HOME/.phpenv/bin:$PATH"
 eval "$(phpenv init -)"
-
-# rbenv
-eval "$(rbenv init -)"
-export PATH=$HOME/.rbenv/bin:$PATH
 
 # --------------------------------------------------------------------------------
 # zsh の基本機能
@@ -123,6 +111,9 @@ else
   export EDITOR=vi
 fi
 
+# To configure your current shell run source $HOME/.cargo/env
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # Homebrew on macOS
 export PATH="/opt/homebrew/bin:$PATH"
 
@@ -157,7 +148,6 @@ export PATH="$PATH":"$HOME/.pub-cache/bin"
 # EOL に表示されるマークである "%" を削除する
 export PROMPT_EOL_MARK=""
 
-
 # Embulk
 export PATH="$HOME/.embulk/bin:$PATH"
 
@@ -178,7 +168,6 @@ export PATH="/usr/local/bin:$PATH"
 # 自作シェルスクリプトなどを置く場所
 export PATH="$HOME/bin:$PATH"
 
-
 # Fly.io CLI
 export FLYCTL_INSTALL="$HOME/.fly"
 export PATH="$FLYCTL_INSTALL/bin:$PATH"
@@ -186,10 +175,9 @@ export PATH="$FLYCTL_INSTALL/bin:$PATH"
 # zplug
 export ZPLUG_HOME="$HOME/.zplug"
 
-
 # fvm & Flutter
 export FLUTTER_HOME=$HOME/fvm/default
-export PATH=$PATH:$FLUTTER_HOME/bin
+export PATH="$PATH:$FLUTTER_HOME/bin"
 
 # uv tools
 export PATH="$HOME/.local/bin:$PATH"
