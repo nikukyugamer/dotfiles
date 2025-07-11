@@ -8,11 +8,6 @@ source ~/.zplug/init.zsh
 eval "$(zoxide init zsh)"
 export _ZO_FZF_OPTS="--preview=''"
 
-# mise (https://mise.jdx.dev/)
-# cargo でインストールされる
-# バッティングするバージョン管理ツールがある場合は順番依存になるので注意すること
-eval "$(mise activate zsh)"
-
 # fnm (https://github.com/Schniz/fnm)
 # cargo でインストールされる
 eval "$(fnm env --use-on-cd --shell zsh)"
@@ -232,6 +227,11 @@ fi
 
 # direnv
 eval "$(direnv hook zsh)"
+
+# mise (https://mise.jdx.dev/)
+# cargo でインストールされる
+# バッティングするバージョン管理ツールがある場合は順番依存になるので注意すること
+eval "$(mise activate zsh)"
 
 # --------------------------------------------------------------------------------
 # エイリアス
