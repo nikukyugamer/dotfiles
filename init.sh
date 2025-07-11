@@ -36,6 +36,9 @@ fi
 ~/dotfiles/initial_scripts_and_settings/scripts/cli_installers/install_vim-plug.sh
 ~/dotfiles/initial_scripts_and_settings/scripts/cli_installers/install_zplug.sh
 
+echo
+echo 'zsh に変更していない場合にはインストール後に $ chsh -s /usr/bin/zsh を実行すること。'
+
 # 実行時のディレクトリに戻る
 cd "$original_dir"
 exit 0
