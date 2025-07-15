@@ -229,9 +229,7 @@ fi
 eval "$(direnv hook zsh)"
 
 # mise (https://mise.jdx.dev/)
-# cargo でインストールされる
-# バッティングするバージョン管理ツールがある場合は順番依存になるので注意すること
-# eval "$(mise activate zsh)"
+eval "$(mise activate zsh)"
 
 # --------------------------------------------------------------------------------
 # エイリアス
