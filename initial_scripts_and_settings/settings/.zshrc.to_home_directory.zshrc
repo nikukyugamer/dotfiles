@@ -19,6 +19,11 @@ export GEMINI_API_KEY="<YOUR_GEMINI_API_KEY>"
 # DeepL API
 export DEEPL_TOKEN="<YOUR_DEEPL_TOKEN>"
 
+# Podman
+# cf. $ man podman-compose
+# export PODMAN_COMPOSE_PROVIDER="/opt/homebrew/bin/podman-compose"
+# export PODMAN_COMPOSE_WARNING_LOGS="false"
+
 # --------------------------------------------------------------------------------
 # PATH の設定（全ての設定の上書き）
 # --------------------------------------------------------------------------------
