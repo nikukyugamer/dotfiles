@@ -245,8 +245,8 @@ alias tf="terraform"
 alias vim="nvim"
 
 # ghq
-alias gg="cd \$(ghq root)/\$(ghq list | peco)"
-alias gghome="gh repo view --web \$(ghq list | peco | cut -d '/' -f 2,3)"
+alias gg="cd \$(ghq root)/\$(ghq list | sk)"
+alias gghome="gh repo view --web \$(ghq list | sk | cut -d '/' -f 2,3)"
 
 # Ruby & Rails
 alias be="bundle exec"
@@ -272,12 +272,12 @@ fi
 alias rm="gomi"
 alias remove="/bin/rm"
 
-# peco
+# git
 # NOTE: ここのクォートはシングルクォートを用いて遅延評価にしないとコマンドが即時実行されてしまう
-alias -g B='`git branch | peco --prompt "GIT BRANCH>" | head -n 1 | sed -e "s/^\*\s*//g"`'
-alias -g LR='`git branch -a | peco --query "remotes/ " --prompt "GIT REMOTE BRANCH>" | head -n 1 | sed "s/^\*\s*//" | sed "s/remotes\/[^\/]*\/\(\S*\)/\1 \0/"`'
-alias -g C='`git log --oneline | peco | cut -d" " -f1`'
-alias -g R='`git reflog | peco | cut -d" " -f1`'
+alias -g B='`git branch | sk --prompt "GIT BRANCH>" | head -n 1 | sed -e "s/^\*\s*//g"`'
+alias -g LR='`git branch -a | sk --query "remotes/ " --prompt "GIT REMOTE BRANCH>" | head -n 1 | sed "s/^\*\s*//" | sed "s/remotes\/[^\/]*\/\(\S*\)/\1 \0/"`'
+alias -g C='`git log --oneline | sk | cut -d" " -f1`'
+alias -g R='`git reflog | sk | cut -d" " -f1`'
 
 # ls や git など
 case "${OSTYPE}" in
@@ -335,7 +335,7 @@ setopt nohup
 # --------------------------------------------------------------------------------
 # git 用便利コマンド
 ghash() {
-  TARGET_LINE=$(git log --oneline --graph --decorate=full | peco)
+  TARGET_LINE=$(git log --oneline --graph --decorate=full | sk)
 
   echo "$TARGET_LINE"
 
@@ -366,8 +366,8 @@ ssher() {
 # 1Password CLI
 opget() {
   # Vault の絞り込みを行うこともできるが、面倒になるだけなので採用しなかった
-  # op item list --vault $(op vault list | peco | cut -d " " -f 1) | peco | cut -d " " -f 1
-  ITEM_ID=$(op item list | peco | cut -d " " -f 1)
+  # op item list --vault $(op vault list | sk | cut -d " " -f 1) | sk | cut -d " " -f 1
+  ITEM_ID=$(op item list | sk | cut -d " " -f 1)
 
   op item get $ITEM_ID
   op item get --format json $ITEM_ID | jq
@@ -377,7 +377,7 @@ opget() {
 lpassget() {
   # TODO: ログインが求められるときは op を使って半自動ログインしたい
   # TODO: ログインを求められないときもあるから分岐が必要かも
-  ITEM_ID=$(lpass ls | peco | sed -E 's/.*\[id: ([0-9]+)\].*/\1/')
+  ITEM_ID=$(lpass ls | sk | sed -E 's/.*\[id: ([0-9]+)\].*/\1/')
 
   lpass show $ITEM_ID
   lpass show --json $ITEM_ID | jq

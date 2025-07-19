@@ -71,6 +71,7 @@ TARGET_PACKAGE_NAMES=(
   ripgrep_all # ffmpeg などがインストールされていることが前提となる https://github.com/phiresky/ripgrep-all
   sd # Alt "sed" https://github.com/chmln/sd
   simple-http-server # https://github.com/TheWaWaR/simple-http-server
+  skim # https://github.com/skim-rs/skim
   tailspin # https://github.com/bensadeh/tailspin (A log file highlighter)
   tealdeer # https://github.com/tealdeer-rs/tealdeer
   tokei # https://github.com/XAMPPRocky/tokei
