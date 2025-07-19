@@ -17,20 +17,6 @@ cat "$HOME"/dotfiles/initial_scripts_and_settings/settings/.gitignore.my.gitigno
 
 # 以下のロジックは関数化したいがまだちょっと早い気がしているので、コピペしている
 
-## peco
-user_input_value=""
-read -r -p "peco の設定ファイル (~/.config/peco) を上書きしてもいいですか？ (y/n): " user_input_value
-case $user_input_value in
-    [Yy]*)
-        mkdir -p "$HOME"/.config/peco
-        cp "$HOME"/dotfiles/initial_scripts_and_settings/settings/config_peco_config.json "$HOME"/.config/peco/config.json
-        echo "上書きしました。"
-        ;;
-    *)
-        echo "スキップしました。"
-        ;;
-esac
-
 ## githooks
 user_input_value=""
 read -r -p "githooks の設定ファイル (~/.githooks) を上書きしてもいいですか？ (y/n): " user_input_value
