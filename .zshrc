@@ -244,6 +244,11 @@ alias sqlite="sqlite3"
 alias tf="terraform"
 alias vim="nvim"
 
+# skim (sk) のオプション付きエイリアスで、下で使うので先に定義しておかないとだめ
+# 設定を上書きしたい場合は個人の .zshrc で上書きする
+# 色の詳細は https://www.mm2d.net/main/prog/c/console-02.html を参照のこと
+alias sk="sk --ansi --color='fg:7,bg:0,matched:5,matched_bg:0,current:2,current_bg:0,current_match:3,current_match_bg:0,spinner:1,info:6,prompt:1,cursor:3,selected:1,header:1,border:1' --layout='reverse' --multi"
+
 # ghq
 alias gg="cd \$(ghq root)/\$(ghq list | sk)"
 alias gghome="gh repo view --web \$(ghq list | sk | cut -d '/' -f 2,3)"
