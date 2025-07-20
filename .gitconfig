@@ -1,3 +1,4 @@
+# グローバルな .gitignore は ~/.config/git/ignore に配置する (cf. .gitignore.my.gitignore)
 [init]
   defaultBranch = main
 [core]
