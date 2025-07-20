@@ -48,9 +48,9 @@ TARGET_PACKAGE_NAMES=(
   lsd # 優先度高 https://github.com/lsd-rs/lsd
   starship # 優先度高 https://github.com/starship/starship
 
-  ag # https://github.com/rcoh/angle-grinder
+  # ag # ログファイルを分割 https://github.com/rcoh/angle-grinder
   bottom # Alt "top" https://github.com/ClementTsang/bottom
-  broot # https://github.com/Canop/broot
+  broot # Yaziと使い分ける https://github.com/Canop/broot
   diskonaut # https://github.com/imsnif/diskonaut
   du-dust # https://github.com/bootandy/dust
   # eza # lsd から乗り換えるときはこれ https://github.com/eza-community/eza
@@ -59,23 +59,23 @@ TARGET_PACKAGE_NAMES=(
   git-delta # https://github.com/dandavison/delta
   git-interactive-rebase-tool # https://github.com/MitMaro/git-interactive-rebase-tool
   gitui # https://github.com/extrawurst/gitui
-  grex # https://github.com/pemistahl/grex
-  hyperfine # https://github.com/sharkdp/hyperfine
+  grex # 文字列を比較して正規表現を生成する https://github.com/pemistahl/grex
+  hyperfine # A command-line benchmarking tool. https://github.com/sharkdp/hyperfine
   just # https://github.com/casey/just
-  macchina # https://github.com/Macchina-CLI/macchina
-  monolith # https://github.com/Y2Z/monolith
-  onefetch # https://github.com/o2sh/onefetch
+  # macchina # https://github.com/Macchina-CLI/macchina
+  # monolith # https://github.com/Y2Z/monolith
+  onefetch # cf. https://github.com/o2sh/onefetch/blob/main/assets/screenshot-1.png https://github.com/o2sh/onefetch
   procs # https://github.com/dalance/procs
   railwayapp # https://github.com/railwayapp/cli
   ripgrep # https://github.com/BurntSushi/ripgrep
   ripgrep_all # ffmpeg などがインストールされていることが前提となる https://github.com/phiresky/ripgrep-all
   sd # Alt "sed" https://github.com/chmln/sd
-  simple-http-server # https://github.com/TheWaWaR/simple-http-server
+  # simple-http-server # https://github.com/TheWaWaR/simple-http-server
   skim # https://github.com/skim-rs/skim
   tailspin # https://github.com/bensadeh/tailspin (A log file highlighter)
   tealdeer # https://github.com/tealdeer-rs/tealdeer
-  tokei # https://github.com/XAMPPRocky/tokei
-  usage-cli # https://github.com/jdx/usage (Dependency of "mise")
+  tokei # コードに関する統計情報を表示するプログラム https://github.com/XAMPPRocky/tokei
+  # usage-cli # https://github.com/jdx/usage (Dependency of "mise")
   xcompress # https://github.com/magiclen/xcompress
   xh # https://github.com/ducaale/xh
   yazi-fm # https://github.com/sxyazi/yazi
