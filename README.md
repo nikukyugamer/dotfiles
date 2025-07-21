@@ -54,6 +54,7 @@ $ mise registry
 ##### 2. 最新バージョンチェック
 
 ```bash
+# $ mise ls-remote でも同じ
 $ mise list-remote bun
 $ mise list-remote deno
 $ mise list-remote ffmpeg
@@ -74,12 +75,14 @@ $ mise list-remote rust
 ##### 3. インストール
 
 ```bash
+# $ mise i ffmpeg@7.1.1 でも同じ
 $ mise install ffmpeg@7.1.1
 ```
 
 ##### 4. 常用設定
 
 ```bash
+# $ mise u -g ffmpeg@7.1.1 も同じ
 $ mise use --global ffmpeg@7.1.1
 ```
 

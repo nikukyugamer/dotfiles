@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # CLI ツールのアップデート
-"$HOME"/dotfiles/update_scripts/cli_installers/update_rbenv_goenv_phpenv.sh
+"$HOME"/dotfiles/update_scripts/cli_installers/update_rbenv_phpenv.sh
 "$HOME"/dotfiles/update_scripts/cli_installers/update_fzf.sh
 
 # 改行を入れて見た目を整える
