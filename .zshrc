@@ -144,9 +144,6 @@ export PROMPT_EOL_MARK=""
 # Embulk
 export PATH="$HOME/.embulk/bin:$PATH"
 
-# tfenv
-export PATH="$HOME/.tfenv/bin:$PATH"
-
 # pnpm
 export PNPM_HOME="$HOME/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"

@@ -11,7 +11,4 @@ git clone https://github.com/phpenv/phpenv.git "$HOME"/.phpenv
 git clone https://github.com/php-build/php-build "$HOME"/.phpenv/plugins/php-build
 git clone https://github.com/ngyuki/phpenv-composer.git "$HOME"/.phpenv/plugins/phpenv-composer
 
-# tfenv
-git clone https://github.com/tfutils/tfenv.git "$HOME"/.tfenv
-
 exit 0

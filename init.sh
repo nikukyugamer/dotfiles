@@ -35,7 +35,7 @@ fi
 ~/dotfiles/initial_scripts_and_settings/scripts/cli_installers/install_zplug.sh
 
 # バージョン管理ツール（独立してインストールできる）
-~/dotfiles/initial_scripts_and_settings/scripts/version_managers/install_rbenv_phpenv_tfenv.sh
+~/dotfiles/initial_scripts_and_settings/scripts/version_managers/install_rbenv_phpenv.sh
 
 echo
 echo 'zsh に変更していない場合にはインストール後に $ chsh -s /usr/bin/zsh を実行すること。'
