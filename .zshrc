@@ -99,8 +99,8 @@ fi
 # export PATH=$PATH:~/Library/Android/sdk/platform-tools
 # export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 
-# To configure your current shell run source $HOME/.cargo/env
-export PATH="$HOME/.cargo/bin:$PATH"
+# # To configure your current shell run source $HOME/.cargo/env
+# export PATH="$HOME/.cargo/bin:$PATH"
 
 # Homebrew on macOS
 export PATH="/opt/homebrew/bin:$PATH"
@@ -221,6 +221,7 @@ alias cat="bat -p --pager 'less -X'"
 alias fzf="fzf --ansi"
 alias g="git"
 alias gl="git log --oneline --graph --decorate=full"
+# FIXME: 場所が変わるはず
 alias gu="~/.cargo/bin/gitui"
 alias lg="lazygit"
 alias sqlite="sqlite3"

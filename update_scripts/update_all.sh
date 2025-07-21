@@ -18,6 +18,5 @@ echo
 
 # 処理系のアップデート
 "$HOME"/dotfiles/update_scripts/cli_installers/update_pnpm.sh
-"$HOME"/dotfiles/update_scripts/cli_installers/update_rust.sh
 
 exit 0
