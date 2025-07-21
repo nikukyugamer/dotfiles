@@ -57,6 +57,7 @@ $ mise registry
 $ mise list-remote bun
 $ mise list-remote deno
 $ mise list-remote ffmpeg
+$ mise list-remote flutter
 $ mise list-remote java
 $ mise list-remote kotlin
 $ mise list-remote swift

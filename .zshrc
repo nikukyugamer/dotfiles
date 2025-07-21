@@ -8,10 +8,6 @@ source ~/.zplug/init.zsh
 eval "$(zoxide init zsh)"
 export _ZO_FZF_OPTS="--preview=''"
 
-# fnm (https://github.com/Schniz/fnm)
-# cargo でインストールされる
-eval "$(fnm env --use-on-cd --shell zsh)"
-
 # Starship
 # cargo でインストールされる
 eval "$(starship init zsh)"

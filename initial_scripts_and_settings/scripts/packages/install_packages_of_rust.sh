@@ -55,7 +55,6 @@ TARGET_PACKAGE_NAMES=(
   du-dust # https://github.com/bootandy/dust
   # eza # lsd から乗り換えるときはこれ https://github.com/eza-community/eza
   fd-find # https://github.com/sharkdp/fd
-  fnm # https://github.com/Schniz/fnm
   git-delta # https://github.com/dandavison/delta
   git-interactive-rebase-tool # https://github.com/MitMaro/git-interactive-rebase-tool
   gitui # https://github.com/extrawurst/gitui
