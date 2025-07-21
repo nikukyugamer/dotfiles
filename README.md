@@ -59,16 +59,16 @@ $ mise list-remote bun
 $ mise list-remote deno
 $ mise list-remote ffmpeg
 $ mise list-remote flutter
+$ mise list-remote go
 $ mise list-remote java
 $ mise list-remote kotlin
+$ mise list-remote node
 $ mise list-remote swift
 $ mise list-remote qsv
 $ mise list-remote uv
 
 # 移行検討中
-$ mise list-remote go
 $ mise list-remote imagemagick # macOS でビルドエラーになる
-$ mise list-remote node
 $ mise list-remote rust
 ```
 
