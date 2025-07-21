@@ -43,6 +43,33 @@ $ nvim
 - 最後に改めて Neovim を起動して動作に問題がないことを確かめる
     - CSV の挙動を確かめるために `$ vim /tmp/example.csv` を実行し、カンマ区切りの複数行データを入力してみるのもいい
 
+## mise で色々入れる
+
+##### 1. 一覧表示
+
+```bash
+$ mise registry
+```
+
+##### 2. 最新バージョンチェック
+
+```bash
+$ mise list-remote bun
+$ mise list-remote deno
+$ mise list-remote java
+$ mise list-remote kotlin
+$ mise list-remote swift
+$ mise list-remote qsv
+$ mise list-remote uv
+
+# 移行検討中
+$ mise list-remote ffmpeg
+$ mise list-remote go
+$ mise list-remote imagemagick
+$ mise list-remote node
+$ mise list-remote rust
+```
+
 ## LICENSE
 
 - [MIT LICENSE](/LICENSE)
