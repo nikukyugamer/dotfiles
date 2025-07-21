@@ -36,7 +36,6 @@ fi
 ~/dotfiles/initial_scripts_and_settings/scripts/cli_installers/install_zplug.sh
 
 # バージョン管理ツール（独立してインストールできる）
-~/dotfiles/initial_scripts_and_settings/scripts/version_managers/install_fvm.sh
 ~/dotfiles/initial_scripts_and_settings/scripts/version_managers/install_rbenv_goenv_phpenv_tfenv.sh
 
 echo
