@@ -31,7 +31,6 @@ fi
 ~/dotfiles/initial_scripts_and_settings/scripts/cli_installers/install_homebrew.sh
 ~/dotfiles/initial_scripts_and_settings/scripts/cli_installers/install_fzf.sh
 ~/dotfiles/initial_scripts_and_settings/scripts/cli_installers/install_pnpm.sh
-~/dotfiles/initial_scripts_and_settings/scripts/cli_installers/install_rust.sh
 ~/dotfiles/initial_scripts_and_settings/scripts/cli_installers/install_vim-plug.sh
 ~/dotfiles/initial_scripts_and_settings/scripts/cli_installers/install_zplug.sh
 
