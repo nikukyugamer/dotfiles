@@ -42,6 +42,7 @@ npm_install_g npm-check-updates
 npm_install_g pm2
 npm_install_g prettier # グローバルに入れておいたほうが VS Code で有用（問題があるようなら外す）
 npm_install_g sharp # https://github.com/lovell/sharp
+npm_install_g sharp-cli # https://github.com/vseventer/sharp-cli
 npm_install_g textlint
 npm_install_g ts-node # 徐々に Deprecated へ
 npm_install_g tsx # 徐々に Deprecated へ https://github.com/privatenumber/tsx
