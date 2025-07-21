@@ -63,9 +63,10 @@ $ mise list-remote go
 $ mise list-remote java
 $ mise list-remote kotlin
 $ mise list-remote node
-$ mise list-remote swift
 $ mise list-remote qsv
 $ mise list-remote rust
+$ mise list-remote swift
+$ mise list-remote terraform
 $ mise list-remote uv
 
 # 移行検討中
