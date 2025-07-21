@@ -65,11 +65,11 @@ $ mise list-remote kotlin
 $ mise list-remote node
 $ mise list-remote swift
 $ mise list-remote qsv
+$ mise list-remote rust
 $ mise list-remote uv
 
 # 移行検討中
-$ mise list-remote imagemagick # macOS でビルドエラーになる
-$ mise list-remote rust
+$ mise list-remote imagemagick # macOS ではビルドエラーになる
 ```
 
 ##### 3. インストール
