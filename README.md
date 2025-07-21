@@ -56,6 +56,7 @@ $ mise registry
 ```bash
 $ mise list-remote bun
 $ mise list-remote deno
+$ mise list-remote ffmpeg
 $ mise list-remote java
 $ mise list-remote kotlin
 $ mise list-remote swift
@@ -63,11 +64,28 @@ $ mise list-remote qsv
 $ mise list-remote uv
 
 # 移行検討中
-$ mise list-remote ffmpeg
 $ mise list-remote go
-$ mise list-remote imagemagick
+$ mise list-remote imagemagick # macOS でビルドエラーになる
 $ mise list-remote node
 $ mise list-remote rust
+```
+
+##### 3. インストール
+
+```bash
+$ mise install ffmpeg@7.1.1
+```
+
+##### 4. 常用設定
+
+```bash
+$ mise use --global ffmpeg@7.1.1
+```
+
+##### 5. 最新版が存在するかのチェック
+
+```bash
+$ mise outdated
 ```
 
 ## LICENSE

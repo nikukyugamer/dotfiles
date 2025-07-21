@@ -181,10 +181,6 @@ export PATH="$FLYCTL_INSTALL/bin:$PATH"
 # zplug
 export ZPLUG_HOME="$HOME/.zplug"
 
-# fvm & Flutter
-export FLUTTER_HOME=$HOME/fvm/default
-export PATH="$PATH:$FLUTTER_HOME/bin"
-
 # uv tools
 export PATH="$HOME/.local/bin:$PATH"
 
