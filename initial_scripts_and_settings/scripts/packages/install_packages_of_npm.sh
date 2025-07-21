@@ -35,7 +35,7 @@ npm_install_g diff-so-fancy
 # npm_install_g dsstore-cli
 npm_install_g firebase-tools # Firebase CLI (https://github.com/firebase/firebase-tools)
 npm_install_g fx # Terminal JSON viewer (https://github.com/antonmedv/fx)
-npm_install_g git-cz --force # なぜか --force にしないと "npm error EEXIST: file already exists" になる (fnm)
+npm_install_g git-cz --force # なぜか --force にしないと "npm error EEXIST: file already exists" になる
 npm_install_g http-server
 npm_install_g js-beautify
 npm_install_g npm-check-updates
