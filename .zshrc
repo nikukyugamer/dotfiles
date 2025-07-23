@@ -144,10 +144,6 @@ export PROMPT_EOL_MARK=""
 # Embulk
 export PATH="$HOME/.embulk/bin:$PATH"
 
-# pnpm
-export PNPM_HOME="$HOME/.local/share/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-
 # npm のパッケージマネージャで、プロジェクト配下にインストールした場合のバイナリをダイレクトに実行できるようにする
 export PATH="$PATH:./node_modules/.bin"
 
