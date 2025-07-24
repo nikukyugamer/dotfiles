@@ -1,0 +1,27 @@
+# $ mkdir -p "$HOME"/.config/mise
+# $ cp "$HOME"/dotfiles/initial_scripts_and_settings/settings/mise.toml "$HOME"/.config/mise/config.toml
+# $ mise install
+
+# 以下のバージョンは 2025/07/24 現在のものである
+[tools]
+aws-cli = "2.27.58"
+bun = "1.2.19"
+circleci = "0.1.32638"
+deno = "2.4.2"
+ffmpeg = "7.1.1"
+flutter = "3.32.7-stable"
+gcloud = "531.0.0"
+go = "1.24.5"
+heroku = "9.5.1"
+java = "21.0.2"
+kotlin = "2.2.0"
+node = "24.4.1"
+pnpm = "10.13.1"
+qsv = "6.0.1"
+rust = "1.88.0"
+terraform = "1.12.2"
+uv = "0.8.2"
+
+[settings]
+experimental = true
+idiomatic_version_file_enable_tools = []
