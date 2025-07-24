@@ -13,51 +13,28 @@ cp "$HOME"/dotfiles/initial_scripts_and_settings/settings/.rdbgrc "$HOME"/.rdbgr
 
 # 安全のために追記にしているので重複行は手動で適宜削除する
 mkdir -p "$HOME"/.config/git
-cat "$HOME"/dotfiles/initial_scripts_and_settings/settings/.gitignore.my.gitignore >> "$HOME"/.config/git/ignore
-
-# 以下のロジックは関数化したいがまだちょっと早い気がしているので、コピペしている
+cat "$HOME"/dotfiles/initial_scripts_and_settings/settings/.gitignore.my.gitignore >> "$HOME"/.config/git/ignore.from_dotfiles
 
 ## githooks
-user_input_value=""
-read -r -p "githooks の設定ファイル (~/.githooks) を上書きしてもいいですか？ (y/n): " user_input_value
-case $user_input_value in
-    [Yy]*)
-        mkdir -p "$HOME"/.githooks
-        cp -R "$HOME"/dotfiles/initial_scripts_and_settings/settings/githooks/* "$HOME"/.githooks
-        echo "上書きしました。"
-        ;;
-    *)
-        echo "スキップしました。"
-        ;;
-esac
+mkdir -p "$HOME"/.githooks
+cp -R "$HOME"/dotfiles/initial_scripts_and_settings/settings/githooks/* "$HOME"/.githooks.from_dotfiles
 
-## Starship
-user_input_value=""
-read -r -p "Starship の設定ファイル (~/.config/starship.toml) を上書きしてもいいですか？ (y/n): " user_input_value
-case $user_input_value in
-    [Yy]*)
-        mkdir -p "$HOME"/.config
-        cp "$HOME"/dotfiles/initial_scripts_and_settings/settings/starship.toml "$HOME"/.config/starship.toml
-        echo "上書きしました。"
-        ;;
-    *)
-        echo "スキップしました。"
-        ;;
-esac
+# Starship
+mkdir -p "$HOME"/.config
+cp "$HOME"/dotfiles/initial_scripts_and_settings/settings/starship.toml "$HOME"/.config/starship.toml.from_dotfiles
 
 ## Yazi
-user_input_value=""
-read -r -p "Yazi の設定ファイル (~/.config/yazi/*.toml) を上書きしてもいいですか？ (y/n): " user_input_value
-case $user_input_value in
-    [Yy]*)
-        mkdir -p "$HOME"/.config/yazi
-        cp "$HOME"/dotfiles/initial_scripts_and_settings/settings/yazi/theme.toml "$HOME"/.config/yazi/theme.toml
-        cp "$HOME"/dotfiles/initial_scripts_and_settings/settings/yazi/yazi.toml "$HOME"/.config/yazi/yazi.toml
-        echo "上書きしました。"
-        ;;
-    *)
-        echo "スキップしました。"
-        ;;
-esac
+mkdir -p "$HOME"/.config/yazi
+cp "$HOME"/dotfiles/initial_scripts_and_settings/settings/yazi/theme.toml "$HOME"/.config/yazi/theme.toml.from_dotfiles
+cp "$HOME"/dotfiles/initial_scripts_and_settings/settings/yazi/yazi.toml "$HOME"/.config/yazi/yazi.toml.from_dotfiles
+
+echo "####################################################################"
+echo "設定ファイルのコピー結果は以下のとおりです。"
+echo "$HOME 配下の \".from_dotfiles\" ファイル。"
+echo "$HOME/.config/git/ignore.from_dotfiles ファイル"
+echo "$HOME/.githooks.from_dotfiles ディレクトリ"
+echo "$HOME/.config/starship.toml.from_dotfiles ファイル"
+echo "$HOME/.config/yazi/ 配下の \"theme.toml.from_dotfiles\" ファイル"
+echo "####################################################################"
 
 exit 0
