@@ -17,7 +17,7 @@ cat "$HOME"/dotfiles/initial_scripts_and_settings/settings/.gitignore.my.gitigno
 
 ## githooks
 mkdir -p "$HOME"/.githooks
-cp -R "$HOME"/dotfiles/initial_scripts_and_settings/settings/githooks/* "$HOME"/.githooks.from_dotfiles
+cp -R "$HOME"/dotfiles/initial_scripts_and_settings/settings/githooks "$HOME"/.githooks.from_dotfiles
 
 # Starship
 mkdir -p "$HOME"/.config
