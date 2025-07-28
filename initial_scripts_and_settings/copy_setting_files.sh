@@ -28,6 +28,10 @@ mkdir -p "$HOME"/.config/yazi
 cp "$HOME"/dotfiles/initial_scripts_and_settings/settings/yazi/theme.toml "$HOME"/.config/yazi/theme.toml.from_dotfiles
 cp "$HOME"/dotfiles/initial_scripts_and_settings/settings/yazi/yazi.toml "$HOME"/.config/yazi/yazi.toml.from_dotfiles
 
+## peco
+mkdir -p "$HOME"/.config/peco
+cp "$HOME"/dotfiles/initial_scripts_and_settings/settings/peco/config.json "$HOME"/.config/peco/config.json.from_dotfiles
+
 echo "####################################################################"
 echo "設定ファイルのコピー結果は以下のとおりです。"
 echo "$HOME 配下の \".from_dotfiles\" ファイル。"
@@ -35,6 +39,8 @@ echo "$HOME/.config/git/ignore.from_dotfiles ファイル"
 echo "$HOME/.githooks.from_dotfiles ディレクトリ"
 echo "$HOME/.config/starship.toml.from_dotfiles ファイル"
 echo "$HOME/.config/yazi/ 配下の \"theme.toml.from_dotfiles\" ファイル"
+echo "$HOME/.config/yazi/ 配下の \"yazi.toml.from_dotfiles\" ファイル"
+echo "$HOME/.config/peco/config.json.from_dotfiles ファイル"
 echo "####################################################################"
 
 exit 0
