@@ -9,7 +9,7 @@ dvcreate() {
 
 # NOTE: mac の sed では "-z" が使えない
 dvlss() {
-  docker volume ls -q | sk | sed "s/^[ \t]*//" | sed -z "s/\n//g" | sed -z "s/ //g"
+  docker volume ls -q | peco | sed "s/^[ \t]*//" | sed -z "s/\n//g" | sed -z "s/ //g"
 }
 
 dvrm() {
@@ -27,7 +27,7 @@ dibuild() {
 ## イメージ名を skim で選択できるようにする
 # NOTE: mac の sed では "-z" が使えない
 dilss() {
-  DILS_SKIM=$(dils | sk)
+  DILS_SKIM=$(dils | peco)
 
   if [ $(echo $DILS_SKIM | cut -d " " -f 1 | sed "s/^[ \t]*//" | sed -z "s/\n//g" | sed -z "s/ //g") = '<none>:<none>' ]; then
     echo "$DILS_SKIM" | cut -d " " -f 2 | sed "s/^[ \t]*//" | sed -z "s/\n//g" | sed -z "s/ //g" | sed "s/(//g" | sed "s/)//g"
@@ -147,11 +147,11 @@ alias dcls='docker container ls --all --format "{{.State}}\t| {{.Names}} | {{.Im
 
 ## コンテナ名を skim で選択できるようにする（さらにパイプでクリップボードに渡すなどすると便利）
 # NOTE: mac の sed では "-z" が使えない
-alias dclss='dcls | sk | cut -d "|" -f 2 | sed "s/^[ \t]*//" | sed -z "s/\n//g" | sed -z "s/ //g"'
+alias dclss='dcls | peco | cut -d "|" -f 2 | sed "s/^[ \t]*//" | sed -z "s/\n//g" | sed -z "s/ //g"'
 alias DC='$(dclss)'
 
 ## コンテナ内でコマンドを実行する ($ dcexec ls -la)
-alias dcexec='docker container exec -it $(docker container ls --all --format "{{.State}}\t| {{.Names}} | {{.Image}} | {{.ID}}" | sk | cut -d "|" -f 2) | sed "s/^[ \t]*//"'
+alias dcexec='docker container exec -it $(docker container ls --all --format "{{.State}}\t| {{.Names}} | {{.Image}} | {{.ID}}" | peco | cut -d "|" -f 2) | sed "s/^[ \t]*//"'
 
 # Docker Compose
 ## Docker Compose コマンドを簡単に扱えるようにする
