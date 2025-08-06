@@ -7,7 +7,7 @@
 bun = "1.2.19"
 deno = "2.4.3"
 flutter = "3.32.7-stable"
-go = "1.24.5"
+go = "1.24.6"
 java = "21.0.2"
 kotlin = "2.2.0"
 node = "24.5.0"
