@@ -19,7 +19,7 @@ pnpm = "10.14.0"
 qsv = "6.0.1"
 rust = "1.88.0"
 terraform = "1.12.2"
-uv = "0.8.4"
+uv = "0.8.5"
 
 [settings]
 experimental = true
