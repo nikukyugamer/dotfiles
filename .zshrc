@@ -199,6 +199,9 @@ if [[ "${OSTYPE}" =~ .*darwin.* ]]; then
   export PATH="/opt/homebrew/opt/sqlite/bin:$PATH"
 fi
 
+# mise Home Directory
+export MISE_HOME="$HOME/.local/share/mise"
+
 # --------------------------------------------------------------------------------
 # PATH が設定された後に読み込むべきもの
 # --------------------------------------------------------------------------------
