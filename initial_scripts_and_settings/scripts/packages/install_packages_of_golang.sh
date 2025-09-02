@@ -19,6 +19,7 @@ go_install mvdan.cc/sh/v3/cmd/shfmt@latest
 go_install github.com/babarot/gomi@latest
 # go_install github.com/charmbracelet/vhs@latest # Write terminal GIFs as code
 # go_install github.com/Clever/csvlint/cmd/csvlint@latest # https://github.com/Clever/csvlint
+go_install github.com/control-theory/gonzo/cmd/gonzo@latest # https://github.com/control-theory/gonzo
 # go_install github.com/docker/hub-tool@latest            # GO111MODULE=on
 # go_install github.com/go-delve/delve/cmd/dlv@latest     # for VSCode
 # go_install github.com/greymd/ojichat@latest
