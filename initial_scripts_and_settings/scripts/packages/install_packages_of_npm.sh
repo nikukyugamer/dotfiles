@@ -21,6 +21,7 @@ npm_install_g @anthropic-ai/claude-code # https://docs.anthropic.com/en/docs/age
 npm_install_g @biomejs/biome
 npm_install_g @devcontainers/cli
 # npm_install_g @fand/kao
+npm_install_g @github/copilot
 npm_install_g @google/clasp
 npm_install_g @google/gemini-cli
 npm_install_g @mermaid-js/mermaid-cli # https://github.com/mermaid-js/mermaid-cli
