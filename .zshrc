@@ -22,6 +22,10 @@ fi
 export PATH="$HOME/.phpenv/bin:$PATH"
 eval "$(phpenv init -)"
 
+# eval で読み込むもの
+# mise (https://mise.jdx.dev/)
+eval "$(mise activate zsh)"
+
 # --------------------------------------------------------------------------------
 # zsh の基本機能
 # --------------------------------------------------------------------------------
@@ -208,9 +212,6 @@ export MISE_HOME="$HOME/.local/share/mise"
 
 # direnv
 eval "$(direnv hook zsh)"
-
-# mise (https://mise.jdx.dev/)
-eval "$(mise activate zsh)"
 
 # --------------------------------------------------------------------------------
 # エイリアス
