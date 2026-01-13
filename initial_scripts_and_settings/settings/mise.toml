@@ -10,7 +10,7 @@ flutter = "3.38.6-stable"
 go = "1.25.5"
 java = "25.0.1+8.0.LTS"
 kotlin = "2.3.0"
-node = "24.12.0"
+node = "24.13.0"
 rust = "1.92.0"
 uv = "0.9.24"
 
