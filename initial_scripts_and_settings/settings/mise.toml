@@ -22,7 +22,7 @@ terraform = "1.15.0"
 aws-cli = "2.34.39"
 circleci = "0.1.35800"
 gcloud = "531.0.0"
-heroku = "9.5.1"
+heroku = "11.3.0"
 
 [settings]
 experimental = true
