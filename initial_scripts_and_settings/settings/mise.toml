@@ -19,7 +19,7 @@ pnpm = "10.33.3"
 qsv = "20.0.0"
 terraform = "1.15.1"
 
-aws-cli = "2.34.42"
+aws-cli = "2.34.43"
 circleci = "0.1.36202"
 gcloud = "531.0.0"
 heroku = "11.3.0"
