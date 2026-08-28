@@ -6,7 +6,7 @@
 [tools]
 bun = "1.4.0"
 deno = "2.9.6"
-flutter = "3.47.1-stable"
+flutter = "3.47.2-stable"
 go = "1.27.0"
 java = "25.0.4+101.0.LTS"
 kotlin = "2.4.10"
