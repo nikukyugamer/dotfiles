@@ -20,7 +20,7 @@ qsv = "24.0.0"
 terraform = "1.16.5"
 
 aws-cli = "2.37.10"
-circleci = "1.2.0"
+circleci = "1.3.0"
 gcloud = "531.0.0"
 heroku = "11.11.0"
 
